@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Bookmarks & Question Library | VetriPathLearn</title>
+    <meta name="description" content="Access your saved placement questions, bookmarked formula sheets, difficult concepts, and personal review notes offline.">
+    <!-- Technical SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Darun Raj">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://vetripathlearn.com/bookmarks.html">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vetripathlearn.com/bookmarks.html">
+    <meta property="og:title" content="Saved Bookmarks & Question Library | VetriPathLearn">
+    <meta property="og:description" content="Access your saved placement questions, bookmarked formula sheets, difficult concepts, and personal review notes offline.">
+    <meta property="og:image" content="https://vetripathlearn.com/images/logo.png">
+    <meta property="og:site_name" content="VetriPathLearn">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Bookmarks Library",
+      "url": "https://vetripathlearn.com/bookmarks.html",
+      "description": "Personalized offline bookmark library for review and revision."
+    }
+    </script>
+    <style>
+        .bookmark-card-item {
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-card {
+            max-width: 750px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Global Loader -->
+    <div id="global-loader" class="loading-screen">
+        <div class="loader-content">
+            <div class="loader-logo-img-wrapper"><img src="images/logo.png" alt="VetriPathLearn Logo"
+                    class="loader-logo-img"></div>
+            <div class="loader-logo">VetriPathLearn</div>
+            <div class="loader-quote">
+                <p class="quote-text">"Walk the Path. Become the Victory. Inspire the World"</p>
+            </div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Nav Placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <main class="container fade-in-up">
+
+        <section style="margin-bottom: 2.5rem; text-align: center;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; font-family: var(--font-heading);"><i
+                    class="fa-solid fa-bookmark" style="color: var(--primary); margin-right: 0.5rem;"></i>Bookmarks
+                Vault</h1>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                Review saved formulas and complex practice questions. Expand any item below to view full solutions or
+                run bookmark-only quizzes in the Practice Hub.
+            </p>
+        </section>
+
+        <!-- Bookmarks List container -->
+        <section id="bookmarks-list-container" style="max-width: 900px; margin: 0 auto;">
+            <!-- Loaded dynamically -->
+        </section>
+
+    </main>
+
+    <!-- EXPANSION MODAL -->
+    <div id="modal-container" class="modal-overlay" onclick="closeBookmarkModal()">
+        <div class="modal-card glass-panel fade-in" onclick="event.stopPropagation()">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.8rem;">
+                <span id="modal-q-id" style="font-size: 0.95rem; font-weight: 700; color: var(--primary);">Question
+                    ID</span>
+                <button onclick="closeBookmarkModal()" style="font-size: 1.5rem; color: var(--text-secondary);"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div id="modal-q-text"
+                style="font-size: 1.15rem; font-weight: 600; line-height: 1.5; margin-bottom: 1.5rem;">Question
+                statement</div>
+
+            <div id="modal-options" style="margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.8rem;">
+                <!-- Option pills -->
+            </div>
+
+            <div
+                style="background: hsla(145, 80%, 42%, 0.1); border-left: 4px solid var(--success); padding: 1rem; border-radius: var(--border-radius-sm); margin-bottom: 2rem;">
+                <div style="font-weight: 700; color: var(--success); margin-bottom: 0.3rem;"><i
+                        class="fa-solid fa-circle-check"></i> Correct Answer</div>
+                <div id="modal-correct-ans" style="font-weight: 600;">Answer text</div>
+            </div>
+
+            <div class="solution-panel" style="margin-top: 0; padding-top: 0; border: none;">
+                <div class="solution-subcard">
+                    <h4>Detailed Solution Walkthrough</h4>
+                    <p id="modal-solution" style="white-space: pre-line; color: var(--text-secondary);"></p>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <div class="solution-subcard success-light">
+                        <h4>Formula Used</h4>
+                        <p id="modal-formula" style="font-family: monospace; color: var(--success); font-weight: 600;">
+                        </p>
+                    </div>
+                    <div class="solution-subcard success-light">
+                        <h4>Shortcut / Method</h4>
+                        <p id="modal-shortcut" style="color: var(--success);"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadGlobalLayout('bookmarks');
+            renderBookmarksList();
+        });
+
+        function renderBookmarksList() {
+            const state = PlacementPrepState.getState();
+            const container = document.getElementById('bookmarks-list-container');
+
+            if (state.bookmarks.length === 0) {
+                container.innerHTML = `
+                    <div class="glass-card" style="text-align: center; padding: 4rem 2rem;">
+                        <i class="fa-solid fa-bookmark" style="font-size: 3.5rem; color: var(--text-muted); margin-bottom: 1.5rem;"></i>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">No bookmarked questions</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+                            Save questions during active practice sessions to review their solutions, tips, and alternate shortcut paths in this vault.
+                        </p>
+                        <a href="practice.html" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Find Questions to Solve</a>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = state.bookmarks.map(q => {
+                return `
+                    <div class="glass-card bookmark-card-item pulse-on-hover" onclick="openBookmarkModal('${q.id}')">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <div>
+                                <span class="badge badge-${q.difficulty}">${q.difficulty}</span>
+                                <span style="font-size: 0.8rem; color: var(--text-muted); margin-left: 0.5rem; font-weight: 600;">${q.topic.toUpperCase().replace('_', ' ')}</span>
+                            </div>
+                            <button onclick="event.stopPropagation(); deleteBookmark('${q.id}')" style="color: var(--danger); font-size: 1.1rem;" title="Delete bookmark">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+                        <div style="font-weight: 600; color: var(--text-primary); line-height: 1.4;">${q.text.substring(0, 180)}${q.text.length > 180 ? '...' : ''}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function deleteBookmark(id) {
+            PlacementPrepState.removeBookmark(id);
+            renderBookmarksList();
+        }
+
+        // --- Expansion Modal ---
+        function openBookmarkModal(id) {
+            const state = PlacementPrepState.getState();
+            const q = state.bookmarks.find(item => item.id === id);
+
+            if (!q) return;
+
+            document.getElementById('modal-q-id').innerHTML = `<span class="badge badge-${q.difficulty}">${q.difficulty}</span>`;
+            document.getElementById('modal-q-text').innerHTML = q.text;
+            document.getElementById('modal-correct-ans').textContent = q.answer;
+            document.getElementById('modal-solution').textContent = q.solution;
+            document.getElementById('modal-formula').textContent = q.formula || "Basic Arithmetic Principles";
+            document.getElementById('modal-shortcut').textContent = q.shortcut || "N/A";
+
+            // Options list
+            const optionsBox = document.getElementById('modal-options');
+            optionsBox.innerHTML = q.options.map((opt, index) => {
+                const isCorrect = opt === q.answer;
+                const statusClass = isCorrect ? 'correct' : '';
+                return `
+                    <div class="option-btn ${statusClass}" style="pointer-events: none;">
+                        <span class="option-index">${String.fromCharCode(65 + index)}</span>
+                        <span>${opt}</span>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('modal-container').classList.add('active');
+        }
+
+        function closeBookmarkModal() {
+            document.getElementById('modal-container').classList.remove('active');
+        }
+    </script>
+</body>
+
+</html>
