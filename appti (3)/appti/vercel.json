@@ -36,7 +36,7 @@
         },
         {
           "key": "Content-Disposition",
-          "value": "attachment; filename=\"VetriPathLearn.apk\""
+          "value": "attachment"
         }
       ]
     }

@@ -24,11 +24,43 @@ document.addEventListener('DOMContentLoaded', () => {
         showToast(e.detail.message, e.detail.type);
     });
 
-    // Global listener for APK download links
+    // Global listener for APK download links with multi-strategy fallback
     document.addEventListener('click', (e) => {
-        const apkBtn = e.target.closest('a[download*=".apk"], a[href*=".apk"]');
+        const apkBtn = e.target.closest('a[download*=".apk"], a[href*=".apk"], .btn-download-glossy, .btn-download-glossy-circle-red');
         if (apkBtn) {
-            showToast("📥 VetriPath APK download started!", "success");
+            e.preventDefault();
+
+            const targetUrl = apkBtn.getAttribute('href') || 'VetriPathLearn.apk';
+            const filename = targetUrl.substring(targetUrl.lastIndexOf('/') + 1) || 'VetriPathLearn.apk';
+            
+            // 1. Display feedback toast
+            if (typeof showToast === 'function') {
+                showToast(`📥 Starting ${filename} download...`, "success");
+            } else if (window.PlacementPrepState && typeof window.PlacementPrepState.dispatchToast === 'function') {
+                window.PlacementPrepState.dispatchToast(`📥 Starting ${filename} download...`, "success");
+            }
+
+            // 2. Strategy A: Direct anchor download click
+            const link = document.createElement('a');
+            link.href = targetUrl;
+            link.download = filename;
+            link.style.display = 'none';
+            document.body.appendChild(link);
+            link.click();
+            setTimeout(() => {
+                if (link.parentNode) link.parentNode.removeChild(link);
+            }, 1000);
+
+            // 3. Strategy B: Hidden Iframe Stream (Guarantees trigger on Android Chrome / Desktop browsers)
+            setTimeout(() => {
+                const iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                iframe.src = targetUrl;
+                document.body.appendChild(iframe);
+                setTimeout(() => {
+                    if (iframe.parentNode) iframe.parentNode.removeChild(iframe);
+                }, 15000);
+            }, 300);
         }
     });
 });
@@ -160,7 +192,7 @@ function loadGlobalLayout(activeLink = 'home') {
                 </nav>
 
                 <div class="nav-actions">
-                    <a href="VetriPathLearn.apk" download="VetriPathLearn.apk" target="_blank" rel="noopener noreferrer" type="application/vnd.android.package-archive" class="btn-download-glossy-circle-red web-only" aria-label="Download Android App" title="Download VetriPathLearn APK">
+                    <a href="VetriPathLearn.apk" download="VetriPathLearn.apk" type="application/vnd.android.package-archive" class="btn-download-glossy-circle-red web-only" aria-label="Download Android App" title="Download VetriPathLearn APK">
                         <i class="fa-solid fa-download" style="font-size: 1.15rem;"></i>
                     </a>
                     <a href="search.html" class="theme-toggle-btn" aria-label="Search Engine" style="display: flex; text-decoration:none;">
