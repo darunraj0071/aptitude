@@ -6,5 +6,7 @@ local.properties
 build/
 app/build/
 *.apk
+!appti/*.apk
+!vetripath-app/app/src/main/assets/appti/*.apk
 *.aar
 .DS_Store

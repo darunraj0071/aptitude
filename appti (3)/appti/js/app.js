@@ -24,43 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
         showToast(e.detail.message, e.detail.type);
     });
 
-    // Global listener for APK download links with multi-strategy fallback
+    // Global listener for APK download links
     document.addEventListener('click', (e) => {
         const apkBtn = e.target.closest('a[download*=".apk"], a[href*=".apk"], .btn-download-glossy, .btn-download-glossy-circle-red');
         if (apkBtn) {
-            e.preventDefault();
-
             const targetUrl = apkBtn.getAttribute('href') || 'VetriPathLearn.apk';
             const filename = targetUrl.substring(targetUrl.lastIndexOf('/') + 1) || 'VetriPathLearn.apk';
             
-            // 1. Display feedback toast
+            // Display feedback toast
             if (typeof showToast === 'function') {
                 showToast(`📥 Starting ${filename} download...`, "success");
             } else if (window.PlacementPrepState && typeof window.PlacementPrepState.dispatchToast === 'function') {
                 window.PlacementPrepState.dispatchToast(`📥 Starting ${filename} download...`, "success");
             }
-
-            // 2. Strategy A: Direct anchor download click
-            const link = document.createElement('a');
-            link.href = targetUrl;
-            link.download = filename;
-            link.style.display = 'none';
-            document.body.appendChild(link);
-            link.click();
-            setTimeout(() => {
-                if (link.parentNode) link.parentNode.removeChild(link);
-            }, 1000);
-
-            // 3. Strategy B: Hidden Iframe Stream (Guarantees trigger on Android Chrome / Desktop browsers)
-            setTimeout(() => {
-                const iframe = document.createElement('iframe');
-                iframe.style.display = 'none';
-                iframe.src = targetUrl;
-                document.body.appendChild(iframe);
-                setTimeout(() => {
-                    if (iframe.parentNode) iframe.parentNode.removeChild(iframe);
-                }, 15000);
-            }, 300);
         }
     });
 });
