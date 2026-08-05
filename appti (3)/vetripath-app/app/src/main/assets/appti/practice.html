@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixed Practice Engine — Custom Placement Quiz Configurator | VetriPathLearn</title>
+    <meta name="description" content="Customize and solve mixed practice quizzes across quantitative aptitude, logical reasoning, and verbal ability with adaptable difficulty levels.">
+    <meta name="keywords" content="VetriPathLearn, VetriPath, campus placement preparation, quantitative aptitude, logical reasoning, verbal ability, coding engine, mock test, competitive exams, placement practice questions, career prep portal, offline placement prep, interview prep">
+    <!-- Technical SEO Meta Tags -->
+    <meta name="google-site-verification" content="h-MC2TSGIWOwB31pbVSr-ttlsnO4Keb3vl3ygZ3WT2s">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Darun Raj">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://vetripathlearn.site/practice.html">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logo.png">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vetripathlearn.site/practice.html">
+    <meta property="og:title" content="Mixed Practice Engine — Custom Placement Quiz Configurator | VetriPathLearn">
+    <meta property="og:description" content="Customize and solve mixed practice quizzes across quantitative aptitude, logical reasoning, and verbal ability with adaptable difficulty levels.">
+    <meta property="og:image" content="https://vetripathlearn.site/images/logo.png">
+    <meta property="og:site_name" content="VetriPathLearn">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Mixed Practice Hub",
+      "url": "https://vetripathlearn.site/practice.html",
+      "description": "Interactive custom quiz generator and practice engine for campus placement drive preparation."
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Global Loader -->
+    <div id="global-loader" class="loading-screen">
+        <div class="loader-content">
+            <div class="loader-logo-img-wrapper"><img src="images/logo.png" alt="VetriPathLearn Logo" class="loader-logo-img"></div>
+            <div class="loader-logo">VetriPathLearn</div>
+            <div class="loader-quote">
+                <p class="quote-text">"Walk the Path. Become the Victory. Inspire the World"</p>
+            </div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Nav Placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <main class="container fade-in-up">
+        
+        <!-- =======================================================
+             CONFIGURATION WORKSPACE PANEL
+             ======================================================= -->
+        <div id="config-panel" class="glass-card" style="padding: 2.5rem; border-radius: var(--border-radius-lg); max-width: 800px; margin: 2rem auto;">
+            <h1 style="font-size: 2rem; margin-bottom: 0.5rem; font-family: var(--font-heading); text-align: center;"><i class="fa-solid fa-sliders" style="color: var(--primary); margin-right: 0.5rem;"></i>Practice Configurator</h1>
+            <p style="color: var(--text-secondary); text-align: center; margin-bottom: 2.5rem; font-size: 0.95rem;">
+                Customize your preparation set. Mix subjects, choose difficulty bounds, or retry previously failed cards.
+            </p>
+
+            <!-- Configuration Modes -->
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 2rem;">
+                <button class="btn btn-secondary" id="mode-mixed" onclick="switchPracticeMode('mixed')" style="padding: 1rem; border-color: var(--primary-glow); color: var(--primary); background: var(--primary-glow); font-weight: 700;">
+                    <i class="fa-solid fa-random"></i> Mixed Practice
+                </button>
+                <button class="btn btn-secondary" id="mode-bookmarks" onclick="switchPracticeMode('bookmarks')" style="padding: 1rem;">
+                    <i class="fa-solid fa-bookmark"></i> Bookmarks Run
+                </button>
+            </div>
+
+            <!-- MIXED CONFIGS BLOCK -->
+            <div id="mixed-config-block">
+                <!-- Subject checkboxes -->
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label class="form-label">Include Subjects</label>
+                    <div style="display: flex; gap: 2rem; margin-top: 0.5rem;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 600; cursor: pointer;">
+                            <input type="checkbox" id="chk-aptitude" checked style="width: 18px; height: 18px;"> Quantitative Aptitude
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 600; cursor: pointer;">
+                            <input type="checkbox" id="chk-reasoning" checked style="width: 18px; height: 18px;"> Logical Reasoning
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 600; cursor: pointer;">
+                            <input type="checkbox" id="chk-verbal" checked style="width: 18px; height: 18px;"> Verbal Ability
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Difficulty pill choices -->
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label class="form-label">Filter Difficulty</label>
+                    <div class="difficulty-selector" style="margin-top: 0.5rem; margin-bottom: 0;">
+                        <button class="diff-pill active" onclick="setPracticeDiff('all', this)">All</button>
+                        <button class="diff-pill" onclick="setPracticeDiff('beginner', this)">Beginner</button>
+                        <button class="diff-pill" onclick="setPracticeDiff('easy', this)">Easy</button>
+                        <button class="diff-pill" onclick="setPracticeDiff('medium', this)">Medium</button>
+                        <button class="diff-pill" onclick="setPracticeDiff('hard', this)">Hard</button>
+                        <button class="diff-pill" onclick="setPracticeDiff('expert', this)">Expert</button>
+                    </div>
+                </div>
+
+                <!-- Question Count choice -->
+                <div class="form-group" style="margin-bottom: 2rem;">
+                    <label class="form-label" for="select-count">Question Set Size</label>
+                    <select class="form-control" id="select-count" style="margin-top: 0.5rem;">
+                        <option value="10">10 Questions</option>
+                        <option value="20" selected>20 Questions</option>
+                        <option value="30">30 Questions</option>
+                        <option value="50">50 Questions</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- BOOKMARKS DETAILS -->
+            <div id="bookmarks-config-block" style="display: none; margin-bottom: 2rem; text-align: center; padding: 1.5rem; border-radius: var(--border-radius-sm); background: hsla(245, 85%, 60%, 0.05); border: 1px dashed var(--primary);">
+                <i class="fa-solid fa-bookmark" style="color: var(--primary); font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.3rem;">Run Bookmarks Library</div>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;" id="bookmarks-count-lbl">You have 0 saved questions in bookmarks.</p>
+            </div>
+
+            <!-- Launch Button -->
+            <button class="btn btn-primary" onclick="launchPracticeSet()" style="width: 100%; padding: 0.9rem; font-size: 1.1rem; border-radius: 30px;">
+                <i class="fa-solid fa-rocket"></i> Launch Practice Session
+            </button>
+        </div>
+
+        <!-- =======================================================
+             ACTIVE PRACTICE INTERFACE WORKSTATION
+             ======================================================= -->
+        <div id="quiz-panel" class="fade-in" style="display: none; max-width: 900px; margin: 0 auto;">
+            
+            <!-- Back to config link -->
+            <button class="btn btn-secondary" onclick="exitQuiz()" style="margin-bottom: 1.5rem; padding: 0.5rem 1rem; font-size: 0.85rem; border-radius: 20px;">
+                <i class="fa-solid fa-arrow-left"></i> Exit Practice Set
+            </button>
+
+            <!-- Quiz header stats (Timer only) -->
+            <div class="glass-panel quiz-header" style="justify-content: flex-end;">
+                <div class="timer-box">
+                    <i class="fa-regular fa-clock"></i>
+                    <span id="session-timer">00s</span>
+                </div>
+            </div>
+
+            <!-- Question container -->
+            <div id="practice-question-area">
+                <!-- Dynamically written -->
+            </div>
+
+            <!-- Question Actions -->
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem; justify-content: flex-end;">
+                <button id="session-btn-check" class="btn btn-primary" onclick="verifyPracticeAnswer()" disabled style="padding: 0.8rem 2.5rem;">
+                    <i class="fa-solid fa-circle-check"></i> Check Answer
+                </button>
+                <button id="session-btn-next" class="btn btn-primary" onclick="nextPracticeQuestion()" style="display: none; padding: 0.8rem 2.5rem;">
+                    <span>Next Question</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- SOLUTION CARD EXPANSIONS -->
+            <div id="practice-solution-area" class="glass-panel solution-panel fade-in" style="display: none; padding: 2rem; border-radius: var(--border-radius-lg); margin-top: 2rem;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--primary);"><i class="fa-solid fa-lightbulb"></i> Solution Walkthrough</h3>
+                
+                <div class="solution-subcard">
+                    <h4>Detailed Steps</h4>
+                    <p id="p-sol-exp" style="white-space: pre-line; color: var(--text-secondary);"></p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <div class="solution-subcard success-light">
+                        <h4>Formula Used</h4>
+                        <p id="p-sol-formula" style="font-family: monospace; font-weight: 600; color: var(--success);"></p>
+                    </div>
+                    <div class="solution-subcard success-light">
+                        <h4>Shortcut / Method</h4>
+                        <p id="p-sol-shortcut" style="color: var(--success);"></p>
+                    </div>
+                </div>
+
+                <div class="solution-subcard danger-light" style="margin-top: 1.5rem;">
+                    <h4>Avoid Common Pitfall</h4>
+                    <p id="p-sol-pitfall" style="color: var(--danger);"></p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/mock_data_gen.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cheating_protection.js"></script>
+    <script>
+        // Practice Session states
+        let activeMode = 'mixed'; // 'mixed', 'mistakes', 'bookmarks'
+        let activeDiff = 'all';
+        let practicePool = [];
+        let practiceIdx = 0;
+        let practiceCorrect = 0;
+        let practiceWrong = 0;
+        let questionTimerSecs = 0;
+        let practiceInterval = null;
+        let chosenOptionIdx = null;
+        let isAnswerChecked = false;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadGlobalLayout('practice');
+            updateStateLabels();
+        });
+
+        function updateStateLabels() {
+            const state = PlacementPrepState.getState();
+            
+            // Bookmarks count
+            document.getElementById('bookmarks-count-lbl').textContent = `You have ${state.bookmarks.length} bookmarked cards saved.`;
+        }
+
+        function switchPracticeMode(mode) {
+            activeMode = mode;
+            
+            const btnMixed = document.getElementById('mode-mixed');
+            const btnBookmarks = document.getElementById('mode-bookmarks');
+            
+            const configMixed = document.getElementById('mixed-config-block');
+            const configBookmarks = document.getElementById('bookmarks-config-block');
+
+            // Reset buttons
+            [btnMixed, btnBookmarks].forEach(btn => {
+                if (btn) {
+                    btn.style.background = '';
+                    btn.style.color = '';
+                    btn.style.borderColor = '';
+                }
+            });
+
+            // Set active buttons
+            const activeBtn = mode === 'mixed' ? btnMixed : btnBookmarks;
+            if (activeBtn) {
+                activeBtn.style.background = 'var(--primary-glow)';
+                activeBtn.style.color = 'var(--primary)';
+                activeBtn.style.borderColor = 'var(--primary-glow)';
+                activeBtn.style.fontWeight = '700';
+            }
+
+            // Swap panels
+            if (configMixed) configMixed.style.display = mode === 'mixed' ? 'block' : 'none';
+            if (configBookmarks) configBookmarks.style.display = mode === 'bookmarks' ? 'block' : 'none';
+        }
+
+        function setPracticeDiff(diff, element) {
+            activeDiff = diff;
+            const pills = element.parentElement.querySelectorAll('.diff-pill');
+            pills.forEach(p => p.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        // --- Session Generator ---
+        async function launchPracticeSet(consented = false) {
+            if (!consented) {
+                CheatingProtection.showSecurityConsent(() => {
+                    launchPracticeSet(true);
+                });
+                return;
+            }
+            const state = PlacementPrepState.getState();
+            practicePool = [];
+            practiceIdx = 0;
+            practiceCorrect = 0;
+            practiceWrong = 0;
+
+            if (activeMode === 'mixed') {
+                const addApt = document.getElementById('chk-aptitude').checked;
+                const addReas = document.getElementById('chk-reasoning').checked;
+                const addVerb = document.getElementById('chk-verbal').checked;
+                
+                if (!addApt && !addReas && !addVerb) {
+                    PlacementPrepState.dispatchToast('Please select at least one subject to practice!', 'warning');
+                    return;
+                }
+
+                // Show loader while loading files
+                let loader = document.getElementById('global-loader');
+                if (!loader) {
+                    loader = document.createElement('div');
+                    loader.id = 'global-loader';
+                    loader.className = 'loading-screen';
+                    loader.innerHTML = '<div class="loader-spinner"></div><div class="loader-logo">VetriPathLearn</div>';
+                    document.body.appendChild(loader);
+                }
+                loader.classList.remove('fade-out');
+
+                // Collect list of topics grouped by subject
+                const subjectGroups = [];
+                if (addApt) subjectGroups.push({ sub: 'aptitude', topics: ['numbers', 'percentage', 'profit_loss', 'ratio_proportion', 'average', 'time_work', 'time_distance', 'speed_distance', 'probability', 'permutation_combination', 'data_interpretation', 'simplification', 'algebra', 'geometry'] });
+                if (addReas) subjectGroups.push({ sub: 'reasoning', topics: ['puzzles', 'seating_arrangement', 'blood_relations', 'coding_decoding', 'syllogism', 'direction_sense', 'statement_conclusion', 'series', 'analogy'] });
+                if (addVerb) subjectGroups.push({ sub: 'verbal', topics: ['grammar', 'vocabulary', 'reading_comprehension', 'sentence_correction', 'error_spotting', 'fill_blanks', 'para_jumbles'] });
+
+                const loadPromises = [];
+                subjectGroups.forEach(grp => {
+                    grp.topics.forEach(t => {
+                        loadPromises.push(loadTopicScript(grp.sub, t));
+                    });
+                });
+
+                try {
+                    await Promise.all(loadPromises);
+                } catch (e) {
+                    console.error("Failed loading practice scripts", e);
+                }
+
+                // Hide loader
+                loader.classList.add('fade-out');
+
+                const totalSize = parseInt(document.getElementById('select-count').value);
+                const numSubjects = subjectGroups.length;
+                
+                // Calculate base questions per subject and remainder
+                const basePerSub = Math.floor(totalSize / numSubjects);
+                const remainder = totalSize % numSubjects;
+
+                let finalPool = [];
+
+                subjectGroups.forEach((grp, sIdx) => {
+                    // Determine how many questions to draw for this subject
+                    const targetCount = basePerSub + (sIdx < remainder ? 1 : 0);
+                    if (targetCount <= 0) return;
+
+                    let subPool = [];
+                    grp.topics.forEach(t => {
+                        let qs = MockDataGen.getQuestions(grp.sub, t, 50);
+                        if (activeDiff !== 'all') {
+                            qs = qs.filter(q => q.difficulty === activeDiff);
+                        }
+                        subPool = subPool.concat(qs);
+                    });
+
+                    // Shuffle this subject's questions and select the target count
+                    subPool.sort(() => Math.random() - 0.5);
+                    finalPool = finalPool.concat(subPool.slice(0, targetCount));
+                });
+
+                // Final shuffle of the combined pool so subjects are mixed together
+                finalPool.sort(() => Math.random() - 0.5);
+                practicePool = finalPool;
+            } else {
+                // Bookmarks quiz
+                if (state.bookmarks.length === 0) {
+                    PlacementPrepState.dispatchToast('Your bookmarks vault is empty!', 'warning');
+                    return;
+                }
+                practicePool = [...state.bookmarks];
+                practicePool.sort(() => Math.random() - 0.5);
+            }
+
+            if (practicePool.length === 0) {
+                PlacementPrepState.dispatchToast('No questions found matching this configuration.', 'warning');
+                return;
+            }
+
+            // Start Quiz
+            document.getElementById('config-panel').style.display = 'none';
+            document.getElementById('quiz-panel').style.display = 'block';
+
+            loadPracticeQuestion();
+            CheatingProtection.enable({
+                onViolationLimitReached: () => {
+                    exitQuiz();
+                }
+            });
+        }
+
+        function loadPracticeQuestion() {
+            if (practicePool.length === 0) return;
+
+            const q = practicePool[practiceIdx];
+            isAnswerChecked = false;
+            chosenOptionIdx = null;
+            questionTimerSecs = 0;
+
+            // Reset layout
+            document.getElementById('practice-solution-area').style.display = 'none';
+            document.getElementById('session-btn-next').style.display = 'none';
+            document.getElementById('session-btn-check').style.display = 'inline-flex';
+            document.getElementById('session-btn-check').disabled = true;
+
+            // Draw question body
+            const container = document.getElementById('practice-question-area');
+            const bookmarked = PlacementPrepState.isBookmarked(q.id);
+            const bookmarkIcon = bookmarked ? 'fa-solid fa-bookmark' : 'fa-regular fa-bookmark';
+            const bookmarkColor = bookmarked ? 'color: var(--primary);' : '';
+
+            container.innerHTML = `
+                <div class="glass-card question-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                        <div>
+                            <span class="badge badge-${q.difficulty}">${q.difficulty}</span>
+                        </div>
+                        <button onclick="togglePracticeBookmark('${q.id}')" style="font-size: 1.2rem; ${bookmarkColor}">
+                            <i class="${bookmarkIcon}"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="question-text">${q.text}</div>
+
+                    <div class="options-list">
+                        ${q.options.map((opt, index) => `
+                            <button class="option-btn" onclick="selectPracticeOption(${index})">
+                                <span class="option-index">${String.fromCharCode(65 + index)}</span>
+                                <span>${opt}</span>
+                            </button>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+
+            startPracticeTimer();
+        }
+
+        function selectPracticeOption(index) {
+            if (isAnswerChecked) return;
+            chosenOptionIdx = index;
+
+            const optionButtons = document.querySelectorAll('.option-btn');
+            optionButtons.forEach((btn, idx) => {
+                if (idx === index) btn.classList.add('selected');
+                else btn.classList.remove('selected');
+            });
+
+            document.getElementById('session-btn-check').disabled = false;
+        }
+
+        function togglePracticeBookmark(id) {
+            const q = practicePool.find(item => item.id === id);
+            if (!q) return;
+
+            if (PlacementPrepState.isBookmarked(id)) {
+                PlacementPrepState.removeBookmark(id);
+            } else {
+                PlacementPrepState.addBookmark(q);
+            }
+            // Re-render question
+            loadPracticeQuestion();
+        }
+
+        function verifyPracticeAnswer() {
+            if (chosenOptionIdx === null || isAnswerChecked) return;
+            isAnswerChecked = true;
+            stopPracticeTimer();
+
+            const q = practicePool[practiceIdx];
+            const correctVal = q.answer;
+            const chosenVal = q.options[chosenOptionIdx];
+            const isCorrect = chosenVal === correctVal;
+
+            const buttons = document.querySelectorAll('.option-btn');
+            buttons.forEach((btn, idx) => {
+                const text = q.options[idx];
+                if (text === correctVal) btn.classList.add('correct');
+                else if (idx === chosenOptionIdx) btn.classList.add('incorrect');
+                btn.disabled = true;
+            });
+
+            if (isCorrect) {
+                practiceCorrect += 1;
+                PlacementPrepState.dispatchToast('\uD83C\uDF89 Correct!', 'success');
+            } else {
+                practiceWrong += 1;
+                PlacementPrepState.dispatchToast('\u274C Incorrect.', 'danger');
+            }
+
+            // Save performance statistics
+            PlacementPrepState.logSolvedQuestion(q.id, q.topic, q.subject, isCorrect, questionTimerSecs);
+
+            // Populates Explanations
+            document.getElementById('p-sol-exp').textContent = q.solution;
+            document.getElementById('p-sol-formula').textContent = q.formula || "Standard formula rule.";
+            document.getElementById('p-sol-shortcut').textContent = q.shortcut || "Plug and check method.";
+            document.getElementById('p-sol-pitfall').textContent = q.commonMistakes || "Units conversion mismatch.";
+
+            document.getElementById('practice-solution-area').style.display = 'block';
+            document.getElementById('session-btn-check').style.display = 'none';
+            document.getElementById('session-btn-next').style.display = 'inline-flex';
+        }
+
+        function nextPracticeQuestion() {
+            if (practiceIdx + 1 < practicePool.length) {
+                practiceIdx += 1;
+                loadPracticeQuestion();
+            } else {
+                PlacementPrepState.dispatchToast('\uD83C\uDF89 Custom practice session complete! Score saved.', 'success');
+                exitQuiz();
+            }
+        }
+
+        function exitQuiz() {
+            stopPracticeTimer();
+            CheatingProtection.disable();
+            document.getElementById('quiz-panel').style.display = 'none';
+            document.getElementById('config-panel').style.display = 'block';
+            updateStateLabels();
+        }
+
+        // --- Timers ---
+        function startPracticeTimer() {
+            stopPracticeTimer();
+            questionTimerSecs = 0;
+            document.getElementById('session-timer').textContent = "00s";
+            
+            practiceInterval = setInterval(() => {
+                questionTimerSecs += 1;
+                document.getElementById('session-timer').textContent = questionTimerSecs < 60 ? `${questionTimerSecs}s` : `${Math.floor(questionTimerSecs/60)}m ${questionTimerSecs%60}s`;
+            }, 1000);
+        }
+
+        function stopPracticeTimer() {
+            if (practiceInterval) {
+                clearInterval(practiceInterval);
+                practiceInterval = null;
+            }
+        }
+    </script>
+</body>
+</html>
+
