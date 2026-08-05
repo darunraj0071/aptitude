@@ -325,3 +325,40 @@ function resetCode() {
         showToast("Editor reset successfully.", "info");
     }
 }
+
+function toggleCodingAntiCheat() {
+    const btn = document.getElementById('btn-anti-cheat-toggle');
+    if (!window.CheatingProtection) return;
+
+    if (window.CheatingProtection.isActive()) {
+        window.CheatingProtection.disable();
+        if (btn) {
+            btn.innerHTML = `<i class="fa-solid fa-shield-halved" style="color:var(--text-muted);"></i> Proctored Mode`;
+            btn.style.borderColor = 'rgba(255,255,255,0.15)';
+            btn.style.color = '';
+        }
+        showToast("Proctored exam mode disabled.", "info");
+    } else {
+        window.CheatingProtection.showSecurityConsent(() => {
+            window.CheatingProtection.enable({
+                maxViolations: 3,
+                enableFullscreen: true,
+                onViolationLimitReached: () => {
+                    if (btn) {
+                        btn.innerHTML = `<i class="fa-solid fa-shield-halved" style="color:var(--text-muted);"></i> Proctored Mode`;
+                        btn.style.borderColor = 'rgba(255,255,255,0.15)';
+                        btn.style.color = '';
+                    }
+                    showToast("Proctored session auto-ended due to maximum security violations.", "danger");
+                }
+            });
+            if (btn) {
+                btn.innerHTML = `<i class="fa-solid fa-shield-halved" style="color:#10b981;"></i> Proctored (Active)`;
+                btn.style.borderColor = '#10b981';
+                btn.style.color = '#10b981';
+            }
+        });
+    }
+}
+
+window.toggleCodingAntiCheat = toggleCodingAntiCheat;

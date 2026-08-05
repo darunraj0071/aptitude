@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Practice Workstation — Data Structures & Algorithms | VetriPathLearn</title>
     <meta name="description" content="Practice coding problems, data structures, and algorithms for technical interview rounds at TCS, Infosys, Wipro, and Accenture with an interactive code execution sandbox.">
+    <meta name="keywords" content="VetriPathLearn, VetriPath, campus placement preparation, quantitative aptitude, logical reasoning, verbal ability, coding engine, mock test, competitive exams, placement practice questions, career prep portal, offline placement prep, interview prep">
     <!-- Technical SEO Meta Tags -->
     <meta name="google-site-verification" content="h-MC2TSGIWOwB31pbVSr-ttlsnO4Keb3vl3ygZ3WT2s">
     <meta name="robots" content="index, follow">
@@ -395,8 +396,13 @@
                             <button class="lang-tab" data-lang="cpp" onclick="setLanguage('cpp')">C++</button>
                             <button class="lang-tab" data-lang="java" onclick="setLanguage('java')">Java</button>
                         </div>
-                        <div style="color:var(--text-muted); font-size:0.8rem; font-weight:600;">
-                            <i class="fa-solid fa-code"></i> Workspace Editor
+                        <div style="display:flex; align-items:center; gap:0.8rem;">
+                            <button id="btn-anti-cheat-toggle" onclick="toggleCodingAntiCheat()" class="btn btn-secondary" style="padding:0.35rem 0.8rem; font-size:0.78rem; border-radius:20px; border:1px solid rgba(255,255,255,0.15);">
+                                <i class="fa-solid fa-shield-halved" style="color:var(--text-muted);"></i> Proctored Mode
+                            </button>
+                            <div style="color:var(--text-muted); font-size:0.8rem; font-weight:600;">
+                                <i class="fa-solid fa-code"></i> Workspace Editor
+                            </div>
                         </div>
                     </div>
 
@@ -429,6 +435,7 @@
 
     <!-- Script imports -->
     <script src="js/storage.js"></script>
+    <script src="js/cheating_protection.js"></script>
     <script src="js/coding_data.js"></script>
     <script src="js/coding_runner.js"></script>
     <script src="js/coding.js"></script>
