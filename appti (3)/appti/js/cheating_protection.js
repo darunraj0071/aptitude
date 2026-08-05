@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CHEATING_PROTECTION.JS - Global Anti-Copy, Anti-Screenshot & Anti-Google Lens System
+   CHEATING_PROTECTION.JS - Total Screenshot Blocking & Anti-Copy System
    ========================================================================== */
 
 const CheatingProtection = (() => {
@@ -14,63 +14,57 @@ const CheatingProtection = (() => {
     let webcamStream = null;
     let isFullscreenEnforced = false;
     let globalProtectionInitialized = false;
+    let blackoutTimer = null;
 
-    // --- Global Protection (Runs on ALL Workstations & Pages) ---
+    // --- Global Screenshot & Copy Protection ---
     function initGlobalProtection() {
         if (globalProtectionInitialized) return;
         globalProtectionInitialized = true;
 
-        // 1. Create Privacy Screen Curtain DOM element
+        // 1. Inject Privacy Screen Curtain DOM
         createScreenCurtain();
 
-        // 2. Block Copy, Cut, Paste, Right Click, Selection, Drag & Drop globally
-        document.addEventListener('contextmenu', blockInteractionGlobal, true);
-        document.addEventListener('copy', blockInteractionGlobal, true);
-        document.addEventListener('cut', blockInteractionGlobal, true);
-        document.addEventListener('paste', blockInteractionGlobal, true);
-        document.addEventListener('selectstart', blockInteractionGlobal, true);
-        document.addEventListener('dragstart', blockInteractionGlobal, true);
-        document.addEventListener('drop', blockInteractionGlobal, true);
+        // 2. Interaction locks: Block Copy, Cut, Paste, Right-click, Drag-Drop, Selection
+        const options = { capture: true, passive: false };
+        document.addEventListener('contextmenu', blockInteractionGlobal, options);
+        document.addEventListener('copy', blockInteractionGlobal, options);
+        document.addEventListener('cut', blockInteractionGlobal, options);
+        document.addEventListener('paste', blockInteractionGlobal, options);
+        document.addEventListener('selectstart', blockInteractionGlobal, options);
+        document.addEventListener('dragstart', blockInteractionGlobal, options);
+        document.addEventListener('drop', blockInteractionGlobal, options);
 
-        // 3. Monitor Keyboard Shortcuts & Screenshot Keys
-        document.addEventListener('keydown', handleGlobalKeydown, true);
-        document.addEventListener('keyup', handleGlobalKeyup, true);
+        // 3. Screenshot Keys & Combinations Interception (keydown & keyup)
+        window.addEventListener('keydown', handleGlobalKeydown, options);
+        window.addEventListener('keyup', handleGlobalKeyup, options);
 
-        // 4. Clear Clipboard on copy attempts
-        document.addEventListener('copy', sanitizeClipboard, true);
+        // 4. Instant 0ms Blackout on Window Blur & Mouse Leave (Defeats Snipping Tool & Screenshot Overlays)
+        window.addEventListener('blur', handleGlobalBlur, true);
+        window.addEventListener('focus', handleGlobalFocus, true);
+        document.addEventListener('mouseleave', handleGlobalMouseLeave, true);
+        document.addEventListener('mouseenter', handleGlobalMouseEnter, true);
+        document.addEventListener('visibilitychange', handleVisibilityChangeGlobal, true);
 
-        // 5. Anti-Lens / Anti-Screenshot Window Focus Curtain
-        window.addEventListener('blur', handleGlobalBlur);
-        window.addEventListener('focus', handleGlobalFocus);
-        document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                activateScreenShield("Tab switched or Screen capture initiated");
-            } else {
-                deactivateScreenShield();
-            }
-        });
-
-        // 6. Anti-OCR Mutation Observer for Question Rendering
+        // 5. Anti-OCR Noise Obfuscator
         setupAntiOCRObserver();
 
-        console.log("[CheatingProtection]: Global Anti-Copy, Anti-Screenshot & Anti-Google Lens Shield active.");
+        console.log("[CheatingProtection]: Total Screenshot & Anti-Copy Protection Initialized.");
     }
 
     function blockInteractionGlobal(e) {
-        // Prevent default copy/paste/select/contextmenu
         e.preventDefault();
-        
-        // Sanitize selection
+        e.stopPropagation();
+
         if (window.getSelection) {
             window.getSelection().removeAllRanges();
         }
-        
-        // Show brief security notice if attempted
+
+        sanitizeClipboard();
+
         if (e.type === 'copy' || e.type === 'cut' || e.type === 'paste') {
-            sanitizeClipboard();
-            dispatchToast("⚠️ Copy/Paste is disabled on VetriPathLearn to protect exam integrity.", "warning");
+            dispatchToast("⚠️ Copy/Paste is strictly disabled on this workstation.", "warning");
         } else if (e.type === 'contextmenu') {
-            dispatchToast("⚠️ Right-click context menu is disabled on this workstation.", "warning");
+            dispatchToast("⚠️ Right-click context menu is restricted.", "warning");
         }
         return false;
     }
@@ -86,23 +80,22 @@ const CheatingProtection = (() => {
     function handleGlobalKeydown(e) {
         const isCtrl = e.ctrlKey || e.metaKey;
         const key = e.key ? e.key.toLowerCase() : '';
+        const code = e.code ? e.code.toLowerCase() : '';
 
-        // Block PrintScreen / Snipping tool shortcuts / DevTools / Copy-Paste / Save / Print
-        if (
-            e.key === 'PrintScreen' ||
-            (isCtrl && ['c', 'v', 'x', 'u', 's', 'p', 'a'].includes(key)) ||
-            e.key === 'F12' ||
-            (isCtrl && e.shiftKey && ['i', 'j', 'c', 'k', 's'].includes(key)) ||
-            (e.altKey && e.key === 'Tab')
-        ) {
+        // Detect PrintScreen or OS Screenshot Combinations
+        const isPrintScreen = e.key === 'PrintScreen' || key === 'printscreen' || code === 'snapshot' || e.keyCode === 44;
+        const isSnippingTool = (isCtrl && e.shiftKey && (key === 's' || key === 'i' || key === 'j' || key === 'c')) || (e.metaKey && e.shiftKey && ['3', '4', '5'].includes(key));
+        const isRestrictedCombo = (isCtrl && ['c', 'v', 'x', 'u', 's', 'p', 'a'].includes(key)) || e.key === 'F12' || (e.altKey && e.key === 'Tab');
+
+        if (isPrintScreen || isSnippingTool || isRestrictedCombo) {
             e.preventDefault();
             e.stopPropagation();
+            if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+
             sanitizeClipboard();
 
-            if (e.key === 'PrintScreen' || (isCtrl && e.shiftKey && key === 's') || (isCtrl && key === 'p')) {
-                activateScreenShield("Screen Capture or Screenshot Attempt Detected");
-                setTimeout(deactivateScreenShield, 2500);
-                dispatchToast("🚨 Screen capture and screenshots are strictly restricted!", "danger");
+            if (isPrintScreen || isSnippingTool || (isCtrl && key === 'p')) {
+                triggerInstantScreenshotBlackout("🚨 SCREENSHOT / SCREEN CAPTURE BLOCKED");
             } else {
                 dispatchToast("⚠️ Keyboard shortcut disabled for security.", "warning");
             }
@@ -111,25 +104,78 @@ const CheatingProtection = (() => {
     }
 
     function handleGlobalKeyup(e) {
-        if (e.key === 'PrintScreen') {
+        const key = e.key ? e.key.toLowerCase() : '';
+        if (e.key === 'PrintScreen' || key === 'printscreen' || e.keyCode === 44) {
             sanitizeClipboard();
-            activateScreenShield("Screenshot Trigger Detected");
-            setTimeout(deactivateScreenShield, 2500);
+            triggerInstantScreenshotBlackout("🚨 SCREENSHOT ATTEMPT BLOCKED");
         }
     }
 
+    function triggerInstantScreenshotBlackout(reason = "SCREENSHOT BLOCKED") {
+        document.documentElement.classList.add('screenshot-blocked', 'screen-shield-active');
+        document.body.classList.add('screenshot-blocked', 'screen-shield-active');
+        
+        const curtainReason = document.getElementById('security-curtain-reason');
+        if (curtainReason) {
+            curtainReason.textContent = reason;
+        }
+
+        sanitizeClipboard();
+
+        if (blackoutTimer) clearTimeout(blackoutTimer);
+        blackoutTimer = setTimeout(() => {
+            if (!document.hidden && document.hasFocus()) {
+                document.documentElement.classList.remove('screenshot-blocked', 'screen-shield-active');
+                document.body.classList.remove('screenshot-blocked', 'screen-shield-active');
+            }
+        }, 3000);
+    }
+
     function handleGlobalBlur() {
-        // Blur activates privacy screen curtain to prevent Snipping tool / Google Lens overlays
         if (active) {
             recordViolation("Exam window lost focus");
         } else {
-            activateScreenShield("Window focus lost / Lens overlay active");
+            triggerInstantScreenshotBlackout("🔒 Screen Focus Lost / Screenshot Overlay Active");
         }
     }
 
     function handleGlobalFocus() {
         if (!active) {
-            deactivateScreenShield();
+            setTimeout(() => {
+                if (document.hasFocus()) {
+                    document.documentElement.classList.remove('screenshot-blocked', 'screen-shield-active');
+                    document.body.classList.remove('screenshot-blocked', 'screen-shield-active');
+                }
+            }, 300);
+        }
+    }
+
+    function handleGlobalMouseLeave() {
+        if (!active) {
+            triggerInstantScreenshotBlackout("🔒 Screen Capture Restricted outside window");
+        }
+    }
+
+    function handleGlobalMouseEnter() {
+        if (!active && document.hasFocus()) {
+            setTimeout(() => {
+                document.documentElement.classList.remove('screenshot-blocked', 'screen-shield-active');
+                document.body.classList.remove('screenshot-blocked', 'screen-shield-active');
+            }, 200);
+        }
+    }
+
+    function handleVisibilityChangeGlobal() {
+        if (document.hidden) {
+            triggerInstantScreenshotBlackout("🔒 Tab Switched / Screen Capture Active");
+            if (active) {
+                recordViolation("Tab switch / Window minimized detected");
+            }
+        } else if (!active && document.hasFocus()) {
+            setTimeout(() => {
+                document.documentElement.classList.remove('screenshot-blocked', 'screen-shield-active');
+                document.body.classList.remove('screenshot-blocked', 'screen-shield-active');
+            }, 300);
         }
     }
 
@@ -139,33 +185,21 @@ const CheatingProtection = (() => {
             curtain = document.createElement('div');
             curtain.id = 'security-screen-curtain';
             curtain.innerHTML = `
-                <div style="width:75px; height:75px; border-radius:50%; background:rgba(239,68,68,0.2); color:#ef4444; display:flex; align-items:center; justify-content:center; font-size:2.5rem; margin-bottom:1.5rem; border:1px solid rgba(239,68,68,0.4); box-shadow:0 0 30px rgba(239,68,68,0.4);">
-                    <i class="fa-solid fa-user-shield"></i>
+                <div style="width:80px; height:80px; border-radius:50%; background:rgba(239,68,68,0.2); color:#ef4444; display:flex; align-items:center; justify-content:center; font-size:2.8rem; margin-bottom:1.5rem; border:2px solid rgba(239,68,68,0.6); box-shadow:0 0 40px rgba(239,68,68,0.5);">
+                    <i class="fa-solid fa-camera-slash"></i>
                 </div>
-                <h2 style="font-size:1.8rem; margin-bottom:0.6rem; color:#ffffff; font-weight:800;">Security Content Shield</h2>
-                <p id="security-curtain-reason" style="color:#f87171; font-weight:600; font-size:1.05rem; margin-bottom:1rem;">
-                    Screen Capture / Google Lens Scan Restricted
+                <h2 style="font-size:2rem; margin-bottom:0.8rem; color:#ffffff; font-weight:800; font-family:sans-serif;">SCREENSHOT RESTRICTED</h2>
+                <p id="security-curtain-reason" style="color:#f87171; font-weight:700; font-size:1.1rem; margin-bottom:1.2rem; font-family:sans-serif;">
+                    Screen capture, printing, and Google Lens scans are strictly disabled.
                 </p>
-                <div style="background:rgba(255,255,255,0.05); padding:1rem 1.8rem; border-radius:30px; font-size:0.88rem; color:#cbd5e1; border:1px solid rgba(255,255,255,0.1);">
-                    Click back inside the VetriPathLearn workspace window to restore content.
+                <div style="background:rgba(255,255,255,0.06); padding:1rem 2rem; border-radius:30px; font-size:0.9rem; color:#cbd5e1; border:1px solid rgba(255,255,255,0.12); font-family:sans-serif;">
+                    Click back inside the VetriPathLearn workspace window to resume.
                 </div>
             `;
             document.body.appendChild(curtain);
         }
     }
 
-    function activateScreenShield(reason = "Content Protected") {
-        document.body.classList.add('screen-shield-active');
-        const reasonEl = document.getElementById('security-curtain-reason');
-        if (reasonEl) reasonEl.textContent = reason;
-    }
-
-    function deactivateScreenShield() {
-        document.body.classList.remove('screen-shield-active');
-    }
-
-    // Anti-Google Lens / OCR Scrambler logic:
-    // Injects zero-width space noise (\u200B) into text nodes of questions to corrupt OCR matrix text parsing without altering human presentation.
     function setupAntiOCRObserver() {
         const injectOCRNoise = (container) => {
             if (!container) return;
@@ -174,12 +208,10 @@ const CheatingProtection = (() => {
                 if (node.getAttribute('data-anti-ocr') === 'true') return;
                 node.setAttribute('data-anti-ocr', 'true');
                 
-                // Add hidden zero-width spaces in text child nodes
                 const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, null, false);
                 let textNode;
                 while (textNode = walker.nextNode()) {
                     if (textNode.nodeValue && textNode.nodeValue.length > 5) {
-                        // Inject zero width non-breaking space between characters
                         textNode.nodeValue = textNode.nodeValue.split('').join('\u200B');
                     }
                 }
@@ -199,17 +231,7 @@ const CheatingProtection = (() => {
         observer.observe(document.body, { childList: true, subtree: true });
     }
 
-    // --- Examination Focus Proctoring Engine ---
-    function handleVisibilityChange() {
-        if (document.hidden) {
-            recordViolation("Tab switch / Window minimized detected");
-        }
-    }
-
-    function handleWindowBlur() {
-        recordViolation("Exam window lost focus");
-    }
-
+    // --- Timed Examination Focus Engine ---
     function handleFullscreenChange() {
         if (!active || !isFullscreenEnforced) return;
         const isFS = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
@@ -222,7 +244,6 @@ const CheatingProtection = (() => {
         if (!active || gracePeriodActive) return;
 
         const now = Date.now();
-        // Debounce violation triggers within 1.2s
         if (now - lastViolationTime < 1200) {
             return;
         }
@@ -267,13 +288,10 @@ const CheatingProtection = (() => {
         if (!badge || !active) return;
 
         let statusColor = '#10b981'; // Green
-        let statusText = 'SECURE';
         if (warningCount === 1) {
             statusColor = '#f59e0b'; // Yellow
-            statusText = 'WARNING (1/3)';
         } else if (warningCount >= 2) {
             statusColor = '#ef4444'; // Red
-            statusText = 'CRITICAL (2/3)';
         }
 
         badge.innerHTML = `
@@ -405,7 +423,6 @@ const CheatingProtection = (() => {
         violationCallback = options.onViolation || null;
         isFullscreenEnforced = !!options.enableFullscreen;
 
-        // Activate Grace Period (2.0 seconds) so starting clicks/modals don't trigger false positives
         gracePeriodActive = true;
         if (gracePeriodTimer) clearTimeout(gracePeriodTimer);
         gracePeriodTimer = setTimeout(() => {
@@ -424,7 +441,7 @@ const CheatingProtection = (() => {
         }
 
         createSecurityBadge();
-        console.log(`[CheatingProtection]: Exam focus active with max ${maxViolations} allowed violations.`);
+        console.log(`[CheatingProtection]: Exam focus mode enabled.`);
     }
 
     function disable() {
@@ -449,7 +466,7 @@ const CheatingProtection = (() => {
         const violationModal = document.getElementById('cheat-violation-modal');
         if (violationModal) violationModal.remove();
 
-        console.log("[CheatingProtection]: Exam focus disabled cleanly.");
+        console.log("[CheatingProtection]: Exam focus mode disabled.");
     }
 
     function showSecurityConsent(onConfirm, options = {}) {
@@ -483,8 +500,8 @@ const CheatingProtection = (() => {
                         <span>The test will launch in <strong>Fullscreen Mode</strong> for focus.</span>
                     </div>
                     <div style="display: flex; align-items: start; gap: 0.8rem; font-size: 0.85rem; color: #cbd5e1;">
-                        <i class="fa-solid fa-copy" style="color:#ef476f; margin-top: 0.2rem;"></i>
-                        <span>Copying, pasting, right-clicks, and keyboard shortcuts are disabled.</span>
+                        <i class="fa-solid fa-camera-slash" style="color:#ef476f; margin-top: 0.2rem;"></i>
+                        <span>Screenshots, copy/paste, and screen capture tools are strictly blocked.</span>
                     </div>
                     <div style="display: flex; align-items: start; gap: 0.8rem; font-size: 0.85rem; color: #cbd5e1;">
                         <i class="fa-solid fa-layer-group" style="color:#f59e0b; margin-top: 0.2rem;"></i>
@@ -531,6 +548,7 @@ const CheatingProtection = (() => {
         disable,
         showSecurityConsent,
         initGlobalProtection,
+        triggerInstantScreenshotBlackout,
         isActive: () => active,
         getViolationCount: () => warningCount
     };

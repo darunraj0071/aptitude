@@ -987,21 +987,34 @@ body::after {
 
 /* 3. Anti-Print Security Lockdown */
 @media print {
-    html, body {
+    html, body, #app-content, main, div, iframe {
         display: none !important;
         visibility: hidden !important;
         opacity: 0 !important;
+        background: #000000 !important;
     }
 }
 
-/* 4. Privacy Screen Shield & Screenshot Curtain */
+/* 4. Instant 0ms Blackout Screen Shield & Screenshot Curtain */
+html.screen-shield-active,
+body.screen-shield-active,
+html.screenshot-blocked,
+body.screenshot-blocked {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    overflow: hidden !important;
+}
+
 body.screen-shield-active #app-content,
 body.screen-shield-active main,
 body.screen-shield-active .practice-container,
 body.screen-shield-active .coding-container,
-body.screen-shield-active .mock-container {
-    filter: blur(40px) brightness(0.2) !important;
-    transition: filter 0.15s ease-in-out;
+body.screen-shield-active .mock-container,
+html.screenshot-blocked body *,
+body.screenshot-blocked * {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    filter: blur(100px) brightness(0) !important;
     pointer-events: none !important;
 }
 
@@ -1009,9 +1022,9 @@ body.screen-shield-active .mock-container {
     display: none;
     position: fixed;
     top: 0; left: 0; width: 100vw; height: 100vh;
-    background: rgba(4, 6, 14, 0.96);
-    z-index: 999999;
-    backdrop-filter: blur(25px);
+    background: #02040a !important;
+    z-index: 99999999 !important;
+    backdrop-filter: blur(40px);
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1021,7 +1034,11 @@ body.screen-shield-active .mock-container {
     box-sizing: border-box;
 }
 
-body.screen-shield-active #security-screen-curtain {
-    display: flex;
-    animation: fadeIn 0.2s ease;
+body.screen-shield-active #security-screen-curtain,
+html.screenshot-blocked #security-screen-curtain,
+body.screenshot-blocked #security-screen-curtain {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    animation: fadeIn 0.1s ease;
 }
