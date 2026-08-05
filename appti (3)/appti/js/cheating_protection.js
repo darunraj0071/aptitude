@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CHEATING_PROTECTION.JS - Seamless Anti-Copy, Anti-Screenshot & Proctoring System
+   CHEATING_PROTECTION.JS - Seamless Anti-Copy, Anti-Screenshot & Coding Editor Support
    ========================================================================== */
 
 const CheatingProtection = (() => {
@@ -15,6 +15,12 @@ const CheatingProtection = (() => {
     let isFullscreenEnforced = false;
     let globalProtectionInitialized = false;
     let blackoutTimer = null;
+
+    function isEditableElement(el) {
+        if (!el) return false;
+        const tag = el.tagName ? el.tagName.toLowerCase() : '';
+        return tag === 'textarea' || tag === 'input' || el.isContentEditable || el.classList.contains('editor-textarea') || el.id === 'code-editor';
+    }
 
     // --- Global Protection (Active across website without breaking UX) ---
     function initGlobalProtection() {
@@ -34,7 +40,7 @@ const CheatingProtection = (() => {
         document.addEventListener('dragstart', blockInteractionGlobal, options);
         document.addEventListener('drop', blockInteractionGlobal, options);
 
-        // Mobile Selection Clearer (Stops long-press selection handles on mobile browsers)
+        // Mobile Selection Clearer (Stops long-press selection handles on question text)
         document.addEventListener('selectionchange', clearMobileSelection, true);
         document.addEventListener('touchstart', handleTouchStartMobile, options);
         document.addEventListener('touchend', clearMobileSelection, options);
@@ -51,10 +57,15 @@ const CheatingProtection = (() => {
         // 5. Anti-OCR Noise Obfuscator
         setupAntiOCRObserver();
 
-        console.log("[CheatingProtection]: Mobile & Desktop Anti-Copy, Anti-Screenshot Shield active.");
+        console.log("[CheatingProtection]: Mobile & Desktop Anti-Copy, Anti-Screenshot Shield active (Code Editor Editable).");
     }
 
-    function clearMobileSelection() {
+    function clearMobileSelection(e) {
+        const activeEl = document.activeElement;
+        const target = e ? e.target : null;
+        if (isEditableElement(activeEl) || isEditableElement(target)) {
+            return; // Allow cursor and text selection inside coding workstation editor & inputs!
+        }
         if (window.getSelection) {
             const sel = window.getSelection();
             if (sel && sel.rangeCount > 0) {
@@ -64,12 +75,15 @@ const CheatingProtection = (() => {
     }
 
     function handleTouchStartMobile(e) {
+        if (isEditableElement(e.target)) {
+            return; // Allow typing & touch focus in code editor!
+        }
         // Prevent multi-touch screenshot gestures (3-finger swipe down)
         if (e.touches && e.touches.length > 2) {
             e.preventDefault();
             triggerInstantScreenshotBlackout("🚨 Multi-touch Screenshot Gesture Blocked");
         }
-        clearMobileSelection();
+        clearMobileSelection(e);
     }
 
     function handleMobileScreenshotShield() {
@@ -87,6 +101,19 @@ const CheatingProtection = (() => {
     }
 
     function blockInteractionGlobal(e) {
+        const target = e.target;
+        if (isEditableElement(target)) {
+            if (e.type === 'selectstart' || e.type === 'contextmenu') {
+                return true; // Allow selecting & clicking inside code editor!
+            }
+            if (e.type === 'paste') {
+                e.preventDefault();
+                dispatchToast("⚠️ Paste is disabled in the Coding editor. Type your solution!", "warning");
+                return false;
+            }
+            return true;
+        }
+
         e.preventDefault();
         e.stopPropagation();
 
@@ -103,6 +130,11 @@ const CheatingProtection = (() => {
     }
 
     function handleCopyGlobal(e) {
+        if (isEditableElement(e.target)) {
+            // Allow selecting text inside code editor if student wants to review code
+            return true;
+        }
+
         e.preventDefault();
         e.stopPropagation();
 
@@ -110,7 +142,6 @@ const CheatingProtection = (() => {
             window.getSelection().removeAllRanges();
         }
 
-        // Silently clear clipboard payload without browser permission prompt
         if (e.clipboardData) {
             e.clipboardData.setData('text/plain', '');
         }
@@ -120,6 +151,9 @@ const CheatingProtection = (() => {
     }
 
     function handleGlobalKeydown(e) {
+        const target = e.target;
+        const isEditing = isEditableElement(target);
+
         const isCtrl = e.ctrlKey || e.metaKey;
         const key = e.key ? e.key.toLowerCase() : '';
         const code = e.code ? e.code.toLowerCase() : '';
@@ -127,7 +161,7 @@ const CheatingProtection = (() => {
         // Detect PrintScreen / OS Screenshot / Snipping Tool / Save / Print Shortcuts
         const isPrintScreen = e.key === 'PrintScreen' || key === 'printscreen' || code === 'snapshot' || e.keyCode === 44;
         const isSnippingTool = (isCtrl && e.shiftKey && (key === 's' || key === 'i' || key === 'j' || key === 'c')) || (e.metaKey && e.shiftKey && ['3', '4', '5'].includes(key));
-        const isRestrictedCombo = (isCtrl && ['c', 'v', 'x', 'u', 's', 'p', 'a'].includes(key)) || e.key === 'F12';
+        const isRestrictedCombo = (isCtrl && (key === 'p' || key === 'u' || key === 's')) || e.key === 'F12';
 
         if (isPrintScreen || isSnippingTool || isRestrictedCombo) {
             e.preventDefault();
@@ -137,8 +171,26 @@ const CheatingProtection = (() => {
             if (isPrintScreen || isSnippingTool || (isCtrl && key === 'p')) {
                 triggerInstantScreenshotBlackout("🚨 SCREENSHOT / SCREEN CAPTURE RESTRICTED");
             } else {
-                dispatchToast("⚠️ Keyboard shortcut disabled for security.", "warning");
+                dispatchToast("⚠️ Restricted shortcut key.", "warning");
             }
+            return false;
+        }
+
+        // Allow normal typing inside code editor & input fields!
+        if (isEditing) {
+            if (isCtrl && key === 'v') {
+                e.preventDefault();
+                dispatchToast("⚠️ Paste is disabled in the Coding editor. Please type your code!", "warning");
+                return false;
+            }
+            return true; // 100% UNLOCKED TYPING IN EDITOR!
+        }
+
+        // Outside code editor: restrict copy/paste key combos
+        if (isCtrl && ['c', 'v', 'x', 'u', 's', 'p', 'a'].includes(key)) {
+            e.preventDefault();
+            e.stopPropagation();
+            dispatchToast("⚠️ Copying text is restricted on VetriPathLearn.", "warning");
             return false;
         }
     }
