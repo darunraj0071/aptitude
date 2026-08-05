@@ -934,7 +934,9 @@ body::after {
    GLOBAL ANTI-COPY, ANTI-SCREENSHOT & ANTI-GOOGLE-LENS SECURITY SYSTEM
    ========================================================================== */
 
-/* 1. Global Text Selection & Touch Callout Lock */
+/* 1. Global & Mobile Text Selection & Touch Callout Lock */
+*, *::before, *::after,
+html, body, div, span, p, a, h1, h2, h3, h4, h5, h6, input, textarea, button, form, label, article, section, main, header, footer, nav,
 .unselectable,
 .question-card,
 .question-text,
@@ -954,9 +956,11 @@ body::after {
 .glass-panel {
     user-select: none !important;
     -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
     -moz-user-select: none !important;
     -ms-user-select: none !important;
     -webkit-touch-callout: none !important;
+    -webkit-tap-highlight-color: transparent !important;
 }
 
 /* 2. Anti-OCR / Google Lens Deterrent Micro-Grid Pattern */
@@ -995,11 +999,13 @@ body::after {
     }
 }
 
-/* 4. Instant 0ms Blackout Screen Shield & Screenshot Curtain */
+/* 4. Instant 0ms Blackout Screen Shield, Mobile Screenshot Shield & Curtain */
 html.screen-shield-active,
 body.screen-shield-active,
 html.screenshot-blocked,
-body.screenshot-blocked {
+body.screenshot-blocked,
+html.mobile-screenshot-blackout,
+body.mobile-screenshot-blackout {
     background: #000000 !important;
     background-color: #000000 !important;
     overflow: hidden !important;
@@ -1011,9 +1017,12 @@ body.screen-shield-active .practice-container,
 body.screen-shield-active .coding-container,
 body.screen-shield-active .mock-container,
 html.screenshot-blocked body *,
-body.screenshot-blocked * {
+body.screenshot-blocked *,
+html.mobile-screenshot-blackout body *,
+body.mobile-screenshot-blackout * {
     visibility: hidden !important;
     opacity: 0 !important;
+    color: transparent !important;
     filter: blur(100px) brightness(0) !important;
     pointer-events: none !important;
 }
@@ -1036,7 +1045,9 @@ body.screenshot-blocked * {
 
 body.screen-shield-active #security-screen-curtain,
 html.screenshot-blocked #security-screen-curtain,
-body.screenshot-blocked #security-screen-curtain {
+body.screenshot-blocked #security-screen-curtain,
+html.mobile-screenshot-blackout #security-screen-curtain,
+body.mobile-screenshot-blackout #security-screen-curtain {
     display: flex !important;
     visibility: visible !important;
     opacity: 1 !important;

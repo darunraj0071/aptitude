@@ -34,14 +34,56 @@ const CheatingProtection = (() => {
         document.addEventListener('dragstart', blockInteractionGlobal, options);
         document.addEventListener('drop', blockInteractionGlobal, options);
 
-        // 3. Screenshot Keys & Shortcut Interception (keydown & keyup)
+        // Mobile Selection Clearer (Stops long-press selection handles on mobile browsers)
+        document.addEventListener('selectionchange', clearMobileSelection, true);
+        document.addEventListener('touchstart', handleTouchStartMobile, options);
+        document.addEventListener('touchend', clearMobileSelection, options);
+
+        // 3. Mobile Phone & Browser Screenshot Detection (Page Lifecycle API & Focus Loss)
+        window.addEventListener('pagehide', handleMobileScreenshotShield, true);
+        document.addEventListener('freeze', handleMobileScreenshotShield, true);
+        document.addEventListener('visibilitychange', handleVisibilityChangeMobile, true);
+
+        // 4. Screenshot Keys & Shortcut Interception (keydown & keyup)
         window.addEventListener('keydown', handleGlobalKeydown, options);
         window.addEventListener('keyup', handleGlobalKeyup, options);
 
-        // 4. Anti-OCR Noise Obfuscator
+        // 5. Anti-OCR Noise Obfuscator
         setupAntiOCRObserver();
 
-        console.log("[CheatingProtection]: Anti-Copy & Anti-Screenshot Shield active (No permission prompts).");
+        console.log("[CheatingProtection]: Mobile & Desktop Anti-Copy, Anti-Screenshot Shield active.");
+    }
+
+    function clearMobileSelection() {
+        if (window.getSelection) {
+            const sel = window.getSelection();
+            if (sel && sel.rangeCount > 0) {
+                sel.removeAllRanges();
+            }
+        }
+    }
+
+    function handleTouchStartMobile(e) {
+        // Prevent multi-touch screenshot gestures (3-finger swipe down)
+        if (e.touches && e.touches.length > 2) {
+            e.preventDefault();
+            triggerInstantScreenshotBlackout("🚨 Multi-touch Screenshot Gesture Blocked");
+        }
+        clearMobileSelection();
+    }
+
+    function handleMobileScreenshotShield() {
+        document.documentElement.classList.add('mobile-screenshot-blackout');
+    }
+
+    function handleVisibilityChangeMobile() {
+        if (document.hidden) {
+            document.documentElement.classList.add('mobile-screenshot-blackout');
+        } else {
+            setTimeout(() => {
+                document.documentElement.classList.remove('mobile-screenshot-blackout');
+            }, 400);
+        }
     }
 
     function blockInteractionGlobal(e) {
