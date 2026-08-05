@@ -245,35 +245,52 @@ const CheatingProtection = (() => {
         }
     }
 
+    const HOMOGLYPH_MAP = {
+        'a': 'а', 'e': 'е', 'o': 'о', 'p': 'р', 'c': 'с', 'y': 'у', 'x': 'х', 'i': 'і',
+        'A': 'А', 'B': 'В', 'E': 'Е', 'K': 'К', 'M': 'М', 'H': 'Н', 'O': 'О', 'P': 'Р',
+        'C': 'С', 'T': 'Т', 'X': 'Х'
+    };
+
+    function scrambleTextForAntiOCR(text) {
+        if (!text || text.length < 3) return text;
+        return text.split('').map((ch, idx) => {
+            if (HOMOGLYPH_MAP[ch] && (idx % 2 === 0 || idx % 3 === 0)) {
+                return HOMOGLYPH_MAP[ch];
+            }
+            return ch;
+        }).join('\u200B');
+    }
+
     function setupAntiOCRObserver() {
-        const injectOCRNoise = (container) => {
+        const obfuscateNodes = (container) => {
             if (!container) return;
-            const targetNodes = container.querySelectorAll('.question-text, .question-body, .problem-desc, .option-text, #sol-explanation');
+            const targetNodes = container.querySelectorAll('.question-text, .question-body, .problem-desc, .option-text, .solution-subcard p, #sol-explanation, #ws-topic-title');
+            
             targetNodes.forEach(node => {
-                if (node.getAttribute('data-anti-ocr') === 'true') return;
-                node.setAttribute('data-anti-ocr', 'true');
+                if (node.getAttribute('data-anti-lens') === 'true' || isEditableElement(node)) return;
+                node.setAttribute('data-anti-lens', 'true');
                 
                 const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, null, false);
                 let textNode;
+                const nodesToProcess = [];
                 while (textNode = walker.nextNode()) {
-                    if (textNode.nodeValue && textNode.nodeValue.length > 5) {
-                        textNode.nodeValue = textNode.nodeValue.split('').join('\u200B');
+                    if (textNode.nodeValue && textNode.nodeValue.trim().length > 3) {
+                        nodesToProcess.push(textNode);
                     }
                 }
+                
+                nodesToProcess.forEach(tNode => {
+                    tNode.nodeValue = scrambleTextForAntiOCR(tNode.nodeValue);
+                });
             });
         };
 
         const observer = new MutationObserver(() => {
-            const quizContainer = document.getElementById('quiz-question-area') || 
-                                  document.getElementById('mock-exam-workspace') || 
-                                  document.getElementById('quiz-panel') ||
-                                  document.querySelector('.coding-container');
-            if (quizContainer) {
-                injectOCRNoise(quizContainer);
-            }
+            obfuscateNodes(document.body);
         });
 
         observer.observe(document.body, { childList: true, subtree: true });
+        obfuscateNodes(document.body);
     }
 
     // --- Timed Examination Focus Engine (Active during Tests/Mocks) ---
