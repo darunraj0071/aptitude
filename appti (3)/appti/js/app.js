@@ -418,7 +418,7 @@ function initApkPromoModal() {
         `;
 
         modal.innerHTML = `
-            <div class="glass-panel" style="width: 100%; max-width: 490px; border-radius: 22px; padding: 2.2rem; border: 1.5px solid rgba(127, 90, 240, 0.4); background: radial-gradient(circle at top right, rgba(127, 90, 240, 0.22) 0%, rgba(15, 14, 23, 0.96) 80%); box-shadow: 0 25px 60px rgba(0,0,0,0.8); display: flex; flex-direction: column; gap: 1.2rem; text-align: center; position: relative; animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+            <div class="glass-panel" style="width: 100%; max-width: 460px; border-radius: 22px; padding: 2.2rem; border: 1.5px solid rgba(127, 90, 240, 0.4); background: radial-gradient(circle at top right, rgba(127, 90, 240, 0.22) 0%, rgba(15, 14, 23, 0.96) 80%); box-shadow: 0 25px 60px rgba(0,0,0,0.8); display: flex; flex-direction: column; gap: 1.4rem; text-align: center; position: relative; animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
                 <button id="apk-modal-close-x" style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.08); border: none; color: #94a1b2; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1rem; transition: 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'; this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.color='#94a1b2'">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
@@ -428,31 +428,16 @@ function initApkPromoModal() {
                 </div>
 
                 <div>
-                    <span style="background: rgba(127, 90, 240, 0.2); color: #a78bfa; padding: 0.25rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(127, 90, 240, 0.3);">Official App Recommendation</span>
-                    <h3 style="margin: 0.6rem 0 0.4rem; font-size: 1.5rem; font-family: var(--font-heading); font-weight: 800; color: #ffffff;">Download APK to Try All Features!</h3>
-                    <p style="margin: 0; color: #94a1b2; font-size: 0.9rem; line-height: 1.5;">
-                        Get the official <strong>VetriPathLearn Android App</strong> for 100% offline practice, full hardware FLAG_SECURE anti-cheat protection, instant code execution, and performance analytics!
+                    <span style="background: rgba(127, 90, 240, 0.2); color: #a78bfa; padding: 0.25rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(127, 90, 240, 0.3);">Official App Notice</span>
+                    <h3 style="margin: 0.6rem 0 0.5rem; font-size: 1.5rem; font-family: var(--font-heading); font-weight: 800; color: #ffffff;">Try High-End Features in APK!</h3>
+                    <p style="margin: 0; color: #94a1b2; font-size: 0.93rem; line-height: 1.6;">
+                        Some features are not available on the website. Download the official <strong>VetriPathLearn Android APK</strong> to experience high-end features and full performance!
                     </p>
                 </div>
 
-                <div style="text-align: left; background: rgba(255,255,255,0.03); border-radius: 12px; padding: 1rem 1.2rem; display: flex; flex-direction: column; gap: 0.6rem; border: 1px solid rgba(255,255,255,0.06);">
-                    <div style="display: flex; align-items: center; gap: 0.7rem; font-size: 0.85rem; color: #cbd5e1;">
-                        <i class="fa-solid fa-bolt" style="color: #10b981;"></i>
-                        <span><strong>100% Offline Mode:</strong> Practice without internet</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.7rem; font-size: 0.85rem; color: #cbd5e1;">
-                        <i class="fa-solid fa-shield-halved" style="color: #7f5af0;"></i>
-                        <span><strong>FLAG_SECURE Lock:</strong> Full screenshot & screen recorder block</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.7rem; font-size: 0.85rem; color: #cbd5e1;">
-                        <i class="fa-solid fa-code" style="color: #06b6d4;"></i>
-                        <span><strong>Coding Workstation:</strong> Pre-built compilers & offline execution</span>
-                    </div>
-                </div>
-
-                <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-top: 0.3rem;">
-                    <a href="VetriPathLearn.apk" download="VetriPathLearn.apk" id="apk-modal-download-btn" class="btn btn-primary" style="padding: 0.9rem 1.5rem; border-radius: 30px; font-weight: 800; font-size: 1rem; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.6rem; background: linear-gradient(135deg, #7f5af0 0%, #2cb67d 100%); border: none; box-shadow: 0 10px 25px rgba(127, 90, 240, 0.4);">
-                        <i class="fa-solid fa-download"></i> Download Android APK Now
+                <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-top: 0.5rem;">
+                    <a href="VetriPathLearn.apk" download="VetriPathLearn.apk" id="apk-modal-download-btn" class="btn btn-primary" style="padding: 0.95rem 1.5rem; border-radius: 30px; font-weight: 800; font-size: 1rem; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.6rem; background: linear-gradient(135deg, #7f5af0 0%, #2cb67d 100%); border: none; box-shadow: 0 10px 25px rgba(127, 90, 240, 0.4);">
+                        <i class="fa-solid fa-download"></i> Download Android APK
                     </a>
                     <button id="apk-modal-dismiss-btn" style="background: transparent; border: none; color: #94a1b2; font-size: 0.85rem; cursor: pointer; padding: 0.4rem; transition: 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#94a1b2'">
                         Continue Browsing Web Version

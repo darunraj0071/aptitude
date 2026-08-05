@@ -246,19 +246,83 @@ const CheatingProtection = (() => {
     }
 
     const HOMOGLYPH_MAP = {
-        'a': 'а', 'e': 'е', 'o': 'о', 'p': 'р', 'c': 'с', 'y': 'у', 'x': 'х', 'i': 'і',
-        'A': 'А', 'B': 'В', 'E': 'Е', 'K': 'К', 'M': 'М', 'H': 'Н', 'O': 'О', 'P': 'Р',
-        'C': 'С', 'T': 'Т', 'X': 'Х'
+        'a': 'а', 'e': 'е', 'o': 'о', 'p': 'р', 'c': 'с', 'y': 'у', 'x': 'х', 'i': 'і', 'u': 'υ', 'n': 'ո',
+        'A': 'А', 'B': 'В', 'E': 'Е', 'K': 'К', 'M': 'М', 'H': 'Н', 'O': 'О', 'P': 'Р', 'C': 'С', 'T': 'Т', 'X': 'Х'
     };
 
     function scrambleTextForAntiOCR(text) {
-        if (!text || text.length < 3) return text;
-        return text.split('').map((ch, idx) => {
-            if (HOMOGLYPH_MAP[ch] && (idx % 2 === 0 || idx % 3 === 0)) {
-                return HOMOGLYPH_MAP[ch];
-            }
-            return ch;
+        if (!text || text.length < 2) return text;
+        return text.split('').map((ch) => {
+            return HOMOGLYPH_MAP[ch] || ch;
         }).join('\u200B');
+    }
+
+    function renderAntiLensCanvasText(container, text, options = {}) {
+        if (!container || !text) return;
+        
+        container.innerHTML = '';
+        container.setAttribute('data-anti-lens', 'true');
+
+        const dpr = window.devicePixelRatio || 1;
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+
+        const fontSize = options.fontSize || 16;
+        const fontFamily = options.fontFamily || "'Outfit', 'Inter', sans-serif";
+        const color = options.color || '#f8fafc';
+        const maxWidth = Math.max(container.clientWidth || 550, 300);
+        const lineHeight = fontSize * 1.55;
+
+        // Wrap text
+        ctx.font = `600 ${fontSize}px ${fontFamily}`;
+        const words = text.split(' ');
+        const lines = [];
+        let currentLine = words[0] || '';
+
+        for (let i = 1; i < words.length; i++) {
+            const word = words[i];
+            const width = ctx.measureText(currentLine + " " + word).width;
+            if (width < maxWidth - 15) {
+                currentLine += " " + word;
+            } else {
+                lines.push(currentLine);
+                currentLine = word;
+            }
+        }
+        lines.push(currentLine);
+
+        canvas.width = maxWidth * dpr;
+        canvas.height = (lines.length * lineHeight + 15) * dpr;
+        canvas.style.width = `${maxWidth}px`;
+        canvas.style.height = `${lines.length * lineHeight + 15}px`;
+        canvas.style.display = 'block';
+
+        ctx.scale(dpr, dpr);
+        ctx.font = `600 ${fontSize}px ${fontFamily}`;
+        ctx.fillStyle = color;
+        ctx.textBaseline = 'top';
+
+        // Draw text with 0.25px Anti-OCR bounding box micro-jitter
+        lines.forEach((line, lineIdx) => {
+            const y = lineIdx * lineHeight + 8;
+            let x = 0;
+
+            for (let c = 0; c < line.length; c++) {
+                const char = line[c];
+                const displayChar = HOMOGLYPH_MAP[char] || char;
+                const jitterY = (c % 2 === 0 ? 0.25 : -0.25);
+                ctx.fillText(displayChar, x, y + jitterY);
+                x += ctx.measureText(char).width;
+            }
+        });
+
+        // Anti-OCR scan mesh
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.02)';
+        for (let py = 0; py < canvas.height / dpr; py += 3) {
+            ctx.fillRect(0, py, maxWidth, 1);
+        }
+
+        container.appendChild(canvas);
     }
 
     function setupAntiOCRObserver() {
@@ -267,14 +331,14 @@ const CheatingProtection = (() => {
             const targetNodes = container.querySelectorAll('.question-text, .question-body, .problem-desc, .option-text, .solution-subcard p, #sol-explanation, #ws-topic-title');
             
             targetNodes.forEach(node => {
-                if (node.getAttribute('data-anti-lens') === 'true' || isEditableElement(node)) return;
+                if (node.getAttribute('data-anti-lens') === 'true' || isEditableElement(node) || node.querySelector('canvas')) return;
                 node.setAttribute('data-anti-lens', 'true');
                 
                 const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, null, false);
                 let textNode;
                 const nodesToProcess = [];
                 while (textNode = walker.nextNode()) {
-                    if (textNode.nodeValue && textNode.nodeValue.trim().length > 3) {
+                    if (textNode.nodeValue && textNode.nodeValue.trim().length > 2) {
                         nodesToProcess.push(textNode);
                     }
                 }
@@ -630,6 +694,8 @@ const CheatingProtection = (() => {
         initGlobalProtection,
         triggerInstantScreenshotBlackout,
         restoreScreenNormal,
+        renderAntiLensCanvasText,
+        scrambleTextForAntiOCR,
         isActive: () => active,
         getViolationCount: () => warningCount
     };
