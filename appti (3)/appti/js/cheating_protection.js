@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CHEATING_PROTECTION.JS - Advanced Client-Side Exam Proctoring & Focus System
+   CHEATING_PROTECTION.JS - Global Anti-Copy, Anti-Screenshot & Anti-Google Lens System
    ========================================================================== */
 
 const CheatingProtection = (() => {
@@ -13,32 +13,193 @@ const CheatingProtection = (() => {
     let gracePeriodTimer = null;
     let webcamStream = null;
     let isFullscreenEnforced = false;
+    let globalProtectionInitialized = false;
 
-    function blockInteractions(e) {
-        if (!active) return;
-        e.preventDefault();
-        dispatchToast("⚠️ Action restricted! Copy, paste, right-click and text selection are disabled during exams.", "warning");
+    // --- Global Protection (Runs on ALL Workstations & Pages) ---
+    function initGlobalProtection() {
+        if (globalProtectionInitialized) return;
+        globalProtectionInitialized = true;
+
+        // 1. Create Privacy Screen Curtain DOM element
+        createScreenCurtain();
+
+        // 2. Block Copy, Cut, Paste, Right Click, Selection, Drag & Drop globally
+        document.addEventListener('contextmenu', blockInteractionGlobal, true);
+        document.addEventListener('copy', blockInteractionGlobal, true);
+        document.addEventListener('cut', blockInteractionGlobal, true);
+        document.addEventListener('paste', blockInteractionGlobal, true);
+        document.addEventListener('selectstart', blockInteractionGlobal, true);
+        document.addEventListener('dragstart', blockInteractionGlobal, true);
+        document.addEventListener('drop', blockInteractionGlobal, true);
+
+        // 3. Monitor Keyboard Shortcuts & Screenshot Keys
+        document.addEventListener('keydown', handleGlobalKeydown, true);
+        document.addEventListener('keyup', handleGlobalKeyup, true);
+
+        // 4. Clear Clipboard on copy attempts
+        document.addEventListener('copy', sanitizeClipboard, true);
+
+        // 5. Anti-Lens / Anti-Screenshot Window Focus Curtain
+        window.addEventListener('blur', handleGlobalBlur);
+        window.addEventListener('focus', handleGlobalFocus);
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                activateScreenShield("Tab switched or Screen capture initiated");
+            } else {
+                deactivateScreenShield();
+            }
+        });
+
+        // 6. Anti-OCR Mutation Observer for Question Rendering
+        setupAntiOCRObserver();
+
+        console.log("[CheatingProtection]: Global Anti-Copy, Anti-Screenshot & Anti-Google Lens Shield active.");
     }
 
-    function handleKeyDown(e) {
-        if (!active) return;
+    function blockInteractionGlobal(e) {
+        // Prevent default copy/paste/select/contextmenu
+        e.preventDefault();
+        
+        // Sanitize selection
+        if (window.getSelection) {
+            window.getSelection().removeAllRanges();
+        }
+        
+        // Show brief security notice if attempted
+        if (e.type === 'copy' || e.type === 'cut' || e.type === 'paste') {
+            sanitizeClipboard();
+            dispatchToast("⚠️ Copy/Paste is disabled on VetriPathLearn to protect exam integrity.", "warning");
+        } else if (e.type === 'contextmenu') {
+            dispatchToast("⚠️ Right-click context menu is disabled on this workstation.", "warning");
+        }
+        return false;
+    }
+
+    function sanitizeClipboard() {
+        try {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText("🔒 Content protected on VetriPathLearn.");
+            }
+        } catch (err) {}
+    }
+
+    function handleGlobalKeydown(e) {
         const isCtrl = e.ctrlKey || e.metaKey;
         const key = e.key ? e.key.toLowerCase() : '';
-        
+
+        // Block PrintScreen / Snipping tool shortcuts / DevTools / Copy-Paste / Save / Print
         if (
+            e.key === 'PrintScreen' ||
             (isCtrl && ['c', 'v', 'x', 'u', 's', 'p', 'a'].includes(key)) ||
             e.key === 'F12' ||
-            e.key === 'PrintScreen' ||
-            (isCtrl && e.shiftKey && ['i', 'j', 'c', 'k'].includes(key)) ||
+            (isCtrl && e.shiftKey && ['i', 'j', 'c', 'k', 's'].includes(key)) ||
             (e.altKey && e.key === 'Tab')
         ) {
             e.preventDefault();
             e.stopPropagation();
-            dispatchToast("⚠️ Restricted keyboard shortcut disabled during exam!", "danger");
+            sanitizeClipboard();
+
+            if (e.key === 'PrintScreen' || (isCtrl && e.shiftKey && key === 's') || (isCtrl && key === 'p')) {
+                activateScreenShield("Screen Capture or Screenshot Attempt Detected");
+                setTimeout(deactivateScreenShield, 2500);
+                dispatchToast("🚨 Screen capture and screenshots are strictly restricted!", "danger");
+            } else {
+                dispatchToast("⚠️ Keyboard shortcut disabled for security.", "warning");
+            }
             return false;
         }
     }
 
+    function handleGlobalKeyup(e) {
+        if (e.key === 'PrintScreen') {
+            sanitizeClipboard();
+            activateScreenShield("Screenshot Trigger Detected");
+            setTimeout(deactivateScreenShield, 2500);
+        }
+    }
+
+    function handleGlobalBlur() {
+        // Blur activates privacy screen curtain to prevent Snipping tool / Google Lens overlays
+        if (active) {
+            recordViolation("Exam window lost focus");
+        } else {
+            activateScreenShield("Window focus lost / Lens overlay active");
+        }
+    }
+
+    function handleGlobalFocus() {
+        if (!active) {
+            deactivateScreenShield();
+        }
+    }
+
+    function createScreenCurtain() {
+        let curtain = document.getElementById('security-screen-curtain');
+        if (!curtain) {
+            curtain = document.createElement('div');
+            curtain.id = 'security-screen-curtain';
+            curtain.innerHTML = `
+                <div style="width:75px; height:75px; border-radius:50%; background:rgba(239,68,68,0.2); color:#ef4444; display:flex; align-items:center; justify-content:center; font-size:2.5rem; margin-bottom:1.5rem; border:1px solid rgba(239,68,68,0.4); box-shadow:0 0 30px rgba(239,68,68,0.4);">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <h2 style="font-size:1.8rem; margin-bottom:0.6rem; color:#ffffff; font-weight:800;">Security Content Shield</h2>
+                <p id="security-curtain-reason" style="color:#f87171; font-weight:600; font-size:1.05rem; margin-bottom:1rem;">
+                    Screen Capture / Google Lens Scan Restricted
+                </p>
+                <div style="background:rgba(255,255,255,0.05); padding:1rem 1.8rem; border-radius:30px; font-size:0.88rem; color:#cbd5e1; border:1px solid rgba(255,255,255,0.1);">
+                    Click back inside the VetriPathLearn workspace window to restore content.
+                </div>
+            `;
+            document.body.appendChild(curtain);
+        }
+    }
+
+    function activateScreenShield(reason = "Content Protected") {
+        document.body.classList.add('screen-shield-active');
+        const reasonEl = document.getElementById('security-curtain-reason');
+        if (reasonEl) reasonEl.textContent = reason;
+    }
+
+    function deactivateScreenShield() {
+        document.body.classList.remove('screen-shield-active');
+    }
+
+    // Anti-Google Lens / OCR Scrambler logic:
+    // Injects zero-width space noise (\u200B) into text nodes of questions to corrupt OCR matrix text parsing without altering human presentation.
+    function setupAntiOCRObserver() {
+        const injectOCRNoise = (container) => {
+            if (!container) return;
+            const targetNodes = container.querySelectorAll('.question-text, .question-body, .problem-desc, .option-text, #sol-explanation');
+            targetNodes.forEach(node => {
+                if (node.getAttribute('data-anti-ocr') === 'true') return;
+                node.setAttribute('data-anti-ocr', 'true');
+                
+                // Add hidden zero-width spaces in text child nodes
+                const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, null, false);
+                let textNode;
+                while (textNode = walker.nextNode()) {
+                    if (textNode.nodeValue && textNode.nodeValue.length > 5) {
+                        // Inject zero width non-breaking space between characters
+                        textNode.nodeValue = textNode.nodeValue.split('').join('\u200B');
+                    }
+                }
+            });
+        };
+
+        const observer = new MutationObserver(() => {
+            const quizContainer = document.getElementById('quiz-question-area') || 
+                                  document.getElementById('mock-exam-workspace') || 
+                                  document.getElementById('quiz-panel') ||
+                                  document.querySelector('.coding-container');
+            if (quizContainer) {
+                injectOCRNoise(quizContainer);
+            }
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
+    }
+
+    // --- Examination Focus Proctoring Engine ---
     function handleVisibilityChange() {
         if (document.hidden) {
             recordViolation("Tab switch / Window minimized detected");
@@ -46,7 +207,6 @@ const CheatingProtection = (() => {
     }
 
     function handleWindowBlur() {
-        // Window blur can fire frequently. Only register if document is actually non-focused
         recordViolation("Exam window lost focus");
     }
 
@@ -62,7 +222,7 @@ const CheatingProtection = (() => {
         if (!active || gracePeriodActive) return;
 
         const now = Date.now();
-        // Debounce violation triggers within 1.2s (e.g. blur & visibilitychange firing together)
+        // Debounce violation triggers within 1.2s
         if (now - lastViolationTime < 1200) {
             return;
         }
@@ -252,20 +412,6 @@ const CheatingProtection = (() => {
             gracePeriodActive = false;
         }, 2000);
 
-        // Interaction listeners
-        document.addEventListener('contextmenu', blockInteractions);
-        document.addEventListener('copy', blockInteractions);
-        document.addEventListener('cut', blockInteractions);
-        document.addEventListener('paste', blockInteractions);
-        document.addEventListener('selectstart', blockInteractions);
-        document.addEventListener('dragstart', blockInteractions);
-        document.addEventListener('drop', blockInteractions);
-        document.addEventListener('keydown', handleKeyDown, true);
-        
-        // Window & Tab Visibility focus monitoring
-        document.addEventListener('visibilitychange', handleVisibilityChange);
-        window.addEventListener('blur', handleWindowBlur);
-
         if (isFullscreenEnforced) {
             requestFullscreenMode();
             document.addEventListener('fullscreenchange', handleFullscreenChange);
@@ -277,29 +423,8 @@ const CheatingProtection = (() => {
             initWebcamProctoring();
         }
 
-        // Apply CSS restrictions
-        let style = document.getElementById('cheat-protection-styles');
-        if (!style) {
-            style = document.createElement('style');
-            style.id = 'cheat-protection-styles';
-            document.head.appendChild(style);
-        }
-        style.innerHTML = `
-            body {
-                user-select: none !important;
-                -webkit-user-select: none !important;
-                -moz-user-select: none !important;
-                -ms-user-select: none !important;
-            }
-            @keyframes pulseDot {
-                0% { opacity: 1; transform: scale(1); }
-                50% { opacity: 0.4; transform: scale(0.85); }
-                100% { opacity: 1; transform: scale(1); }
-            }
-        `;
-
         createSecurityBadge();
-        console.log(`[CheatingProtection]: Enabled with max ${maxViolations} allowed violations.`);
+        console.log(`[CheatingProtection]: Exam focus active with max ${maxViolations} allowed violations.`);
     }
 
     function disable() {
@@ -308,18 +433,6 @@ const CheatingProtection = (() => {
         warningCount = 0;
         gracePeriodActive = false;
         if (gracePeriodTimer) clearTimeout(gracePeriodTimer);
-
-        document.removeEventListener('contextmenu', blockInteractions);
-        document.removeEventListener('copy', blockInteractions);
-        document.removeEventListener('cut', blockInteractions);
-        document.removeEventListener('paste', blockInteractions);
-        document.removeEventListener('selectstart', blockInteractions);
-        document.removeEventListener('dragstart', blockInteractions);
-        document.removeEventListener('drop', blockInteractions);
-        document.removeEventListener('keydown', handleKeyDown, true);
-        
-        document.removeEventListener('visibilitychange', handleVisibilityChange);
-        window.removeEventListener('blur', handleWindowBlur);
 
         if (isFullscreenEnforced) {
             document.removeEventListener('fullscreenchange', handleFullscreenChange);
@@ -330,16 +443,13 @@ const CheatingProtection = (() => {
 
         stopWebcamProctoring();
 
-        const style = document.getElementById('cheat-protection-styles');
-        if (style) style.remove();
-
         const badge = document.getElementById('cheat-security-badge');
         if (badge) badge.remove();
 
         const violationModal = document.getElementById('cheat-violation-modal');
         if (violationModal) violationModal.remove();
 
-        console.log("[CheatingProtection]: Disabled cleanly.");
+        console.log("[CheatingProtection]: Exam focus disabled cleanly.");
     }
 
     function showSecurityConsent(onConfirm, options = {}) {
@@ -407,10 +517,20 @@ const CheatingProtection = (() => {
         });
     }
 
+    // Auto-initiate global security protection when DOM is ready
+    if (typeof document !== 'undefined') {
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initGlobalProtection);
+        } else {
+            initGlobalProtection();
+        }
+    }
+
     return {
         enable,
         disable,
         showSecurityConsent,
+        initGlobalProtection,
         isActive: () => active,
         getViolationCount: () => warningCount
     };
