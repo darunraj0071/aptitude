@@ -11,8 +11,8 @@ android {
         applicationId = "com.example.vetripathlearn"
         minSdk = 24
         targetSdk = 36
-        versionCode = 10
-        versionName = "1.9"
+        versionCode = 15
+        versionName = "2.4"
     }
 
     buildTypes {

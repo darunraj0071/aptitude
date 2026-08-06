@@ -47,11 +47,10 @@ fun MainScreen(modifier: Modifier = Modifier) {
   }
 
   AndroidView(
-    modifier = modifier
-      .fillMaxSize()
-      .statusBarsPadding(),
+    modifier = modifier.fillMaxSize(),
     factory = { context ->
       WebView(context).apply {
+        setInitialScale(0)
         layoutParams = ViewGroup.LayoutParams(
           ViewGroup.LayoutParams.MATCH_PARENT,
           ViewGroup.LayoutParams.MATCH_PARENT

@@ -239,7 +239,7 @@ function loadGlobalLayout(activeLink = 'home') {
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer-title">Evaluations</h4>
+                    <h4 class="footer-title">Evaluations &amp; Tools</h4>
                     <ul class="footer-links">
                         <li><a href="mocktest.html">Full-Length Mocks</a></li>
                         <li><a href="bookmarks.html">Bookmarks Portal</a></li>
@@ -247,10 +247,24 @@ function loadGlobalLayout(activeLink = 'home') {
                         <li><a href="search.html">Formula Search</a></li>
                     </ul>
                 </div>
+                <div>
+                    <h4 class="footer-title">Legal &amp; Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 VetriPathLearn. All Rights Reserved.</p>
-                
+                <div style="display:flex; gap:1.2rem; flex-wrap:wrap; justify-content:center; font-size:0.85rem; margin-top:0.4rem;">
+                    <a href="privacy.html" style="color:var(--text-secondary); text-decoration:none;">Privacy Policy</a>
+                    <a href="terms.html" style="color:var(--text-secondary); text-decoration:none;">Terms &amp; Conditions</a>
+                    <a href="disclaimer.html" style="color:var(--text-secondary); text-decoration:none;">Disclaimer</a>
+                </div>
             </div>
         </footer>
     `;
