@@ -72,20 +72,21 @@
         /* Make buttons full-width in small forms/actions */
     }
 
-    /* Layout Adaptations: Force 1 column on mobile screens */
+    /* Layout Adaptations: Force 1 column for major layout sections on mobile */
     .two-col-layout,
     .three-col-grid,
     .four-col-grid,
     .dashboard-grid,
-    .tier-grid-container {
+    .tier-grid-container,
+    .hero-grid {
         grid-template-columns: 1fr !important;
         gap: 1.2rem !important;
     }
 
-    /* Override inline grid styles on mobile */
-    div[style*="grid-template-columns"] {
-        grid-template-columns: 1fr !important;
-        gap: 1.2rem !important;
+    /* Selector rows and small control groups stay responsive */
+    .selector-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
     }
 
     /* Card padding optimization for small screens */
