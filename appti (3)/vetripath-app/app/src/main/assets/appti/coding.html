@@ -396,8 +396,13 @@
                             <button class="lang-tab" data-lang="cpp" onclick="setLanguage('cpp')">C++</button>
                             <button class="lang-tab" data-lang="java" onclick="setLanguage('java')">Java</button>
                         </div>
-                        <div style="color:var(--text-muted); font-size:0.8rem; font-weight:600;">
-                            <i class="fa-solid fa-code"></i> Workspace Editor
+                        <div style="display:flex; align-items:center; gap:0.8rem;">
+                            <button id="btn-anti-cheat-toggle" onclick="toggleCodingAntiCheat()" class="btn btn-secondary" style="padding:0.35rem 0.8rem; font-size:0.78rem; border-radius:20px; border:1px solid rgba(255,255,255,0.15);">
+                                <i class="fa-solid fa-shield-halved" style="color:var(--text-muted);"></i> Proctored Mode
+                            </button>
+                            <div style="color:var(--text-muted); font-size:0.8rem; font-weight:600;">
+                                <i class="fa-solid fa-code"></i> Workspace Editor
+                            </div>
                         </div>
                     </div>
 
@@ -430,6 +435,7 @@
 
     <!-- Script imports -->
     <script src="js/storage.js"></script>
+    <script src="js/cheating_protection.js"></script>
     <script src="js/coding_data.js"></script>
     <script src="js/coding_runner.js"></script>
     <script src="js/coding.js"></script>

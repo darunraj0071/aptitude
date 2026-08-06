@@ -129,8 +129,10 @@ async function startExam(level, consented = false) {
     renderExamQuestion();
     startExamTimer();
 
-    // Enable secure exam window monitoring
+    // Enable secure exam window monitoring with 3-violation limit & Fullscreen mode
     CheatingProtection.enable({
+        maxViolations: 3,
+        enableFullscreen: true,
         onViolationLimitReached: () => {
             submitExam();
         }

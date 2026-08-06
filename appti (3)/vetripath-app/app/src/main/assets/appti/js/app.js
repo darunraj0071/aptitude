@@ -39,6 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // Initialize APK promotion popup modal for website visitors
+    initApkPromoModal();
 });
 
 // --- Theme Settings ---
@@ -387,5 +390,79 @@ function showScoreModal(options = {}) {
     }
 }
 window.showScoreModal = showScoreModal;
+
+// --- APK Download Promotion Modal ---
+function initApkPromoModal() {
+    // Skip if running inside the Android WebView app itself
+    if (window.location.href.includes('android_asset') || navigator.userAgent.includes('VetriPathLearnApp')) {
+        return;
+    }
+
+    // Skip if user already dismissed modal in current session
+    if (sessionStorage.getItem('apk_promo_dismissed') === 'true') {
+        return;
+    }
+
+    // Show popup 1.8 seconds after landing on website
+    setTimeout(() => {
+        if (document.getElementById('apk-promo-modal')) return;
+
+        const modal = document.createElement('div');
+        modal.id = 'apk-promo-modal';
+        modal.style.cssText = `
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(4, 6, 16, 0.85); z-index: 999990;
+            display: flex; align-items: center; justify-content: center;
+            backdrop-filter: blur(12px); padding: 1.5rem; box-sizing: border-box;
+            animation: fadeIn 0.4s ease;
+        `;
+
+        modal.innerHTML = `
+            <div class="glass-panel" style="width: 100%; max-width: 460px; border-radius: 22px; padding: 2.2rem; border: 1.5px solid rgba(127, 90, 240, 0.4); background: radial-gradient(circle at top right, rgba(127, 90, 240, 0.22) 0%, rgba(15, 14, 23, 0.96) 80%); box-shadow: 0 25px 60px rgba(0,0,0,0.8); display: flex; flex-direction: column; gap: 1.4rem; text-align: center; position: relative; animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                <button id="apk-modal-close-x" style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.08); border: none; color: #94a1b2; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1rem; transition: 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'; this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.color='#94a1b2'">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div style="width: 72px; height: 72px; border-radius: 20px; background: radial-gradient(circle, rgba(127, 90, 240, 0.4) 0%, rgba(127, 90, 240, 0.1) 100%); color: #7f5af0; display: flex; align-items: center; justify-content: center; font-size: 2.4rem; margin: 0 auto; border: 1px solid rgba(127, 90, 240, 0.5); box-shadow: 0 0 25px rgba(127, 90, 240, 0.4);">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+
+                <div>
+                    <span style="background: rgba(127, 90, 240, 0.2); color: #a78bfa; padding: 0.25rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(127, 90, 240, 0.3);">Official App Notice</span>
+                    <h3 style="margin: 0.6rem 0 0.5rem; font-size: 1.5rem; font-family: var(--font-heading); font-weight: 800; color: #ffffff;">Try High-End Features in APK!</h3>
+                    <p style="margin: 0; color: #94a1b2; font-size: 0.93rem; line-height: 1.6;">
+                        Some features are not available on the website. Download the official <strong>VetriPathLearn Android APK</strong> to experience high-end features and full performance!
+                    </p>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-top: 0.5rem;">
+                    <a href="VetriPathLearn.apk" download="VetriPathLearn.apk" id="apk-modal-download-btn" class="btn btn-primary" style="padding: 0.95rem 1.5rem; border-radius: 30px; font-weight: 800; font-size: 1rem; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.6rem; background: linear-gradient(135deg, #7f5af0 0%, #2cb67d 100%); border: none; box-shadow: 0 10px 25px rgba(127, 90, 240, 0.4);">
+                        <i class="fa-solid fa-download"></i> Download Android APK
+                    </a>
+                    <button id="apk-modal-dismiss-btn" style="background: transparent; border: none; color: #94a1b2; font-size: 0.85rem; cursor: pointer; padding: 0.4rem; transition: 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#94a1b2'">
+                        Continue Browsing Web Version
+                    </button>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        const closeModal = () => {
+            sessionStorage.setItem('apk_promo_dismissed', 'true');
+            modal.remove();
+        };
+
+        modal.querySelector('#apk-modal-close-x').addEventListener('click', closeModal);
+        modal.querySelector('#apk-modal-dismiss-btn').addEventListener('click', closeModal);
+        modal.querySelector('#apk-modal-download-btn').addEventListener('click', () => {
+            if (typeof showToast === 'function') {
+                showToast("📥 Starting VetriPathLearn.apk download...", "success");
+            }
+            closeModal();
+        });
+    }, 1800);
+}
+window.initApkPromoModal = initApkPromoModal;
 
 

@@ -929,3 +929,140 @@ body::after {
     opacity: 0.045;
     mix-blend-mode: multiply;
 }
+
+/* ==========================================================================
+   GLOBAL ANTI-COPY, ANTI-SCREENSHOT & ANTI-GOOGLE-LENS SECURITY SYSTEM
+   ========================================================================== */
+
+/* 1. Global & Mobile Text Selection & Touch Callout Lock */
+.unselectable,
+.question-card,
+.question-text,
+.question-options,
+.options-list,
+.option-item,
+.solution-panel,
+.quiz-card,
+.practice-container,
+.mock-container,
+.formula-box,
+.roadmap-step,
+.card,
+.glass-panel {
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    -webkit-touch-callout: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Allow typing and text editing in inputs, textareas, and code workstation editor */
+input,
+textarea,
+[contenteditable="true"],
+#code-editor,
+.editor-textarea {
+    user-select: text !important;
+    -webkit-user-select: text !important;
+    -khtml-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    -webkit-touch-callout: default !important;
+    pointer-events: auto !important;
+    cursor: text !important;
+}
+
+/* 2. Anti-OCR / Google Lens Camera Scan Shield Overlay */
+.question-text,
+.question-body,
+.problem-desc,
+.option-text,
+.solution-panel {
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+.question-text::after,
+.question-body::after,
+.problem-desc::after,
+.option-text::after,
+.solution-panel::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 10;
+    background-image: 
+        radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0),
+        repeating-linear-gradient(45deg, rgba(127, 90, 240, 0.012) 0px, rgba(127, 90, 240, 0.012) 1px, transparent 1px, transparent 3px);
+    background-size: 6px 6px, 100% 100%;
+    opacity: 0.95;
+    mix-blend-mode: overlay;
+}
+
+/* 3. Anti-Print Security Lockdown */
+@media print {
+    html, body, #app-content, main, div, iframe {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        background: #000000 !important;
+    }
+}
+
+/* 4. Instant 0ms Blackout Screen Shield, Mobile Screenshot Shield & Curtain */
+html.screen-shield-active,
+body.screen-shield-active,
+html.screenshot-blocked,
+body.screenshot-blocked,
+html.mobile-screenshot-blackout,
+body.mobile-screenshot-blackout {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    overflow: hidden !important;
+}
+
+body.screen-shield-active #app-content,
+body.screen-shield-active main,
+body.screen-shield-active .practice-container,
+body.screen-shield-active .coding-container,
+body.screen-shield-active .mock-container,
+html.screenshot-blocked body *,
+body.screenshot-blocked *,
+html.mobile-screenshot-blackout body *,
+body.mobile-screenshot-blackout * {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    color: transparent !important;
+    filter: blur(100px) brightness(0) !important;
+    pointer-events: none !important;
+}
+
+#security-screen-curtain {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: #02040a !important;
+    z-index: 99999999 !important;
+    backdrop-filter: blur(40px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+body.screen-shield-active #security-screen-curtain,
+html.screenshot-blocked #security-screen-curtain,
+body.screenshot-blocked #security-screen-curtain,
+html.mobile-screenshot-blackout #security-screen-curtain,
+body.mobile-screenshot-blackout #security-screen-curtain {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    animation: fadeIn 0.1s ease;
+}

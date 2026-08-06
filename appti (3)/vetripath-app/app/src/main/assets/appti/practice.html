@@ -383,6 +383,8 @@
 
             loadPracticeQuestion();
             CheatingProtection.enable({
+                maxViolations: 3,
+                enableFullscreen: false,
                 onViolationLimitReached: () => {
                     exitQuiz();
                 }
