@@ -233,6 +233,41 @@ html, body {
         flex-direction: column !important;
         gap: 0.5rem !important;
     }
+
+    /* Search Box Mobile Bounds & Overflow Fix */
+    .glass-panel[style*="border-radius: 40px"],
+    .glass-panel[style*="border-radius:40px"],
+    .glass-panel[style*="border-radius: 30px"],
+    .hero-search-wrapper {
+        padding: 0.3rem 0.4rem !important;
+        border-radius: 25px !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    .glass-panel[style*="border-radius: 40px"] i,
+    .glass-panel[style*="border-radius:40px"] i {
+        margin: 0 0.4rem !important;
+        font-size: 0.95rem !important;
+    }
+
+    .glass-panel[style*="border-radius: 40px"] input,
+    .glass-panel[style*="border-radius:40px"] input {
+        font-size: 0.85rem !important;
+        padding: 0.5rem 0 !important;
+        min-width: 0 !important;
+    }
+
+    .glass-panel[style*="border-radius: 40px"] button,
+    .glass-panel[style*="border-radius:40px"] button {
+        padding: 0.5rem 0.9rem !important;
+        font-size: 0.82rem !important;
+        border-radius: 20px !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+    }
 }
 
 /* --- Dynamic Layout Utilities --- */

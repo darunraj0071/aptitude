@@ -218,13 +218,16 @@ function loadGlobalLayout(activeLink = 'home') {
                          window.location.hostname === '' || 
                          window.location.href.includes('android_asset');
 
-    if (isAndroidApp) {
+    const isCodingPage = window.location.pathname.includes('coding') || 
+                         window.location.href.includes('coding.html');
+
+    if (isAndroidApp || isCodingPage) {
         document.body.classList.add('is-native-app');
-        // Remove AMP auto ads elements in APK app
-        document.querySelectorAll('amp-auto-ads, ins.adsbygoogle').forEach(el => el.remove());
+        // Remove AMP auto ads elements in APK app & coding page
+        document.querySelectorAll('amp-auto-ads, ins.adsbygoogle, .ad-section-wrapper, .ad-section-box').forEach(el => el.remove());
     }
 
-    const adsHTML = isAndroidApp ? '' : `
+    const adsHTML = (isAndroidApp || isCodingPage) ? '' : `
         <div class="container ad-section-wrapper" style="margin: 2rem auto 1.5rem auto;">
             <div class="ad-section-box" style="background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 1.2rem 1rem; text-align: center; position: relative;">
                 <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 0.8rem; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
