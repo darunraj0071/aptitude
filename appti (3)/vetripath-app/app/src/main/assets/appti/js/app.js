@@ -213,25 +213,47 @@ function loadGlobalLayout(activeLink = 'home') {
         </div>
     `;
 
+    const isAndroidApp = navigator.userAgent.includes('VetriPathLearnApp') || 
+                         window.location.protocol === 'file:' || 
+                         window.location.hostname === '' || 
+                         window.location.href.includes('android_asset');
+
+    if (isAndroidApp) {
+        document.body.classList.add('is-native-app');
+        // Remove AMP auto ads elements in APK app
+        document.querySelectorAll('amp-auto-ads, ins.adsbygoogle').forEach(el => el.remove());
+    }
+
+    const adsHTML = isAndroidApp ? '' : `
+        <div class="container ad-section-wrapper" style="margin: 2rem auto 1.5rem auto;">
+            <div class="ad-section-box" style="background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 1.2rem 1rem; text-align: center; position: relative;">
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 0.8rem; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+                    <i class="fa-solid fa-rectangle-ad" style="color: var(--primary);"></i> Sponsored Advertisement
+                </div>
+                <div class="adsense-container" style="overflow: hidden;">
+                    <!-- Vetripathlearn Display Ad Unit -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-7971777206323143"
+                         data-ad-slot="8157337944"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                </div>
+                <div class="adsense-infeed-container" style="margin-top: 1rem; overflow: hidden;">
+                    <!-- Vetripathlearn In-Feed Fluid Ad Unit -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-format="fluid"
+                         data-ad-layout-key="-6t+ed+2i-1n-4w"
+                         data-ad-client="ca-pub-7971777206323143"
+                         data-ad-slot="3824889423"></ins>
+                </div>
+            </div>
+        </div>
+    `;
+
     const footerHTML = `
-        <div class="container adsense-container" style="margin: 2rem auto 1.5rem auto; text-align: center; overflow: hidden;">
-            <!-- Vetripathlearn Display Ad Unit -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-7971777206323143"
-                 data-ad-slot="8157337944"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-        </div>
-        <div class="container adsense-infeed-container" style="margin: 1.5rem auto 1.5rem auto; text-align: center; overflow: hidden;">
-            <!-- Vetripathlearn In-Feed Fluid Ad Unit -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-format="fluid"
-                 data-ad-layout-key="-6t+ed+2i-1n-4w"
-                 data-ad-client="ca-pub-7971777206323143"
-                 data-ad-slot="3824889423"></ins>
-        </div>
+        ${adsHTML}
         <footer class="main-footer">
             <div class="footer-content">
                 <div class="footer-about">
@@ -293,10 +315,12 @@ function loadGlobalLayout(activeLink = 'home') {
     if (headerContainer) headerContainer.innerHTML = headerHTML;
     if (footerContainer) {
         footerContainer.innerHTML = footerHTML;
-        try {
-            (window.adsbygoogle = window.adsbygoogle || []).push({});
-            (window.adsbygoogle = window.adsbygoogle || []).push({});
-        } catch (err) {}
+        if (!isAndroidApp) {
+            try {
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+            } catch (err) {}
+        }
     }
 
     // Initialize global theme and mobile navigation handlers now that they are in the DOM

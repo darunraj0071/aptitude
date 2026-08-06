@@ -261,3 +261,26 @@ html, body {
     gap: 1.2rem;
     margin-bottom: 2rem;
 }
+
+/* --- Native Android App (APK WebView) Ad Suppression --- */
+body.is-native-app .ad-section-wrapper,
+body.is-native-app .ad-section-box,
+body.is-native-app .adsense-container,
+body.is-native-app .adsense-infeed-container,
+body.is-native-app ins.adsbygoogle,
+body.is-native-app amp-auto-ads,
+.is-native-app .ad-section-wrapper,
+.is-native-app .ad-section-box,
+.is-native-app .adsense-container,
+.is-native-app .adsense-infeed-container,
+.is-native-app ins.adsbygoogle,
+.is-native-app amp-auto-ads {
+    display: none !important;
+    height: 0 !important;
+    max-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+}
