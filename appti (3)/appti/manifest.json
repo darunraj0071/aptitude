@@ -2,7 +2,7 @@
   "name": "VetriPathLearn — Campus Placement Preparation Portal",
   "short_name": "VetriPathLearn",
   "description": "Offline-first campus placement prep portal with quantitative aptitude, logical reasoning, verbal ability, coding, practice questions, and mock tests.",
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#7f5af0",
