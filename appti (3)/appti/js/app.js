@@ -171,9 +171,6 @@ function loadGlobalLayout(activeLink = 'home') {
                 </nav>
 
                 <div class="nav-actions">
-                    <a href="VetriPathLearn.apk" download="VetriPathLearn.apk" type="application/vnd.android.package-archive" class="btn-download-glossy-circle-red web-only" aria-label="Download Android App" title="Download VetriPathLearn APK">
-                        <i class="fa-solid fa-download" style="font-size: 1.15rem;"></i>
-                    </a>
                     <a href="search.html" class="theme-toggle-btn" aria-label="Search Engine" style="display: flex; text-decoration:none;">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
@@ -205,8 +202,17 @@ function loadGlobalLayout(activeLink = 'home') {
                 <a href="bookmarks.html" class="drawer-link ${activeLink === 'bookmarks' ? 'active' : ''}">Bookmarks</a>
                 <a href="about.html" class="drawer-link ${activeLink === 'about' ? 'active' : ''}">About Us</a>
                 <div class="web-only" style="padding: 1rem 1rem 0.5rem 1rem;">
-                    <a href="VetriPathLearn.apk" download="VetriPathLearn.apk" target="_blank" rel="noopener noreferrer" type="application/vnd.android.package-archive" class="btn-download-glossy" style="width: 100%; justify-content: center; box-sizing: border-box;">
-                        <i class="fa-solid fa-arrow-down" style="font-size: 1.1rem;"></i> Download Android App
+                    <a href="VetriPathLearn.apk" download="VetriPathLearn.apk" target="_blank" rel="noopener noreferrer" type="application/vnd.android.package-archive" class="btn-download-cyber">
+                        <div class="cyber-btn-badge">
+                            <i class="fa-solid fa-download"></i>
+                        </div>
+                        <div class="cyber-btn-content">
+                            <span class="cyber-btn-sub">Direct APK Download</span>
+                            <span class="cyber-btn-title">Download APK</span>
+                        </div>
+                        <div class="cyber-btn-arrow">
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </div>
                     </a>
                 </div>
             </nav>
