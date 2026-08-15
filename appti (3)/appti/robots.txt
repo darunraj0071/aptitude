@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vetripathlearn.site/sitemap.xml
+Sitemap: https://www.vetripathlearn.site/sitemap.xml
