@@ -76,16 +76,23 @@ function updateQuestionSolvedMark(qId) {
 function populateCategories() {
     const catSelect = document.getElementById('select-category');
     catSelect.innerHTML = `
-        <option value="numbers">Working with Numbers</option>
-        <option value="recursion">Recursion Codes</option>
-        <option value="arrays">Array Operations</option>
-        <option value="strings">String Operations</option>
-        <option value="sorting">Sorting Algorithms</option>
-        <option value="numsystem">Number Systems</option>
-        <option value="matrices">Matrix Codes</option>
-        <option value="patterns">Pattern Printing</option>
+        <option value="arrays">Array Operations & Two Pointers (47)</option>
+        <option value="binary">Binary & Bit Manipulation (5)</option>
+        <option value="dp">Dynamic Programming (12)</option>
+        <option value="graph">Graph Algorithms & Traversal (8)</option>
+        <option value="intervals">Intervals & Scheduling (5)</option>
+        <option value="linkedlist">Linked List Operations (6)</option>
+        <option value="matrices">Matrix & 2D Grids (9)</option>
+        <option value="strings">String Algorithms & Patterns (29)</option>
+        <option value="trees">Binary Trees, BST & Tries (14)</option>
+        <option value="heaps">Heaps & Priority Queues (3)</option>
+        <option value="numbers">Working with Numbers (46)</option>
+        <option value="recursion">Recursion & Backtracking (19)</option>
+        <option value="sorting">Sorting Algorithms (6)</option>
+        <option value="numsystem">Number Systems (8)</option>
+        <option value="patterns">Pattern Printing (20)</option>
     `;
-    populateQuestions('numbers');
+    populateQuestions('arrays');
 }
 
 function populateQuestions(category, searchQuery = "") {

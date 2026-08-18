@@ -279,15 +279,23 @@ function getReferenceUrl(name) {
     
     // Direct matches / Official docs mappings
     if (lower.includes('mdn')) {
-        if (lower.includes('semantics')) return 'https://developer.mozilla.org/en-US/docs/Glossary/Semantics';
+        if (lower.includes('semantics') || lower.includes('html')) return 'https://developer.mozilla.org/en-US/docs/Glossary/Semantics';
         if (lower.includes('box model')) return 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model';
-        if (lower.includes('variables')) return 'https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties';
-        if (lower.includes('transitions') || lower.includes('keyframes')) return 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations';
-        if (lower.includes('arrow')) return 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions';
+        if (lower.includes('variables') || lower.includes('custom properties')) return 'https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties';
+        if (lower.includes('transitions') || lower.includes('keyframes') || lower.includes('animations')) return 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations';
+        if (lower.includes('arrow') || lower.includes('functions')) return 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions';
         if (lower.includes('closure')) return 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures';
         if (lower.includes('dom') || lower.includes('events')) return 'https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model';
         if (lower.includes('promise') || lower.includes('async')) return 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise';
+        if (lower.includes('arrays') || lower.includes('array')) return 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array';
         return `https://developer.mozilla.org/en-US/search?q=${encodeURIComponent(name)}`;
+    }
+    if (lower.includes('geeksforgeeks') || lower.includes('gfg')) {
+        if (lower.includes('recursion')) return 'https://www.geeksforgeeks.org/recursion/';
+        if (lower.includes('tree')) return 'https://www.geeksforgeeks.org/binary-tree-data-structure/';
+        if (lower.includes('graph')) return 'https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/';
+        if (lower.includes('dp') || lower.includes('dynamic programming')) return 'https://www.geeksforgeeks.org/dynamic-programming/';
+        return `https://www.geeksforgeeks.org/search/?q=${encodeURIComponent(name)}`;
     }
     if (lower.includes('web.dev')) {
         if (lower.includes('specificity')) return 'https://web.dev/learn/css/specificity/';
@@ -300,6 +308,8 @@ function getReferenceUrl(name) {
         if (lower.includes('grid')) return 'https://css-tricks.com/snippets/css/complete-guide-grid/';
         return `https://css-tricks.com/?s=${encodeURIComponent(name)}`;
     }
+    if (lower.includes('visualgo')) return 'https://visualgo.net/';
+    if (lower.includes('w3schools')) return 'https://www.w3schools.com/';
     if (lower.includes('tailwind')) return 'https://tailwindcss.com/docs';
     if (lower.includes('react')) return 'https://react.dev';
     if (lower.includes('spring')) return 'https://spring.io/projects/spring-boot';
@@ -308,7 +318,7 @@ function getReferenceUrl(name) {
     if (lower.includes('maven')) return 'https://maven.apache.org';
     if (lower.includes('git')) return 'https://git-scm.com/book';
     if (lower.includes('vite')) return 'https://vitejs.dev';
-    if (lower.includes('leetcode')) return 'https://leetcode.com';
+    if (lower.includes('leetcode')) return 'https://leetcode.com/problemset/';
     if (lower.includes('numpy')) return 'https://numpy.org/doc/';
     if (lower.includes('pandas')) return 'https://pandas.pydata.org/docs/';
     if (lower.includes('matplotlib')) return 'https://matplotlib.org';
@@ -333,7 +343,7 @@ function getReferenceUrl(name) {
     if (lower.includes('nielsen') || lower.includes('nng')) return 'https://www.nngroup.com';
     
     // Default fallback to Google Search
-    return `https://www.google.com/search?q=${encodeURIComponent(name)}`;
+    return `https://www.google.com/search?q=${encodeURIComponent(name + " tutorial")}`;
 }
 
 // Generate rich, context-specific list of study concepts based on day content
@@ -694,9 +704,12 @@ function openRoadmap(deptId) {
                         </div>
  
                         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 1rem; border-top: 1px dashed var(--border-color);">
-                            <div style="font-size: 0.85rem; color: var(--text-muted); display: ${isUnlocked ? 'flex' : 'none'}; align-items: center; gap: 0.5rem;">
-                                <i class="fa-solid fa-book-bookmark"></i>
-                                <strong>References:</strong> <a href="${getReferenceUrl(d.resources)}" target="_blank" style="color: var(--secondary); font-weight: 600; text-decoration: underline;" onclick="event.stopPropagation();">${d.resources}</a>
+                            <div style="font-size: 0.88rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <i class="fa-solid fa-book-bookmark" style="color: var(--primary);"></i>
+                                <strong style="color: var(--text-primary);">Reference:</strong> 
+                                <a href="${getReferenceUrl(d.resources)}" target="_blank" rel="noopener noreferrer" style="color: var(--secondary); font-weight: 700; text-decoration: underline; display: inline-flex; align-items: center; gap: 0.35rem;" onclick="event.stopPropagation();">
+                                    ${d.resources} <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+                                </a>
                             </div>
                             
                             <label class="check-container ${isCompleted ? 'checked' : ''} ${isUnlocked ? '' : 'disabled'}" id="lbl-check-${d.day}" onclick="event.stopPropagation();" style="${isUnlocked ? '' : 'opacity: 0.5; cursor: not-allowed;'}">
