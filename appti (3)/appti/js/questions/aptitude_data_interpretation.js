@@ -1,1030 +1,1303 @@
 if (!window.TOPIC_QUESTIONS) window.TOPIC_QUESTIONS = {};
 window.TOPIC_QUESTIONS['aptitude_data_interpretation'] = [
     {
-        "id": "apt_data_interpretation_1",
-        "text": "The production of a company was 134 tons in 2024 and grew to 336 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_beginner_1",
+        "text": "A sales table lists quarterly earnings: Q1: 167k, Q2: 275k, Q3: 150k, Q4: 405k. What is the total annual sales?",
         "options": [
-            "155.75%",
-            "147.25%",
-            "150.75%",
-            "100%"
+            "997k",
+            "1047k",
+            "957k",
+            "1196.3999999999999k"
         ],
-        "answer": "150.75",
+        "answer": "997k",
+        "solution": "167 + 275 + 150 + 405 = 997k.",
+        "formula": "Total = Q1 + Q2 + Q3 + Q4.",
+        "shortcut": "Sum = 997k.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 2,
-        "solution": "Step 1: Increase = 336 - 134 = 202.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (202 / 134) * 100 = 150.75%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 202 by base 134 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 2,
+        "tags": [
+            "data_interpretation",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_2",
-        "text": "The production of a company was 127 tons in 2024 and grew to 298 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_beginner_2",
+        "text": "A sales table lists quarterly earnings: Q1: 159k, Q2: 214k, Q3: 207k, Q4: 376k. What is the total annual sales?",
         "options": [
-            "131.15%",
-            "100%",
-            "139.65%",
-            "134.65%"
+            "1006k",
+            "1147.2k",
+            "956k",
+            "916k"
         ],
-        "answer": "134.65",
+        "answer": "956k",
+        "solution": "159 + 214 + 207 + 376 = 956k.",
+        "formula": "Total = Q1 + Q2 + Q3 + Q4.",
+        "shortcut": "Sum = 956k.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 3,
-        "solution": "Step 1: Increase = 298 - 127 = 171.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (171 / 127) * 100 = 134.65%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 171 by base 127 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 3,
+        "tags": [
+            "data_interpretation",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_3",
-        "text": "The production of a company was 278 tons in 2024 and grew to 386 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_beginner_3",
+        "text": "A sales table lists quarterly earnings: Q1: 135k, Q2: 262k, Q3: 242k, Q4: 383k. What is the total annual sales?",
         "options": [
-            "38.85%",
-            "43.85%",
-            "35.35%",
-            "100%"
+            "1072k",
+            "1022k",
+            "1226.3999999999999k",
+            "982k"
         ],
-        "answer": "38.85",
+        "answer": "1022k",
+        "solution": "135 + 262 + 242 + 383 = 1022k.",
+        "formula": "Total = Q1 + Q2 + Q3 + Q4.",
+        "shortcut": "Sum = 1022k.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 4,
-        "solution": "Step 1: Increase = 386 - 278 = 108.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (108 / 278) * 100 = 38.85%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 108 by base 278 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 4,
+        "tags": [
+            "data_interpretation",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_4",
-        "text": "The production of a company was 275 tons in 2024 and grew to 279 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_beginner_4",
+        "text": "A sales table lists quarterly earnings: Q1: 168k, Q2: 253k, Q3: 237k, Q4: 355k. What is the total annual sales?",
         "options": [
-            "100%",
-            "-2.05%",
-            "1.45%",
-            "6.45%"
+            "1063k",
+            "1215.6k",
+            "973k",
+            "1013k"
         ],
-        "answer": "1.45",
+        "answer": "1013k",
+        "solution": "168 + 253 + 237 + 355 = 1013k.",
+        "formula": "Total = Q1 + Q2 + Q3 + Q4.",
+        "shortcut": "Sum = 1013k.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 5,
-        "solution": "Step 1: Increase = 279 - 275 = 4.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (4 / 275) * 100 = 1.45%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 4 by base 275 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 5,
+        "tags": [
+            "data_interpretation",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_5",
-        "text": "The production of a company was 212 tons in 2024 and grew to 306 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_beginner_5",
+        "text": "A sales table lists quarterly earnings: Q1: 188k, Q2: 230k, Q3: 176k, Q4: 370k. What is the total annual sales?",
         "options": [
-            "49.34%",
-            "40.84%",
-            "100%",
-            "44.34%"
+            "924k",
+            "1156.8k",
+            "964k",
+            "1014k"
         ],
-        "answer": "44.34",
+        "answer": "964k",
+        "solution": "188 + 230 + 176 + 370 = 964k.",
+        "formula": "Total = Q1 + Q2 + Q3 + Q4.",
+        "shortcut": "Sum = 964k.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 1,
-        "solution": "Step 1: Increase = 306 - 212 = 94.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (94 / 212) * 100 = 44.34%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 94 by base 212 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 6,
+        "tags": [
+            "data_interpretation",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_6",
-        "text": "The production of a company was 165 tons in 2024 and grew to 358 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_beginner_6",
+        "text": "A sales table lists quarterly earnings: Q1: 116k, Q2: 256k, Q3: 166k, Q4: 333k. What is the total annual sales?",
         "options": [
-            "121.97%",
-            "113.47%",
-            "100%",
-            "116.97%"
+            "921k",
+            "871k",
+            "1045.2k",
+            "831k"
         ],
-        "answer": "116.97",
+        "answer": "871k",
+        "solution": "116 + 256 + 166 + 333 = 871k.",
+        "formula": "Total = Q1 + Q2 + Q3 + Q4.",
+        "shortcut": "Sum = 871k.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 2,
-        "solution": "Step 1: Increase = 358 - 165 = 193.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (193 / 165) * 100 = 116.97%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 193 by base 165 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 1,
+        "tags": [
+            "data_interpretation",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_7",
-        "text": "The production of a company was 220 tons in 2024 and grew to 208 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_beginner_7",
+        "text": "A sales table lists quarterly earnings: Q1: 169k, Q2: 260k, Q3: 191k, Q4: 418k. What is the total annual sales?",
         "options": [
-            "-8.95%",
-            "-5.45%",
-            "-0.45%",
-            "100%"
+            "998k",
+            "1088k",
+            "1245.6k",
+            "1038k"
         ],
-        "answer": "-5.45",
+        "answer": "1038k",
+        "solution": "169 + 260 + 191 + 418 = 1038k.",
+        "formula": "Total = Q1 + Q2 + Q3 + Q4.",
+        "shortcut": "Sum = 1038k.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 3,
-        "solution": "Step 1: Increase = 208 - 220 = -12.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (-12 / 220) * 100 = -5.45%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change -12 by base 220 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 2,
+        "tags": [
+            "data_interpretation",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_8",
-        "text": "The production of a company was 154 tons in 2024 and grew to 311 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_beginner_8",
+        "text": "A sales table lists quarterly earnings: Q1: 149k, Q2: 271k, Q3: 172k, Q4: 334k. What is the total annual sales?",
         "options": [
-            "106.95%",
-            "98.45%",
-            "100%",
-            "101.95%"
+            "1111.2k",
+            "976k",
+            "886k",
+            "926k"
         ],
-        "answer": "101.95",
+        "answer": "926k",
+        "solution": "149 + 271 + 172 + 334 = 926k.",
+        "formula": "Total = Q1 + Q2 + Q3 + Q4.",
+        "shortcut": "Sum = 926k.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 4,
-        "solution": "Step 1: Increase = 311 - 154 = 157.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (157 / 154) * 100 = 101.95%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 157 by base 154 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 3,
+        "tags": [
+            "data_interpretation",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_9",
-        "text": "The production of a company was 260 tons in 2024 and grew to 343 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_beginner_9",
+        "text": "A sales table lists quarterly earnings: Q1: 142k, Q2: 204k, Q3: 208k, Q4: 348k. What is the total annual sales?",
         "options": [
-            "36.92%",
-            "28.42%",
-            "100%",
-            "31.92%"
+            "902k",
+            "862k",
+            "952k",
+            "1082.3999999999999k"
         ],
-        "answer": "31.92",
+        "answer": "902k",
+        "solution": "142 + 204 + 208 + 348 = 902k.",
+        "formula": "Total = Q1 + Q2 + Q3 + Q4.",
+        "shortcut": "Sum = 902k.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 5,
-        "solution": "Step 1: Increase = 343 - 260 = 83.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (83 / 260) * 100 = 31.92%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 83 by base 260 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 4,
+        "tags": [
+            "data_interpretation",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_10",
-        "text": "The production of a company was 240 tons in 2024 and grew to 202 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_beginner_10",
+        "text": "A sales table lists quarterly earnings: Q1: 105k, Q2: 227k, Q3: 239k, Q4: 422k. What is the total annual sales?",
         "options": [
-            "100%",
-            "-19.33%",
-            "-15.83%",
-            "-10.83%"
+            "1191.6k",
+            "953k",
+            "993k",
+            "1043k"
         ],
-        "answer": "-15.83",
+        "answer": "993k",
+        "solution": "105 + 227 + 239 + 422 = 993k.",
+        "formula": "Total = Q1 + Q2 + Q3 + Q4.",
+        "shortcut": "Sum = 993k.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 1,
-        "solution": "Step 1: Increase = 202 - 240 = -38.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (-38 / 240) * 100 = -15.83%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change -38 by base 240 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
-    },
-    {
-        "id": "apt_data_interpretation_11",
-        "text": "The production of a company was 255 tons in 2024 and grew to 348 tons in 2025. Find the percentage growth in production.",
-        "options": [
-            "32.97%",
-            "100%",
-            "36.47%",
-            "41.47%"
-        ],
-        "answer": "36.47",
-        "difficulty": "easy",
-        "patternType": 2,
-        "solution": "Step 1: Increase = 348 - 255 = 93.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (93 / 255) * 100 = 36.47%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 93 by base 255 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
-    },
-    {
-        "id": "apt_data_interpretation_12",
-        "text": "The production of a company was 142 tons in 2024 and grew to 293 tons in 2025. Find the percentage growth in production.",
-        "options": [
-            "100%",
-            "102.84%",
-            "106.34%",
-            "111.34%"
-        ],
-        "answer": "106.34",
-        "difficulty": "easy",
-        "patternType": 3,
-        "solution": "Step 1: Increase = 293 - 142 = 151.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (151 / 142) * 100 = 106.34%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 151 by base 142 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
-    },
-    {
-        "id": "apt_data_interpretation_13",
-        "text": "The production of a company was 131 tons in 2024 and grew to 360 tons in 2025. Find the percentage growth in production.",
-        "options": [
-            "174.81%",
-            "171.31%",
-            "100%",
-            "179.81%"
-        ],
-        "answer": "174.81",
-        "difficulty": "easy",
-        "patternType": 4,
-        "solution": "Step 1: Increase = 360 - 131 = 229.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (229 / 131) * 100 = 174.81%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 229 by base 131 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
-    },
-    {
-        "id": "apt_data_interpretation_14",
-        "text": "The production of a company was 295 tons in 2024 and grew to 289 tons in 2025. Find the percentage growth in production.",
-        "options": [
-            "2.97%",
-            "-2.03%",
-            "100%",
-            "-5.53%"
-        ],
-        "answer": "-2.03",
-        "difficulty": "easy",
         "patternType": 5,
-        "solution": "Step 1: Increase = 289 - 295 = -6.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (-6 / 295) * 100 = -2.03%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change -6 by base 295 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_15",
-        "text": "The production of a company was 281 tons in 2024 and grew to 355 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_easy_1",
+        "text": "Given quarterly sales: Q1: 150k, Q2: 250k, Q3: 200k, Q4: 400k (Total 1000k). What percentage of total sales was generated in Q4?",
         "options": [
-            "26.33%",
-            "100%",
-            "22.83%",
-            "31.33%"
+            "50.00%",
+            "40.00%",
+            "35.00%",
+            "25.00%"
         ],
-        "answer": "26.33",
+        "answer": "40.00%",
+        "solution": "(400 / 1000) × 100 = 40%.",
+        "formula": "Share% = (400 / 1000) × 100% = 40%.",
+        "shortcut": "40%.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 1,
-        "solution": "Step 1: Increase = 355 - 281 = 74.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (74 / 281) * 100 = 26.33%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 74 by base 281 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 2,
+        "tags": [
+            "data_interpretation",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_16",
-        "text": "The production of a company was 192 tons in 2024 and grew to 239 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_easy_2",
+        "text": "Problem scenario for data interpretation (easy tier, item #2): Given primary parameter 35 and secondary parameter 22, calculate the combined sum.",
         "options": [
-            "100%",
-            "24.48%",
-            "20.98%",
-            "29.48%"
+            "57",
+            "114",
+            "67",
+            "42"
         ],
-        "answer": "24.48",
+        "answer": "57",
+        "solution": "Calculate combined parameter: 35 + 22 = 57.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 2,
-        "solution": "Step 1: Increase = 239 - 192 = 47.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (47 / 192) * 100 = 24.48%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 47 by base 192 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 3,
+        "tags": [
+            "data_interpretation",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_17",
-        "text": "The production of a company was 254 tons in 2024 and grew to 213 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_easy_3",
+        "text": "Problem scenario for data interpretation (easy tier, item #3): Given primary parameter 45 and secondary parameter 27, calculate the combined sum.",
         "options": [
-            "-19.64%",
-            "100%",
-            "-11.14%",
-            "-16.14%"
+            "72",
+            "144",
+            "82",
+            "57"
         ],
-        "answer": "-16.14",
+        "answer": "72",
+        "solution": "Calculate combined parameter: 45 + 27 = 72.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 3,
-        "solution": "Step 1: Increase = 213 - 254 = -41.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (-41 / 254) * 100 = -16.14%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change -41 by base 254 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 4,
+        "tags": [
+            "data_interpretation",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_18",
-        "text": "The production of a company was 153 tons in 2024 and grew to 222 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_easy_4",
+        "text": "Problem scenario for data interpretation (easy tier, item #4): Given primary parameter 55 and secondary parameter 32, calculate the combined sum.",
         "options": [
-            "41.6%",
-            "50.1%",
-            "100%",
-            "45.1%"
+            "72",
+            "174",
+            "97",
+            "87"
         ],
-        "answer": "45.1",
+        "answer": "87",
+        "solution": "Calculate combined parameter: 55 + 32 = 87.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 4,
-        "solution": "Step 1: Increase = 222 - 153 = 69.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (69 / 153) * 100 = 45.1%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 69 by base 153 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 5,
+        "tags": [
+            "data_interpretation",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_19",
-        "text": "The production of a company was 243 tons in 2024 and grew to 388 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_easy_5",
+        "text": "Problem scenario for data interpretation (easy tier, item #5): Given primary parameter 65 and secondary parameter 37, calculate the combined sum.",
         "options": [
-            "56.17%",
-            "64.67%",
-            "100%",
-            "59.67%"
+            "87",
+            "102",
+            "112",
+            "204"
         ],
-        "answer": "59.67",
+        "answer": "102",
+        "solution": "Calculate combined parameter: 65 + 37 = 102.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 5,
-        "solution": "Step 1: Increase = 388 - 243 = 145.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (145 / 243) * 100 = 59.67%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 145 by base 243 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 6,
+        "tags": [
+            "data_interpretation",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_20",
-        "text": "The production of a company was 108 tons in 2024 and grew to 292 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_easy_6",
+        "text": "Problem scenario for data interpretation (easy tier, item #6): Given primary parameter 75 and secondary parameter 42, calculate the combined sum.",
         "options": [
-            "170.37%",
-            "175.37%",
-            "166.87%",
-            "100%"
+            "234",
+            "102",
+            "127",
+            "117"
         ],
-        "answer": "170.37",
+        "answer": "117",
+        "solution": "Calculate combined parameter: 75 + 42 = 117.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 1,
-        "solution": "Step 1: Increase = 292 - 108 = 184.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (184 / 108) * 100 = 170.37%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 184 by base 108 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 1,
+        "tags": [
+            "data_interpretation",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_21",
-        "text": "The production of a company was 231 tons in 2024 and grew to 298 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_easy_7",
+        "text": "Problem scenario for data interpretation (easy tier, item #7): Given primary parameter 85 and secondary parameter 47, calculate the combined sum.",
         "options": [
-            "29.0%",
-            "25.5%",
-            "34.0%",
-            "100%"
+            "132",
+            "264",
+            "142",
+            "117"
         ],
-        "answer": "29.0",
-        "difficulty": "medium",
+        "answer": "132",
+        "solution": "Calculate combined parameter: 85 + 47 = 132.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 2,
-        "solution": "Step 1: Increase = 298 - 231 = 67.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (67 / 231) * 100 = 29.0%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 67 by base 231 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_22",
-        "text": "The production of a company was 114 tons in 2024 and grew to 333 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_easy_8",
+        "text": "Problem scenario for data interpretation (easy tier, item #8): Given primary parameter 95 and secondary parameter 52, calculate the combined sum.",
         "options": [
-            "188.61%",
-            "100%",
-            "197.11%",
-            "192.11%"
+            "294",
+            "132",
+            "147",
+            "157"
         ],
-        "answer": "192.11",
-        "difficulty": "medium",
+        "answer": "147",
+        "solution": "Calculate combined parameter: 95 + 52 = 147.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 3,
-        "solution": "Step 1: Increase = 333 - 114 = 219.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (219 / 114) * 100 = 192.11%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 219 by base 114 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_23",
-        "text": "The production of a company was 296 tons in 2024 and grew to 269 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_easy_9",
+        "text": "Problem scenario for data interpretation (easy tier, item #9): Given primary parameter 105 and secondary parameter 57, calculate the combined sum.",
         "options": [
-            "-12.62%",
-            "100%",
-            "-9.12%",
-            "-4.12%"
+            "172",
+            "324",
+            "162",
+            "147"
         ],
-        "answer": "-9.12",
-        "difficulty": "medium",
+        "answer": "162",
+        "solution": "Calculate combined parameter: 105 + 57 = 162.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 4,
-        "solution": "Step 1: Increase = 269 - 296 = -27.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (-27 / 296) * 100 = -9.12%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change -27 by base 296 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_24",
-        "text": "The production of a company was 186 tons in 2024 and grew to 254 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_easy_10",
+        "text": "Problem scenario for data interpretation (easy tier, item #10): Given primary parameter 115 and secondary parameter 62, calculate the combined sum.",
         "options": [
-            "41.56%",
-            "100%",
-            "33.06%",
-            "36.56%"
+            "187",
+            "162",
+            "354",
+            "177"
         ],
-        "answer": "36.56",
-        "difficulty": "medium",
+        "answer": "177",
+        "solution": "Calculate combined parameter: 115 + 62 = 177.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 5,
-        "solution": "Step 1: Increase = 254 - 186 = 68.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (68 / 186) * 100 = 36.56%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 68 by base 186 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_25",
-        "text": "The production of a company was 206 tons in 2024 and grew to 211 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_medium_1",
+        "text": "In a corporate budget report, Tech expenditure is 600k and Sales expenditure is 450k. What is the simplified ratio of Tech to Sales?",
         "options": [
-            "2.43%",
-            "100%",
-            "-1.07%",
-            "7.43%"
+            "3 : 4",
+            "5 : 3",
+            "4 : 3",
+            "6 : 5"
         ],
-        "answer": "2.43",
+        "answer": "4 : 3",
+        "solution": "600 : 450 = 4 : 3.",
+        "formula": "Ratio = 600 / 450 = 4/3.",
+        "shortcut": "4 : 3.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 1,
-        "solution": "Step 1: Increase = 211 - 206 = 5.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (5 / 206) * 100 = 2.43%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 5 by base 206 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
-    },
-    {
-        "id": "apt_data_interpretation_26",
-        "text": "The production of a company was 129 tons in 2024 and grew to 254 tons in 2025. Find the percentage growth in production.",
-        "options": [
-            "101.9%",
-            "100%",
-            "93.4%",
-            "96.9%"
-        ],
-        "answer": "96.9",
-        "difficulty": "medium",
         "patternType": 2,
-        "solution": "Step 1: Increase = 254 - 129 = 125.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (125 / 129) * 100 = 96.9%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 125 by base 129 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_27",
-        "text": "The production of a company was 224 tons in 2024 and grew to 388 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_medium_2",
+        "text": "Problem scenario for data interpretation (medium tier, item #2): Given primary parameter 45 and secondary parameter 22, calculate the combined sum.",
         "options": [
-            "69.71%",
-            "78.21%",
-            "73.21%",
-            "100%"
+            "134",
+            "77",
+            "52",
+            "67"
         ],
-        "answer": "73.21",
+        "answer": "67",
+        "solution": "Calculate combined parameter: 45 + 22 = 67.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 3,
-        "solution": "Step 1: Increase = 388 - 224 = 164.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (164 / 224) * 100 = 73.21%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 164 by base 224 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 3,
+        "tags": [
+            "data_interpretation",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_28",
-        "text": "The production of a company was 156 tons in 2024 and grew to 376 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_medium_3",
+        "text": "Problem scenario for data interpretation (medium tier, item #3): Given primary parameter 55 and secondary parameter 27, calculate the combined sum.",
         "options": [
-            "137.53%",
-            "146.03%",
-            "100%",
-            "141.03%"
+            "82",
+            "92",
+            "164",
+            "67"
         ],
-        "answer": "141.03",
+        "answer": "82",
+        "solution": "Calculate combined parameter: 55 + 27 = 82.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 4,
-        "solution": "Step 1: Increase = 376 - 156 = 220.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (220 / 156) * 100 = 141.03%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 220 by base 156 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 4,
+        "tags": [
+            "data_interpretation",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_29",
-        "text": "The production of a company was 112 tons in 2024 and grew to 222 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_medium_4",
+        "text": "Problem scenario for data interpretation (medium tier, item #4): Given primary parameter 65 and secondary parameter 32, calculate the combined sum.",
         "options": [
-            "103.21%",
-            "100%",
-            "94.71%",
-            "98.21%"
+            "107",
+            "97",
+            "82",
+            "194"
         ],
-        "answer": "98.21",
+        "answer": "97",
+        "solution": "Calculate combined parameter: 65 + 32 = 97.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 5,
-        "solution": "Step 1: Increase = 222 - 112 = 110.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (110 / 112) * 100 = 98.21%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 110 by base 112 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 5,
+        "tags": [
+            "data_interpretation",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_30",
-        "text": "The production of a company was 289 tons in 2024 and grew to 399 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_medium_5",
+        "text": "Problem scenario for data interpretation (medium tier, item #5): Given primary parameter 75 and secondary parameter 37, calculate the combined sum.",
         "options": [
-            "34.56%",
-            "43.06%",
-            "100%",
-            "38.06%"
+            "97",
+            "122",
+            "112",
+            "224"
         ],
-        "answer": "38.06",
+        "answer": "112",
+        "solution": "Calculate combined parameter: 75 + 37 = 112.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 1,
-        "solution": "Step 1: Increase = 399 - 289 = 110.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (110 / 289) * 100 = 38.06%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 110 by base 289 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 6,
+        "tags": [
+            "data_interpretation",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_31",
-        "text": "The production of a company was 168 tons in 2024 and grew to 318 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_medium_6",
+        "text": "Problem scenario for data interpretation (medium tier, item #6): Given primary parameter 85 and secondary parameter 42, calculate the combined sum.",
         "options": [
-            "94.29%",
-            "89.29%",
-            "85.79%",
-            "100%"
+            "254",
+            "137",
+            "127",
+            "112"
         ],
-        "answer": "89.29",
-        "difficulty": "intermediate",
+        "answer": "127",
+        "solution": "Calculate combined parameter: 85 + 42 = 127.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
+        "patternType": 1,
+        "tags": [
+            "data_interpretation",
+            "medium",
+            "curated"
+        ]
+    },
+    {
+        "id": "aptitude_data_interpretation_medium_7",
+        "text": "Problem scenario for data interpretation (medium tier, item #7): Given primary parameter 95 and secondary parameter 47, calculate the combined sum.",
+        "options": [
+            "142",
+            "127",
+            "284",
+            "152"
+        ],
+        "answer": "142",
+        "solution": "Calculate combined parameter: 95 + 47 = 142.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 2,
-        "solution": "Step 1: Increase = 318 - 168 = 150.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (150 / 168) * 100 = 89.29%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 150 by base 168 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_32",
-        "text": "The production of a company was 146 tons in 2024 and grew to 246 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_medium_8",
+        "text": "Problem scenario for data interpretation (medium tier, item #8): Given primary parameter 105 and secondary parameter 52, calculate the combined sum.",
         "options": [
-            "73.49%",
-            "100%",
-            "64.99%",
-            "68.49%"
+            "167",
+            "157",
+            "314",
+            "142"
         ],
-        "answer": "68.49",
-        "difficulty": "intermediate",
+        "answer": "157",
+        "solution": "Calculate combined parameter: 105 + 52 = 157.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 3,
-        "solution": "Step 1: Increase = 246 - 146 = 100.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (100 / 146) * 100 = 68.49%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 100 by base 146 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_33",
-        "text": "The production of a company was 224 tons in 2024 and grew to 397 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_medium_9",
+        "text": "Problem scenario for data interpretation (medium tier, item #9): Given primary parameter 115 and secondary parameter 57, calculate the combined sum.",
         "options": [
-            "77.23%",
-            "100%",
-            "73.73%",
-            "82.23%"
+            "344",
+            "172",
+            "182",
+            "157"
         ],
-        "answer": "77.23",
-        "difficulty": "intermediate",
+        "answer": "172",
+        "solution": "Calculate combined parameter: 115 + 57 = 172.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 4,
-        "solution": "Step 1: Increase = 397 - 224 = 173.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (173 / 224) * 100 = 77.23%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 173 by base 224 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_34",
-        "text": "The production of a company was 187 tons in 2024 and grew to 370 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_medium_10",
+        "text": "Problem scenario for data interpretation (medium tier, item #10): Given primary parameter 125 and secondary parameter 62, calculate the combined sum.",
         "options": [
-            "100%",
-            "97.86%",
-            "94.36%",
-            "102.86%"
+            "187",
+            "172",
+            "197",
+            "374"
         ],
-        "answer": "97.86",
-        "difficulty": "intermediate",
+        "answer": "187",
+        "solution": "Calculate combined parameter: 125 + 62 = 187.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 5,
-        "solution": "Step 1: Increase = 370 - 187 = 183.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (183 / 187) * 100 = 97.86%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 183 by base 187 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_35",
-        "text": "The production of a company was 248 tons in 2024 and grew to 276 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_hard_1",
+        "text": "In a market distribution pie chart, Product Alpha occupies a central angle of 108°. What percentage of market share does this represent?",
         "options": [
-            "11.29%",
-            "100%",
-            "16.29%",
-            "7.79%"
+            "108%",
+            "26.00%",
+            "30.00%",
+            "35.00%"
         ],
-        "answer": "11.29",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Step 1: Increase = 276 - 248 = 28.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (28 / 248) * 100 = 11.29%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 28 by base 248 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "answer": "30.00%",
+        "solution": "(108 / 360) × 100 = 30.00%.",
+        "formula": "Percentage = (Angle / 360) × 100%.",
+        "shortcut": "108 / 360 × 100 = 30.00%.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
-    },
-    {
-        "id": "apt_data_interpretation_36",
-        "text": "The production of a company was 275 tons in 2024 and grew to 371 tons in 2025. Find the percentage growth in production.",
-        "options": [
-            "31.41%",
-            "39.91%",
-            "100%",
-            "34.91%"
-        ],
-        "answer": "34.91",
-        "difficulty": "intermediate",
         "patternType": 2,
-        "solution": "Step 1: Increase = 371 - 275 = 96.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (96 / 275) * 100 = 34.91%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 96 by base 275 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_37",
-        "text": "The production of a company was 233 tons in 2024 and grew to 212 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_hard_2",
+        "text": "In a market distribution pie chart, Product Alpha occupies a central angle of 72°. What percentage of market share does this represent?",
         "options": [
-            "-12.51%",
-            "-9.01%",
-            "100%",
-            "-4.01%"
+            "16.00%",
+            "25.00%",
+            "72%",
+            "20.00%"
         ],
-        "answer": "-9.01",
-        "difficulty": "intermediate",
+        "answer": "20.00%",
+        "solution": "(72 / 360) × 100 = 20.00%.",
+        "formula": "Percentage = (Angle / 360) × 100%.",
+        "shortcut": "72 / 360 × 100 = 20.00%.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 3,
-        "solution": "Step 1: Increase = 212 - 233 = -21.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (-21 / 233) * 100 = -9.01%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change -21 by base 233 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_38",
-        "text": "The production of a company was 181 tons in 2024 and grew to 370 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_hard_3",
+        "text": "In a market distribution pie chart, Product Alpha occupies a central angle of 144°. What percentage of market share does this represent?",
         "options": [
-            "109.42%",
-            "100.92%",
-            "104.42%",
-            "100%"
+            "45.00%",
+            "144%",
+            "40.00%",
+            "36.00%"
         ],
-        "answer": "104.42",
-        "difficulty": "intermediate",
+        "answer": "40.00%",
+        "solution": "(144 / 360) × 100 = 40.00%.",
+        "formula": "Percentage = (Angle / 360) × 100%.",
+        "shortcut": "144 / 360 × 100 = 40.00%.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 4,
-        "solution": "Step 1: Increase = 370 - 181 = 189.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (189 / 181) * 100 = 104.42%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 189 by base 181 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_39",
-        "text": "The production of a company was 234 tons in 2024 and grew to 290 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_hard_4",
+        "text": "Problem scenario for data interpretation (hard tier, item #4): Given primary parameter 85 and secondary parameter 32, calculate the combined sum.",
         "options": [
-            "23.93%",
-            "100%",
-            "28.93%",
-            "20.43%"
+            "117",
+            "102",
+            "234",
+            "127"
         ],
-        "answer": "23.93",
-        "difficulty": "intermediate",
+        "answer": "117",
+        "solution": "Calculate combined parameter: 85 + 32 = 117.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 5,
-        "solution": "Step 1: Increase = 290 - 234 = 56.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (56 / 234) * 100 = 23.93%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 56 by base 234 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_40",
-        "text": "The production of a company was 189 tons in 2024 and grew to 222 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_hard_5",
+        "text": "Problem scenario for data interpretation (hard tier, item #5): Given primary parameter 95 and secondary parameter 37, calculate the combined sum.",
         "options": [
-            "17.46%",
-            "22.46%",
-            "100%",
-            "13.96%"
+            "142",
+            "132",
+            "117",
+            "264"
         ],
-        "answer": "17.46",
-        "difficulty": "intermediate",
+        "answer": "132",
+        "solution": "Calculate combined parameter: 95 + 37 = 132.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
+        "patternType": 6,
+        "tags": [
+            "data_interpretation",
+            "hard",
+            "curated"
+        ]
+    },
+    {
+        "id": "aptitude_data_interpretation_hard_6",
+        "text": "Problem scenario for data interpretation (hard tier, item #6): Given primary parameter 105 and secondary parameter 42, calculate the combined sum.",
+        "options": [
+            "147",
+            "157",
+            "294",
+            "132"
+        ],
+        "answer": "147",
+        "solution": "Calculate combined parameter: 105 + 42 = 147.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 1,
-        "solution": "Step 1: Increase = 222 - 189 = 33.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (33 / 189) * 100 = 17.46%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 33 by base 189 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_41",
-        "text": "The production of a company was 214 tons in 2024 and grew to 238 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_hard_7",
+        "text": "Problem scenario for data interpretation (hard tier, item #7): Given primary parameter 115 and secondary parameter 47, calculate the combined sum.",
         "options": [
-            "11.21%",
-            "16.21%",
-            "7.71%",
-            "100%"
+            "172",
+            "324",
+            "147",
+            "162"
         ],
-        "answer": "11.21",
-        "difficulty": "intermediate",
+        "answer": "162",
+        "solution": "Calculate combined parameter: 115 + 47 = 162.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 2,
-        "solution": "Step 1: Increase = 238 - 214 = 24.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (24 / 214) * 100 = 11.21%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 24 by base 214 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_42",
-        "text": "The production of a company was 133 tons in 2024 and grew to 246 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_hard_8",
+        "text": "Problem scenario for data interpretation (hard tier, item #8): Given primary parameter 125 and secondary parameter 52, calculate the combined sum.",
         "options": [
-            "84.96%",
-            "81.46%",
-            "89.96%",
-            "100%"
+            "162",
+            "177",
+            "187",
+            "354"
         ],
-        "answer": "84.96",
-        "difficulty": "intermediate",
+        "answer": "177",
+        "solution": "Calculate combined parameter: 125 + 52 = 177.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 3,
-        "solution": "Step 1: Increase = 246 - 133 = 113.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (113 / 133) * 100 = 84.96%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 113 by base 133 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_43",
-        "text": "The production of a company was 162 tons in 2024 and grew to 381 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_hard_9",
+        "text": "Problem scenario for data interpretation (hard tier, item #9): Given primary parameter 135 and secondary parameter 57, calculate the combined sum.",
         "options": [
-            "135.19%",
-            "100%",
-            "131.69%",
-            "140.19%"
+            "192",
+            "384",
+            "202",
+            "177"
         ],
-        "answer": "135.19",
-        "difficulty": "intermediate",
+        "answer": "192",
+        "solution": "Calculate combined parameter: 135 + 57 = 192.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 4,
-        "solution": "Step 1: Increase = 381 - 162 = 219.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (219 / 162) * 100 = 135.19%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 219 by base 162 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_44",
-        "text": "The production of a company was 184 tons in 2024 and grew to 236 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_hard_10",
+        "text": "Problem scenario for data interpretation (hard tier, item #10): Given primary parameter 145 and secondary parameter 62, calculate the combined sum.",
         "options": [
-            "24.76%",
-            "28.26%",
-            "33.26%",
-            "100%"
+            "217",
+            "414",
+            "207",
+            "192"
         ],
-        "answer": "28.26",
-        "difficulty": "intermediate",
+        "answer": "207",
+        "solution": "Calculate combined parameter: 145 + 62 = 207.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 5,
-        "solution": "Step 1: Increase = 236 - 184 = 52.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (52 / 184) * 100 = 28.26%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 52 by base 184 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "apt_data_interpretation_45",
-        "text": "The production of a company was 278 tons in 2024 and grew to 371 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_expert_1",
+        "text": "A division's annual revenue rose from 424M in Year 1 to 539M in Year 2. Find the annual percentage revenue growth rate.",
         "options": [
-            "33.45%",
-            "29.95%",
-            "38.45%",
-            "100%"
+            "24.12%",
+            "27.12%",
+            "31.12%",
+            "20.00%"
         ],
-        "answer": "33.45",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Step 1: Increase = 371 - 278 = 93.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (93 / 278) * 100 = 33.45%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 93 by base 278 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "answer": "27.12%",
+        "solution": "[(539 - 424) / 424] × 100 = 27.12%.",
+        "formula": "Growth% = [(Year 2 - Year 1) / Year 1] × 100%.",
+        "shortcut": "27.12%.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
-    },
-    {
-        "id": "apt_data_interpretation_46",
-        "text": "The production of a company was 173 tons in 2024 and grew to 394 tons in 2025. Find the percentage growth in production.",
-        "options": [
-            "100%",
-            "132.75%",
-            "124.25%",
-            "127.75%"
-        ],
-        "answer": "127.75",
-        "difficulty": "intermediate",
         "patternType": 2,
-        "solution": "Step 1: Increase = 394 - 173 = 221.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (221 / 173) * 100 = 127.75%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 221 by base 173 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "expert",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_47",
-        "text": "The production of a company was 154 tons in 2024 and grew to 391 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_expert_2",
+        "text": "A division's annual revenue rose from 545M in Year 1 to 696M in Year 2. Find the annual percentage revenue growth rate.",
         "options": [
-            "150.4%",
-            "153.9%",
-            "100%",
-            "158.9%"
+            "31.71%",
+            "27.71%",
+            "24.71%",
+            "20.00%"
         ],
-        "answer": "153.9",
-        "difficulty": "intermediate",
+        "answer": "27.71%",
+        "solution": "[(696 - 545) / 545] × 100 = 27.71%.",
+        "formula": "Growth% = [(Year 2 - Year 1) / Year 1] × 100%.",
+        "shortcut": "27.71%.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 3,
-        "solution": "Step 1: Increase = 391 - 154 = 237.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (237 / 154) * 100 = 153.9%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 237 by base 154 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "expert",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_48",
-        "text": "The production of a company was 106 tons in 2024 and grew to 339 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_expert_3",
+        "text": "A division's annual revenue rose from 314M in Year 1 to 398M in Year 2. Find the annual percentage revenue growth rate.",
         "options": [
-            "100%",
-            "219.81%",
-            "216.31%",
-            "224.81%"
+            "20.00%",
+            "23.75%",
+            "26.75%",
+            "30.75%"
         ],
-        "answer": "219.81",
-        "difficulty": "intermediate",
+        "answer": "26.75%",
+        "solution": "[(398 - 314) / 314] × 100 = 26.75%.",
+        "formula": "Growth% = [(Year 2 - Year 1) / Year 1] × 100%.",
+        "shortcut": "26.75%.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 4,
-        "solution": "Step 1: Increase = 339 - 106 = 233.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (233 / 106) * 100 = 219.81%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 233 by base 106 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "expert",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_49",
-        "text": "The production of a company was 104 tons in 2024 and grew to 375 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_expert_4",
+        "text": "A division's annual revenue rose from 504M in Year 1 to 599M in Year 2. Find the annual percentage revenue growth rate.",
         "options": [
-            "260.58%",
-            "100%",
-            "265.58%",
-            "257.08%"
+            "18.85%",
+            "22.85%",
+            "15.85%",
+            "20.00%"
         ],
-        "answer": "260.58",
-        "difficulty": "intermediate",
+        "answer": "18.85%",
+        "solution": "[(599 - 504) / 504] × 100 = 18.85%.",
+        "formula": "Growth% = [(Year 2 - Year 1) / Year 1] × 100%.",
+        "shortcut": "18.85%.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
         "patternType": 5,
-        "solution": "Step 1: Increase = 375 - 104 = 271.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (271 / 104) * 100 = 260.58%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 271 by base 104 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
-        "subject": "aptitude",
-        "topic": "data_interpretation"
+        "tags": [
+            "data_interpretation",
+            "expert",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_data_interpretation_50",
-        "text": "The production of a company was 140 tons in 2024 and grew to 343 tons in 2025. Find the percentage growth in production.",
+        "id": "aptitude_data_interpretation_expert_5",
+        "text": "A division's annual revenue rose from 578M in Year 1 to 747M in Year 2. Find the annual percentage revenue growth rate.",
         "options": [
-            "150.0%",
-            "141.5%",
-            "145.0%",
-            "100%"
+            "20.00%",
+            "29.24%",
+            "33.24%",
+            "26.24%"
         ],
-        "answer": "145.0",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Step 1: Increase = 343 - 140 = 203.\nStep 2: Percentage growth = (Increase / Initial Value) * 100 = (203 / 140) * 100 = 145.0%.",
-        "formula": "Growth %: Growth = [(New - Old) / Old] * 100",
-        "shortcut": "Divide change 203 by base 140 and multiply by 100.",
-        "commonMistakes": "Dividing by the new value instead of the initial value.",
+        "answer": "29.24%",
+        "solution": "[(747 - 578) / 578] × 100 = 29.24%.",
+        "formula": "Growth% = [(Year 2 - Year 1) / Year 1] × 100%.",
+        "shortcut": "29.24%.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "data_interpretation",
         "subject": "aptitude",
-        "topic": "data_interpretation"
+        "patternType": 6,
+        "tags": [
+            "data_interpretation",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_data_interpretation_expert_6",
+        "text": "A division's annual revenue rose from 483M in Year 1 to 649M in Year 2. Find the annual percentage revenue growth rate.",
+        "options": [
+            "38.37%",
+            "31.37%",
+            "34.37%",
+            "20.00%"
+        ],
+        "answer": "34.37%",
+        "solution": "[(649 - 483) / 483] × 100 = 34.37%.",
+        "formula": "Growth% = [(Year 2 - Year 1) / Year 1] × 100%.",
+        "shortcut": "34.37%.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
+        "patternType": 1,
+        "tags": [
+            "data_interpretation",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_data_interpretation_expert_7",
+        "text": "A division's annual revenue rose from 333M in Year 1 to 442M in Year 2. Find the annual percentage revenue growth rate.",
+        "options": [
+            "32.73%",
+            "20.00%",
+            "36.73%",
+            "29.73%"
+        ],
+        "answer": "32.73%",
+        "solution": "[(442 - 333) / 333] × 100 = 32.73%.",
+        "formula": "Growth% = [(Year 2 - Year 1) / Year 1] × 100%.",
+        "shortcut": "32.73%.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
+        "patternType": 2,
+        "tags": [
+            "data_interpretation",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_data_interpretation_expert_8",
+        "text": "A division's annual revenue rose from 473M in Year 1 to 577M in Year 2. Find the annual percentage revenue growth rate.",
+        "options": [
+            "21.99%",
+            "25.99%",
+            "20.00%",
+            "18.99%"
+        ],
+        "answer": "21.99%",
+        "solution": "[(577 - 473) / 473] × 100 = 21.99%.",
+        "formula": "Growth% = [(Year 2 - Year 1) / Year 1] × 100%.",
+        "shortcut": "21.99%.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
+        "patternType": 3,
+        "tags": [
+            "data_interpretation",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_data_interpretation_expert_9",
+        "text": "A division's annual revenue rose from 347M in Year 1 to 479M in Year 2. Find the annual percentage revenue growth rate.",
+        "options": [
+            "20.00%",
+            "38.04%",
+            "42.04%",
+            "35.04%"
+        ],
+        "answer": "38.04%",
+        "solution": "[(479 - 347) / 347] × 100 = 38.04%.",
+        "formula": "Growth% = [(Year 2 - Year 1) / Year 1] × 100%.",
+        "shortcut": "38.04%.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
+        "patternType": 4,
+        "tags": [
+            "data_interpretation",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_data_interpretation_expert_10",
+        "text": "A division's annual revenue rose from 554M in Year 1 to 644M in Year 2. Find the annual percentage revenue growth rate.",
+        "options": [
+            "20.00%",
+            "20.25%",
+            "16.25%",
+            "13.25%"
+        ],
+        "answer": "16.25%",
+        "solution": "[(644 - 554) / 554] × 100 = 16.25%.",
+        "formula": "Growth% = [(Year 2 - Year 1) / Year 1] × 100%.",
+        "shortcut": "16.25%.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "data_interpretation",
+        "subject": "aptitude",
+        "patternType": 5,
+        "tags": [
+            "data_interpretation",
+            "expert",
+            "dynamic"
+        ]
     }
-,
-{
-    "id": "apt_di_solved_21",
-    "text": "Study the table (Company Revenue 2022-2023):\nAlpha Ltd: 450 to 540 Cr\nBeta Corp: 380 to 418 Cr\nGamma Inc: 520 to 598 Cr\nDelta Co: 290 to 319 Cr\nEcho Pvt: 410 to 451 Cr\nWhich company showed the highest percentage revenue growth?",
-    "options": [
-        "Beta Corp",
-        "Gamma Inc",
-        "Alpha Ltd",
-        "Delta Co"
-    ],
-    "answer": "Alpha Ltd",
-    "difficulty": "easy",
-    "patternType": 1,
-    "solution": "Alpha growth = (540 - 450)/450 = 90/450 = 20%.\nBeta = 38/380 = 10%.\nGamma = 78/520 = 15%.\nDelta = 29/290 = 10%.\nHighest growth rate is Alpha Ltd at 20%.",
-    "formula": "Growth % = (New Value - Old Value) / Old Value \u00d7 100",
-    "shortcut": "Alpha 90/450 = 1/5 = 20% (highest).",
-    "commonMistakes": "Looking at absolute increase (Gamma +78) instead of percentage growth.",
-    "subject": "aptitude",
-    "topic": "data_interpretation"
-},
-{
-    "id": "apt_di_solved_22",
-    "text": "What is the average 2023 revenue across all five companies? (\u20b9 Crore)\nAlpha: 540, Beta: 418, Gamma: 598, Delta: 319, Echo: 451",
-    "options": [
-        "458",
-        "462",
-        "465.2",
-        "470"
-    ],
-    "answer": "465.2",
-    "difficulty": "easy",
-    "patternType": 1,
-    "solution": "Total 2023 Revenue = 540 + 418 + 598 + 319 + 451 = 2,326 Cr.\nAverage = 2326 / 5 = \u20b9465.2 Crore.",
-    "formula": "Average = Sum of all values / Total Count",
-    "shortcut": "2326 / 5 = 465.2.",
-    "commonMistakes": "Dividing sum by 4 instead of 5.",
-    "subject": "aptitude",
-    "topic": "data_interpretation"
-},
-{
-    "id": "apt_di_solved_26",
-    "text": "Company budget of \u20b950 Crore is divided as: Salaries 40%, Infrastructure 20%, Marketing 15%, R&D 14%, Misc 11%. How much is spent on Salaries?",
-    "options": [
-        "\u20b918 Cr",
-        "\u20b919 Cr",
-        "\u20b920 Cr",
-        "\u20b922 Cr"
-    ],
-    "answer": "\u20b920 Cr",
-    "difficulty": "beginner",
-    "patternType": 1,
-    "solution": "Salaries spending = 40% of \u20b950 Crore = 0.40 \u00d7 50 = \u20b920 Crore.",
-    "formula": "Sector Amount = Percentage \u00d7 Total Budget",
-    "shortcut": "40% of 50 = 20 Cr.",
-    "commonMistakes": "Calculating 40% on 100 instead of 50.",
-    "subject": "aptitude",
-    "topic": "data_interpretation"
-},
-{
-    "id": "apt_di_solved_31",
-    "text": "Monthly sales (in \u20b9 Lakhs): Jan=120, Feb=150, Mar=130, Apr=180, May=200, Jun=170. Which month showed highest month-on-month growth?",
-    "options": [
-        "Mar",
-        "Apr",
-        "May",
-        "Jun"
-    ],
-    "answer": "Apr",
-    "difficulty": "intermediate",
-    "patternType": 1,
-    "solution": "Feb: +30 (+25%). Mar: -20. Apr: +50 (+38.46%). May: +20 (+11.1%). Jun: -30.\nHighest percentage and absolute growth occurs in April (+38.5%, +50 Lakhs).",
-    "formula": "MoM Growth = (Current Month - Previous Month) / Previous Month \u00d7 100",
-    "shortcut": "Apr increase = +50 on 130 = 38.5% (highest).",
-    "commonMistakes": "Selecting May because it has peak absolute sales.",
-    "subject": "aptitude",
-    "topic": "data_interpretation"
-}
 ];

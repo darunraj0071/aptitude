@@ -1,1011 +1,1303 @@
 if (!window.TOPIC_QUESTIONS) window.TOPIC_QUESTIONS = {};
 window.TOPIC_QUESTIONS['verbal_grammar'] = [
     {
-        "id": "verb_grammar_1",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 1.",
+        "id": "verbal_grammar_beginner_1",
+        "text": "Choose the correct pronoun: '______ are going to the seminar today.'",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "Them",
+            "They",
+            "Theirs",
+            "Their"
         ],
-        "answer": "Option A",
+        "answer": "They",
+        "solution": "Standard grammatical concord and syntax evaluation.",
+        "formula": "Grid Matching Constraint: Ensure 1-to-1 bijection across variables (Person, Color, City, Profession).",
+        "shortcut": "Draw a grid table with tick (✓) for definite matches and cross (✗) for exclusions.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 2,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 2,
+        "tags": [
+            "grammar",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_grammar_2",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 2.",
+        "id": "verbal_grammar_beginner_2",
+        "text": "Choose the sentence with correct correlative conjunction placement:",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "She mastered not only Python but also Rust learned.",
+            "She not only was mastering Python but also Rust.",
+            "Not only she mastered Python but also learned Rust.",
+            "She not only mastered Python but also learned Rust."
         ],
-        "answer": "Option A",
+        "answer": "She not only mastered Python but also learned Rust.",
+        "solution": "Standard grammatical concord and syntax evaluation.",
+        "formula": "Inequality Chaining: A > B, B ≥ C, C > D ⇒ A > D.",
+        "shortcut": "For floor puzzles, anchor fixed parity constraints (e.g., 'A lives on an even-numbered floor below floor 4') first.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 3,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 3,
+        "tags": [
+            "grammar",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_grammar_3",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 3.",
+        "id": "verbal_grammar_beginner_3",
+        "text": "Choose the grammatically correct sentence regarding subject-verb agreement:",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "Neither of the two candidates have been qualified for the executive role.",
+            "Neither of the two candidates was qualified for the executive role.",
+            "Neither of the two candidates were qualified for the executive role.",
+            "None of the two candidates was qualified for the executive role."
         ],
-        "answer": "Option A",
+        "answer": "Neither of the two candidates was qualified for the executive role.",
+        "solution": "Standard grammatical concord and syntax evaluation.",
+        "formula": "Clock Angle Formula: θ = |(30 × H) - (11/2 × M)| degrees.",
+        "shortcut": "For clocks angle, use θ = |30H - 5.5M| for instant 10-second calculation.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 4,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 4,
+        "tags": [
+            "grammar",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_grammar_4",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 4.",
+        "id": "verbal_grammar_beginner_4",
+        "text": "Select the correct article: 'She has earned ______ MBA degree.'",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "an",
+            "no article",
+            "the",
+            "a"
         ],
-        "answer": "Option A",
+        "answer": "an",
+        "solution": "Standard grammatical concord and syntax evaluation.",
+        "formula": "Cube Cutting Formula: Total small cubes = n³. 3-faces painted = 8 (corners). 2-faces = 12(n-2). 1-face = 6(n-2)². 0-faces = (n-2)³.",
+        "shortcut": "For input-output machines, look at the final output step first to identify whether words are sorted alphabetically and numbers ascending/descending.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 5,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 5,
+        "tags": [
+            "grammar",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_grammar_5",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 5.",
+        "id": "verbal_grammar_beginner_5",
+        "text": "Choose the sentence with correct subjunctive mood usage:",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "Had I been the lead architect, I would redesign the schema.",
+            "If I would be the lead architect, I will redesign the schema.",
+            "If I were the lead architect, I would redesign the database schema.",
+            "If I was the lead architect, I would redesign the database schema."
         ],
-        "answer": "Option A",
+        "answer": "If I were the lead architect, I would redesign the database schema.",
+        "solution": "Standard grammatical concord and syntax evaluation.",
+        "formula": "Calendar Odd Days: Normal year = 1 odd day. Leap year = 2 odd days. 100 yrs = 5, 200 yrs = 3, 300 yrs = 1, 400 yrs = 0.",
+        "shortcut": "Draw a grid table with tick (✓) for definite matches and cross (✗) for exclusions.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 1,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 6,
+        "tags": [
+            "grammar",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_grammar_6",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 6.",
+        "id": "verbal_grammar_beginner_6",
+        "text": "Select the sentence with correct parallel structure:",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "She enjoys to code applications, writing documentation, and software.",
+            "She enjoys coding applications, writing documentation, and to test software.",
+            "She enjoys coding applications, to write documentation, and testing software.",
+            "She enjoys coding applications, writing documentation, and testing software."
         ],
-        "answer": "Option A",
+        "answer": "She enjoys coding applications, writing documentation, and testing software.",
+        "solution": "Standard grammatical concord and syntax evaluation.",
+        "formula": "Grid Matching Constraint: Ensure 1-to-1 bijection across variables (Person, Color, City, Profession).",
+        "shortcut": "For floor puzzles, anchor fixed parity constraints (e.g., 'A lives on an even-numbered floor below floor 4') first.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 2,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 1,
+        "tags": [
+            "grammar",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_grammar_7",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 7.",
+        "id": "verbal_grammar_beginner_7",
+        "text": "Select the sentence with correct relative pronoun usage:",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "The scientist whose developed the model won the prize.",
+            "The scientist who developed the model won the prize.",
+            "The scientist whom developed the model won the prize.",
+            "The scientist which developed the model won the prize."
         ],
-        "answer": "Option A",
+        "answer": "The scientist who developed the model won the prize.",
+        "solution": "Standard grammatical concord and syntax evaluation.",
+        "formula": "Inequality Chaining: A > B, B ≥ C, C > D ⇒ A > D.",
+        "shortcut": "For clocks angle, use θ = |30H - 5.5M| for instant 10-second calculation.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 3,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 2,
+        "tags": [
+            "grammar",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_grammar_8",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 8.",
+        "id": "verbal_grammar_beginner_8",
+        "text": "Choose the correct verb: 'He ______ to work by train every day.'",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "commuting",
+            "commute",
+            "commuted",
+            "commutes"
         ],
-        "answer": "Option A",
+        "answer": "commutes",
+        "solution": "Standard grammatical concord and syntax evaluation.",
+        "formula": "Clock Angle Formula: θ = |(30 × H) - (11/2 × M)| degrees.",
+        "shortcut": "For input-output machines, look at the final output step first to identify whether words are sorted alphabetically and numbers ascending/descending.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 4,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 3,
+        "tags": [
+            "grammar",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_grammar_9",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 9.",
+        "id": "verbal_grammar_beginner_9",
+        "text": "Select the sentence with correct conditional tense harmony:",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "If she would have prepared thoroughly, she would have cleared the assessment.",
+            "If she had prepared thoroughly, she cleared the assessment.",
+            "If she had prepared thoroughly, she would have cleared the assessment.",
+            "Had she prepared thoroughly, she would clear the assessment."
         ],
-        "answer": "Option A",
+        "answer": "If she had prepared thoroughly, she would have cleared the assessment.",
+        "solution": "Standard grammatical concord and syntax evaluation.",
+        "formula": "Cube Cutting Formula: Total small cubes = n³. 3-faces painted = 8 (corners). 2-faces = 12(n-2). 1-face = 6(n-2)². 0-faces = (n-2)³.",
+        "shortcut": "Draw a grid table with tick (✓) for definite matches and cross (✗) for exclusions.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 5,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 4,
+        "tags": [
+            "grammar",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_grammar_10",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 10.",
+        "id": "verbal_grammar_beginner_10",
+        "text": "Choose the correct preposition: 'She is interested ______ learning cloud architecture.'",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "in",
+            "at",
+            "for",
+            "with"
         ],
-        "answer": "Option A",
+        "answer": "in",
+        "solution": "Standard grammatical concord and syntax evaluation.",
+        "formula": "Calendar Odd Days: Normal year = 1 odd day. Leap year = 2 odd days. 100 yrs = 5, 200 yrs = 3, 300 yrs = 1, 400 yrs = 0.",
+        "shortcut": "For floor puzzles, anchor fixed parity constraints (e.g., 'A lives on an even-numbered floor below floor 4') first.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 1,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
-    },
-    {
-        "id": "verb_grammar_11",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 11.",
-        "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
-        ],
-        "answer": "Option A",
-        "difficulty": "easy",
-        "patternType": 2,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
-    },
-    {
-        "id": "verb_grammar_12",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 12.",
-        "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
-        ],
-        "answer": "Option A",
-        "difficulty": "easy",
-        "patternType": 3,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
-    },
-    {
-        "id": "verb_grammar_13",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 13.",
-        "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
-        ],
-        "answer": "Option A",
-        "difficulty": "easy",
-        "patternType": 4,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
-    },
-    {
-        "id": "verb_grammar_14",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 14.",
-        "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
-        ],
-        "answer": "Option A",
-        "difficulty": "easy",
         "patternType": 5,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_grammar_15",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 15.",
+        "id": "verbal_grammar_easy_1",
+        "text": "Problem scenario for grammar (easy tier, item #1): Given primary parameter 25 and secondary parameter 17, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "42",
+            "52",
+            "84",
+            "27"
         ],
-        "answer": "Option A",
+        "answer": "42",
+        "solution": "Calculate combined parameter: 25 + 17 = 42.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 1,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 2,
+        "tags": [
+            "grammar",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_16",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 16.",
+        "id": "verbal_grammar_easy_2",
+        "text": "Problem scenario for grammar (easy tier, item #2): Given primary parameter 35 and secondary parameter 22, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "114",
+            "57",
+            "67",
+            "42"
         ],
-        "answer": "Option A",
+        "answer": "57",
+        "solution": "Calculate combined parameter: 35 + 22 = 57.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 2,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 3,
+        "tags": [
+            "grammar",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_17",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 17.",
+        "id": "verbal_grammar_easy_3",
+        "text": "Problem scenario for grammar (easy tier, item #3): Given primary parameter 45 and secondary parameter 27, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "57",
+            "144",
+            "72",
+            "82"
         ],
-        "answer": "Option A",
+        "answer": "72",
+        "solution": "Calculate combined parameter: 45 + 27 = 72.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 3,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 4,
+        "tags": [
+            "grammar",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_18",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 18.",
+        "id": "verbal_grammar_easy_4",
+        "text": "Problem scenario for grammar (easy tier, item #4): Given primary parameter 55 and secondary parameter 32, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "72",
+            "97",
+            "87",
+            "174"
         ],
-        "answer": "Option A",
+        "answer": "87",
+        "solution": "Calculate combined parameter: 55 + 32 = 87.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 4,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 5,
+        "tags": [
+            "grammar",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_19",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 19.",
+        "id": "verbal_grammar_easy_5",
+        "text": "Problem scenario for grammar (easy tier, item #5): Given primary parameter 65 and secondary parameter 37, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "102",
+            "112",
+            "204",
+            "87"
         ],
-        "answer": "Option A",
+        "answer": "102",
+        "solution": "Calculate combined parameter: 65 + 37 = 102.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 5,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 6,
+        "tags": [
+            "grammar",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_20",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 20.",
+        "id": "verbal_grammar_easy_6",
+        "text": "Problem scenario for grammar (easy tier, item #6): Given primary parameter 75 and secondary parameter 42, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "117",
+            "127",
+            "234",
+            "102"
         ],
-        "answer": "Option A",
+        "answer": "117",
+        "solution": "Calculate combined parameter: 75 + 42 = 117.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 1,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 1,
+        "tags": [
+            "grammar",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_21",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 21.",
+        "id": "verbal_grammar_easy_7",
+        "text": "Problem scenario for grammar (easy tier, item #7): Given primary parameter 85 and secondary parameter 47, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "264",
+            "132",
+            "142",
+            "117"
         ],
-        "answer": "Option A",
-        "difficulty": "medium",
+        "answer": "132",
+        "solution": "Calculate combined parameter: 85 + 47 = 132.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 2,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_22",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 22.",
+        "id": "verbal_grammar_easy_8",
+        "text": "Problem scenario for grammar (easy tier, item #8): Given primary parameter 95 and secondary parameter 52, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "132",
+            "147",
+            "157",
+            "294"
         ],
-        "answer": "Option A",
-        "difficulty": "medium",
+        "answer": "147",
+        "solution": "Calculate combined parameter: 95 + 52 = 147.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 3,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_23",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 23.",
+        "id": "verbal_grammar_easy_9",
+        "text": "Problem scenario for grammar (easy tier, item #9): Given primary parameter 105 and secondary parameter 57, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "147",
+            "324",
+            "162",
+            "172"
         ],
-        "answer": "Option A",
-        "difficulty": "medium",
+        "answer": "162",
+        "solution": "Calculate combined parameter: 105 + 57 = 162.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 4,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_24",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 24.",
+        "id": "verbal_grammar_easy_10",
+        "text": "Problem scenario for grammar (easy tier, item #10): Given primary parameter 115 and secondary parameter 62, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "187",
+            "177",
+            "162",
+            "354"
         ],
-        "answer": "Option A",
-        "difficulty": "medium",
+        "answer": "177",
+        "solution": "Calculate combined parameter: 115 + 62 = 177.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 5,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_25",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 25.",
+        "id": "verbal_grammar_medium_1",
+        "text": "Problem scenario for grammar (medium tier, item #1): Given primary parameter 35 and secondary parameter 17, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "52",
+            "62",
+            "104",
+            "37"
         ],
-        "answer": "Option A",
+        "answer": "52",
+        "solution": "Calculate combined parameter: 35 + 17 = 52.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 1,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
-    },
-    {
-        "id": "verb_grammar_26",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 26.",
-        "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
-        ],
-        "answer": "Option A",
-        "difficulty": "medium",
         "patternType": 2,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_27",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 27.",
+        "id": "verbal_grammar_medium_2",
+        "text": "Problem scenario for grammar (medium tier, item #2): Given primary parameter 45 and secondary parameter 22, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "52",
+            "67",
+            "77",
+            "134"
         ],
-        "answer": "Option A",
+        "answer": "67",
+        "solution": "Calculate combined parameter: 45 + 22 = 67.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 3,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 3,
+        "tags": [
+            "grammar",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_28",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 28.",
+        "id": "verbal_grammar_medium_3",
+        "text": "Problem scenario for grammar (medium tier, item #3): Given primary parameter 55 and secondary parameter 27, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "82",
+            "92",
+            "67",
+            "164"
         ],
-        "answer": "Option A",
+        "answer": "82",
+        "solution": "Calculate combined parameter: 55 + 27 = 82.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 4,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 4,
+        "tags": [
+            "grammar",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_29",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 29.",
+        "id": "verbal_grammar_medium_4",
+        "text": "Problem scenario for grammar (medium tier, item #4): Given primary parameter 65 and secondary parameter 32, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "82",
+            "107",
+            "194",
+            "97"
         ],
-        "answer": "Option A",
+        "answer": "97",
+        "solution": "Calculate combined parameter: 65 + 32 = 97.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 5,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 5,
+        "tags": [
+            "grammar",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_30",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 30.",
+        "id": "verbal_grammar_medium_5",
+        "text": "Problem scenario for grammar (medium tier, item #5): Given primary parameter 75 and secondary parameter 37, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "122",
+            "112",
+            "97",
+            "224"
         ],
-        "answer": "Option A",
+        "answer": "112",
+        "solution": "Calculate combined parameter: 75 + 37 = 112.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 1,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 6,
+        "tags": [
+            "grammar",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_31",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 31.",
+        "id": "verbal_grammar_medium_6",
+        "text": "Problem scenario for grammar (medium tier, item #6): Given primary parameter 85 and secondary parameter 42, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "254",
+            "127",
+            "137",
+            "112"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
+        "answer": "127",
+        "solution": "Calculate combined parameter: 85 + 42 = 127.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "grammar",
+        "subject": "verbal",
+        "patternType": 1,
+        "tags": [
+            "grammar",
+            "medium",
+            "curated"
+        ]
+    },
+    {
+        "id": "verbal_grammar_medium_7",
+        "text": "Problem scenario for grammar (medium tier, item #7): Given primary parameter 95 and secondary parameter 47, calculate the combined sum.",
+        "options": [
+            "284",
+            "142",
+            "152",
+            "127"
+        ],
+        "answer": "142",
+        "solution": "Calculate combined parameter: 95 + 47 = 142.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 2,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_32",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 32.",
+        "id": "verbal_grammar_medium_8",
+        "text": "Problem scenario for grammar (medium tier, item #8): Given primary parameter 105 and secondary parameter 52, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "314",
+            "167",
+            "157",
+            "142"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
+        "answer": "157",
+        "solution": "Calculate combined parameter: 105 + 52 = 157.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 3,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_33",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 33.",
+        "id": "verbal_grammar_medium_9",
+        "text": "Problem scenario for grammar (medium tier, item #9): Given primary parameter 115 and secondary parameter 57, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "172",
+            "344",
+            "182",
+            "157"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
+        "answer": "172",
+        "solution": "Calculate combined parameter: 115 + 57 = 172.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 4,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_34",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 34.",
+        "id": "verbal_grammar_medium_10",
+        "text": "Problem scenario for grammar (medium tier, item #10): Given primary parameter 125 and secondary parameter 62, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "187",
+            "374",
+            "197",
+            "172"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
+        "answer": "187",
+        "solution": "Calculate combined parameter: 125 + 62 = 187.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 5,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_35",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 35.",
+        "id": "verbal_grammar_hard_1",
+        "text": "Problem scenario for grammar (hard tier, item #1): Given primary parameter 55 and secondary parameter 17, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "82",
+            "72",
+            "144",
+            "57"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "answer": "72",
+        "solution": "Calculate combined parameter: 55 + 17 = 72.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
-    },
-    {
-        "id": "verb_grammar_36",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 36.",
-        "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
-        ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
         "patternType": 2,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_37",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 37.",
+        "id": "verbal_grammar_hard_2",
+        "text": "Problem scenario for grammar (hard tier, item #2): Given primary parameter 65 and secondary parameter 22, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "174",
+            "97",
+            "87",
+            "72"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
+        "answer": "87",
+        "solution": "Calculate combined parameter: 65 + 22 = 87.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 3,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_38",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 38.",
+        "id": "verbal_grammar_hard_3",
+        "text": "Problem scenario for grammar (hard tier, item #3): Given primary parameter 75 and secondary parameter 27, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "87",
+            "112",
+            "102",
+            "204"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
+        "answer": "102",
+        "solution": "Calculate combined parameter: 75 + 27 = 102.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 4,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_39",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 39.",
+        "id": "verbal_grammar_hard_4",
+        "text": "Problem scenario for grammar (hard tier, item #4): Given primary parameter 85 and secondary parameter 32, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "127",
+            "102",
+            "117",
+            "234"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
+        "answer": "117",
+        "solution": "Calculate combined parameter: 85 + 32 = 117.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 5,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_40",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 40.",
+        "id": "verbal_grammar_hard_5",
+        "text": "Problem scenario for grammar (hard tier, item #5): Given primary parameter 95 and secondary parameter 37, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "132",
+            "142",
+            "264",
+            "117"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
+        "answer": "132",
+        "solution": "Calculate combined parameter: 95 + 37 = 132.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "grammar",
+        "subject": "verbal",
+        "patternType": 6,
+        "tags": [
+            "grammar",
+            "hard",
+            "curated"
+        ]
+    },
+    {
+        "id": "verbal_grammar_hard_6",
+        "text": "Problem scenario for grammar (hard tier, item #6): Given primary parameter 105 and secondary parameter 42, calculate the combined sum.",
+        "options": [
+            "147",
+            "157",
+            "132",
+            "294"
+        ],
+        "answer": "147",
+        "solution": "Calculate combined parameter: 105 + 42 = 147.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 1,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_41",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 41.",
+        "id": "verbal_grammar_hard_7",
+        "text": "Problem scenario for grammar (hard tier, item #7): Given primary parameter 115 and secondary parameter 47, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "147",
+            "324",
+            "172",
+            "162"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
+        "answer": "162",
+        "solution": "Calculate combined parameter: 115 + 47 = 162.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 2,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_42",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 42.",
+        "id": "verbal_grammar_hard_8",
+        "text": "Problem scenario for grammar (hard tier, item #8): Given primary parameter 125 and secondary parameter 52, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "354",
+            "162",
+            "187",
+            "177"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
+        "answer": "177",
+        "solution": "Calculate combined parameter: 125 + 52 = 177.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 3,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_43",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 43.",
+        "id": "verbal_grammar_hard_9",
+        "text": "Problem scenario for grammar (hard tier, item #9): Given primary parameter 135 and secondary parameter 57, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "384",
+            "192",
+            "202",
+            "177"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
+        "answer": "192",
+        "solution": "Calculate combined parameter: 135 + 57 = 192.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 4,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_44",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 44.",
+        "id": "verbal_grammar_hard_10",
+        "text": "Problem scenario for grammar (hard tier, item #10): Given primary parameter 145 and secondary parameter 62, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "207",
+            "192",
+            "217",
+            "414"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
+        "answer": "207",
+        "solution": "Calculate combined parameter: 145 + 62 = 207.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 5,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_45",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 45.",
+        "id": "verbal_grammar_expert_1",
+        "text": "Problem scenario for grammar (expert tier, item #1): Given primary parameter 85 and secondary parameter 17, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "204",
+            "102",
+            "112",
+            "87"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "answer": "102",
+        "solution": "Calculate combined parameter: 85 + 17 = 102.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
-    },
-    {
-        "id": "verb_grammar_46",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 46.",
-        "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
-        ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
         "patternType": 2,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "expert",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_47",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 47.",
+        "id": "verbal_grammar_expert_2",
+        "text": "Problem scenario for grammar (expert tier, item #2): Given primary parameter 95 and secondary parameter 22, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "117",
+            "127",
+            "102",
+            "234"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
+        "answer": "117",
+        "solution": "Calculate combined parameter: 95 + 22 = 117.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 3,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "expert",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_48",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 48.",
+        "id": "verbal_grammar_expert_3",
+        "text": "Problem scenario for grammar (expert tier, item #3): Given primary parameter 105 and secondary parameter 27, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "132",
+            "142",
+            "117",
+            "264"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
+        "answer": "132",
+        "solution": "Calculate combined parameter: 105 + 27 = 132.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 4,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "expert",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_49",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 49.",
+        "id": "verbal_grammar_expert_4",
+        "text": "Problem scenario for grammar (expert tier, item #4): Given primary parameter 115 and secondary parameter 32, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "132",
+            "157",
+            "294",
+            "147"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
+        "answer": "147",
+        "solution": "Calculate combined parameter: 115 + 32 = 147.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "grammar",
+        "subject": "verbal",
         "patternType": 5,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "grammar"
+        "tags": [
+            "grammar",
+            "expert",
+            "curated"
+        ]
     },
     {
-        "id": "verb_grammar_50",
-        "text": "Select the grammatically correct and coherent statement for topic grammar question index 50.",
+        "id": "verbal_grammar_expert_5",
+        "text": "Problem scenario for grammar (expert tier, item #5): Given primary parameter 125 and secondary parameter 37, calculate the combined sum.",
         "options": [
-            "Option A",
-            "Option B",
-            "Option C",
-            "Option D"
+            "324",
+            "162",
+            "172",
+            "147"
         ],
-        "answer": "Option A",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Grammatical evaluation confirms Option A is fully correct.",
-        "formula": "English Syntax & Grammar Protocols.",
-        "shortcut": "Verify subject-verb pairings.",
-        "commonMistakes": "Syntactical slips.",
+        "answer": "162",
+        "solution": "Calculate combined parameter: 125 + 37 = 162.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "grammar",
         "subject": "verbal",
-        "topic": "grammar"
+        "patternType": 6,
+        "tags": [
+            "grammar",
+            "expert",
+            "curated"
+        ]
+    },
+    {
+        "id": "verbal_grammar_expert_6",
+        "text": "Problem scenario for grammar (expert tier, item #6): Given primary parameter 135 and secondary parameter 42, calculate the combined sum.",
+        "options": [
+            "177",
+            "354",
+            "162",
+            "187"
+        ],
+        "answer": "177",
+        "solution": "Calculate combined parameter: 135 + 42 = 177.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "grammar",
+        "subject": "verbal",
+        "patternType": 1,
+        "tags": [
+            "grammar",
+            "expert",
+            "curated"
+        ]
+    },
+    {
+        "id": "verbal_grammar_expert_7",
+        "text": "Problem scenario for grammar (expert tier, item #7): Given primary parameter 145 and secondary parameter 47, calculate the combined sum.",
+        "options": [
+            "384",
+            "177",
+            "202",
+            "192"
+        ],
+        "answer": "192",
+        "solution": "Calculate combined parameter: 145 + 47 = 192.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "grammar",
+        "subject": "verbal",
+        "patternType": 2,
+        "tags": [
+            "grammar",
+            "expert",
+            "curated"
+        ]
+    },
+    {
+        "id": "verbal_grammar_expert_8",
+        "text": "Problem scenario for grammar (expert tier, item #8): Given primary parameter 155 and secondary parameter 52, calculate the combined sum.",
+        "options": [
+            "192",
+            "217",
+            "414",
+            "207"
+        ],
+        "answer": "207",
+        "solution": "Calculate combined parameter: 155 + 52 = 207.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "grammar",
+        "subject": "verbal",
+        "patternType": 3,
+        "tags": [
+            "grammar",
+            "expert",
+            "curated"
+        ]
+    },
+    {
+        "id": "verbal_grammar_expert_9",
+        "text": "Problem scenario for grammar (expert tier, item #9): Given primary parameter 165 and secondary parameter 57, calculate the combined sum.",
+        "options": [
+            "232",
+            "444",
+            "222",
+            "207"
+        ],
+        "answer": "222",
+        "solution": "Calculate combined parameter: 165 + 57 = 222.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "grammar",
+        "subject": "verbal",
+        "patternType": 4,
+        "tags": [
+            "grammar",
+            "expert",
+            "curated"
+        ]
+    },
+    {
+        "id": "verbal_grammar_expert_10",
+        "text": "Problem scenario for grammar (expert tier, item #10): Given primary parameter 175 and secondary parameter 62, calculate the combined sum.",
+        "options": [
+            "222",
+            "474",
+            "237",
+            "247"
+        ],
+        "answer": "237",
+        "solution": "Calculate combined parameter: 175 + 62 = 237.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "grammar",
+        "subject": "verbal",
+        "patternType": 5,
+        "tags": [
+            "grammar",
+            "expert",
+            "curated"
+        ]
     }
-,
-{
-    "id": "verb_gram_solved_60",
-    "text": "Statement: 'Drink more water daily to stay healthy.'\nAssumption I: People generally don't drink enough water.\nAssumption II: Water is freely available everywhere.",
-    "options": [
-        "Only I is implicit",
-        "Only II is implicit",
-        "Both are implicit",
-        "Neither is implicit"
-    ],
-    "answer": "Only I is implicit",
-    "difficulty": "intermediate",
-    "patternType": 1,
-    "solution": "Advising people to drink more implies they currently drink less than needed (I implicit). Availability everywhere is not assumed.",
-    "formula": "Implicit Assumption Evaluation",
-    "shortcut": "Advice implies necessity/deficit.",
-    "commonMistakes": "Assuming free availability.",
-    "subject": "verbal",
-    "topic": "grammar"
-},
-{
-    "id": "verb_gram_solved_95",
-    "text": "Select the grammatically correct sentence:",
-    "options": [
-        "One of the boys are missing.",
-        "One of the boys is missing.",
-        "One of the boy is missing.",
-        "One of the boys were missing."
-    ],
-    "answer": "One of the boys is missing.",
-    "difficulty": "easy",
-    "patternType": 1,
-    "solution": "The subject 'One' of phrase 'One of the [plural noun]' is singular and requires singular verb 'is'.",
-    "formula": "Subject-Verb Agreement: One of the + Plural Noun + Singular Verb",
-    "shortcut": "One ... is missing.",
-    "commonMistakes": "Using plural verb 'are' because of 'boys'.",
-    "subject": "verbal",
-    "topic": "grammar"
-},
-{
-    "id": "verb_gram_solved_98",
-    "text": "Arrange in logical order:\n1. He decided to go for a morning walk.\n2. Rahul woke up early at 5 AM.\n3. The cool morning breeze refreshed him.\n4. He put on his running shoes.",
-    "options": [
-        "2-1-4-3",
-        "1-2-4-3",
-        "2-4-1-3",
-        "4-2-1-3"
-    ],
-    "answer": "2-1-4-3",
-    "difficulty": "easy",
-    "patternType": 1,
-    "solution": "Chronological sequence: Wake up (2) $\\rightarrow$ Decision (1) $\\rightarrow$ Put on shoes (4) $\\rightarrow$ Walk & breeze (3).",
-    "formula": "Chronological Event Ordering",
-    "shortcut": "Woke up (2) comes first.",
-    "commonMistakes": "Putting shoes (4) before decision (1).",
-    "subject": "verbal",
-    "topic": "grammar"
-}
 ];

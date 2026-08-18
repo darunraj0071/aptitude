@@ -1,5 +1,6 @@
 /* ==========================================================================
-   QUIZ.JS - Workstation Tab Router & Practice engine (Simplified)
+   QUIZ.JS - Workstation Tab Router & Practice Engine
+   Comprehensive varieties & practice routing across all 31 topics
    ========================================================================== */
 
 let currentQuestions = [];
@@ -39,7 +40,7 @@ function getPageSubject() {
     return 'aptitude';
 }
 
-// --- Topic Hub Portal Render (No Progress Bars) ---
+// --- Topic Hub Portal Render ---
 function renderTopicHubList(subject) {
     const listContainer = document.getElementById('hub-topics-grid');
     if (!listContainer) return;
@@ -146,662 +147,754 @@ async function initWorkstation(subject, topic) {
     panelTheory.classList.add('flip-panel-3d');
 }
 
+// Master topic database of formulas, tricks, and pattern varieties
+const TOPIC_DATABASE = {
+    /* ---------------- APTITUDE TOPICS ---------------- */
+    numbers: {
+        intro: "Number systems & Number Series cover classification of numbers, divisibility guidelines, unit digit cyclicity, AP & GP progression rules, higher-order differences, and pattern recognition (missing terms and wrong number identification).",
+        formulas: [
+            { name: "Pattern 1: Arithmetic Progression (AP)", formula: "a_n = a + (n-1)d, S_n = (n/2)[2a + (n-1)d] with constant difference d" },
+            { name: "Pattern 2: Difference Series (Second Order AP)", formula: "Differences between consecutive numbers increase by a constant: d_n = d_1 + (n-1)c" },
+            { name: "Pattern 3: Geometric Progression (GP) & Division", formula: "a_n = a * r^(n-1), S_n = a(r^n - 1) / (r - 1) with multiplier/divisor r" },
+            { name: "Pattern 4: Alternating Operations", formula: "Alternating arithmetic steps (e.g. +a, *b, +a, *b or *n + n, *n - n)" },
+            { name: "Pattern 5: Squares & Cubes Series", formula: "T_n = n^2, n^3, n^2 ± k, n^3 ± k, or n^3 - n^2" },
+            { name: "Pattern 6: Triangular Numbers", formula: "T_n = n(n + 1) / 2 (e.g., 1, 3, 6, 10, 15, 21...)" },
+            { name: "Pattern 7: Digit Operations", formula: "T_n = Product_of_digits(T_{n-1}) + k or Sum_of_digits(T_{n-1}) + k" },
+            { name: "Pattern 8: Prime Number Differences", formula: "d_n in {2, 3, 5, 7, 11, 13, 17, 19, 23, 29...}" },
+            { name: "Pattern 9: Percentage Growth/Decay", formula: "T_n = T_{n-1} * (1 ± r/100)" },
+            { name: "Pattern 10: Higher-Order Differences", formula: "3rd order difference is constant for cubic polynomials: Delta^3(T_n) = constant" },
+            { name: "Unit Digit Cyclicity", formula: "2, 3, 7, 8 have period 4; 4, 9 have period 2; 0, 1, 5, 6 have period 1" },
+            { name: "Product Relationship", formula: "A * B = HCF(A,B) * LCM(A,B)" },
+            { name: "Legendre's Trailing Zeroes", formula: "Zeroes = sum of floor(n / 5^k)" }
+        ],
+        tricks: [
+            "Check differences first: If differences are constant, it's AP. If 2nd differences are constant, it's a quadratic series.",
+            "If numbers grow very fast, test multiplication (GP) or exponential powers (n^2, n^3).",
+            "For alternating series, look at alternating positions (1st, 3rd, 5th and 2nd, 4th, 6th) or alternating operators (+, *).",
+            "Divisibility rules: 3/9 (sum of digits), 4/8 (last 2/3 digits), 11 (|Sum_odd - Sum_even| is 0 or 11k).",
+            "Wrong Number Series: Calculate differences; a single incorrect term disrupts two consecutive differences."
+        ],
+        mistakes: "Assuming a series is purely multiplicative when differences follow an arithmetic progression (+4, +8, +12...). Always check differences before complex formulas.",
+        varieties: [
+            { type: 1, title: "Type 1: Arithmetic & Geometric Series (AP/GP)", desc: "Identify missing numbers in constant difference or constant multiplier/divisor sequences." },
+            { type: 2, title: "Type 2: Difference & Second-Order Sequences", desc: "Solve series where differences form an AP, prime sequence, or power sequence." },
+            { type: 3, title: "Type 3: Alternating Multi-Operator Series", desc: "Evaluate series alternating between addition, subtraction, and multiplication (+a, *b, +a, *b)." },
+            { type: 4, title: "Type 4: Square, Cube & Triangular Series", desc: "Recognize n^2, n^3, n^3 - n^2, and triangular numbers n(n+1)/2." },
+            { type: 5, title: "Type 5: Wrong Term in Series Identification", desc: "Isolate the defective or erroneous number in competitive exam series (Bank PO, SSC, RRB)." },
+            { type: 6, title: "Type 6: Two-Tier & Cloned Derived Sequences", desc: "Apply identical operational rules to new starting numbers (RBI Grade B pattern)." }
+        ]
+    },
+
+    percentage: {
+        intro: "Percentage represents ratios relative to 100 base, acting as the fundamental scaling factor in comparison metrics, compounding cycles, and algebraic equations.",
+        formulas: [
+            { name: "Percentage Value", formula: "Value = (Percent / 100) * Total" },
+            { name: "Net Consecutive Change", formula: "Net% = a + b + (a * b) / 100" },
+            { name: "Product Constancy", formula: "If Price increases by x%, Consumption drops by [x / (100 + x)] * 100%" },
+            { name: "Relative Comparison", formula: "If A is x% less than B, B is [x / (100 - x)] * 100% more than A" },
+            { name: "Depreciation / Growth", formula: "V = P(1 ± R / 100)^n" }
+        ],
+        tricks: [
+            "x% of y is identical to y% of x (e.g. 16% of 50 = 50% of 16 = 8).",
+            "Memorize fraction equivalents: 1/3 = 33.33%, 1/6 = 16.67%, 1/8 = 12.5%, 1/12 = 8.33%."
+        ],
+        mistakes: "Adding consecutive percentage changes linearly instead of compounding them.",
+        varieties: [
+            { type: 1, title: "Type 1: Successive Percentage Increases & Decreases", desc: "Evaluate net change when multiple consecutive percentage shifts occur." },
+            { type: 2, title: "Type 2: Income, Expenditure & Savings Apportionment", desc: "Calculate residual monetary savings from percentage expense breakdowns." },
+            { type: 3, title: "Type 3: Product Constancy & Consumption Adjustments", desc: "Determine required consumption cuts when item prices increase to keep budget fixed." },
+            { type: 4, title: "Type 4: Examination Pass Marks & Failing Margins", desc: "Calculate maximum test scores from pass percentage and point margins." },
+            { type: 5, title: "Type 5: Relative Percentage Comparisons", desc: "Translate percentage differences between two entities across variable bases." },
+            { type: 6, title: "Type 6: Compounding Depreciation & Population Growth", desc: "Model multi-year value decay or demographic growth using compounding formulas." }
+        ]
+    },
+
+    profit_loss: {
+        intro: "Profit and Loss analyzes commercial transactions, markups, cost bases, margins, and consecutive discounts.",
+        formulas: [
+            { name: "Profit & Loss %", formula: "P% = (Profit / CP) * 100, L% = (Loss / CP) * 100 (Always on CP)" },
+            { name: "Markup & Discount", formula: "SP = MP * (1 - D / 100) = CP * (1 + P / 100)" },
+            { name: "Dishonest Dealer", formula: "Gain% = [Error / (True Weight - Error)] * 100%" },
+            { name: "Equal SP with Gain/Loss x%", formula: "Always an overall loss of (x / 10)^2 %" },
+            { name: "CP and MP Ratio", formula: "CP / MP = (100 - D%) / (100 + P%)" }
+        ],
+        tricks: [
+            "Selling two items at same SP with equal gain/loss x% always yields a net loss of (x/10)^2 %.",
+            "Cost Price is the 100% baseline unless the problem explicitly states profit on Selling Price."
+        ],
+        mistakes: "Calculating profit percentage with Selling Price as denominator instead of Cost Price.",
+        varieties: [
+            { type: 1, title: "Type 1: Markup and Successive Discount Chains", desc: "Find overall profit margins when articles are marked up and discounted." },
+            { type: 2, title: "Type 2: Consecutive Resale Chains (A → B → C)", desc: "Back-calculate initial cost prices across serial buyer-seller transactions." },
+            { type: 3, title: "Type 3: Dishonest Dealer & False Weight Profit", desc: "Calculate trader gain percentage from underweight scales and measuring errors." },
+            { type: 4, title: "Type 4: Cost Price of X = Selling Price of Y", desc: "Determine profit percentage from direct item quantity equality relations." },
+            { type: 5, title: "Type 5: Identical Selling Price Equal Gain & Loss", desc: "Evaluate net transaction losses when two goods sell at identical prices with +/- x%." },
+            { type: 6, title: "Type 6: Target Markup for Desired Profit Margin", desc: "Compute catalog marked prices required to preserve profit margins after discounts." }
+        ]
+    },
+
+    ratio_proportion: {
+        intro: "Ratios express comparative relationships between quantities by division, whereas proportions establish equality between ratios.",
+        formulas: [
+            { name: "Proportional Share", formula: "Share A = Total * [a / (a + b + c)]" },
+            { name: "Partnership Ratio", formula: "Profit A : Profit B = (Capital A * Time A) : (Capital B * Time B)" },
+            { name: "Mean & Third Proportional", formula: "Mean = sqrt(a * b), Third = b^2 / a" },
+            { name: "Coin Box Equation", formula: "Total = k * (r1*1.0 + r2*0.5 + r3*0.25)" }
+        ],
+        tricks: [
+            "To combine A:B = 2:3 and B:C = 4:5, multiply to make B common: A:B:C = 8:12:15.",
+            "Substitute ratio components directly into homogeneous algebraic equations."
+        ],
+        mistakes: "Adding ratio parts directly without identifying the common scaling multiplier k.",
+        varieties: [
+            { type: 1, title: "Type 1: Sum Partition & Proportional Allocation", desc: "Divide financial sums across individuals in specified integer ratios." },
+            { type: 2, title: "Type 2: Mixture Dilution & Liquid Replacement", desc: "Compute new liquid ratios when solvents or water are added to mixtures." },
+            { type: 3, title: "Type 3: Partnership Capital-Time Apportionment", desc: "Divide corporate profit shares proportionally to capital investment and duration." },
+            { type: 4, title: "Type 4: Coin Denomination & Monetary Sum Bags", desc: "Calculate coin counts across rupee and paise denominations from total monetary values." },
+            { type: 5, title: "Type 5: Third and Fourth Proportional Calculations", desc: "Solve geometric proportions using cross-multiplication identities." },
+            { type: 6, title: "Type 6: Mean Proportional Geometry Relations", desc: "Find geometric means between numeric pairs using square root relations." }
+        ]
+    },
+
+    average: {
+        intro: "Average represents central tendencies of discrete numerical distributions, calculated as total sum divided by size.",
+        formulas: [
+            { name: "Basic Average", formula: "Average = Sum of terms / Number of terms" },
+            { name: "Weighted Average", formula: "Avg_w = (n1*A1 + n2*A2) / (n1 + n2)" },
+            { name: "Average Speed (Equal Distance)", formula: "Harmonic Mean = (2 * S1 * S2) / (S1 + S2)" },
+            { name: "Replacement Offset", formula: "New Value = Old Value + (Change in Avg * Total Count)" },
+            { name: "Consecutive Integer Average", formula: "Middle Term = (First Term + Last Term) / 2" }
+        ],
+        tricks: [
+            "Use Deviation Method: Assume a base average, sum deviations, divide by count, and adjust base.",
+            "Average of first n natural numbers is (n + 1) / 2; average of first n odd numbers is n."
+        ],
+        mistakes: "Using arithmetic mean for average speed instead of harmonic mean when distances are equal.",
+        varieties: [
+            { type: 1, title: "Type 1: Group Inclusion & Addition to Sets", desc: "Calculate updated group averages when a new member joins with a known weight." },
+            { type: 2, title: "Type 2: Harmonic Mean Average Velocity", desc: "Compute average round-trip speed across equal-distance journey legs." },
+            { type: 3, title: "Type 3: Replacement Problems & Group Shifts", desc: "Determine weights of incoming replacement members from average group shifts." },
+            { type: 4, title: "Type 4: Multi-Section Weighted Averages", desc: "Combine scores of multiple classroom or department sections with different headcounts." },
+            { type: 5, title: "Type 5: Consecutive Integer & Natural Number Series", desc: "Deduce largest or smallest terms in consecutive sequence series from average values." },
+            { type: 6, title: "Type 6: Chronological & Multi-Day Meteorological Averages", desc: "Compute rolling multi-day temperature and score averages with additions." }
+        ]
+    },
+
+    time_work: {
+        intro: "Time and Work assesses production parameters. Work rate is inversely proportional to time taken when capacities are constant.",
+        formulas: [
+            { name: "Combined Time (2 people)", formula: "T = (A * B) / (A + B)" },
+            { name: "Manpower Days Formula", formula: "M1 * D1 * H1 / W1 = M2 * D2 * H2 / W2" },
+            { name: "Efficiency Ratio", formula: "Time A / Time B = Efficiency B / Efficiency A" },
+            { name: "Pipes Inflow / Outflow", formula: "1 / T_net = 1 / T_inlet - 1 / T_outlet" },
+            { name: "Wages Apportionment", formula: "Wages Ratio = Efficiency Ratio = (Work Done Ratio)" }
+        ],
+        tricks: [
+            "Assign 'Total Work Units' as the LCM of days. Solve for efficiencies as small integers.",
+            "If A is thrice as efficient as B, A takes 1/3 of the time taken by B."
+        ],
+        mistakes: "Adding days directly to find combined completion times rather than adding reciprocal work rates.",
+        varieties: [
+            { type: 1, title: "Type 1: Efficiency Multiplier & Relative Rates", desc: "Calculate joint completion timelines when one worker is k times faster than another." },
+            { type: 2, title: "Type 2: Joint Worker Combined Completion Timelines", desc: "Find simultaneous completion days using the standard product-over-sum formula." },
+            { type: 3, title: "Type 3: Man-Day Manpower Scaling Relations", desc: "Scale workforce size against project deadlines using M1*D1 = M2*D2." },
+            { type: 4, title: "Type 4: Cistern Fill Pipes & Drain Outlets", desc: "Model net reservoir fill times with simultaneous inlet pumps and leakage drains." },
+            { type: 5, title: "Type 5: Alternate Days Work Rotations", desc: "Compute project duration when workers take turns on sequential alternate days." },
+            { type: 6, title: "Type 6: Work Wages & Contract Compensation", desc: "Apportion contract revenue proportionally to individual worker efficiency rates." }
+        ]
+    },
+
+    time_distance: {
+        intro: "Speed and Distance models motion kinetics, governing relations between speeds, transit times, and relative velocity.",
+        formulas: [
+            { name: "Speed Equation", formula: "Speed = Distance / Time" },
+            { name: "Unit Conversions", formula: "1 km/h = 5/18 m/s, 1 m/s = 18/5 km/h" },
+            { name: "Relative Speed (Opposite)", formula: "S_rel = S1 + S2" },
+            { name: "Relative Speed (Same Dir)", formula: "S_rel = S1 - S2" },
+            { name: "Train Crossing Platform", formula: "Distance = Length of Train + Length of Platform" }
+        ],
+        tricks: [
+            "Relative speed: In opposite directions, ADD speeds; in same direction, SUBTRACT speeds.",
+            "When a train crosses a bridge or platform, total distance is Train Length + Platform Length."
+        ],
+        mistakes: "Forgetting to convert km/h to m/s when dealing with train lengths in meters and seconds.",
+        varieties: [
+            { type: 1, title: "Type 1: Train Crossing Stationary Objects", desc: "Compute crossing seconds for trains passing poles, signals, or standing observers." },
+            { type: 2, title: "Type 2: Train Crossing Platforms & Bridges", desc: "Calculate transit times when crossing extended physical infrastructure." },
+            { type: 3, title: "Type 3: Opposing Bodies Meeting Timelines", desc: "Find intersection times for vehicles traveling toward each other from opposite towns." },
+            { type: 4, title: "Type 4: Parallel Trains Overtaking in Same Direction", desc: "Compute overtaking seconds for two trains moving along parallel tracks." },
+            { type: 5, title: "Type 5: Speed Acceleration & Time Saved Offsets", desc: "Determine minutes saved over fixed routes when traveling at elevated velocities." },
+            { type: 6, title: "Type 6: Metric & Imperial Velocity Unit Conversions", desc: "Convert velocities between km/h and m/s using standard 5/18 multipliers." }
+        ]
+    },
+
+    speed_distance: {
+        intro: "Kinetics modeling focusing on advanced motion challenges like circular tracks, relative sweeps, races, and river currents.",
+        formulas: [
+            { name: "Upstream Speed", formula: "U = Boat - Stream" },
+            { name: "Downstream Speed", formula: "D = Boat + Stream" },
+            { name: "Boat in Still Water", formula: "Boat = (D + U) / 2" },
+            { name: "Speed of Current", formula: "Stream = (D - U) / 2" },
+            { name: "Circular Track Meeting", formula: "Time = Track Length / (S1 + S2) (Opposite directions)" }
+        ],
+        tricks: [
+            "Still water speed is the average of downstream and upstream velocities: (D + U) / 2.",
+            "Current speed is half the difference: (D - U) / 2."
+        ],
+        mistakes: "Assuming upstream speed is Stream - Boat (which would cause the boat to drift backwards).",
+        varieties: [
+            { type: 1, title: "Type 1: Upstream & Downstream River Navigation", desc: "Calculate transit times against river currents using U = Boat - Stream." },
+            { type: 2, title: "Type 2: Still Water Boat Velocity Determination", desc: "Extract still water boat speeds from given upstream and downstream vectors." },
+            { type: 3, title: "Type 3: River Current Flow Rate Calculation", desc: "Determine stream flow velocity using half the difference of downstream and upstream." },
+            { type: 4, title: "Type 4: Circular Track First Intersection Timelines", desc: "Find meeting times for athletes running in opposite directions around circular tracks." },
+            { type: 5, title: "Type 5: Police & Thief Relative Chase Capture", desc: "Calculate capture seconds for pursuit chases with initial distance leads." },
+            { type: 6, title: "Type 6: Round-Trip River Navigation Total Duration", desc: "Sum upstream and downstream legs to compute total journey duration." }
+        ]
+    },
+
+    probability: {
+        intro: "Probability quantifies occurrences likelihoods, ranging from absolute impossibility (0) to absolute certainty (1).",
+        formulas: [
+            { name: "Basic Probability", formula: "P(E) = Favorable Outcomes / Total Sample Space" },
+            { name: "Complementary Event", formula: "P(At least 1) = 1 - P(None)" },
+            { name: "Two Dice Sample Space", formula: "Total outcomes = 36" },
+            { name: "Addition Theorem", formula: "P(A U B) = P(A) + P(B) - P(A n B)" },
+            { name: "Contradiction Probability", formula: "P(Contradict) = P(A)*P(B') + P(A')*P(B)" }
+        ],
+        tricks: [
+            "P(At least 1 success) = 1 - P(No successes). This is almost always faster to calculate.",
+            "Leap year has 2 odd days -> P(53 of any day) = 2/7. Non-leap year has 1 odd day -> 1/7."
+        ],
+        mistakes: "Confusing mutually exclusive events [P(A n B) = 0] with independent events [P(A n B) = P(A)*P(B)].",
+        varieties: [
+            { type: 1, title: "Type 1: Urn & Colored Marbles Drawing (Without Replacement)", desc: "Compute probability of sequential draws without replacing items in urns." },
+            { type: 2, title: "Type 2: Dual Dice Score Sum Combinations", desc: "Calculate probabilities of target sums when rolling two 6-sided dice." },
+            { type: 3, title: "Type 3: Deck of Cards Suit & Rank Unions", desc: "Apply addition theorem for non-mutually exclusive card selections." },
+            { type: 4, title: "Type 4: Truth & Contradiction Statements", desc: "Determine contradiction percentages between two speakers with known truthfulness." },
+            { type: 5, title: "Type 5: Calendar & Leap Year Weekday Probabilities", desc: "Calculate probability of 53 Sundays in leap and non-leap calendar years." },
+            { type: 6, title: "Type 6: Complementary 'At Least One' Defective Events", desc: "Use complementary probability 1 - P(none) to solve multi-draw selection problems." }
+        ]
+    },
+
+    permutation_combination: {
+        intro: "Permutation tracks item ordering configurations where placement matters, whereas Combination aggregates groupings where order is irrelevant.",
+        formulas: [
+            { name: "Permutation Formula", formula: "nPr = n! / (n - r)!" },
+            { name: "Combination Formula", formula: "nCr = n! / [r! * (n - r)!]" },
+            { name: "Circular Permutation", formula: "P_circ = (n - 1)!" },
+            { name: "Polygon Diagonals", formula: "Diagonals = n(n - 3) / 2" },
+            { name: "Handshakes in Group", formula: "Handshakes = n(n - 1) / 2" },
+            { name: "Gap Method", formula: "cons! * ^(cons+1)P_vowels" }
+        ],
+        tricks: [
+            "Use String Method when items must be together (treat as 1 single unit).",
+            "Use Gap Method when items must NOT be together (place in intermediate gaps)."
+        ],
+        mistakes: "Calculating permutations instead of combinations when team order does not matter.",
+        varieties: [
+            { type: 1, title: "Type 1: Committee & Team Selections (nCr)", desc: "Form representative panels and teams from candidate pools." },
+            { type: 2, title: "Type 2: Distinct Word Letter Rearrangements (n!)", desc: "Calculate total linear anagram permutations from unique character strings." },
+            { type: 3, title: "Type 3: Circular Table Seating Permutations", desc: "Arrange executive delegates around circular dining tables using (n-1)!." },
+            { type: 4, title: "Type 4: Regular Polygon Diagonals Counting", desc: "Calculate diagonal counts in n-sided geometric polygons using n(n-3)/2." },
+            { type: 5, title: "Type 5: Conference Handshakes & Pairwise Interactions", desc: "Determine total bilateral interactions among attendees using n(n-1)/2." },
+            { type: 6, title: "Type 6: Gap Method with Neighbor Exclusions", desc: "Arrange letters with restrictions ensuring no two vowels sit adjacent." }
+        ]
+    },
+
+    data_interpretation: {
+        intro: "Data Interpretation translates chart diagrams (bar, pie, line, tables) into quantified business intelligence ratios and metrics.",
+        formulas: [
+            { name: "Percentage Share", formula: "Share% = (Component / Total) * 100" },
+            { name: "Annual Growth Rate", formula: "Growth% = [(Year2 - Year1) / Year1] * 100" },
+            { name: "Pie Chart Angle to %", formula: "Percent = (Angle / 360) * 100" },
+            { name: "Component Ratio", formula: "Ratio = Value A / Value B" }
+        ],
+        tricks: [
+            "Look at chart legends and scales first. Approximate fractions: 16.6% ≈ 1/6, 14.3% ≈ 1/7.",
+            "Cross-multiply to compare ratios without performing full division."
+        ],
+        mistakes: "Misinterpreting graph axis scale offsets (e.g. values in thousands vs actual values).",
+        varieties: [
+            { type: 1, title: "Type 1: Departmental Expenditure Percentage Share", desc: "Compute proportional budget allocations across corporate divisions." },
+            { type: 2, title: "Type 2: Multi-Category Expenditure Ratio Analysis", desc: "Simplify financial expenditure comparisons into irreducible integer ratios." },
+            { type: 3, title: "Type 3: Multi-Department Average Spending Metrics", desc: "Calculate central mean expenditure across multiple functional divisions." },
+            { type: 4, title: "Type 4: Year-over-Year Revenue Growth Percentages", desc: "Evaluate corporate annual revenue growth rates from historical figures." },
+            { type: 5, title: "Type 5: Pie Chart Sector Angle to Value Conversions", desc: "Convert central angular sector degrees into market share percentages." },
+            { type: 6, title: "Type 6: Tabular Data Extrapolation & Population Estimation", desc: "Deduce total sample populations from sub-group percentage shares." }
+        ]
+    },
+
+    simplification: {
+        intro: "Simplification utilizes arithmetic order precedence guidelines (VBODMAS) to reduce heavy arithmetic and exponents into single values quickly.",
+        formulas: [
+            { name: "VBODMAS Order", formula: "Vinculum, Brackets, Of, Division, Multiplication, Addition, Subtraction" },
+            { name: "Algebraic Identity", formula: "(a + b)^2 - (a - b)^2 = 4ab" },
+            { name: "Laws of Indices", formula: "(a^m)^n = a^(m*n), a^m * a^n = a^(m+n)" },
+            { name: "Difference of Squares", formula: "a^2 - b^2 = (a - b)(a + b)" }
+        ],
+        tricks: [
+            "Apply digital sum rules (casting out nines) or unit-digit analysis to test options instantly.",
+            "Round decimal numbers to nearby integers to eliminate wrong choices rapidly."
+        ],
+        mistakes: "Performing addition or multiplication before division in violation of VBODMAS.",
+        varieties: [
+            { type: 1, title: "Type 1: Laws of Indices & Fractional Exponents", desc: "Simplify nested exponential expressions using index addition and power multiplication." },
+            { type: 2, title: "Type 2: VBODMAS Operator Precedence Evaluation", desc: "Solve multi-operation arithmetic expressions following strict operational precedence." },
+            { type: 3, title: "Type 3: Algebraic Identity Reductions", desc: "Reduce complex quadratic fractions using (a+b)^2 - (a-b)^2 = 4ab." },
+            { type: 4, title: "Type 4: Square Roots & Surds Simplification", desc: "Evaluate composite radical expressions containing perfect squares." },
+            { type: 5, title: "Type 5: Fractional Additions & LCM Denominators", desc: "Reduce fraction additions to simplest irreducible forms." },
+            { type: 6, title: "Type 6: Mixed Operator Arithmetic Expressions", desc: "Evaluate multi-term polynomial arithmetic equations." }
+        ]
+    },
+
+    algebra: {
+        intro: "Algebra covers equations, variables, roots representations, and logarithmic rules.",
+        formulas: [
+            { name: "Quadratic Roots Sum & Prod", formula: "Sum = -b/a, Product = c/a" },
+            { name: "AP nth Term & Sum", formula: "T_n = a + (n-1)d, S_n = (n/2)[2a + (n-1)d]" },
+            { name: "Infinite GP Sum", formula: "S_inf = a / (1 - r) for |r| < 1" },
+            { name: "Logarithm Properties", formula: "log(xy) = log(x) + log(y), log(x/y) = log(x) - log(y)" }
+        ],
+        tricks: [
+            "Plug test values (0, 1, or -1) into algebraic options to eliminate incorrect choices.",
+            "Backsolve by plugging options directly into the system of equations."
+        ],
+        mistakes: "Forgetting that square roots yield both positive and negative roots in quadratic systems.",
+        varieties: [
+            { type: 1, title: "Type 1: Sum of Roots in Quadratic Equations", desc: "Extract root sums from standard form quadratic equations using -b/a." },
+            { type: 2, title: "Type 2: Product of Roots in Quadratic Equations", desc: "Find product of roots using constant term ratio c/a." },
+            { type: 3, title: "Type 3: Arithmetic Progression nth Term Evaluation", desc: "Calculate distant sequence terms in constant difference progressions." },
+            { type: 4, title: "Type 4: Infinite Geometric Progression Convergence", desc: "Determine infinite geometric series sums using a / (1 - r)." },
+            { type: 5, title: "Type 5: Simultaneous Linear Systems in Two Variables", desc: "Solve two-variable linear equations using substitution and elimination." },
+            { type: 6, title: "Type 6: Logarithmic Identity Expansions", desc: "Evaluate composite logarithmic values using base 10 properties." }
+        ]
+    },
+
+    geometry: {
+        intro: "Geometry analyzes shapes properties: coordinate layouts, lines, angles, triangles, polygons, circles, and perimeter/area metrics.",
+        formulas: [
+            { name: "Circle Circumference & Area", formula: "C = 2 * pi * r, Area = pi * r^2" },
+            { name: "Rectangle Diagonal", formula: "d = sqrt(L^2 + W^2)" },
+            { name: "Polygon Angle Sum", formula: "Sum = (n - 2) * 180 degrees" },
+            { name: "Cylinder Volume", formula: "V = pi * r^2 * h" },
+            { name: "Equilateral Triangle Area", formula: "Area = (sqrt(3)/4) * a^2" }
+        ],
+        tricks: [
+            "Memorize standard Pythagorean Triplets: 3-4-5, 5-12-13, 8-15-17, 7-24-25.",
+            "Sum of exterior angles of any convex polygon is always 360 degrees."
+        ],
+        mistakes: "Confusing similarity rules (ratio of areas = square of ratio of sides) with simple side ratios.",
+        varieties: [
+            { type: 1, title: "Type 1: Radial Scaling & Percentage Area Changes", desc: "Calculate percentage area expansion of 2D shapes when radii increase." },
+            { type: 2, title: "Type 2: Circle Radius, Perimeter & Circumference", desc: "Compute perimeters of circular disks using 2*pi*r." },
+            { type: 3, title: "Type 3: Rectangular Diagonals & Pythagorean Hypotenuse", desc: "Find corner-to-corner diagonal distances in rectangular planes." },
+            { type: 4, title: "Type 4: Convex Polygon Interior Angle Sums", desc: "Calculate total interior degrees in n-sided regular polygons." },
+            { type: 5, title: "Type 5: 3D Mensuration & Cylindrical Volume", desc: "Compute 3D solid volumes using base area and height." },
+            { type: 6, title: "Type 6: Equilateral Triangle Surface Area", desc: "Calculate equilateral triangle area using (sqrt(3)/4)*a^2." }
+        ]
+    },
+
+    /* ---------------- REASONING TOPICS ---------------- */
+    puzzles: {
+        intro: "Logical puzzles challenge deductive reasoning, grid matching, variable relationships, and exclusion constraints.",
+        formulas: [
+            { name: "Inequality Chaining", formula: "If A > B and B > C, then A > C" },
+            { name: "Grid Allocation", formula: "Ensure 1-to-1 matching across rows and columns" },
+            { name: "Floor & Box Stacking", formula: "Anchor definite positions before filling relative gaps" }
+        ],
+        tricks: [
+            "Construct a grid diagram (e.g. Name, Profession, Department) and check off absolute exclusions first.",
+            "Anchor elements with the highest constraint frequency first."
+        ],
+        mistakes: "Making assumptions not explicitly stated in the puzzle rules.",
+        varieties: [
+            { type: 1, title: "Type 1: Height & Weight Inequality Rankings", desc: "Determine extreme ranking positions by chaining relational inequalities." },
+            { type: 2, title: "Type 2: Department & Profession Attribute Grid Matching", desc: "Allocate unique professions across individuals using elimination grids." },
+            { type: 3, title: "Type 3: Vertical Box Stacking & Placement Ordering", desc: "Determine central box positions in multi-tier vertical stacks." },
+            { type: 4, title: "Type 4: Multi-Story Building Floor Allocation", desc: "Place residents on specific building floors based on parity and adjacency constraints." },
+            { type: 5, title: "Type 5: Chronological Day-of-Week Scheduling", desc: "Schedule events across weekdays adhering to precedence rules." },
+            { type: 6, title: "Type 6: Linear Ordering & Comparative Adjacency", desc: "Identify central positions in comparative linear sequences." }
+        ]
+    },
+
+    seating_arrangement: {
+        intro: "Seating Arrangements deal with ordering constraints along lines or around circles.",
+        formulas: [
+            { name: "Circular Facing Center", formula: "Right turn = Counter-clockwise, Left turn = Clockwise" },
+            { name: "Circular Facing Outward", formula: "Right turn = Clockwise, Left turn = Counter-clockwise" },
+            { name: "Linear Facing North", formula: "Left = West, Right = East" },
+            { name: "Linear Facing South", formula: "Left = East, Right = West" }
+        ],
+        tricks: [
+            "For circular arrangements, draw a circle with numbered spokes to visualize opposite seats.",
+            "Start with definite positions ('A sits 3rd to right of B') before placing relative positions."
+        ],
+        mistakes: "Forgetting to invert Left/Right conventions when candidates face outward.",
+        varieties: [
+            { type: 1, title: "Type 1: Circular Arrangement Facing Inward", desc: "Determine opposite seats and neighbor positions in center-facing rings." },
+            { type: 2, title: "Type 2: Circular Arrangement Facing Outward", desc: "Apply inverted left/right directional conventions in outward-facing circles." },
+            { type: 3, title: "Type 3: Linear Row Seating Facing North", desc: "Place individuals in linear arrays using standard West-to-East left/right orientations." },
+            { type: 4, title: "Type 4: Linear Row Seating Facing South", desc: "Apply mirrored left/right orientations for South-facing rows." },
+            { type: 5, title: "Type 5: Parallel Dual-Row Opposite Seating", desc: "Map opposite facing partners across parallel North-South facing rows." },
+            { type: 6, title: "Type 6: Square & Rectangular Table Corner Layouts", desc: "Determine side and corner opposite positions in polygonal tables." }
+        ]
+    },
+
+    blood_relations: {
+        intro: "Blood Relations parse family relationships across generations using family trees and relationship codes.",
+        formulas: [
+            { name: "Generation Hierarchy", formula: "Grandparents -> Parents/Uncles -> Self/Siblings -> Children" },
+            { name: "Coded Relations", formula: "Evaluate relationship strings from right to left" }
+        ],
+        tricks: [
+            "Draw a family tree: use '+' for male, '-' for female, '=' for married couples, and vertical lines for children.",
+            "Solve coded strings from right to left to track generational shifts."
+        ],
+        mistakes: "Assuming gender based on name alone without context clues in the problem.",
+        varieties: [
+            { type: 1, title: "Type 1: Portrait & Person Identification Riddles", desc: "Deduce relationships from descriptive statements ('father of my son...')." },
+            { type: 2, title: "Type 2: Coded Symbolic Family Relations", desc: "Evaluate relationship operator expressions (A + B * C)." },
+            { type: 3, title: "Type 3: Multi-Generation Ancestral Lineage", desc: "Trace paternal and maternal grandparent lineages across family trees." },
+            { type: 4, title: "Type 4: In-Law & Extended Family Relations", desc: "Resolve mother-in-law and sibling-in-law relationship chains." },
+            { type: 5, title: "Type 5: Multi-Tier Descendant Trees", desc: "Determine grandson and nephew relations from generational descriptors." },
+            { type: 6, title: "Type 6: Family Headcount & Sibling Riddles", desc: "Calculate total family membership counts from shared sibling relationships." }
+        ]
+    },
+
+    coding_decoding: {
+        intro: "Coding and Decoding maps text shifts, substitutions, opposite characters, and reverse alphabetic configurations.",
+        formulas: [
+            { name: "Alphabet Forward Rank", formula: "A=1, B=2 ... Z=26 (EJOTY: 5, 10, 15, 20, 25)" },
+            { name: "Opposite Pair Index", formula: "Forward Rank + Backward Rank = 27 (A-Z, B-Y)" },
+            { name: "Caesar Shift", formula: "C_i = (P_i + k) mod 26" }
+        ],
+        tricks: [
+            "Memorize the EJOTY mnemonic for rapid letter position lookups.",
+            "Check for reverse coding or opposite-letter pairs before testing shift offsets."
+        ],
+        mistakes: "Forgetting to wrap around the alphabet from Z to A during forward shifts.",
+        varieties: [
+            { type: 1, title: "Type 1: Forward Alphabetical Shift Ciphers", desc: "Encode words by shifting letter ranks forward by constant integers (+k)." },
+            { type: 2, title: "Type 2: Reverse Word & Letter Reordering Ciphers", desc: "Decipher words whose letters are inverted in reverse order." },
+            { type: 3, title: "Type 3: Complementary Opposite-Letter Pair Ciphers", desc: "Encode text using 27-sum opposite alphabet pairs (A-Z, B-Y)." },
+            { type: 4, title: "Type 4: Positional Numerical Rank Mapping", desc: "Convert words to hyphenated numerical rank sequences." },
+            { type: 5, title: "Type 5: Common Word Deciphering from Message Codes", desc: "Isolate unique word codes by comparing overlapping coded sentences." },
+            { type: 6, title: "Type 6: Direct Single-Shift Caesar Cipher Encryption", desc: "Apply +1 linear character shifts across target words." }
+        ]
+    },
+
+    syllogism: {
+        intro: "Syllogisms verify deductive arguments validity using Venn Diagrams, checking subset/superset overlays and possibilities.",
+        formulas: [
+            { name: "ALL A are B", formula: "Set A is a subset of Set B (A subset of B)" },
+            { name: "SOME A are B", formula: "Intersection of A and B is non-empty" },
+            { name: "NO A is B", formula: "Intersection of A and B is empty" },
+            { name: "Possibility Rule", formula: "Holds if true in at least one valid Venn diagram" }
+        ],
+        tricks: [
+            "Draw minimal overlap Venn diagrams. A conclusion is valid ONLY if it holds in ALL valid diagrams.",
+            "Possibility conclusions only need ONE valid diagram to be true."
+        ],
+        mistakes: "Assuming a possibility is invalid because it is not an absolute certainty.",
+        varieties: [
+            { type: 1, title: "Type 1: Standard Universal & Particular Deductions", desc: "Evaluate 'All A are B' and 'Some B are C' categorical propositions." },
+            { type: 2, title: "Type 2: Negative Premise Subsets ('No A is B')", desc: "Determine valid subset inclusions with negative categorical premises." },
+            { type: 3, title: "Type 3: Possibility & Modal Proposition Verification", desc: "Test possibility conclusions ('can be', 'is a possibility') across diagrams." },
+            { type: 4, title: "Type 4: Definite True Overlaps vs Contradictions", desc: "Differentiate definite conclusions from contradictory statements." },
+            { type: 5, title: "Type 5: Transitive Double-Universal Inclusions", desc: "Verify transitive subset conclusions from chained 'All A are B' premises." },
+            { type: 6, title: "Type 6: Negative Particular Deductions ('Some are not')", desc: "Identify valid negative particular conclusions from disjoint premises." }
+        ]
+    },
+
+    direction_sense: {
+        intro: "Direction Sense maps spatial orientations, angular turns, shadow properties, and shortest path coordinates.",
+        formulas: [
+            { name: "Pythagoras Shortest Path", formula: "Displacement = sqrt(East_West^2 + North_South^2)" },
+            { name: "Sunrise Shadow", formula: "Sun is in East -> Shadow falls to the West" },
+            { name: "Sunset Shadow", formula: "Sun is in West -> Shadow falls to the East" },
+            { name: "Right Turn from North", formula: "Points East (Clockwise 90 degrees)" }
+        ],
+        tricks: [
+            "Draw a compass rose on your scratch sheet before solving multi-turn paths.",
+            "At sunrise, all shadows point West. At sunset, all shadows point East."
+        ],
+        mistakes: "Confusing left/right turns when walking towards the South.",
+        varieties: [
+            { type: 1, title: "Type 1: Shortest Path Displacement via Pythagoras", desc: "Calculate straight-line hypotenuse distance from initial starting points." },
+            { type: 2, title: "Type 2: Net Cardinal Direction from Starting Point", desc: "Determine compass direction relative to origin after multiple orthogonal turns." },
+            { type: 3, title: "Type 3: Morning Sunrise Shadow Orientation", desc: "Determine facing orientation from shadows cast to left or right at sunrise." },
+            { type: 4, title: "Type 4: Evening Sunset Shadow Orientation", desc: "Deduce facing direction from shadow orientations at sunset." },
+            { type: 5, title: "Type 5: Angular Clockwise & Anti-Clockwise Rotations", desc: "Compute net facing direction from sequential degree rotations." },
+            { type: 6, title: "Type 6: Complete Coordinate Backtracking", desc: "Determine total distance and cardinal heading back to initial point." }
+        ]
+    },
+
+    statement_conclusion: {
+        intro: "Statement and Conclusion tests logical deductions based strictly on the provided context, filtering out external assumptions.",
+        formulas: [
+            { name: "Strict Scope Rule", formula: "Restrict logic strictly to facts explicitly mentioned in statement" },
+            { name: "Extreme Words Filter", formula: "Conclusions with 'all', 'always', 'only', 'never' are usually invalid" }
+        ],
+        tricks: [
+            "Do not apply external real-world knowledge. Treat the statement as 100% true.",
+            "Watch out for extreme absolute words ('guarantees', 'only', 'never')."
+        ],
+        mistakes: "Marking a conclusion as valid because it is a true general fact, even though it cannot be derived from the statement.",
+        varieties: [
+            { type: 1, title: "Type 1: Health & Medical Cause-Effect Inferences", desc: "Verify health recommendations without accepting extreme universal claims." },
+            { type: 2, title: "Type 2: Technology & Scientific Feature Deductions", desc: "Extract direct product capabilities while filtering outside assumptions." },
+            { type: 3, title: "Type 3: Environmental & Ergonomic Inferences", desc: "Deduce logical lifestyle remedies from cause-effect environmental statements." },
+            { type: 4, title: "Type 4: Economic Growth & Investment Deductions", desc: "Evaluate policy impact statements while filtering 'only sector' traps." },
+            { type: 5, title: "Type 5: Educational & Assessment Inferences", desc: "Differentiate probable benefits from guaranteed examination outcomes." },
+            { type: 6, title: "Type 6: Civic & Municipal Policy Objectives", desc: "Identify valid civic objectives behind governmental regulations." }
+        ]
+    },
+
+    series: {
+        intro: "Number and Letter Series trace chronological trends (APs, GPs, prime rules, squares/cubes) across discrete terms.",
+        formulas: [
+            { name: "Arithmetic Series", formula: "T_n = T_(n-1) + d" },
+            { name: "Geometric Series", formula: "T_n = T_(n-1) * r" },
+            { name: "Square + Constant", formula: "T_n = n^2 + k" },
+            { name: "Fibonacci Series", formula: "T_n = T_(n-1) + T_(n-2)" }
+        ],
+        tricks: [
+            "Calculate differences between consecutive terms first. If differences grow, check second differences.",
+            "Look for alternating series (two patterns merged at odd/even positions) if terms go up and down."
+        ],
+        mistakes: "Assuming simple addition without checking if geometric multiplication or prime sequence rules apply.",
+        varieties: [
+            { type: 1, title: "Type 1: Constant Common Difference Arithmetic Series", desc: "Identify missing terms in linear addition sequence progressions." },
+            { type: 2, title: "Type 2: Geometric & Exponential Growth Multipliers", desc: "Find missing terms in multiplicative geometric progressions." },
+            { type: 3, title: "Type 3: Quadratic Squares & Offset Sequences (n^2 + k)", desc: "Discover next numbers in square-based polynomial series." },
+            { type: 4, title: "Type 4: Interleaved Dual Alternating Series", desc: "Solve interleaved sequences combining two independent alternating patterns." },
+            { type: 5, title: "Type 5: Progressive Alphabetical Letter Sequences", desc: "Determine next alphabet letters in expanding rank progression series." },
+            { type: 6, title: "Type 6: Fibonacci Consecutive Sum Progressions", desc: "Solve terms where each element is the sum of the two preceding numbers." }
+        ]
+    },
+
+    analogy: {
+        intro: "Analogies identify semantic, mathematical, physical, or structural correlations between sets of items.",
+        formulas: [
+            { name: "Semantic Pair", formula: "Synonym : Synonym or Antonym : Antonym" },
+            { name: "Worker to Tool", formula: "Professional : Primary Instrument" },
+            { name: "Numerical Analogy", formula: "x : x^2 or x : x^3" }
+        ],
+        tricks: [
+            "Formulate the first pair into a complete sentence ('A Carpenter uses a Saw to cut'). Apply the exact sentence to the second pair.",
+            "In numbers, test squares and cubes (x : x^2 + 1) before testing differences."
+        ],
+        mistakes: "Choosing options with weak superficial associations instead of matching the exact functional relationship.",
+        varieties: [
+            { type: 1, title: "Type 1: Semantic Antonym & Synonym Word Pairs", desc: "Match vocabulary opposites and synonyms across analogical pairs." },
+            { type: 2, title: "Type 2: Craftsman & Professional Tool Analogies", desc: "Map artisans to their primary instruments of trade." },
+            { type: 3, title: "Type 3: Mathematical Numerical Exponent Relations", desc: "Solve mathematical analogies based on squaring and cubing transformations." },
+            { type: 4, title: "Type 4: Scientific Measuring Instruments & Units", desc: "Link scientific devices (barometer, odometer) to measured physical quantities." },
+            { type: 5, title: "Type 5: Geopolitical National Capitals & Geography", desc: "Match world capital cities with their sovereign nations." },
+            { type: 6, title: "Type 6: Part-to-Whole & Component Hierarchies", desc: "Map constituent elements to their parent structures (petal to flower)." }
+        ]
+    },
+
+    non_verbal: {
+        intro: "Non-verbal reasoning tests visual-spatial cognition: mirror images, water reflections, paper folding, embedded shapes, and series.",
+        formulas: [
+            { name: "Mirror Image (Vertical)", formula: "Lateral inversion: Left becomes Right, Right becomes Left" },
+            { name: "Water Image (Horizontal)", formula: "Vertical inversion: Top becomes Bottom, Bottom becomes Top" },
+            { name: "Angular Step Series", formula: "Track clockwise / anti-clockwise rotation degrees" }
+        ],
+        tricks: [
+            "In mirror images, the rightmost element becomes the leftmost element in the reflection.",
+            "Letters with horizontal symmetry (H, I, O, X, C, D, E) retain their shape in water images."
+        ],
+        mistakes: "Confusing mirror images (lateral flip) with water images (vertical upside-down flip).",
+        varieties: [
+            { type: 1, title: "Type 1: Vertical Plane Mirror Image Reflections", desc: "Determine laterally inverted reflections of alphanumeric strings." },
+            { type: 2, title: "Type 2: Horizontal Water Image Inversions", desc: "Identify vertically inverted reflections retaining horizontal symmetry." },
+            { type: 3, title: "Type 3: Transparent Paper Sheet Folding Overlays", desc: "Visualize superimposed shapes when folding transparent patterned sheets." },
+            { type: 4, title: "Type 4: 2D Matrix Dual Transformation Completion", desc: "Complete 3x3 pattern matrices combining row count and column rotation rules." },
+            { type: 5, title: "Type 5: Geometric Arrow Angular Series Rotations", desc: "Predict the next orientation in 45-degree rotating geometric series." },
+            { type: 6, title: "Type 6: Embedded Figure & Wireframe Detection", desc: "Detect hidden unrotated target shapes within composite diagrams." }
+        ]
+    },
+
+    /* ---------------- VERBAL TOPICS ---------------- */
+    grammar: {
+        intro: "Grammar rules govern syntax structures: subject-verb agreements, modifiers, pronoun categories, and tense alignments.",
+        formulas: [
+            { name: "Subject-Verb Agreement", formula: "Singular subject -> singular verb; plural -> plural" },
+            { name: "Third Conditional", formula: "If + had + V3 ..., would have + V3" },
+            { name: "Relative Pronouns", formula: "Who for subject (doing action); Whom for object (receiving action)" },
+            { name: "Parallelism", formula: "Maintain identical grammatical form across coordinate lists" }
+        ],
+        tricks: [
+            "Ignore intervening prepositional phrases between subject and verb to verify agreement.",
+            "'Neither of' + plural noun always takes a SINGULAR verb ('was', 'is', 'has')."
+        ],
+        mistakes: "Using 'would have' inside the 'if'-clause of conditional sentences.",
+        varieties: [
+            { type: 1, title: "Type 1: Subject-Verb Concord & Distributive Pronouns", desc: "Select correct verb forms following 'neither of' and collective subjects." },
+            { type: 2, title: "Type 2: Conditional Sentence Tense Harmony", desc: "Apply third conditional rules (If + had + V3 ..., would have + V3)." },
+            { type: 3, title: "Type 3: Relative Pronoun Case Disambiguation (Who vs Whom)", desc: "Differentiate nominative subject 'who' from objective 'whom'." },
+            { type: 4, title: "Type 4: Prepositional Collocations & Idiomatic Verb Pairs", desc: "Select correct preposition pairings with standard English verbs." },
+            { type: 5, title: "Type 5: Parallel Grammatical Structures in Coordinate Lists", desc: "Maintain matching verb and gerund structures across series." },
+            { type: 6, title: "Type 6: Active to Passive Voice Syntactic Transformations", desc: "Convert past simple passive sentences into concise active voice." }
+        ]
+    },
+
+    vocabulary: {
+        intro: "Vocabulary studies word definitions, roots, synonyms, antonyms, phrasal combinations, and usage contexts.",
+        formulas: [
+            { name: "Root Prefixes", formula: "'poly' = many, 'bene' = good, 'mal' = bad, 'ephemer' = transient" },
+            { name: "Idiom Meaning", formula: "Decode non-literal figurative expressions" },
+            { name: "Phrasal Verbs", formula: "Verb + preposition combinations (call off = cancel)" }
+        ],
+        tricks: [
+            "Use word root mappings to approximate meanings of unfamiliar words.",
+            "Determine the positive or negative tone of the sentence context before picking synonyms."
+        ],
+        mistakes: "Selecting a synonym when the question explicitly asked for an antonym.",
+        varieties: [
+            { type: 1, title: "Type 1: High-Frequency Placement Synonyms", desc: "Identify precise contextual synonyms for corporate vocabulary words." },
+            { type: 2, title: "Type 2: Direct Contextual Antonyms", desc: "Select direct opposites for words like 'Candid' and 'Meticulous'." },
+            { type: 3, title: "Type 3: Figurative Idiomatic Expressions", desc: "Interpret figurative meanings of idioms like 'burn the midnight oil'." },
+            { type: 4, title: "Type 4: One-Word Substitutions & Etymology", desc: "Condense descriptive phrases into single root terms like 'Polyglot'." },
+            { type: 5, title: "Type 5: Phrasal Verbs & Prepositional Combinations", desc: "Disambiguate verb-preposition phrases like 'call off' vs 'put off'." },
+            { type: 6, title: "Type 6: Nuanced Vocabulary & Fleeting States", desc: "Match precise vocabulary terms like 'Ephemeral' and 'Transient'." }
+        ]
+    },
+
+    reading_comprehension: {
+        intro: "Reading Comprehension evaluates content processing, main idea identification, argument mapping, and tone deductions.",
+        formulas: [
+            { name: "Central Thesis", formula: "Look at introductory and concluding topic sentences" },
+            { name: "Tone Identification", formula: "Objective, critical, laudatory, or analytical" },
+            { name: "Inference Rule", formula: "Must be directly supported by passage evidence" }
+        ],
+        tricks: [
+            "Read question prompts before reading the passage to scan for key terms effectively.",
+            "Avoid options with absolute generalizations unless backed explicitly by text."
+        ],
+        mistakes: "Choosing choices that are factually true in real life but never mentioned in the text.",
+        varieties: [
+            { type: 1, title: "Type 1: Central Thesis & Main Idea Extraction", desc: "Extract balanced central arguments from technical and medical passages." },
+            { type: 2, title: "Type 2: Direct Factual Detail Retrieval", desc: "Scan and locate specific statistics and cause-effect data points." },
+            { type: 3, title: "Type 3: Author's Tone & Attitude Identification", desc: "Characterize authorial stance as objective, analytical, or polemical." },
+            { type: 4, title: "Type 4: Supported Logical Inferences", desc: "Deduce implicit engineering trade-offs not explicitly stated." },
+            { type: 5, title: "Type 5: Vocabulary in Context Definition", desc: "Define words like 'austere' as used in specific socioeconomic contexts." },
+            { type: 6, title: "Type 6: Comprehensive Passage Title Selection", desc: "Choose optimal titles reflecting the full scope of passage themes." }
+        ]
+    },
+
+    sentence_correction: {
+        intro: "Sentence Correction evaluates sentence fragments, dangling modifiers, parallel structures, and word choice errors.",
+        formulas: [
+            { name: "Dangling Modifier Fix", formula: "Attach introductory modifier directly to the logical human actor" },
+            { name: "Redundancy Rule", formula: "Delete duplicate words (revert back -> revert)" },
+            { name: "Subjunctive Mood", formula: "Use 'were' for hypothetical conditions ('If I were you')" }
+        ],
+        tricks: [
+            "Check for parallelism: ensure verbs, adjectives, and list elements match structure formats.",
+            "Scan for redundancy (e.g. 'revert back' or 'repeat again' are redundant)."
+        ],
+        mistakes: "Leaving dangling modifiers that make inanimate objects perform human actions.",
+        varieties: [
+            { type: 1, title: "Type 1: Dangling & Misplaced Participial Modifiers", desc: "Reattach introductory participle clauses to the logical human subject." },
+            { type: 2, title: "Type 2: Wordiness & Pleonastic Redundancy Elimination", desc: "Remove redundant repetitions like 'revert back' and 'repeat again'." },
+            { type: 3, title: "Type 3: Correlative Conjunction Alignment (Not only... but also)", desc: "Maintain matching grammatical elements after both parts of conjunctions." },
+            { type: 4, title: "Type 4: Singular Pronoun-Antecedent Concord", desc: "Enforce singular pronoun agreement with 'Every student'." },
+            { type: 5, title: "Type 5: Hypothetical Subjunctive Mood ('If I were')", desc: "Use subjunctive 'were' in contrary-to-fact conditional clauses." },
+            { type: 6, title: "Type 6: Comma Splice & Run-On Sentence Resolution", desc: "Connect independent clauses using semicolons and conjunctive adverbs." }
+        ]
+    },
+
+    error_spotting: {
+        intro: "Error Spotting challenges syntax verification: preposition rules, subject-verb agreements, tenses, and conjunctions.",
+        formulas: [
+            { name: "Subject-Verb Check", formula: "Verify singular/plural status of true subject" },
+            { name: "One of the...", formula: "Always followed by plural noun ('One of the reasons')" },
+            { name: "Latin Comparatives", formula: "Senior, Junior, Superior take 'to', never 'than'" },
+            { name: "Uncountable Nouns", formula: "Advice, Information, Furniture have no plural 's'" }
+        ],
+        tricks: [
+            "Check Subject-Verb agreement first. If correct, check pronoun agreement and prepositions.",
+            "Latin comparatives (senior, junior, superior) take 'to', not 'than'."
+        ],
+        mistakes: "Overlooking uncountable noun errors (e.g. 'advices' is incorrect).",
+        varieties: [
+            { type: 1, title: "Type 1: Collective Noun Subject-Verb Discord", desc: "Spot verb number errors with collective subjects acting as a single unit." },
+            { type: 2, title: "Type 2: 'One of the' Plural Noun Errors", desc: "Identify missing plural noun forms in 'One of the [plural noun]' structures." },
+            { type: 3, title: "Type 3: Latin Comparative Preposition Errors ('Senior to')", desc: "Correct incorrect 'senior than' usage to 'senior to'." },
+            { type: 4, title: "Type 4: Correlative Conjunction Pairings (Scarcely... when)", desc: "Identify conjunction mismatch errors like 'Scarcely had he... than'." },
+            { type: 5, title: "Type 5: Uncountable Noun Pluralization Traps", desc: "Spot improper pluralization of uncountable nouns like 'advices'." },
+            { type: 6, title: "Type 6: Redundant Preposition Usage ('Despite of')", desc: "Correct 'Despite of' errors (use 'Despite' or 'In spite of')." }
+        ]
+    },
+
+    fill_blanks: {
+        intro: "Fill in the Blanks tests vocabulary precision, context fits, conjunction indicators, and preposition pairings.",
+        formulas: [
+            { name: "Collocation", formula: "Select words that naturally pair together in standard English" },
+            { name: "Conjunction Clue", formula: "'Although'/'However' indicate contrasting polarity between clauses" }
+        ],
+        tricks: [
+            "Read sentences with blank spaces, guess simple words that fit naturally, then match options against your guess.",
+            "Look for clue conjunctions ('although' = contrast, 'furthermore' = support)."
+        ],
+        mistakes: "Choosing words that fit grammatically but distort the logical meaning of the sentence.",
+        varieties: [
+            { type: 1, title: "Type 1: Single-Blank Contextual Clarity Vocabulary", desc: "Select precise vocabulary words like 'lucid' that resolve sentence ambiguities." },
+            { type: 2, title: "Type 2: Double-Blank Contrast Conjunction Fillers", desc: "Balance opposing negative/positive polarities signaled by 'Although'." },
+            { type: 3, title: "Type 3: Fixed Verb-Preposition Phrasal Collocations", desc: "Insert required prepositions like 'abstain from'." },
+            { type: 4, title: "Type 4: Skillful Action Descriptors & Adjectives", desc: "Choose apt descriptive adjectives like 'deft' in executive contexts." },
+            { type: 5, title: "Type 5: Logistics & Timeline Delay Vocabulary", desc: "Select precise project management terms like 'deferred'." },
+            { type: 6, title: "Type 6: Character & Demeanor Contextual Fit", desc: "Match character adjectives like 'forthright' with honesty clues." }
+        ]
+    },
+
+    para_jumbles: {
+        intro: "Paragraph Jumbles evaluate paragraph coherence, acronym expansions, sentence connections, and chronological layouts.",
+        formulas: [
+            { name: "Opening Sentence", formula: "Introduces topic, contains no standalone relative pronouns" },
+            { name: "Mandatory Pair", formula: "Link noun introduction to subsequent pronoun references" },
+            { name: "Chronological Flow", formula: "Order events from historical origins to modern day" }
+        ],
+        tricks: [
+            "Identify mandatory pairs (e.g. full name introduced before pronoun 'it' or 'they').",
+            "Look for transition words ('therefore', 'consequently', 'today') to locate closing sentences."
+        ],
+        mistakes: "Reading sentences in isolation instead of looking for linking pronouns and transition words.",
+        varieties: [
+            { type: 1, title: "Type 1: Historical Chronological Evolution Paragraphs", desc: "Sequence events from ancient origins to modern worldwide consumption." },
+            { type: 2, title: "Type 2: Technological Concept to Infrastructure Impact", desc: "Order general necessity claims, technical definitions, and investments." },
+            { type: 3, title: "Type 3: Full Name to Acronym Pronoun Pairings", desc: "Link organization name introductions (WHO) to pronoun mandates." },
+            { type: 4, title: "Type 4: Problem Statement to Advanced Solution Sequences", desc: "Structure problem escalations, legacy failures, and modern solutions." },
+            { type: 5, title: "Type 5: Macro Economic & Startup Impact Flows", desc: "Order concept definitions, cost shifts, and resulting business innovations." },
+            { type: 6, title: "Type 6: Data Science Pipeline & Optimization Benefits", desc: "Sequence preprocessing necessity, problem explanations, and model benefits." }
+        ]
+    }
+};
 
 // --- Dynamic Theory & Formula Sheet Aggregator ---
 function loadTheoryContent(subject, topic) {
-    const database = {
-        numbers: {
-            intro: "Number systems cover classification of numbers (Natural, Whole, Integers, Even, Odd, Prime, Composite, Co-prime), divisibility guidelines, Arithmetic & Geometric Progression rules, and remainder cyclicity concepts.",
-            formulas: [
-                { name: "Geometric Progression (GP)", formula: "a, ar, ar^2, ar^3... where 'a' is first term and 'r' is common ratio" },
-                { name: "GP: nth term", formula: "a_n = a * r^(n-1)" },
-                { name: "GP: Sum of n terms (r < 1)", formula: "S_n = a(1 - r^n) / (1 - r)" },
-                { name: "GP: Sum of n terms (r > 1)", formula: "S_n = a(r^n - 1) / (r - 1)" },
-                { name: "Arithmetic Progression (AP)", formula: "a, a+d, a+2d, a+3d... where 'a' is first term and 'd' is common difference" },
-                { name: "AP: nth term", formula: "a_n = a + (n - 1)d" },
-                { name: "AP: Sum of n terms", formula: "S_n = (n / 2) * [2a + (n - 1)d]" },
-                { name: "Sum of first n natural numbers", formula: "1 + 2 + ... + n = n(n + 1) / 2" },
-                { name: "Sum of squares of natural numbers", formula: "1^2 + 2^2 + ... + n^2 = n(n + 1)(2n + 1) / 6" },
-                { name: "Sum of cubes of natural numbers", formula: "1^3 + 2^3 + ... + n^3 = [n(n + 1) / 2]^2" },
-                { name: "Basic Algebraic Identity 1", formula: "(a - b)^2 = a^2 + b^2 - 2ab" },
-                { name: "Basic Algebraic Identity 2", formula: "(a + b)^2 = a^2 + b^2 + 2ab" },
-                { name: "Basic Algebraic Identity 3", formula: "(a + b)(a - b) = a^2 - b^2" },
-                { name: "Basic Algebraic Identity 4", formula: "a^3 + b^3 = (a + b)(a^2 - ab + b^2)" },
-                { name: "Basic Algebraic Identity 5", formula: "a^3 - b^3 = (a - b)(a^2 + ab + b^2)" },
-                { name: "Basic Algebraic Identity 6", formula: "(a + b + c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca)" },
-                { name: "Basic Algebraic Identity 7", formula: "a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ac)" }
-            ],
-            tricks: [
-                "Divisibility by 2: Last digit is 0, 2, 4, 6, or 8.",
-                "Divisibility by 3: Sum of all digits must be divisible by 3.",
-                "Divisibility by 4: Number formed by last two digits is divisible by 4.",
-                "Divisibility by 5: Units digit ends in 0 or 5.",
-                "Divisibility by 6: Divisible by both 2 and 3.",
-                "Divisibility by 11: |Sum(digits at even positions) - Sum(digits at odd positions)| is 0 or divisible by 11.",
-                "Divisibility by 12: Divisible by both 3 and 4.",
-                "Divisor rule: Dividend = (Divisor * Quotient) + Remainder.",
-                "Co-primes: Two numbers are co-prime if their H.C.F. is 1.",
-                "Sum of first n odd numbers = n^2.",
-                "Sum of first n even numbers = n(n + 1).",
-                "Odd numbers can be expressed as 2n + 1 where n is an integer."
-            ],
-            mistakes: "Correction warnings: 1) Odd numbers are expressed as 2n + 1, not 2(n + 1). 2) GP first term is 'a' and GP formulas depend on 'a' and ratio 'r'. 3) The difference algebraic expansion for cubic subtraction is: a^3 - b^3 = (a - b)(a^2 + ab + b^2).",
-            varieties: [
-                { type: 1, title: "Type 1: Find units digit of a number in the form of a<sup>b</sup>", desc: "Calculate the units digit of exponential bases or products using standard cyclicity patterns (cycles of 4 for 2, 3, 7, 8, etc.)." },
-                { type: 2, title: "Type 2: Arithmetic and Geometric progression", desc: "Identify progression patterns, determine the number of terms, common ratio, and sum of finite geometric progressions." },
-                { type: 3, title: "Type 3: Arithmetic Progression", desc: "Solve terms and sum series with constant difference intervals, natural number series, and quadratic relations." },
-                { type: 4, title: "Type 4: Divisibility", desc: "Test divisibility properties for large integer values using prime factor rules (e.g. testing divisibility by 11 or 88)." },
-                { type: 5, title: "Type 5: Operations on Integers", desc: "Determine value results of complex algebraic operations using identities such as a^2 - b^2, squares, or cubic forms." },
-                { type: 6, title: "Type 6: Divisor and Remainder Transformations", desc: "Determine the resulting remainder when a number is divided by a new divisor c based on its initial remainder when divided by b." }
-            ]
-        },
-
-        percentage: {
-            intro: "Percentage represents ratios relative to 100 base, acting as the fundamental scaling factor in comparison metrics, compounding cycles, and algebraic equations.",
-            formulas: [
-                { name: "Percentage Value", formula: "Value = (Percent / 100) * Total" },
-                { name: "Fraction conversion", formula: "Percentage = Fraction * 100" },
-                { name: "Percentage Increase", formula: "New = Original * (1 + Rate / 100)" },
-                { name: "Percentage Decrease", formula: "New = Original * (1 - Rate / 100)" },
-                { name: "Net Consecutive Change", formula: "Net% = x + y + (x * y) / 100" },
-                { name: "Relative Comparison (More)", formula: "If A is x% more than B, B is [x / (100 + x)] * 100% less than A" },
-                { name: "Relative Comparison (Less)", formula: "If A is x% less than B, B is [x / (100 - x)] * 100% more than A" },
-                { name: "Compound Population Growth", formula: "P_n = P_0 * (1 + R / 100)^n" },
-                { name: "Compound Population Decay", formula: "P_n = P_0 * (1 - R / 100)^n" },
-                { name: "Product Constancy Consumption", formula: "If Price increases by P%, Consumption must decrease by [P / (100 + P)] * 100%" }
-            ],
-            tricks: [
-                "x% of y is equivalent to y% of x. (e.g. 16% of 50 is same as 50% of 16 = 8).",
-                "Convert percentages to standard fractions: 12.5% = 1/8, 33.33% = 1/3, 16.66% = 1/6.",
-                "If A is x% more than B, then B is [x / (100 + x)] * 100% less than A."
-            ],
-            mistakes: "Adding consecutive percentage changes linearly instead of compounding them sequentially."
-        },
-        profit_loss: {
-            intro: "Profit and Loss analyzes financial transactions, markups, cost bases, margins, and consecutive discounts. Calculating percentage values using the correct base is critical.",
-            formulas: [
-                { name: "Profit Percentage", formula: "P% = (Profit / CP) * 100" },
-                { name: "Loss Percentage", formula: "L% = (Loss / CP) * 100" },
-                { name: "Selling Price (Profit)", formula: "SP = CP * (1 + P / 100)" },
-                { name: "Selling Price (Loss)", formula: "SP = CP * (1 - L / 100)" },
-                { name: "Discount Percentage", formula: "D% = (Discount / MP) * 100" },
-                { name: "Selling Price (Discount)", formula: "SP = MP * (1 - D / 100)" },
-                { name: "Markup Percentage", formula: "Markup% = [(Marked Price - CP) / CP] * 100" },
-                { name: "CP & MP Relationship", formula: "CP / MP = (100 - D%) / (100 + P%)" },
-                { name: "Net Discount (Successive)", formula: "Net D% = d1 + d2 - (d1 * d2) / 100" },
-                { name: "Dishonest Dealer Profit", formula: "Profit% = [Error / (True Weight - Error)] * 100%" }
-            ],
-            tricks: [
-                "If SP is constant and two items are sold at a profit of x% and loss of x%, the net transaction is always a loss of (x/10)^2 %.",
-                "Cost Price corresponds to 100% base. All profits add and losses subtract directly from this percentage base.",
-                "If a trader sells goods using false weights, profit% = [Error / (True Value - Error)] * 100%."
-            ],
-            mistakes: "Calculating profit margins based on Selling Price instead of Cost Price base unless specified."
-        },
-        ratio_proportion: {
-            intro: "Ratios express comparative relationships between quantities by division, whereas proportions establish equations between ratios. Scale factors map parts to whole amounts.",
-            formulas: [
-                { name: "Duplicate Ratio", formula: "Duplicate of a:b = a^2 : b^2" },
-                { name: "Triplicate Ratio", formula: "Triplicate of a:b = a^3 : b^3" },
-                { name: "Sub-Duplicate Ratio", formula: "Sub-Duplicate of a:b = sqrt(a) : sqrt(b)" },
-                { name: "Sub-Triplicate Ratio", formula: "Sub-Triplicate of a:b = cbrt(a) : cbrt(b)" },
-                { name: "Mean Proportion", formula: "b = sqrt(a * c)" },
-                { name: "Third Proportion", formula: "c = b^2 / a" },
-                { name: "Fourth Proportion", formula: "d = (b * c) / a" },
-                { name: "Componendo", formula: "If a/b = c/d, then (a+b)/b = (c+d)/d" },
-                { name: "Dividendo", formula: "If a/b = c/d, then (a-b)/b = (c-d)/d" },
-                { name: "Componendo & Dividendo", formula: "If a/b = c/d, then (a+b)/(a-b) = (c+d)/(c-d)" }
-            ],
-            tricks: [
-                "To merge A:B and B:C ratios, multiply values to equalize the common term B's coefficient using the LCM.",
-                "Substitute ratio values directly into homogenous equations (e.g. if x:y = 3:4, substitute x=3 and y=4 directly)."
-            ],
-            mistakes: "Adding ratio components directly to find net distributions without establishing the scaling coefficient k."
-        },
-        average: {
-            intro: "Average represents central tendencies of discrete numerical distributions, calculated as total sum divided by size. Weighted averages adjust for varying group weights.",
-            formulas: [
-                { name: "Standard Average", formula: "Average = Sum of terms / Number of terms" },
-                { name: "Average of n consecutive integers", formula: "Average = (First Term + Last Term) / 2" },
-                { name: "Weighted Average", formula: "Avg_w = (n1*A1 + n2*A2) / (n1 + n2)" },
-                { name: "Average Speed (Equal Distances)", formula: "Harmonic Mean = 2 * S1 * S2 / (S1 + S2)" },
-                { name: "Average Speed (Equal Times)", formula: "Arithmetic Mean = (S1 + S2) / 2" },
-                { name: "Average of first n natural numbers", formula: "Average = (n + 1) / 2" },
-                { name: "Average of squares of first n natural numbers", formula: "Average = (n + 1)(2n + 1) / 6" },
-                { name: "Average of cubes of first n natural numbers", formula: "Average = n(n + 1)^2 / 4" },
-                { name: "Average of first n even numbers", formula: "Average = n + 1" },
-                { name: "Average of first n odd numbers", formula: "Average = n" }
-            ],
-            tricks: [
-                "Apply the Deviation Method: Assume a base average, calculate sum deviations, divide by count, and adjust the base.",
-                "The average of first n natural numbers is (n + 1) / 2, and the average of first n odd numbers is simply n."
-            ],
-            mistakes: "Using simple arithmetic mean for average speed problems instead of harmonic mean speed ratios."
-        },
-        time_work: {
-            intro: "Time and Work assesses production parameters. Work rate is inversely proportional to time taken when capacities are constant. Working with integer units via LCM simplifies calculations.",
-            formulas: [
-                { name: "Combined Work Rate (2 people)", formula: "T = (A * B) / (A + B)" },
-                { name: "Combined Work Rate (3 people)", formula: "T = (A * B * C) / (A*B + B*C + C*A)" },
-                { name: "Manpower Days Formula", formula: "M1 * D1 * H1 / W1 = M2 * D2 * H2 / W2" },
-                { name: "Efficiency Time Relation", formula: "Time A / Time B = Efficiency B / Efficiency A" },
-                { name: "Inlet & Outlet Pipe Net Flow", formula: "1/T_net = 1/T_inlet - 1/T_outlet" },
-                { name: "Alternate Day Efficiency Cycle", formula: "Cycle work = E_A + E_B in 2 days" },
-                { name: "Work Wages Split Rule", formula: "Wages ratio = Work Done ratio = (Efficiency * Days) ratio" },
-                { name: "Relative Combined Completion Time", formula: "If A takes x days more and B takes y days more than A+B, T_ab = sqrt(x * y)" },
-                { name: "Leak Emptying Time", formula: "T_leak = (T_normal * T_with_leak) / (T_with_leak - T_normal)" },
-                { name: "Group Capacity Conversion", formula: "1 Man = x Women = y Children" }
-            ],
-            tricks: [
-                "Assign 'Total Work Units' as the LCM of days. Solve for efficiencies as small integers instead of working with fractional parts.",
-                "If A is thrice as efficient as B, then A takes 1/3 of the time taken by B."
-            ],
-            mistakes: "Adding days directly to find combined completion times rather than adding reciprocal work rates."
-        },
-        time_distance: {
-            intro: "Speed and Distance models motion kinetics, governing relations between speeds, transit times, relative shifts, and unit conversions.",
-            formulas: [
-                { name: "Speed Equation", formula: "Speed = Distance / Time" },
-                { name: "km/h to m/s conversion", formula: "1 km/h = 5/18 m/s" },
-                { name: "m/s to km/h conversion", formula: "1 m/s = 18/5 km/h" },
-                { name: "Relative Speed (Same direction)", formula: "S_rel = S1 - S2 (S1 > S2)" },
-                { name: "Relative Speed (Opposite direction)", formula: "S_rel = S1 + S2" },
-                { name: "Train crossing point object", formula: "Distance = Length of Train" },
-                { name: "Train crossing platform/bridge", formula: "Distance = Length of Train + Length of Platform" },
-                { name: "Two trains crossing each other", formula: "Distance = Length of Train 1 + Length of Train 2" },
-                { name: "Late & Early arrival trick", formula: "Distance = [S1 * S2 / |S1 - S2|] * (Time Difference)" },
-                { name: "Time to meet (Starts at same time)", formula: "Time = Initial Distance / Relative Speed" }
-            ],
-            tricks: [
-                "For two bodies traveling in same direction, subtract relative speeds (S1 - S2). In opposite directions, add them (S1 + S2).",
-                "When a train crosses a bridge/platform, the total distance is the sum of the lengths of the train and the platform."
-            ],
-            mistakes: "Forgetting to convert units to be consistent (e.g. speed in km/h but time in seconds)."
-        },
-        speed_distance: {
-            intro: "Kinetics modeling focusing on advanced motion challenges like circular tracks, relative sweeps, races, and river currents.",
-            formulas: [
-                { name: "Downstream Speed", formula: "D_spd = Speed_boat + Speed_stream" },
-                { name: "Upstream Speed", formula: "U_spd = Speed_boat - Speed_stream" },
-                { name: "Speed of Boat in Still Water", formula: "S_boat = (D_spd + U_spd) / 2" },
-                { name: "Speed of Current", formula: "S_stream = (D_spd - U_spd) / 2" },
-                { name: "Round Trip Average Speed", formula: "Average Speed = (Boat_Speed^2 - Stream_Speed^2) / Boat_Speed" },
-                { name: "Circular Track Meeting Time (First time)", formula: "T_meet = Track_Length / Relative_Speed" },
-                { name: "Circular Track Starting Point Meeting", formula: "T_start = LCM(Track_Length/S1, Track_Length/S2)" },
-                { name: "Linear Race Start Advantage", formula: "A runs D meters, B runs (D - start_distance) meters" },
-                { name: "Police & Thief Capture Time", formula: "T_capture = Initial_Lead / (S_police - S_thief)" },
-                { name: "Sound Flash Distance", formula: "Distance = Speed of sound * Time interval between sight and sound" }
-            ],
-            tricks: [
-                "Time taken to meet on a circular track of length L for the first time is L / (Relative Speed).",
-                "For relative motion of trains passing each other, total distance crossed is always L1 + L2, regardless of directions."
-            ],
-            mistakes: "Assuming upstream speed is Stream - Boat, which is invalid as boats must be faster than currents to progress."
-        },
-        probability: {
-            intro: "Probability quantifies occurrences likelihoods, ranging from absolute impossibility (0) to absolute certainty (1). Analyzing total sample space is key.",
-            formulas: [
-                { name: "Basic Probability", formula: "P(E) = Favorable Outcomes / Total Sample Space" },
-                { name: "Complementary Event", formula: "P(E') = 1 - P(E)" },
-                { name: "Range of Probability", formula: "0 <= P(E) <= 1" },
-                { name: "Addition Theorem (General)", formula: "P(A U B) = P(A) + P(B) - P(A n B)" },
-                { name: "Addition Theorem (Mutually Exclusive)", formula: "P(A U B) = P(A) + P(B)" },
-                { name: "Conditional Probability", formula: "P(A|B) = P(A n B) / P(B)" },
-                { name: "Multiplication Theorem (Independent)", formula: "P(A n B) = P(A) * P(B)" },
-                { name: "Bayes' Theorem", formula: "P(Ai|B) = [P(B|Ai) * P(Ai)] / Sum[P(B|Aj) * P(Aj)]" },
-                { name: "Binomial Probability distribution", formula: "P(X=k) = nCk * p^k * q^(n-k)" },
-                { name: "Odds in Favor", formula: "Odds = a : b -> P(E) = a / (a + b)" }
-            ],
-            tricks: [
-                "P(At least 1 success) = 1 - P(No successes). This is often much faster to compute than summing successes.",
-                "For coin tosses or dice throws, list total sample counts (2^n for coins, 6^n for dice) first before checking bounds."
-            ],
-            mistakes: "Confusing mutually exclusive events [P(A n B) = 0] with independent events [P(A n B) = P(A) * P(B)]."
-        },
-        permutation_combination: {
-            intro: "Permutation tracks item ordering configurations where placement matters, whereas Combination aggregates groupings where order is irrelevant.",
-            formulas: [
-                { name: "Factorial Equation", formula: "n! = n * (n-1) * (n-2) * ... * 1" },
-                { name: "Permutations (Order matters)", formula: "nPr = n! / (n - r)!" },
-                { name: "Combinations (Order irrelevant)", formula: "nCr = n! / [r! * (n - r)!]" },
-                { name: "Combinations Symmetry", formula: "nCr = nC(n-r)" },
-                { name: "Permutations of identical items", formula: "Permutations = n! / (p! * q! * r!)" },
-                { name: "Circular Permutations (Beads/Necklace)", formula: "Permutations = (n - 1)! / 2" },
-                { name: "Circular Permutations (Normal)", formula: "Permutations = (n - 1)!" },
-                { name: "Diagonals of an n-sided polygon", formula: "Diagonals = n(n - 3) / 2" },
-                { name: "Handshakes in a group of n", formula: "Handshakes = n(n - 1) / 2" },
-                { name: "Total Selections from n distinct items", formula: "Total = 2^n - 1" }
-            ],
-            tricks: [
-                "Use the 'String Method' when items must stay together: tie them into a single unit, arrange units, then arrange inside.",
-                "Use the 'Gap Method' when items must not sit next to each other: arrange others first, then place items in intermediate spaces."
-            ],
-            mistakes: "Calculating permutations instead of combinations when the question only asks for a team selection."
-        },
-        data_interpretation: {
-            intro: "Data Interpretation translates chart diagrams (bar, pie, line, tables) into quantified business intelligence ratios and metrics.",
-            formulas: [
-                { name: "Percentage Growth Rate", formula: "Growth% = [(Current - Previous) / Previous] * 100" },
-                { name: "Pie Chart degree to percentage", formula: "Percent = Degree * (5 / 18)" },
-                { name: "Pie Chart percentage to degree", formula: "Degree = Percent * 3.6" },
-                { name: "Simple Average of data points", formula: "Average = Sum of values / Number of points" },
-                { name: "Compound Annual Growth Rate (CAGR)", formula: "CAGR = (FV / PV)^(1/n) - 1" },
-                { name: "Profit Margin ratio", formula: "Margin% = (Net Profit / Total Revenue) * 100" },
-                { name: "Market Share percentage", formula: "Share% = (Sales of Company / Total Market Sales) * 100" },
-                { name: "Cost Benefit ratio", formula: "Ratio = Total Financial Benefits / Total Financial Costs" },
-                { name: "Price Index", formula: "Index = (Current Price / Base Year Price) * 100" },
-                { name: "Weighted Data Value", formula: "Weighted Value = Sum(Data * Weight) / Sum(Weights)" }
-            ],
-            tricks: [
-                "Look at chart legends and scales before computing. Approximate calculations using round fractions: 16.6% ≈ 1/6, 14.3% ≈ 1/7.",
-                "When comparing ratios, check if you can compare numerators or denominators visually to avoid division."
-            ],
-            mistakes: "Misinterpreting graph axis scale offsets (e.g. values represented in thousands but answers expecting actual values)."
-        },
-        simplification: {
-            intro: "Simplification utilizes arithmetic order precedence guidelines (VBODMAS) to reduce heavy arithmetic and exponents into single values quickly.",
-            formulas: [
-                { name: "Arithmetic Precedence", formula: "VBODMAS (Virnculum, Bracket, Of, Div, Mult, Add, Sub)" },
-                { name: "Difference of Squares", formula: "a^2 - b^2 = (a - b)(a + b)" },
-                { name: "Perfect Square Expansion", formula: "(a + b)^2 = a^2 + 2ab + b^2" },
-                { name: "Difference Square Expansion", formula: "(a - b)^2 = a^2 - 2ab + b^2" },
-                { name: "Cubic expansion (+)", formula: "(a + b)^3 = a^3 + b^3 + 3ab(a + b)" },
-                { name: "Cubic expansion (-)", formula: "(a - b)^3 = a^3 - b^3 - 3ab(a - b)" },
-                { name: "Sum of Cubes", formula: "a^3 + b^3 = (a + b)(a^2 - ab + b^2)" },
-                { name: "Difference of Cubes", formula: "a^3 - b^3 = (a - b)(a^2 + ab + b^2)" },
-                { name: "Sum of Three Cubes relation", formula: "If a+b+c=0, then a^3+b^3+c^3 = 3abc" },
-                { name: "Exponential multiplication", formula: "a^m * a^n = a^(m+n), a^m / a^n = a^(m-n)" }
-            ],
-            tricks: [
-                "Apply unit digit analysis or digital sum rules (casting out nines) to check options without doing full calculations.",
-                "Round decimal numbers to close integers (e.g., 29.98 * 5.02 ≈ 30 * 5) to eliminate wrong choices rapidly."
-            ],
-            mistakes: "Ignoring VBODMAS precedence, such as doing additions or multiplications before divisions."
-        },
-        algebra: {
-            intro: "Algebra covers equations, variables, roots representations, and logarithmic rules. Arithmetic and Geometric Progressions trace systematic series.",
-            formulas: [
-                { name: "Quadratic Equation Roots", formula: "x = [-b +- sqrt(b^2 - 4ac)] / 2a" },
-                { name: "Sum of Roots (Quadratic)", formula: "alpha + beta = -b / a" },
-                { name: "Product of Roots (Quadratic)", formula: "alpha * beta = c / a" },
-                { name: "Discriminant nature", formula: "D = b^2 - 4ac (D > 0: Real/Distinct, D < 0: Complex)" },
-                { name: "Arithmetic Progression n-th term", formula: "T_n = a + (n-1)d" },
-                { name: "Arithmetic Progression Sum", formula: "S_n = (n/2)[2a + (n-1)d]" },
-                { name: "Geometric Progression n-th term", formula: "T_n = a * r^(n-1)" },
-                { name: "Infinite GP Sum", formula: "S_inf = a / (1 - r) where |r| < 1" },
-                { name: "Logarithm base translation", formula: "log_b(a) = log_c(a) / log_c(b)" },
-                { name: "Logarithm product/division", formula: "log(xy) = log(x) + log(y), log(x/y) = log(x) - log(y)" }
-            ],
-            tricks: [
-                "Substitute simple test values (like 0, 1, or -1) for variables to eliminate incorrect options immediately.",
-                "Use options directly: plug choice values back into the algebraic system to see if they satisfy equation equations."
-            ],
-            mistakes: "Forgetting that square roots yield both positive and negative roots (e.g., x^2 = 9 gives x = +3 and -3)."
-        },
-        geometry: {
-            intro: "Geometry analyzes shapes properties: coordinate layouts, lines, angles, triangles, polygons, circles, and perimeter/area metrics.",
-            formulas: [
-                { name: "Area of Equilateral Triangle", formula: "Area = [sqrt(3) / 4] * side^2" },
-                { name: "Heron's Triangle Area", formula: "Area = sqrt(s(s-a)(s-b)(s-c)) where s = (a+b+c)/2" },
-                { name: "Sum of interior angles of polygon", formula: "Angles = (n - 2) * 180" },
-                { name: "Sum of exterior angles of polygon", formula: "Exterior Angles Sum = 360 degrees" },
-                { name: "Circumference & Area of Circle", formula: "C = 2 * pi * r, Area = pi * r^2" },
-                { name: "Coordinate Distance", formula: "d = sqrt[(x2-x1)^2 + (y2-y1)^2]" },
-                { name: "Midpoint of line segment", formula: "M = ((x1+x2)/2, (y1+y2)/2)" },
-                { name: "Area of Trapezoid", formula: "Area = 0.5 * (a + b) * h" },
-                { name: "Pythagorean Theorem", formula: "a^2 + b^2 = c^2" },
-                { name: "Area & Perimeter of Rectangle", formula: "Area = length * width, Perimeter = 2 * (length + width)" }
-            ],
-            tricks: [
-                "Memorize standard Pythagorean Triplets (3-4-5, 5-12-13, 8-15-17, 7-24-25) to solve diagonal values instantly.",
-                "Sum of exterior angles of any convex polygon is always 360 degrees, regardless of the number of sides."
-            ],
-            mistakes: "Confusing similarity rules (ratio of areas = square of ratio of corresponding sides) with simple side ratios."
-        },
-        puzzles: {
-            intro: "Logical puzzles challenge deductive reasoning, grid matching, variable relationships, and exclusion constraints.",
-            formulas: [
-                { name: "Grid Matching matrix constraint", formula: "Ensure 1-to-1 matching across rows and columns" },
-                { name: "Inequality Transitivity", formula: "If A > B and B > C, then A > C" },
-                { name: "Grouping Constraint bounds", formula: "Total candidates = Sum(Group sizes)" },
-                { name: "Double Line-up matching", formula: "Map 2 parallel columns of independent entities" },
-                { name: "Circular layout constraint", formula: "Neighbor restriction check: Neighbors != Excluded variables" },
-                { name: "Condition chaining order", formula: "Link elements with highest constraint frequency first" },
-                { name: "Case branching", formula: "If A has 2 possible options, branch into Case I and Case II" },
-                { name: "Mutual exclusion rule", formula: "One slot contains exactly one entity" },
-                { name: "Concrete anchor positions", formula: "Solve definite rules first to anchor layout" },
-                { name: "Binary search exclusions", formula: "Variables not matching either subset must form a third subset" }
-            ],
-            tricks: [
-                "Construct matrix grid diagrams matching variables (e.g., Name, Profession, Color). Check off absolute exclusions first.",
-                "Identify variables with the highest number of constraints and position them first to anchor the puzzle."
-            ],
-            mistakes: "Making assumptions not explicitly stated in the puzzle rules (e.g., assuming layout orders based on text order)."
-        },
-        seating_arrangement: {
-            intro: "Seating Arrangements deal with ordering constraints along lines (linear) or around circles (radial setups). Hand orientation rules shift depending on face direction.",
-            formulas: [
-                { name: "Circular Right-hand turn (Facing Center)", formula: "Facing inside: Right turn is counter-clockwise" },
-                { name: "Circular Right-hand turn (Facing Out)", formula: "Facing outside: Right turn is clockwise" },
-                { name: "Linear arrangement facing North", formula: "Left points West, Right points East" },
-                { name: "Linear arrangement facing South", formula: "Left points East, Right points West" },
-                { name: "Two Rows Facing Each Other", formula: "Row 1 (South facing) faces Row 2 (North facing)" },
-                { name: "Diagonal opposite relation", formula: "Opposite corners passing through the shape center" },
-                { name: "Neighbor split rule", formula: "A sits between B and C implies B-A-C or C-A-B" },
-                { name: "Extreme ends layout", formula: "Start by placing variables at extreme left/right bounds" },
-                { name: "Next-to spacing layout", formula: "A sits second to the right of B implies 1 variable between A and B" },
-                { name: "Even seats opposite rule", formula: "Seat index i is opposite to i + N/2" }
-            ],
-            tricks: [
-                "For circular arrangements, always draw a circle with lines representing positions to check opposite seats.",
-                "Start with definite positions (e.g., 'A sits third to the right of B') rather than relative positions."
-            ],
-            mistakes: "Forgetting to swap Left/Right conventions when candidates face outwards from the circle."
-        },
-        blood_relations: {
-            intro: "Blood Relations parse family relationships across generations using family trees, gender codes, and relationship strings.",
-            formulas: [
-                { name: "Generation mapping tree", formula: "Render generations on vertical levels (Grandparents -> Parents -> Self)" },
-                { name: "Gender tagging convention", formula: "Use '+' for male, '-' for female" },
-                { name: "Married Couples relationship", formula: "Connect partners using double horizontal lines (=)" },
-                { name: "Siblings relationship", formula: "Connect siblings using a single horizontal line (-)" },
-                { name: "Offspring relationship", formula: "Connect parent to child using a vertical line (|)" },
-                { name: "Coded relations mapping", formula: "Evaluate relationship strings from right to left" },
-                { name: "Maternal relations prefix", formula: "Prefix relations from the mother's side (e.g. maternal uncle)" },
-                { name: "Paternal relations prefix", formula: "Prefix relations from the father's side (e.g. paternal aunt)" },
-                { name: "Brother-in-law paths", formula: "Wife's brother, Husband's brother, or Sister's husband" },
-                { name: "Sister-in-law paths", formula: "Wife's sister, Husband's sister, or Brother's wife" }
-            ],
-            tricks: [
-                "Draw standard family tree diagrams. Use squares for males, circles for females, and double lines for married couples.",
-                "Solve coded relationship strings from right to left (e.g., in A+B-C, evaluate B-C first to trace generation shifts)."
-            ],
-            mistakes: "Assuming the gender of a person based on their name alone (e.g., Amit, Kiran) without checking gender context."
-        },
-        coding_decoding: {
-            intro: "Coding and Decoding maps text shifts, substitutions, opposite characters, and reverse alphabetic configurations.",
-            formulas: [
-                { name: "Alphabet forward rank index", formula: "A=1, B=2 ... Z=26" },
-                { name: "Alphabet backward rank index", formula: "Backward Rank = 27 - Forward Rank" },
-                { name: "EJOTY mnemonic positions", formula: "E=5, J=10, O=15, T=20, Y=25" },
-                { name: "CFILORUX mnemonic positions", formula: "C=3, F=6, I=9, L=12, O=15, R=18, U=21, X=24" },
-                { name: "Opposite pair characters", formula: "Char_Index + Opposite_Index = 27 (e.g. A-Z, B-Y)" },
-                { name: "Linear shift encryption", formula: "Cipher_Index = (Plain_Index + Shift_k) mod 26" },
-                { name: "Linear shift decryption", formula: "Plain_Index = (Cipher_Index - Shift_k) mod 26" },
-                { name: "Cross substitution shifts", formula: "Divide the word in half and shift letters diagonally" },
-                { name: "Word sum value code", formula: "Code = Sum of forward ranks of all letters" },
-                { name: "Direct key mapping check", formula: "Verify if matching letters across terms map to matching symbols" }
-            ],
-            tricks: [
-                "Memorize the EJOTY word for rapid positioning index matches. Write down target code shifts above original letters.",
-                "Check for reverse coding patterns or cross-letter shifts (e.g. first half swapped with the second half)."
-            ],
-            mistakes: "Forgetting to check if opposite-pair index rules apply before tracking offset shifts."
-        },
-        syllogism: {
-            intro: "Syllogisms verify deductive arguments validity using Venn Diagrams, checking subset/superset overlays and possibilities.",
-            formulas: [
-                { name: "Categorical statement - ALL", formula: "Set A is a subset of Set B (A c= B)" },
-                { name: "Categorical statement - SOME", formula: "Intersection of Set A and B is non-empty" },
-                { name: "Categorical statement - NO", formula: "Intersection of Set A and B is empty (A n B = empty)" },
-                { name: "Categorical statement - SOME NOT", formula: "Elements exist in A that are not in B" },
-                { name: "Venn Diagram Minimal Overlap", formula: "Draw only the minimal intersections required by statements" },
-                { name: "Possibility statement check", formula: "Possibility holds if true in at least one valid Venn diagram" },
-                { name: "Complementary Pairs (Some / No)", formula: "Either 'Some A are B' or 'No A are B' must be true" },
-                { name: "Complementary Pairs (All / Some Not)", formula: "Either 'All A are B' or 'Some A are not B' must be true" },
-                { name: "Definite conclusion check", formula: "Conclusion is valid only if true in ALL possible Venn diagrams" },
-                { name: "Positive statements constraint", formula: "No definite negative conclusion can be drawn from positive premises" }
-            ],
-            tricks: [
-                "Always draw the minimal overlap Venn Diagram to test conclusions. A conclusion is valid ONLY if it holds in ALL diagrams.",
-                "Watch out for 'Either-Or' conditions: occurs when conclusions are complementary (e.g., Some A are B vs No A are B)."
-            ],
-            mistakes: "Assuming possibility statements are invalid because they are not absolute. Possibilities only need one valid diagram."
-        },
-        direction_sense: {
-            intro: "Direction Sense maps spatial orientations, angular turns, shadow properties, and shortest path coordinates.",
-            formulas: [
-                { name: "Cardinal Directions layout", formula: "North is UP, South is DOWN, East is RIGHT, West is LEFT" },
-                { name: "Ordinal Directions layout", formula: "NE, SE, SW, NW at 45-degree splits" },
-                { name: "Left/Right turns (NESW cycle)", formula: "Right turns move clockwise (N -> E -> S -> W)" },
-                { name: "Left turns (NWSE cycle)", formula: "Left turns move counter-clockwise (N -> W -> S -> E)" },
-                { name: "Angle turn tracking", formula: "Net Angle = Clockwise sum - Counter-clockwise sum" },
-                { name: "Pythagoras distance calculation", formula: "Displacement = sqrt(Net_East_West^2 + Net_North_South^2)" },
-                { name: "Shadow rule at Sunrise", formula: "Sun is in East, shadow falls to the West" },
-                { name: "Shadow rule at Sunset", formula: "Sun is in West, shadow falls to the East" },
-                { name: "Clock face directions mapping", formula: "12 is North, 3 is East, 6 is South, 9 is West" },
-                { name: "Facing direction inversion", formula: "A 180-degree turn flips the current facing direction" }
-            ],
-            tricks: [
-                "Draw the compass reference on your sheet. Remember that a turn of 90 degrees right from North points East.",
-                "For shadow problems: At sunrise, shadows fall to the West. At sunset, shadows fall to the East."
-            ],
-            mistakes: "Confusing left/right turns when walking towards the South direction (left points East, right points West)."
-        },
-        statement_conclusion: {
-            intro: "Statement and Conclusion tests logical deductions based strictly on the provided context, filtering out external assumptions.",
-            formulas: [
-                { name: "Strict boundary rule", formula: "Restrict logic strictly to the facts mentioned in the statement" },
-                { name: "Extreme words filter", formula: "Conclusions with absolute words (e.g. all, never, only) are generally invalid" },
-                { name: "Cause and effect link", formula: "If statement states A causes B, concluding B implies A is valid" },
-                { name: "General advice rule", formula: "Government notices or advice in statement implies people should follow them" },
-                { name: "No correlation fallacy", formula: "Do not assume a relationship between two items unless statement links them" },
-                { name: "Implicit meaning extraction", formula: "Contrapositive logic: If A then B is equivalent to If not B then not A" },
-                { name: "Synonymous terms matching", formula: "Conclusion terms must align semantically with statement terminology" },
-                { name: "Direct derivation check", formula: "A conclusion is invalid if it goes beyond the statement's scope" },
-                { name: "Logical implication rule", formula: "If P implies Q is true, and P is true, then Q is true" },
-                { name: "Time-frame constraints", formula: "Do not project past trends onto future predictions without statement basis" }
-            ],
-            tricks: [
-                "Do not apply external knowledge or real-world assumptions. If the statement says 'sky is green', treat it as fact.",
-                "Watch out for absolute words like 'all', 'always', 'only', or 'never' in conclusions; they are usually invalid."
-            ],
-            mistakes: "Marking a conclusion as valid because it is a true general fact, even though it cannot be derived from the statement."
-        },
-        series: {
-            intro: "Number and Letter Series trace chronological trends (APs, GPs, prime rules, squares/cubes) across discrete terms.",
-            formulas: [
-                { name: "Common difference (AP)", formula: "d = T_(n) - T_(n-1)" },
-                { name: "Common ratio (GP)", formula: "r = T_(n) / T_(n-1)" },
-                { name: "Fibonacci sequence addition", formula: "T_n = T_(n-1) + T_(n-2)" },
-                { name: "Prime number sequence", formula: "2, 3, 5, 7, 11, 13, 17, 19, 23, 29..." },
-                { name: "Square + Constant series", formula: "T_n = n^2 + k" },
-                { name: "Cube + Constant series", formula: "T_n = n^3 + k" },
-                { name: "Product of consecutive numbers", formula: "T_n = n * (n + 1)" },
-                { name: "Alternating positions series", formula: "Odd positions follow pattern A, even positions follow pattern B" },
-                { name: "Multi-stage difference", formula: "Calculate difference of difference to find secondary constant difference" },
-                { name: "Decimal multiplication pattern", formula: "Multiply by 0.5, 1, 1.5, 2, 2.5..." }
-            ],
-            tricks: [
-                "Calculate differences between consecutive terms first. If differences are constant, it's an AP; if they grow, check differences of differences.",
-                "Look for alternating series (two patterns merged at odd/even positions) if terms alternate up and down."
-            ],
-            mistakes: "Assuming a simple addition pattern without checking if exponential multiplication or prime sequence rules apply."
-        },
-        analogy: {
-            intro: "Analogies identify semantic, mathematical, physical, or structural correlations between sets of items.",
-            formulas: [
-                { name: "Cause and Effect relation", formula: "A causes B (e.g. Spark : Fire)" },
-                { name: "Synonym / Antonym equivalence", formula: "Semantic matches or absolute opposites" },
-                { name: "Part to Whole relation", formula: "A is a component of B (e.g. Wheel : Car)" },
-                { name: "Tool to Action relation", formula: "A is used to do action B (e.g. Pen : Write)" },
-                { name: "Worker to Product relation", formula: "A creates product B (e.g. Chef : Food)" },
-                { name: "Mathematical relation", formula: "x : y matches x^2 : y^2 or x : x^3 - 1" },
-                { name: "Country to Capital relation", formula: "Geopolitical relationship mappings" },
-                { name: "Animal to Young relation", formula: "A is the parent, B is the offspring name" },
-                { name: "Singular to Plural relation", formula: "Morphological adjustments matching" },
-                { name: "Study of / Science relation", formula: "A is the subject, B is the study field (e.g. Cards : Cartography)" }
-            ],
-            tricks: [
-                "Define the relationship between the first pair as a clear sentence (e.g., 'A is the capital of B'). Apply this sentence to the second pair.",
-                "In numerical analogies, check for square/cube relations (e.g., x : x^2 + 1) before testing differences."
-            ],
-            mistakes: "Selecting options that share a weak or superficial similarity rather than matching the exact relationship pattern."
-        },
-        grammar: {
-            intro: "Grammar rules govern syntax structures: subject-verb agreements, modifiers, pronoun categories, and tense alignments.",
-            formulas: [
-                { name: "Subject-Verb Agreement", formula: "Singular subjects take singular verbs; plural take plural" },
-                { name: "Pronoun Case agreement", formula: "Use nominative (I, he, they) for subjects, objective (me, him) for objects" },
-                { name: "Parallel Structure rule", formula: "Maintain consistent grammatical form in lists" },
-                { name: "Pronoun-Antecedent agreement", formula: "Pronouns must match their antecedent nouns in number and gender" },
-                { name: "Active vs Passive Voice", formula: "Prefer active voice for direct clarity" },
-                { name: "Subjunctive Mood hypothetical", formula: "Use 'were' for hypothetical statements (e.g., If I were you)" },
-                { name: "Double Negatives correction", formula: "Avoid combining two negatives in a single clause" },
-                { name: "Relative pronoun usage", formula: "Who is subject-level; Whom is object-level" },
-                { name: "Tense consistency rule", formula: "Do not shift verb tenses mid-sentence unless showing time order" },
-                { name: "Collective nouns agreement", formula: "Singular when acting as a unit, plural when acting individually" }
-            ],
-            tricks: [
-                "Locate the main subject and verb by ignoring descriptive phrases between commas.",
-                "Compare relative pronouns: 'who' refers to the subject, 'whom' refers to the object of the action."
-            ],
-            mistakes: "Using double negatives or using mismatching pronouns (e.g., 'every student must check their grades')."
-        },
-        vocabulary: {
-            intro: "Vocabulary studies word definitions, roots, synonyms, antonyms, phrasal combinations, and usage contexts.",
-            formulas: [
-                { name: "Root prefix meaning", formula: "Identify base origins to decode words (e.g. 'tele' = far)" },
-                { name: "Root suffix meaning", formula: "Identify grammatical function shifts (e.g. '-ology' = study of)" },
-                { name: "Synonym matching", formula: "Select word with the closest contextual meaning" },
-                { name: "Antonym matching", formula: "Select word with the opposite contextual meaning" },
-                { name: "Homophones disambiguation", formula: "Differentiate words sounding identical but spelled differently (e.g. affect vs effect)" },
-                { name: "Idiomatic expressions", formula: "Comprehend non-literal figurative meanings (e.g. spill the beans)" },
-                { name: "Phrasal verbs combinations", formula: "Understand verb-preposition combinations (e.g. look up to)" },
-                { name: "Contextual clues check", formula: "Determine word meaning from positive/negative modifiers nearby" },
-                { name: "Analogy matching", formula: "Select the pair of words representing the same relation" },
-                { name: "One-word substitution", formula: "Condense descriptive phrases into single terms (e.g. somniloquist)" }
-            ],
-            tricks: [
-                "Use word root mappings (e.g. 'bene' = good, 'mal' = bad, 'anthrop' = human) to approximate meanings of unknown words.",
-                "Identify positive/negative tones of sentences to guess matching synonyms or antonyms in context."
-            ],
-            mistakes: "Selecting synonyms when the question explicitly asks for antonyms due to quick reading."
-        },
-        reading_comprehension: {
-            intro: "Reading Comprehension evaluates content processing, main idea identification, argument mapping, and tone deductions.",
-            formulas: [
-                { name: "Main Idea extraction", formula: "Focus on introductory and concluding thesis statements" },
-                { name: "Tone identification", formula: "Identify author's attitude (e.g. sarcastic, objective, laudatory)" },
-                { name: "Structure mapping flow", formula: "Trace argument: Intro -> Counter-claim -> Rebuttal -> Conclusion" },
-                { name: "Detail scanning key", formula: "Search for key vocabulary terms matching questions" },
-                { name: "Inference extraction rule", formula: "Identify statements that must be true based on the passage" },
-                { name: "Fact vs Opinion separation", formula: "Separate factual evidence from subjective author claims" },
-                { name: "Pronoun referent check", formula: "Trace back what noun a pronoun like 'it' or 'their' references" },
-                { name: "Contextual definition rule", formula: "Determine word meaning as used specifically in the passage" },
-                { name: "Title selection criteria", formula: "Choose a title covering the main thesis without being too broad" },
-                { name: "Question type analysis", formula: "Differentiate 'According to passage' from 'Based on passage'" }
-            ],
-            tricks: [
-                "Read the questions before reading the passage. This focuses your reading to scan for key terms directly.",
-                "Avoid selecting choices that contain absolute generalizations unless they are explicitly backed by the text."
-            ],
-            mistakes: "Choosing options that are factually true but not mentioned or supported anywhere in the provided passage."
-        },
-        sentence_correction: {
-            intro: "Sentence Correction evaluates sentence fragments, dangling modifiers, parallel structures, and word choice errors.",
-            formulas: [
-                { name: "Dangling modifiers fix", formula: "Ensure modifier phrases are placed adjacent to modified nouns" },
-                { name: "Misplaced modifier", formula: "Move adverbs or clauses to avoid double meanings" },
-                { name: "Parallelism constraint", formula: "Match structural formats across coordinate conjunctions" },
-                { name: "Run-on sentence fix", formula: "Connect independent clauses with coordinating conjunctions or semicolons" },
-                { name: "Sentence fragment resolution", formula: "Ensure every sentence contains a finite verb and subject" },
-                { name: "Redundancy exclusion rule", formula: "Delete repetitive words (e.g. revert back, repeat again)" },
-                { name: "Correlative Conjunctions", formula: "Place 'neither/nor' directly before matching grammatical elements" },
-                { name: "Word choice error", formula: "Fix misused words (e.g. fewer for countable, less for uncountable)" },
-                { name: "Split infinitives", formula: "Avoid inserting adverbs between 'to' and the verb (e.g. to quickly run)" },
-                { name: "Comma splices fix", formula: "Do not connect independent clauses with a comma alone" }
-            ],
-            tricks: [
-                "Check for parallelism: ensure verbs, adjectives, and lists match structure formats (e.g. running, swimming, and biking).",
-                "Scan for redundancy (e.g., 'return back' or 'repeat again' are redundant)."
-            ],
-            mistakes: "Keeping dangling modifiers (e.g. 'Walking down the street, the trees looked beautiful' makes the trees walk)."
-        },
-        error_spotting: {
-            intro: "Error Spotting challenges syntax verification: preposition rules, subject-verb agreements, tenses, and conjunctions.",
-            formulas: [
-                { name: "Subject-Verb check", formula: "Verify singular/plural status of subject" },
-                { name: "Tense shift detection", formula: "Spot mismatching past/present combinations" },
-                { name: "Prepositional error correction", formula: "Correct incorrect prepositions (e.g., differ with vs differ from)" },
-                { name: "Conjunction pair check", formula: "Verify 'not only' is paired with 'but also'" },
-                { name: "Pronoun reference check", formula: "Ensure pronoun has a clear, unambiguous antecedent noun" },
-                { name: "Adjective vs Adverb verify", formula: "Verify if word modifies noun (adjective) or verb/adjective (adverb)" },
-                { name: "Article usage check", formula: "Check correct use of 'a', 'an', 'the' (e.g., an honest man)" },
-                { name: "Countable vs Uncountable nouns", formula: "Spot mistakes like 'many advices' (should be pieces of advice)" },
-                { name: "Double comparative elimination", formula: "Remove expressions like 'more taller' or 'most worst'" },
-                { name: "Concord of nouns check", formula: "Verify singular/plural forms in expressions like 'one of the students'" }
-            ],
-            tricks: [
-                "Check Subject-Verb agreement first. If correct, check pronoun agreements and then tense consistency.",
-                "Verify preposition usage (e.g., 'independent of' vs 'dependent on')."
-            ],
-            mistakes: "Overlooking errors in common homophones or contractions (e.g., confusing 'its' with 'it's' or 'their' with 'there')."
-        },
-        fill_blanks: {
-            intro: "Fill in the Blanks tests vocabulary precision, context fits, conjunction indicators, and preposition pairings.",
-            formulas: [
-                { name: "Collocation checking", formula: "Select words that naturally pair together (e.g. take an exam)" },
-                { name: "Grammatical fit check", formula: "Choose the word class (noun, verb, adj, adv) required by blank" },
-                { name: "Conjunction clues check", formula: "Use contrast words (but, yet) to determine blank's polarity" },
-                { name: "Semantic alignment check", formula: "Ensure word fits the overall theme/topic of the sentence" },
-                { name: "Preposition combination check", formula: "Match verbs with required trailing prepositions (e.g. abstain from)" },
-                { name: "Positive/Negative tone check", formula: "Select words that preserve sentence's emotional valence" },
-                { name: "Double blanks matching", formula: "Solve easier blank first, then check remaining blank options" },
-                { name: "Vocabulary intensity check", formula: "Differentiate degrees of meaning (e.g. dislike vs loathe)" },
-                { name: "Contextual clues check", formula: "Look for definitions or examples in nearby clauses" },
-                { name: "Syntax elimination trick", formula: "Eliminate options that violate basic syntax rules first" }
-            ],
-            tricks: [
-                "Read sentences with blank spaces, guess simple words that fit naturally, then match options against your guess.",
-                "Look for clue conjunctions (e.g., 'although' indicates contrast, 'furthermore' indicates support)."
-            ],
-            mistakes: "Choosing words that fit grammatically but distort the logical meaning of the sentence."
-        },
-        para_jumbles: {
-            intro: "Paragraph Jumbles evaluate paragraph coherence, acronym expansions, sentence connections, and chronological layouts.",
-            formulas: [
-                { name: "Opening Sentence rule", formula: "Opening sentence introduces topic and contains no relative pronouns" },
-                { name: "Mandatory pair identification", formula: "Link sentence with name to sentence with corresponding pronoun" },
-                { name: "Chronological flow ordering", formula: "Order events by time indicators (e.g., First, Then, In 1990)" },
-                { name: "General to Specific ordering", formula: "Order sentences such that general claims precede specific examples" },
-                { name: "Transition indicator mapping", formula: "Place contrasting sentences immediately after the claims they contrast" },
-                { name: "Closing sentence identification", formula: "Locate sentence summarizing paragraph or showing final results" },
-                { name: "Acronym expansion rule", formula: "Sentence with full form comes before sentence with acronym (e.g. CIA)" },
-                { name: "Cause and effect order", formula: "Place the cause sentence before the effect sentence" },
-                { name: "Question-Answer relation", formula: "Place sentence asking a question before sentence answering it" },
-                { name: "Clue words linking", formula: "Connect sentences sharing common terms or thematic keywords" }
-            ],
-            tricks: [
-                "Identify mandatory pairs (e.g. sentences starting with pronouns must follow sentences introducing the noun).",
-                "Look for transition words (e.g., 'however', 'therefore', 'consequently') to determine chronological sequences."
-            ],
-            mistakes: "Reading sentences in isolation instead of looking for structural clues and pronoun connections."
-        }
-    };
-
+    const meta = MockDataGen.getTopicMetadata(subject, topic);
     const defaultData = {
-        intro: `Detailed preparation theoretical review for ${topic}. Study the basic concepts to begin practice sets.`,
+        intro: `Comprehensive preparation and concepts review for ${meta.title}. Study core formulas, mental math shortcuts, and problem varieties before launching practice drills.`,
         formulas: [
-            { name: "Base Equation", formula: "Output = Inputs * Factor" },
-            { name: "Average Metric", formula: "Average = Sum of elements / Count" },
-            { name: "Growth Rate", formula: "Growth = (New - Old) / Old" },
-            { name: "Ratio Form", formula: "Ratio = A / B" },
-            { name: "Percentage Change", formula: "Change% = Ratio * 100" },
-            { name: "Unit Efficiency", formula: "Efficiency = Total Work / Total Time" },
-            { name: "Inverse Property", formula: "Value A * Value B = Constant" },
-            { name: "Linear Shift", formula: "New Value = Original Value + Shift" },
-            { name: "Scale Proportions", formula: "x1 / y1 = x2 / y2" },
-            { name: "Digital Sum CASTING", formula: "Cast out nines from numbers to verify arithmetic results" }
+            { name: "Fundamental Equation", formula: "Output = Input * Rate" },
+            { name: "Average Metric", formula: "Average = Sum / Count" },
+            { name: "Growth Rate", formula: "Growth% = ((New - Old) / Old) * 100" }
         ],
         tricks: [
-            "Eliminate extreme outliers from the options first.",
-            "Plug values from options to test algebraic equations directly."
+            "Eliminate extreme outliers from option choices first.",
+            "Backsolve by plugging options into the problem constraints directly."
         ],
-        mistakes: "Rushing past question units conversions (e.g. m/s to km/h)."
+        mistakes: "Rushing past question units conversions.",
+        varieties: [
+            { type: 1, title: `Type 1: ${meta.title} Standard Analysis`, desc: `Practice key problem types for ${meta.title.toLowerCase()}.` }
+        ]
     };
 
-    const data = database[topic] || defaultData;
+    const data = TOPIC_DATABASE[topic] || defaultData;
 
     document.getElementById('theory-intro-txt').textContent = data.intro;
     
@@ -825,93 +918,85 @@ function loadTheoryContent(subject, topic) {
     mList.innerHTML = `
         <li style="display: flex; align-items: start; gap: 0.6rem;">
             <i class="fa-solid fa-triangle-exclamation" style="color: var(--danger); margin-top: 0.2rem;"></i>
-            <span>${data.mistakes || "Incorrect units conversions."}</span>
+            <span>${data.mistakes || "Units conversion error or calculation slips."}</span>
         </li>
     `;
 
     // Dynamic rendering of Question Varieties
     const varContainer = document.getElementById('theory-varieties-container');
     if (varContainer) {
-        const meta = MockDataGen.getTopicMetadata(subject, topic);
-        let varieties = data.varieties;
-        if (!varieties || varieties.length === 0) {
-            varieties = [
-                { type: 1, title: `Type 1: ${meta.title} Standard Analysis`, desc: `Practice key problem types and solutions for ${meta.title.toLowerCase()}.` }
-            ];
-        }
+        let varieties = data.varieties || [
+            { type: 1, title: `Type 1: ${meta.title} Standard Analysis`, desc: `Practice key problem types for ${meta.title.toLowerCase()}.` }
+        ];
 
-        if (varieties && varieties.length > 0) {
-            // Fetch questions for this topic to extract examples
-            const topicQuestions = (typeof MockDataGen !== 'undefined') ? MockDataGen.getQuestions(subject, topic, 20) : [];
+        // Fetch questions for this topic to extract live examples
+        const topicQuestions = (typeof MockDataGen !== 'undefined') ? MockDataGen.getQuestions(subject, topic, 30) : [];
 
-            varContainer.innerHTML = `
-                <div class="glass-panel" style="padding: 2rem; border-radius: var(--border-radius-lg); margin-bottom: 2rem;">
-                    <h3 style="font-size: 1.35rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.6rem; margin-bottom: 1.2rem; font-family: var(--font-heading);">
-                        <i class="fa-solid fa-list-check" style="color: var(--primary); margin-right: 0.5rem;"></i>Question Varieties & Patterns
-                    </h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
-                        Generally ${varieties.length} type${varieties.length > 1 ? 's' : ''} of questions are asked from this chapter. Select any variety below to practice its specific pattern directly:
-                    </p>
-                    <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
-                        ${varieties.map(v => {
-                            // Find up to 2 examples of this pattern type
-                            const examples = topicQuestions.filter(q => (q.patternType || 1) === v.type).slice(0, 2);
-                            let examplesHTML = '';
+        varContainer.innerHTML = `
+            <div class="glass-panel" style="padding: 2rem; border-radius: var(--border-radius-lg); margin-bottom: 2rem;">
+                <h3 style="font-size: 1.35rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.6rem; margin-bottom: 1.2rem; font-family: var(--font-heading);">
+                    <i class="fa-solid fa-list-check" style="color: var(--primary); margin-right: 0.5rem;"></i>Question Varieties & Patterns (${varieties.length} Types)
+                </h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
+                    Placement tests evaluate ${varieties.length} distinct problem varieties from this chapter. Review each pattern with worked-out examples below, or click <strong>Practice</strong> to filter and test that exact pattern:
+                </p>
+                <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+                    ${varieties.map(v => {
+                        // Find example of this pattern type
+                        const examples = topicQuestions.filter(q => (q.patternType || 1) === v.type).slice(0, 1);
+                        let examplesHTML = '';
 
-                            if (examples.length > 0) {
-                                examplesHTML = `
-                                    <div style="margin-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.2rem;">
-                                        <div style="font-size: 0.8rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem;">
-                                            EXAMPLES WITH SOLUTIONS
-                                        </div>
-                                        ${examples.map((q, idx) => `
-                                            <div style="margin-bottom: 1.5rem;">
-                                                <div style="display: flex; align-items: start; gap: 0.6rem; margin-bottom: 0.6rem; color: var(--text-primary); font-weight: 600; font-size: 0.95rem;">
-                                                    <div style="width: 24px; height: 24px; border-radius: 50%; background: #3b82f6; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; flex-shrink: 0; margin-top: 0.1rem;">
-                                                        ${idx + 1}
-                                                    </div>
-                                                    <span>${q.text}</span>
+                        if (examples.length > 0) {
+                            examplesHTML = `
+                                <div style="margin-top: 1.2rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem;">
+                                    <div style="font-size: 0.75rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem;">
+                                        WORKED EXAMPLE & SOLUTION
+                                    </div>
+                                    ${examples.map(q => `
+                                        <div>
+                                            <div style="display: flex; align-items: start; gap: 0.6rem; margin-bottom: 0.6rem; color: var(--text-primary); font-weight: 600; font-size: 0.95rem;">
+                                                <div style="width: 22px; height: 22px; border-radius: 50%; background: #3b82f6; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0; margin-top: 0.1rem;">
+                                                    Q
                                                 </div>
-                                                <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); padding: 1rem; border-radius: var(--border-radius-sm); margin-bottom: 0.6rem; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; white-space: pre-line;">${q.solution}</div>
-                                                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                                                    <div style="border-left: 3px solid #8b5cf6; background: rgba(255,255,255,0.01); padding: 0.6rem 1rem; border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0; flex: 1; min-width: 200px;">
-                                                        <div style="font-size: 0.7rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">FORMULA</div>
-                                                        <div style="font-size: 0.88rem; color: var(--text-secondary);">${q.formula || 'Standard formula applies.'}</div>
-                                                    </div>
-                                                    <div style="border-left: 3px solid var(--success); background: rgba(255,255,255,0.01); padding: 0.6rem 1rem; border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0; width: 160px;">
-                                                        <div style="font-size: 0.7rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">ANSWER</div>
-                                                        <div style="font-size: 1.1rem; font-weight: 700; color: var(--success);">${q.answer}</div>
-                                                    </div>
+                                                <span>${q.text}</span>
+                                            </div>
+                                            <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); padding: 0.9rem; border-radius: var(--border-radius-sm); margin-bottom: 0.6rem; color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; white-space: pre-line;">${q.solution}</div>
+                                            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                                <div style="border-left: 3px solid #8b5cf6; background: rgba(255,255,255,0.01); padding: 0.5rem 0.8rem; border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0; flex: 1; min-width: 180px;">
+                                                    <div style="font-size: 0.68rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase; margin-bottom: 0.1rem;">KEY FORMULA / RULE</div>
+                                                    <div style="font-size: 0.82rem; color: var(--text-secondary);">${q.formula || 'Standard analytical principle applies.'}</div>
+                                                </div>
+                                                <div style="border-left: 3px solid var(--success); background: rgba(255,255,255,0.01); padding: 0.5rem 0.8rem; border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0; width: 140px;">
+                                                    <div style="font-size: 0.68rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase; margin-bottom: 0.1rem;">CORRECT ANSWER</div>
+                                                    <div style="font-size: 1rem; font-weight: 700; color: var(--success);">${q.answer}</div>
                                                 </div>
                                             </div>
-                                        `).join('')}
-                                    </div>
-                                `;
-                            }
-
-                            return `
-                                <div class="glass-card pattern-variety-card" style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem; border-left: 4px solid var(--primary); transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                                    <div style="display: flex; justify-content: space-between; align-items: start; gap: 1.5rem;">
-                                        <div style="flex: 1;">
-                                            <h4 style="font-size: 1.1rem; color: var(--text-primary); margin: 0 0 0.4rem 0; font-family: var(--font-heading);">${v.title}</h4>
-                                            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.4; margin: 0;">${v.desc}</p>
                                         </div>
-                                        <div>
-                                            <button onclick="practiceSpecificPattern(${v.type}, '${topic}', '${subject}')" class="btn btn-primary btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.8rem; white-space: nowrap; border-radius: 20px; display: inline-flex; align-items: center; gap: 0.4rem;">
-                                                <i class="fa-solid fa-dumbbell"></i> Practice
-                                            </button>
-                                        </div>
-                                    </div>
-                                    ${examplesHTML}
+                                    `).join('')}
                                 </div>
                             `;
-                        }).join('')}
-                    </div>
+                        }
+
+                        return `
+                            <div class="glass-card pattern-variety-card" style="display: flex; flex-direction: column; gap: 0.8rem; padding: 1.4rem; border-left: 4px solid var(--primary);">
+                                <div style="display: flex; justify-content: space-between; align-items: start; gap: 1.5rem;">
+                                    <div style="flex: 1;">
+                                        <h4 style="font-size: 1.08rem; color: var(--text-primary); margin: 0 0 0.3rem 0; font-family: var(--font-heading);">${v.title}</h4>
+                                        <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.4; margin: 0;">${v.desc}</p>
+                                    </div>
+                                    <div>
+                                        <button onclick="practiceSpecificPattern(${v.type}, '${topic}', '${subject}')" class="btn btn-primary btn-secondary" style="padding: 0.45rem 1.1rem; font-size: 0.8rem; white-space: nowrap; border-radius: 20px; display: inline-flex; align-items: center; gap: 0.4rem;">
+                                            <i class="fa-solid fa-dumbbell"></i> Practice Type ${v.type}
+                                        </button>
+                                    </div>
+                                </div>
+                                ${examplesHTML}
+                            </div>
+                        `;
+                    }).join('')}
                 </div>
-            `;
-        } else {
-            varContainer.innerHTML = '';
-        }
+            </div>
+        `;
     }
 }
 
@@ -958,23 +1043,14 @@ function setupPracticeSession(subject, topic) {
     if (activePatternFilter !== null && bannerContainer) {
         activeQuestions = rawQuestions.filter(q => (q.patternType || 1) === activePatternFilter);
         
-        // Find pattern title from metadata
+        // Find pattern title from metadata or TOPIC_DATABASE
         const meta = MockDataGen.getTopicMetadata(subject, topic);
         let patternName = `Type ${activePatternFilter} Pattern`;
-        if (topic === 'numbers') {
-            const db = {
-                numbers: [
-                    "Type 1: Find units digit of a number",
-                    "Type 2: Arithmetic and Geometric progression",
-                    "Type 3: Arithmetic Progression",
-                    "Type 4: Divisibility",
-                    "Type 5: Operations on Integers",
-                    "Type 6: Divisor and Remainder Transformations"
-                ]
-            };
-            patternName = db.numbers[activePatternFilter - 1];
-        } else if (activePatternFilter === 1) {
-            patternName = `Type 1: ${meta.title} Standard Analysis`;
+        const topicData = TOPIC_DATABASE[topic];
+        if (topicData && topicData.varieties && topicData.varieties[activePatternFilter - 1]) {
+            patternName = topicData.varieties[activePatternFilter - 1].title;
+        } else {
+            patternName = `Type ${activePatternFilter}: ${meta.title} Pattern`;
         }
 
         bannerContainer.innerHTML = `
@@ -1020,6 +1096,9 @@ function setupPracticeSession(subject, topic) {
                 currentQuestions = activeQuestions;
             } else {
                 currentQuestions = activeQuestions.filter(q => q.difficulty === selectedDiff);
+                if (currentQuestions.length === 0) {
+                    currentQuestions = MockDataGen.getQuestions(subject, topic, 50, selectedDiff);
+                }
             }
             
             currentIndex = 0;
@@ -1051,7 +1130,7 @@ function displayNoQuestions() {
         <div class="glass-card" style="text-align: center; padding: 3rem 1.5rem;">
             <i class="fa-solid fa-face-meh" style="font-size: 3rem; color: var(--text-muted); margin-bottom: 1rem;"></i>
             <h3>No questions available</h3>
-            <p style="color: var(--text-secondary);">Try changing your difficulty filter selector.</p>
+            <p style="color: var(--text-secondary);">Try changing your difficulty filter selector or reset the pattern filter.</p>
         </div>
     `;
 }
@@ -1088,7 +1167,6 @@ function renderQuestion() {
                 </button>
             </div>
 
-            
             <div class="question-text">${q.text}</div>
 
             <div class="options-list">
@@ -1171,9 +1249,9 @@ function checkCurrentAnswer() {
     PlacementPrepState.logSolvedQuestion(q.id, q.topic, q.subject, isCorrect, currentQuestionTimer);
 
     document.getElementById('sol-explanation').textContent = q.solution;
-    document.getElementById('sol-formula').textContent = q.formula || "Basic Arithmetic formula";
+    document.getElementById('sol-formula').textContent = q.formula || "Standard formula rule.";
     document.getElementById('sol-shortcut').textContent = q.shortcut || "None required.";
-    document.getElementById('sol-common-mistakes').textContent = q.commonMistakes || "Units conversion error.";
+    document.getElementById('sol-common-mistakes').textContent = q.commonMistakes || "Units conversion error or calculation slip.";
 
     document.getElementById('solution-container').style.display = 'block';
     document.getElementById('btn-check-answer').style.display = 'none';
@@ -1228,13 +1306,13 @@ function startTimer() {
     }, 1000);
 }
 
-// Stop Timer
 function stopTimer() {
     if (timerInterval) {
         clearInterval(timerInterval);
         timerInterval = null;
     }
 }
+
 window.selectOption = selectOption;
 window.toggleQuestionBookmark = toggleQuestionBookmark;
 window.checkCurrentAnswer = checkCurrentAnswer;

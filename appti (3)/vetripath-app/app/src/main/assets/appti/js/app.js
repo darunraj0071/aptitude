@@ -14,8 +14,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Initialize Themes & Layouts
-    // Delay hiding the loading screen by 2.0 seconds to allow the quote entry animation to play fully
-    setTimeout(hideLoadingScreen, 2000);
+    // Fast, smooth loading screen transition
+    setTimeout(hideLoadingScreen, 300);
 
 
 

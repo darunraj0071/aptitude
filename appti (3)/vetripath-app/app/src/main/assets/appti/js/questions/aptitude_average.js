@@ -1,973 +1,1303 @@
 if (!window.TOPIC_QUESTIONS) window.TOPIC_QUESTIONS = {};
 window.TOPIC_QUESTIONS['aptitude_average'] = [
     {
-        "id": "apt_average_1",
-        "text": "The average age of a class of 15 students is 42 years. If the age of the teacher (54 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_beginner_1",
+        "text": "Find the average of 29, 35, and 37.",
         "options": [
-            "41.25 years",
-            "43 years",
-            "45.25 years",
-            "42.75 years"
+            "32.00",
+            "33.67",
+            "35.67",
+            "30.67"
         ],
-        "answer": "42.75",
+        "answer": "33.67",
+        "solution": "(29 + 35 + 37) / 3 = 33.67.",
+        "formula": "Average = Sum / Count.",
+        "shortcut": "(29 + 35 + 37) / 3 = 33.67.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 2,
-        "solution": "Step 1: Total age of students = 15 * 42 = 630.\nStep 2: Total age with teacher = 630 + 54 = 684.\nStep 3: New average = 684 / 16 = 42.75 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 630 to 684. Average is divide by 16.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 2,
+        "tags": [
+            "average",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_2",
-        "text": "The average age of a class of 5 students is 34 years. If the age of the teacher (27 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_beginner_2",
+        "text": "Find the average of 27, 15, and 35.",
         "options": [
-            "35 years",
-            "32.83 years",
-            "35.33 years",
-            "31.33 years"
+            "22.67",
+            "25.67",
+            "27.67",
+            "21.00"
         ],
-        "answer": "32.83",
+        "answer": "25.67",
+        "solution": "(27 + 15 + 35) / 3 = 25.67.",
+        "formula": "Average = Sum / Count.",
+        "shortcut": "(27 + 15 + 35) / 3 = 25.67.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 3,
-        "solution": "Step 1: Total age of students = 5 * 34 = 170.\nStep 2: Total age with teacher = 170 + 27 = 197.\nStep 3: New average = 197 / 6 = 32.83 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 170 to 197. Average is divide by 6.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 3,
+        "tags": [
+            "average",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_3",
-        "text": "The average age of a class of 15 students is 41 years. If the age of the teacher (46 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_beginner_3",
+        "text": "Find the average of 14, 25, and 37.",
         "options": [
-            "39.81 years",
-            "43.81 years",
-            "41.31 years",
-            "42 years"
+            "19.50",
+            "22.33",
+            "25.33",
+            "27.33"
         ],
-        "answer": "41.31",
+        "answer": "25.33",
+        "solution": "(14 + 25 + 37) / 3 = 25.33.",
+        "formula": "Average = Sum / Count.",
+        "shortcut": "(14 + 25 + 37) / 3 = 25.33.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 4,
-        "solution": "Step 1: Total age of students = 15 * 41 = 615.\nStep 2: Total age with teacher = 615 + 46 = 661.\nStep 3: New average = 661 / 16 = 41.31 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 615 to 661. Average is divide by 16.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 4,
+        "tags": [
+            "average",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_4",
-        "text": "The average age of a class of 5 students is 35 years. If the age of the teacher (70 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_beginner_4",
+        "text": "Find the average of 14, 15, and 39.",
         "options": [
-            "40.83 years",
-            "36 years",
-            "39.33 years",
-            "43.33 years"
+            "14.50",
+            "24.67",
+            "19.67",
+            "22.67"
         ],
-        "answer": "40.83",
+        "answer": "22.67",
+        "solution": "(14 + 15 + 39) / 3 = 22.67.",
+        "formula": "Average = Sum / Count.",
+        "shortcut": "(14 + 15 + 39) / 3 = 22.67.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 5,
-        "solution": "Step 1: Total age of students = 5 * 35 = 175.\nStep 2: Total age with teacher = 175 + 70 = 245.\nStep 3: New average = 245 / 6 = 40.83 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 175 to 245. Average is divide by 6.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 5,
+        "tags": [
+            "average",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_5",
-        "text": "The average age of a class of 9 students is 21 years. If the age of the teacher (41 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_beginner_5",
+        "text": "Find the average of 22, 26, and 23.",
         "options": [
-            "23.0 years",
-            "25.5 years",
-            "22 years",
-            "21.5 years"
+            "25.67",
+            "23.67",
+            "24.00",
+            "20.67"
         ],
-        "answer": "23.0",
+        "answer": "23.67",
+        "solution": "(22 + 26 + 23) / 3 = 23.67.",
+        "formula": "Average = Sum / Count.",
+        "shortcut": "(22 + 26 + 23) / 3 = 23.67.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 1,
-        "solution": "Step 1: Total age of students = 9 * 21 = 189.\nStep 2: Total age with teacher = 189 + 41 = 230.\nStep 3: New average = 230 / 10 = 23.0 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 189 to 230. Average is divide by 10.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 6,
+        "tags": [
+            "average",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_6",
-        "text": "The average age of a class of 15 students is 21 years. If the age of the teacher (76 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_beginner_6",
+        "text": "Find the average of 12, 27, and 24.",
         "options": [
-            "24.44 years",
-            "22 years",
-            "22.94 years",
-            "26.94 years"
+            "23.00",
+            "21",
+            "19.50",
+            "18.00"
         ],
-        "answer": "24.44",
+        "answer": "21",
+        "solution": "(12 + 27 + 24) / 3 = 21.",
+        "formula": "Average = Sum / Count.",
+        "shortcut": "(12 + 27 + 24) / 3 = 21.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 2,
-        "solution": "Step 1: Total age of students = 15 * 21 = 315.\nStep 2: Total age with teacher = 315 + 76 = 391.\nStep 3: New average = 391 / 16 = 24.44 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 315 to 391. Average is divide by 16.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 1,
+        "tags": [
+            "average",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_7",
-        "text": "The average age of a class of 10 students is 49 years. If the age of the teacher (40 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_beginner_7",
+        "text": "Find the average of 25, 35, and 23.",
         "options": [
-            "50.68 years",
-            "50 years",
-            "48.18 years",
-            "46.68 years"
+            "29.67",
+            "27.67",
+            "24.67",
+            "30.00"
         ],
-        "answer": "48.18",
+        "answer": "27.67",
+        "solution": "(25 + 35 + 23) / 3 = 27.67.",
+        "formula": "Average = Sum / Count.",
+        "shortcut": "(25 + 35 + 23) / 3 = 27.67.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 3,
-        "solution": "Step 1: Total age of students = 10 * 49 = 490.\nStep 2: Total age with teacher = 490 + 40 = 530.\nStep 3: New average = 530 / 11 = 48.18 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 490 to 530. Average is divide by 11.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 2,
+        "tags": [
+            "average",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_8",
-        "text": "The average age of a class of 13 students is 33 years. If the age of the teacher (21 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_beginner_8",
+        "text": "Find the average of 14, 16, and 33.",
         "options": [
-            "32.14 years",
-            "34 years",
-            "30.64 years",
-            "34.64 years"
+            "15.00",
+            "23.00",
+            "18.00",
+            "21"
         ],
-        "answer": "32.14",
+        "answer": "21",
+        "solution": "(14 + 16 + 33) / 3 = 21.",
+        "formula": "Average = Sum / Count.",
+        "shortcut": "(14 + 16 + 33) / 3 = 21.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 4,
-        "solution": "Step 1: Total age of students = 13 * 33 = 429.\nStep 2: Total age with teacher = 429 + 21 = 450.\nStep 3: New average = 450 / 14 = 32.14 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 429 to 450. Average is divide by 14.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 3,
+        "tags": [
+            "average",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_9",
-        "text": "The average age of a class of 9 students is 50 years. If the age of the teacher (75 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_beginner_9",
+        "text": "Find the average of 29, 25, and 38.",
         "options": [
-            "51.0 years",
-            "55.0 years",
-            "51 years",
-            "52.5 years"
+            "32.67",
+            "27.00",
+            "30.67",
+            "27.67"
         ],
-        "answer": "52.5",
+        "answer": "30.67",
+        "solution": "(29 + 25 + 38) / 3 = 30.67.",
+        "formula": "Average = Sum / Count.",
+        "shortcut": "(29 + 25 + 38) / 3 = 30.67.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 5,
-        "solution": "Step 1: Total age of students = 9 * 50 = 450.\nStep 2: Total age with teacher = 450 + 75 = 525.\nStep 3: New average = 525 / 10 = 52.5 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 450 to 525. Average is divide by 10.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 4,
+        "tags": [
+            "average",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_10",
-        "text": "The average age of a class of 10 students is 34 years. If the age of the teacher (67 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_beginner_10",
+        "text": "Find the average of 30, 17, and 34.",
         "options": [
-            "35 years",
-            "37.0 years",
-            "35.5 years",
-            "39.5 years"
+            "24.00",
+            "23.50",
+            "29.00",
+            "27"
         ],
-        "answer": "37.0",
+        "answer": "27",
+        "solution": "(30 + 17 + 34) / 3 = 27.",
+        "formula": "Average = Sum / Count.",
+        "shortcut": "(30 + 17 + 34) / 3 = 27.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 1,
-        "solution": "Step 1: Total age of students = 10 * 34 = 340.\nStep 2: Total age with teacher = 340 + 67 = 407.\nStep 3: New average = 407 / 11 = 37.0 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 340 to 407. Average is divide by 11.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
-    },
-    {
-        "id": "apt_average_11",
-        "text": "The average age of a class of 8 students is 45 years. If the age of the teacher (78 years) is included, find the new average age of the class.",
-        "options": [
-            "46 years",
-            "48.67 years",
-            "51.17 years",
-            "47.17 years"
-        ],
-        "answer": "48.67",
-        "difficulty": "easy",
-        "patternType": 2,
-        "solution": "Step 1: Total age of students = 8 * 45 = 360.\nStep 2: Total age with teacher = 360 + 78 = 438.\nStep 3: New average = 438 / 9 = 48.67 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 360 to 438. Average is divide by 9.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
-    },
-    {
-        "id": "apt_average_12",
-        "text": "The average age of a class of 12 students is 37 years. If the age of the teacher (26 years) is included, find the new average age of the class.",
-        "options": [
-            "34.65 years",
-            "38.65 years",
-            "36.15 years",
-            "38 years"
-        ],
-        "answer": "36.15",
-        "difficulty": "easy",
-        "patternType": 3,
-        "solution": "Step 1: Total age of students = 12 * 37 = 444.\nStep 2: Total age with teacher = 444 + 26 = 470.\nStep 3: New average = 470 / 13 = 36.15 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 444 to 470. Average is divide by 13.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
-    },
-    {
-        "id": "apt_average_13",
-        "text": "The average age of a class of 14 students is 27 years. If the age of the teacher (36 years) is included, find the new average age of the class.",
-        "options": [
-            "30.1 years",
-            "28 years",
-            "26.1 years",
-            "27.6 years"
-        ],
-        "answer": "27.6",
-        "difficulty": "easy",
-        "patternType": 4,
-        "solution": "Step 1: Total age of students = 14 * 27 = 378.\nStep 2: Total age with teacher = 378 + 36 = 414.\nStep 3: New average = 414 / 15 = 27.6 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 378 to 414. Average is divide by 15.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
-    },
-    {
-        "id": "apt_average_14",
-        "text": "The average age of a class of 5 students is 34 years. If the age of the teacher (78 years) is included, find the new average age of the class.",
-        "options": [
-            "39.83 years",
-            "43.83 years",
-            "41.33 years",
-            "35 years"
-        ],
-        "answer": "41.33",
-        "difficulty": "easy",
         "patternType": 5,
-        "solution": "Step 1: Total age of students = 5 * 34 = 170.\nStep 2: Total age with teacher = 170 + 78 = 248.\nStep 3: New average = 248 / 6 = 41.33 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 170 to 248. Average is divide by 6.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_15",
-        "text": "The average age of a class of 9 students is 25 years. If the age of the teacher (37 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_easy_1",
+        "text": "A vehicle travels from City A to City B at 38 km/h and returns at 78 km/h. What is the average speed of the round trip?",
         "options": [
-            "26.2 years",
-            "28.7 years",
-            "26 years",
-            "24.7 years"
+            "58.00 km/h",
+            "49.10 km/h",
+            "51.1 km/h",
+            "54.10 km/h"
         ],
-        "answer": "26.2",
+        "answer": "51.1 km/h",
+        "solution": "(2 × 38 × 78) / (38 + 78) = 51.1 km/h.",
+        "formula": "Average Speed = 2xy / (x + y).",
+        "shortcut": "2 × 38 × 78 / (38 + 78) = 51.1 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 1,
-        "solution": "Step 1: Total age of students = 9 * 25 = 225.\nStep 2: Total age with teacher = 225 + 37 = 262.\nStep 3: New average = 262 / 10 = 26.2 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 225 to 262. Average is divide by 10.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 2,
+        "tags": [
+            "average",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_16",
-        "text": "The average age of a class of 12 students is 29 years. If the age of the teacher (35 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_easy_2",
+        "text": "A vehicle travels from City A to City B at 39 km/h and returns at 43 km/h. What is the average speed of the round trip?",
         "options": [
-            "29.46 years",
-            "31.96 years",
-            "27.96 years",
-            "30 years"
+            "41.00 km/h",
+            "43.90 km/h",
+            "40.9 km/h",
+            "38.90 km/h"
         ],
-        "answer": "29.46",
+        "answer": "40.9 km/h",
+        "solution": "(2 × 39 × 43) / (39 + 43) = 40.9 km/h.",
+        "formula": "Average Speed = 2xy / (x + y).",
+        "shortcut": "2 × 39 × 43 / (39 + 43) = 40.9 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 2,
-        "solution": "Step 1: Total age of students = 12 * 29 = 348.\nStep 2: Total age with teacher = 348 + 35 = 383.\nStep 3: New average = 383 / 13 = 29.46 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 348 to 383. Average is divide by 13.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 3,
+        "tags": [
+            "average",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_17",
-        "text": "The average age of a class of 6 students is 41 years. If the age of the teacher (44 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_easy_3",
+        "text": "A vehicle travels from City A to City B at 34 km/h and returns at 67 km/h. What is the average speed of the round trip?",
         "options": [
-            "41.43 years",
-            "39.93 years",
-            "43.93 years",
-            "42 years"
+            "43.11 km/h",
+            "48.11 km/h",
+            "50.50 km/h",
+            "45.11 km/h"
         ],
-        "answer": "41.43",
+        "answer": "45.11 km/h",
+        "solution": "(2 × 34 × 67) / (34 + 67) = 45.11 km/h.",
+        "formula": "Average Speed = 2xy / (x + y).",
+        "shortcut": "2 × 34 × 67 / (34 + 67) = 45.11 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 3,
-        "solution": "Step 1: Total age of students = 6 * 41 = 246.\nStep 2: Total age with teacher = 246 + 44 = 290.\nStep 3: New average = 290 / 7 = 41.43 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 246 to 290. Average is divide by 7.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 4,
+        "tags": [
+            "average",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_18",
-        "text": "The average age of a class of 15 students is 37 years. If the age of the teacher (52 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_easy_4",
+        "text": "A vehicle travels from City A to City B at 38 km/h and returns at 58 km/h. What is the average speed of the round trip?",
         "options": [
-            "36.44 years",
-            "37.94 years",
-            "40.44 years",
-            "38 years"
+            "48.92 km/h",
+            "43.92 km/h",
+            "45.92 km/h",
+            "48.00 km/h"
         ],
-        "answer": "37.94",
+        "answer": "45.92 km/h",
+        "solution": "(2 × 38 × 58) / (38 + 58) = 45.92 km/h.",
+        "formula": "Average Speed = 2xy / (x + y).",
+        "shortcut": "2 × 38 × 58 / (38 + 58) = 45.92 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 4,
-        "solution": "Step 1: Total age of students = 15 * 37 = 555.\nStep 2: Total age with teacher = 555 + 52 = 607.\nStep 3: New average = 607 / 16 = 37.94 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 555 to 607. Average is divide by 16.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 5,
+        "tags": [
+            "average",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_19",
-        "text": "The average age of a class of 12 students is 31 years. If the age of the teacher (78 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_easy_5",
+        "text": "A vehicle travels from City A to City B at 33 km/h and returns at 55 km/h. What is the average speed of the round trip?",
         "options": [
-            "33.12 years",
-            "32 years",
-            "37.12 years",
-            "34.62 years"
+            "41.25 km/h",
+            "44.25 km/h",
+            "44.00 km/h",
+            "39.25 km/h"
         ],
-        "answer": "34.62",
+        "answer": "41.25 km/h",
+        "solution": "(2 × 33 × 55) / (33 + 55) = 41.25 km/h.",
+        "formula": "Average Speed = 2xy / (x + y).",
+        "shortcut": "2 × 33 × 55 / (33 + 55) = 41.25 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 5,
-        "solution": "Step 1: Total age of students = 12 * 31 = 372.\nStep 2: Total age with teacher = 372 + 78 = 450.\nStep 3: New average = 450 / 13 = 34.62 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 372 to 450. Average is divide by 13.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 6,
+        "tags": [
+            "average",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_20",
-        "text": "The average age of a class of 10 students is 42 years. If the age of the teacher (23 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_easy_6",
+        "text": "A vehicle travels from City A to City B at 21 km/h and returns at 80 km/h. What is the average speed of the round trip?",
         "options": [
-            "43 years",
-            "38.77 years",
-            "42.77 years",
-            "40.27 years"
+            "50.50 km/h",
+            "33.27 km/h",
+            "36.27 km/h",
+            "31.27 km/h"
         ],
-        "answer": "40.27",
+        "answer": "33.27 km/h",
+        "solution": "(2 × 21 × 80) / (21 + 80) = 33.27 km/h.",
+        "formula": "Average Speed = 2xy / (x + y).",
+        "shortcut": "2 × 21 × 80 / (21 + 80) = 33.27 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 1,
-        "solution": "Step 1: Total age of students = 10 * 42 = 420.\nStep 2: Total age with teacher = 420 + 23 = 443.\nStep 3: New average = 443 / 11 = 40.27 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 420 to 443. Average is divide by 11.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 1,
+        "tags": [
+            "average",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_21",
-        "text": "The average age of a class of 10 students is 20 years. If the age of the teacher (21 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_easy_7",
+        "text": "A vehicle travels from City A to City B at 29 km/h and returns at 45 km/h. What is the average speed of the round trip?",
         "options": [
-            "21 years",
-            "18.59 years",
-            "22.59 years",
-            "20.09 years"
+            "37.00 km/h",
+            "38.27 km/h",
+            "35.27 km/h",
+            "33.27 km/h"
         ],
-        "answer": "20.09",
-        "difficulty": "medium",
+        "answer": "35.27 km/h",
+        "solution": "(2 × 29 × 45) / (29 + 45) = 35.27 km/h.",
+        "formula": "Average Speed = 2xy / (x + y).",
+        "shortcut": "2 × 29 × 45 / (29 + 45) = 35.27 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 2,
-        "solution": "Step 1: Total age of students = 10 * 20 = 200.\nStep 2: Total age with teacher = 200 + 21 = 221.\nStep 3: New average = 221 / 11 = 20.09 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 200 to 221. Average is divide by 11.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_22",
-        "text": "The average age of a class of 13 students is 50 years. If the age of the teacher (34 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_easy_8",
+        "text": "A vehicle travels from City A to City B at 25 km/h and returns at 78 km/h. What is the average speed of the round trip?",
         "options": [
-            "48.86 years",
-            "47.36 years",
-            "51 years",
-            "51.36 years"
+            "37.86 km/h",
+            "35.86 km/h",
+            "51.50 km/h",
+            "40.86 km/h"
         ],
-        "answer": "48.86",
-        "difficulty": "medium",
+        "answer": "37.86 km/h",
+        "solution": "(2 × 25 × 78) / (25 + 78) = 37.86 km/h.",
+        "formula": "Average Speed = 2xy / (x + y).",
+        "shortcut": "2 × 25 × 78 / (25 + 78) = 37.86 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 3,
-        "solution": "Step 1: Total age of students = 13 * 50 = 650.\nStep 2: Total age with teacher = 650 + 34 = 684.\nStep 3: New average = 684 / 14 = 48.86 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 650 to 684. Average is divide by 14.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_23",
-        "text": "The average age of a class of 14 students is 49 years. If the age of the teacher (54 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_easy_9",
+        "text": "A vehicle travels from City A to City B at 40 km/h and returns at 42 km/h. What is the average speed of the round trip?",
         "options": [
-            "49.33 years",
-            "50 years",
-            "51.83 years",
-            "47.83 years"
+            "40.98 km/h",
+            "38.98 km/h",
+            "43.98 km/h",
+            "41.00 km/h"
         ],
-        "answer": "49.33",
-        "difficulty": "medium",
+        "answer": "40.98 km/h",
+        "solution": "(2 × 40 × 42) / (40 + 42) = 40.98 km/h.",
+        "formula": "Average Speed = 2xy / (x + y).",
+        "shortcut": "2 × 40 × 42 / (40 + 42) = 40.98 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 4,
-        "solution": "Step 1: Total age of students = 14 * 49 = 686.\nStep 2: Total age with teacher = 686 + 54 = 740.\nStep 3: New average = 740 / 15 = 49.33 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 686 to 740. Average is divide by 15.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_24",
-        "text": "The average age of a class of 12 students is 23 years. If the age of the teacher (35 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_easy_10",
+        "text": "A vehicle travels from City A to City B at 26 km/h and returns at 70 km/h. What is the average speed of the round trip?",
         "options": [
-            "23.92 years",
-            "22.42 years",
-            "26.42 years",
-            "24 years"
+            "35.92 km/h",
+            "40.92 km/h",
+            "37.92 km/h",
+            "48.00 km/h"
         ],
-        "answer": "23.92",
-        "difficulty": "medium",
+        "answer": "37.92 km/h",
+        "solution": "(2 × 26 × 70) / (26 + 70) = 37.92 km/h.",
+        "formula": "Average Speed = 2xy / (x + y).",
+        "shortcut": "2 × 26 × 70 / (26 + 70) = 37.92 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 5,
-        "solution": "Step 1: Total age of students = 12 * 23 = 276.\nStep 2: Total age with teacher = 276 + 35 = 311.\nStep 3: New average = 311 / 13 = 23.92 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 276 to 311. Average is divide by 13.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_25",
-        "text": "The average age of a class of 15 students is 21 years. If the age of the teacher (61 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_medium_1",
+        "text": "The average weight of 20 students increases by 1 kg when a student weighing 59 kg is replaced by a newcomer. Find the weight of the new student.",
         "options": [
-            "22.0 years",
-            "22 years",
-            "26.0 years",
-            "23.5 years"
+            "74 kg",
+            "83 kg",
+            "59 kg",
+            "79 kg"
         ],
-        "answer": "23.5",
+        "answer": "79 kg",
+        "solution": "59 + (20 × 1) = 79 kg.",
+        "formula": "New Weight = Replaced Weight + (Count × Increase).",
+        "shortcut": "59 + 20 = 79 kg.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 1,
-        "solution": "Step 1: Total age of students = 15 * 21 = 315.\nStep 2: Total age with teacher = 315 + 61 = 376.\nStep 3: New average = 376 / 16 = 23.5 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 315 to 376. Average is divide by 16.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
-    },
-    {
-        "id": "apt_average_26",
-        "text": "The average age of a class of 10 students is 24 years. If the age of the teacher (31 years) is included, find the new average age of the class.",
-        "options": [
-            "27.14 years",
-            "24.64 years",
-            "25 years",
-            "23.14 years"
-        ],
-        "answer": "24.64",
-        "difficulty": "medium",
         "patternType": 2,
-        "solution": "Step 1: Total age of students = 10 * 24 = 240.\nStep 2: Total age with teacher = 240 + 31 = 271.\nStep 3: New average = 271 / 11 = 24.64 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 240 to 271. Average is divide by 11.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_27",
-        "text": "The average age of a class of 7 students is 27 years. If the age of the teacher (77 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_medium_2",
+        "text": "The average weight of 10 students increases by 3 kg when a student weighing 57 kg is replaced by a newcomer. Find the weight of the new student.",
         "options": [
-            "31.75 years",
-            "28 years",
-            "35.75 years",
-            "33.25 years"
+            "87 kg",
+            "57 kg",
+            "82 kg",
+            "91 kg"
         ],
-        "answer": "33.25",
+        "answer": "87 kg",
+        "solution": "57 + (10 × 3) = 87 kg.",
+        "formula": "New Weight = Replaced Weight + (Count × Increase).",
+        "shortcut": "57 + 30 = 87 kg.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 3,
-        "solution": "Step 1: Total age of students = 7 * 27 = 189.\nStep 2: Total age with teacher = 189 + 77 = 266.\nStep 3: New average = 266 / 8 = 33.25 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 189 to 266. Average is divide by 8.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 3,
+        "tags": [
+            "average",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_28",
-        "text": "The average age of a class of 10 students is 48 years. If the age of the teacher (44 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_medium_3",
+        "text": "The average weight of 17 students increases by 2 kg when a student weighing 55 kg is replaced by a newcomer. Find the weight of the new student.",
         "options": [
-            "50.14 years",
-            "46.14 years",
-            "49 years",
-            "47.64 years"
+            "55 kg",
+            "84 kg",
+            "93 kg",
+            "89 kg"
         ],
-        "answer": "47.64",
+        "answer": "89 kg",
+        "solution": "55 + (17 × 2) = 89 kg.",
+        "formula": "New Weight = Replaced Weight + (Count × Increase).",
+        "shortcut": "55 + 34 = 89 kg.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 4,
-        "solution": "Step 1: Total age of students = 10 * 48 = 480.\nStep 2: Total age with teacher = 480 + 44 = 524.\nStep 3: New average = 524 / 11 = 47.64 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 480 to 524. Average is divide by 11.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 4,
+        "tags": [
+            "average",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_29",
-        "text": "The average age of a class of 13 students is 29 years. If the age of the teacher (68 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_medium_4",
+        "text": "The average weight of 18 students increases by 1 kg when a student weighing 75 kg is replaced by a newcomer. Find the weight of the new student.",
         "options": [
-            "34.29 years",
-            "30.29 years",
-            "31.79 years",
-            "30 years"
+            "97 kg",
+            "75 kg",
+            "93 kg",
+            "88 kg"
         ],
-        "answer": "31.79",
+        "answer": "93 kg",
+        "solution": "75 + (18 × 1) = 93 kg.",
+        "formula": "New Weight = Replaced Weight + (Count × Increase).",
+        "shortcut": "75 + 18 = 93 kg.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 5,
-        "solution": "Step 1: Total age of students = 13 * 29 = 377.\nStep 2: Total age with teacher = 377 + 68 = 445.\nStep 3: New average = 445 / 14 = 31.79 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 377 to 445. Average is divide by 14.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 5,
+        "tags": [
+            "average",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_30",
-        "text": "The average age of a class of 8 students is 45 years. If the age of the teacher (76 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_medium_5",
+        "text": "The average weight of 18 students increases by 2 kg when a student weighing 57 kg is replaced by a newcomer. Find the weight of the new student.",
         "options": [
-            "46 years",
-            "46.94 years",
-            "50.94 years",
-            "48.44 years"
+            "57 kg",
+            "93 kg",
+            "97 kg",
+            "88 kg"
         ],
-        "answer": "48.44",
+        "answer": "93 kg",
+        "solution": "57 + (18 × 2) = 93 kg.",
+        "formula": "New Weight = Replaced Weight + (Count × Increase).",
+        "shortcut": "57 + 36 = 93 kg.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 1,
-        "solution": "Step 1: Total age of students = 8 * 45 = 360.\nStep 2: Total age with teacher = 360 + 76 = 436.\nStep 3: New average = 436 / 9 = 48.44 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 360 to 436. Average is divide by 9.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 6,
+        "tags": [
+            "average",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_31",
-        "text": "The average age of a class of 11 students is 23 years. If the age of the teacher (69 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_medium_6",
+        "text": "The average weight of 14 students increases by 2 kg when a student weighing 51 kg is replaced by a newcomer. Find the weight of the new student.",
         "options": [
-            "26.83 years",
-            "24 years",
-            "25.33 years",
-            "29.33 years"
+            "79 kg",
+            "74 kg",
+            "51 kg",
+            "83 kg"
         ],
-        "answer": "26.83",
-        "difficulty": "intermediate",
+        "answer": "79 kg",
+        "solution": "51 + (14 × 2) = 79 kg.",
+        "formula": "New Weight = Replaced Weight + (Count × Increase).",
+        "shortcut": "51 + 28 = 79 kg.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "average",
+        "subject": "aptitude",
+        "patternType": 1,
+        "tags": [
+            "average",
+            "medium",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_average_medium_7",
+        "text": "The average weight of 23 students increases by 2 kg when a student weighing 72 kg is replaced by a newcomer. Find the weight of the new student.",
+        "options": [
+            "113 kg",
+            "118 kg",
+            "122 kg",
+            "72 kg"
+        ],
+        "answer": "118 kg",
+        "solution": "72 + (23 × 2) = 118 kg.",
+        "formula": "New Weight = Replaced Weight + (Count × Increase).",
+        "shortcut": "72 + 46 = 118 kg.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 2,
-        "solution": "Step 1: Total age of students = 11 * 23 = 253.\nStep 2: Total age with teacher = 253 + 69 = 322.\nStep 3: New average = 322 / 12 = 26.83 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 253 to 322. Average is divide by 12.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_32",
-        "text": "The average age of a class of 9 students is 22 years. If the age of the teacher (69 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_medium_8",
+        "text": "The average weight of 21 students increases by 1 kg when a student weighing 71 kg is replaced by a newcomer. Find the weight of the new student.",
         "options": [
-            "23 years",
-            "29.2 years",
-            "25.2 years",
-            "26.7 years"
+            "87 kg",
+            "96 kg",
+            "92 kg",
+            "71 kg"
         ],
-        "answer": "26.7",
-        "difficulty": "intermediate",
+        "answer": "92 kg",
+        "solution": "71 + (21 × 1) = 92 kg.",
+        "formula": "New Weight = Replaced Weight + (Count × Increase).",
+        "shortcut": "71 + 21 = 92 kg.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 3,
-        "solution": "Step 1: Total age of students = 9 * 22 = 198.\nStep 2: Total age with teacher = 198 + 69 = 267.\nStep 3: New average = 267 / 10 = 26.7 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 198 to 267. Average is divide by 10.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_33",
-        "text": "The average age of a class of 5 students is 49 years. If the age of the teacher (67 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_medium_9",
+        "text": "The average weight of 21 students increases by 3 kg when a student weighing 51 kg is replaced by a newcomer. Find the weight of the new student.",
         "options": [
-            "50 years",
-            "50.5 years",
-            "52.0 years",
-            "54.5 years"
+            "114 kg",
+            "118 kg",
+            "51 kg",
+            "109 kg"
         ],
-        "answer": "52.0",
-        "difficulty": "intermediate",
+        "answer": "114 kg",
+        "solution": "51 + (21 × 3) = 114 kg.",
+        "formula": "New Weight = Replaced Weight + (Count × Increase).",
+        "shortcut": "51 + 63 = 114 kg.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 4,
-        "solution": "Step 1: Total age of students = 5 * 49 = 245.\nStep 2: Total age with teacher = 245 + 67 = 312.\nStep 3: New average = 312 / 6 = 52.0 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 245 to 312. Average is divide by 6.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_34",
-        "text": "The average age of a class of 15 students is 23 years. If the age of the teacher (46 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_medium_10",
+        "text": "The average weight of 18 students increases by 3 kg when a student weighing 75 kg is replaced by a newcomer. Find the weight of the new student.",
         "options": [
-            "26.94 years",
-            "22.94 years",
-            "24.44 years",
-            "24 years"
+            "129 kg",
+            "124 kg",
+            "75 kg",
+            "133 kg"
         ],
-        "answer": "24.44",
-        "difficulty": "intermediate",
+        "answer": "129 kg",
+        "solution": "75 + (18 × 3) = 129 kg.",
+        "formula": "New Weight = Replaced Weight + (Count × Increase).",
+        "shortcut": "75 + 54 = 129 kg.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 5,
-        "solution": "Step 1: Total age of students = 15 * 23 = 345.\nStep 2: Total age with teacher = 345 + 46 = 391.\nStep 3: New average = 391 / 16 = 24.44 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 345 to 391. Average is divide by 16.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_35",
-        "text": "The average age of a class of 8 students is 44 years. If the age of the teacher (37 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_hard_1",
+        "text": "Section A with 33 candidates scored average 81, and Section B with 39 candidates scored average 74. Find the combined overall average.",
         "options": [
-            "43.22 years",
-            "45.72 years",
-            "45 years",
-            "41.72 years"
+            "80.31",
+            "74.81",
+            "77.21",
+            "77.50"
         ],
-        "answer": "43.22",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Step 1: Total age of students = 8 * 44 = 352.\nStep 2: Total age with teacher = 352 + 37 = 389.\nStep 3: New average = 389 / 9 = 43.22 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 352 to 389. Average is divide by 9.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "answer": "77.21",
+        "solution": "(33×81 + 39×74) / (33 + 39) = 77.21.",
+        "formula": "Weighted Average = (n1×A1 + n2×A2) / (n1 + n2).",
+        "shortcut": "(2673 + 2886) / 72 = 77.21.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
-    },
-    {
-        "id": "apt_average_36",
-        "text": "The average age of a class of 10 students is 21 years. If the age of the teacher (27 years) is included, find the new average age of the class.",
-        "options": [
-            "22 years",
-            "24.05 years",
-            "21.55 years",
-            "20.05 years"
-        ],
-        "answer": "21.55",
-        "difficulty": "intermediate",
         "patternType": 2,
-        "solution": "Step 1: Total age of students = 10 * 21 = 210.\nStep 2: Total age with teacher = 210 + 27 = 237.\nStep 3: New average = 237 / 11 = 21.55 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 210 to 237. Average is divide by 11.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_37",
-        "text": "The average age of a class of 11 students is 33 years. If the age of the teacher (55 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_hard_2",
+        "text": "Section A with 34 candidates scored average 74, and Section B with 21 candidates scored average 59. Find the combined overall average.",
         "options": [
-            "34.83 years",
-            "37.33 years",
-            "33.33 years",
-            "34 years"
+            "65.87",
+            "66.50",
+            "68.27",
+            "71.37"
         ],
-        "answer": "34.83",
-        "difficulty": "intermediate",
+        "answer": "68.27",
+        "solution": "(34×74 + 21×59) / (34 + 21) = 68.27.",
+        "formula": "Weighted Average = (n1×A1 + n2×A2) / (n1 + n2).",
+        "shortcut": "(2516 + 1239) / 55 = 68.27.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 3,
-        "solution": "Step 1: Total age of students = 11 * 33 = 363.\nStep 2: Total age with teacher = 363 + 55 = 418.\nStep 3: New average = 418 / 12 = 34.83 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 363 to 418. Average is divide by 12.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_38",
-        "text": "The average age of a class of 15 students is 42 years. If the age of the teacher (45 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_hard_3",
+        "text": "Section A with 29 candidates scored average 61, and Section B with 34 candidates scored average 68. Find the combined overall average.",
         "options": [
-            "40.69 years",
-            "42.19 years",
-            "44.69 years",
-            "43 years"
+            "64.50",
+            "67.88",
+            "62.38",
+            "64.78"
         ],
-        "answer": "42.19",
-        "difficulty": "intermediate",
+        "answer": "64.78",
+        "solution": "(29×61 + 34×68) / (29 + 34) = 64.78.",
+        "formula": "Weighted Average = (n1×A1 + n2×A2) / (n1 + n2).",
+        "shortcut": "(1769 + 2312) / 63 = 64.78.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 4,
-        "solution": "Step 1: Total age of students = 15 * 42 = 630.\nStep 2: Total age with teacher = 630 + 45 = 675.\nStep 3: New average = 675 / 16 = 42.19 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 630 to 675. Average is divide by 16.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_39",
-        "text": "The average age of a class of 5 students is 35 years. If the age of the teacher (55 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_hard_4",
+        "text": "Section A with 33 candidates scored average 66, and Section B with 29 candidates scored average 73. Find the combined overall average.",
         "options": [
-            "36 years",
-            "36.83 years",
-            "40.83 years",
-            "38.33 years"
+            "66.87",
+            "69.50",
+            "72.37",
+            "69.27"
         ],
-        "answer": "38.33",
-        "difficulty": "intermediate",
+        "answer": "69.27",
+        "solution": "(33×66 + 29×73) / (33 + 29) = 69.27.",
+        "formula": "Weighted Average = (n1×A1 + n2×A2) / (n1 + n2).",
+        "shortcut": "(2178 + 2117) / 62 = 69.27.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 5,
-        "solution": "Step 1: Total age of students = 5 * 35 = 175.\nStep 2: Total age with teacher = 175 + 55 = 230.\nStep 3: New average = 230 / 6 = 38.33 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 175 to 230. Average is divide by 6.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_40",
-        "text": "The average age of a class of 8 students is 30 years. If the age of the teacher (38 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_hard_5",
+        "text": "Section A with 28 candidates scored average 62, and Section B with 28 candidates scored average 67. Find the combined overall average.",
         "options": [
-            "33.39 years",
-            "29.39 years",
-            "31 years",
-            "30.89 years"
+            "62.10",
+            "67.60",
+            "64.5",
+            "64.50"
         ],
-        "answer": "30.89",
-        "difficulty": "intermediate",
+        "answer": "64.5",
+        "solution": "(28×62 + 28×67) / (28 + 28) = 64.5.",
+        "formula": "Weighted Average = (n1×A1 + n2×A2) / (n1 + n2).",
+        "shortcut": "(1736 + 1876) / 56 = 64.5.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "average",
+        "subject": "aptitude",
+        "patternType": 6,
+        "tags": [
+            "average",
+            "hard",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_average_hard_6",
+        "text": "Section A with 16 candidates scored average 60, and Section B with 40 candidates scored average 59. Find the combined overall average.",
+        "options": [
+            "59.50",
+            "56.89",
+            "59.29",
+            "62.39"
+        ],
+        "answer": "59.29",
+        "solution": "(16×60 + 40×59) / (16 + 40) = 59.29.",
+        "formula": "Weighted Average = (n1×A1 + n2×A2) / (n1 + n2).",
+        "shortcut": "(960 + 2360) / 56 = 59.29.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 1,
-        "solution": "Step 1: Total age of students = 8 * 30 = 240.\nStep 2: Total age with teacher = 240 + 38 = 278.\nStep 3: New average = 278 / 9 = 30.89 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 240 to 278. Average is divide by 9.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_41",
-        "text": "The average age of a class of 13 students is 49 years. If the age of the teacher (50 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_hard_7",
+        "text": "Section A with 24 candidates scored average 73, and Section B with 22 candidates scored average 53. Find the combined overall average.",
         "options": [
-            "51.57 years",
-            "50 years",
-            "49.07 years",
-            "47.57 years"
+            "66.53",
+            "63.43",
+            "63.00",
+            "61.03"
         ],
-        "answer": "49.07",
-        "difficulty": "intermediate",
+        "answer": "63.43",
+        "solution": "(24×73 + 22×53) / (24 + 22) = 63.43.",
+        "formula": "Weighted Average = (n1×A1 + n2×A2) / (n1 + n2).",
+        "shortcut": "(1752 + 1166) / 46 = 63.43.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 2,
-        "solution": "Step 1: Total age of students = 13 * 49 = 637.\nStep 2: Total age with teacher = 637 + 50 = 687.\nStep 3: New average = 687 / 14 = 49.07 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 637 to 687. Average is divide by 14.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_42",
-        "text": "The average age of a class of 12 students is 41 years. If the age of the teacher (32 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_hard_8",
+        "text": "Section A with 20 candidates scored average 67, and Section B with 39 candidates scored average 66. Find the combined overall average.",
         "options": [
-            "38.81 years",
-            "42 years",
-            "40.31 years",
-            "42.81 years"
+            "66.34",
+            "66.50",
+            "63.94",
+            "69.44"
         ],
-        "answer": "40.31",
-        "difficulty": "intermediate",
+        "answer": "66.34",
+        "solution": "(20×67 + 39×66) / (20 + 39) = 66.34.",
+        "formula": "Weighted Average = (n1×A1 + n2×A2) / (n1 + n2).",
+        "shortcut": "(1340 + 2574) / 59 = 66.34.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 3,
-        "solution": "Step 1: Total age of students = 12 * 41 = 492.\nStep 2: Total age with teacher = 492 + 32 = 524.\nStep 3: New average = 524 / 13 = 40.31 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 492 to 524. Average is divide by 13.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_43",
-        "text": "The average age of a class of 14 students is 24 years. If the age of the teacher (28 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_hard_9",
+        "text": "Section A with 35 candidates scored average 75, and Section B with 21 candidates scored average 66. Find the combined overall average.",
         "options": [
-            "24.27 years",
-            "26.77 years",
-            "22.77 years",
-            "25 years"
+            "69.23",
+            "74.73",
+            "70.50",
+            "71.63"
         ],
-        "answer": "24.27",
-        "difficulty": "intermediate",
+        "answer": "71.63",
+        "solution": "(35×75 + 21×66) / (35 + 21) = 71.63.",
+        "formula": "Weighted Average = (n1×A1 + n2×A2) / (n1 + n2).",
+        "shortcut": "(2625 + 1386) / 56 = 71.63.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 4,
-        "solution": "Step 1: Total age of students = 14 * 24 = 336.\nStep 2: Total age with teacher = 336 + 28 = 364.\nStep 3: New average = 364 / 15 = 24.27 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 336 to 364. Average is divide by 15.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_44",
-        "text": "The average age of a class of 11 students is 32 years. If the age of the teacher (54 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_hard_10",
+        "text": "Section A with 21 candidates scored average 64, and Section B with 35 candidates scored average 74. Find the combined overall average.",
         "options": [
-            "32.33 years",
-            "33.83 years",
-            "33 years",
-            "36.33 years"
+            "69.00",
+            "67.85",
+            "70.25",
+            "73.35"
         ],
-        "answer": "33.83",
-        "difficulty": "intermediate",
+        "answer": "70.25",
+        "solution": "(21×64 + 35×74) / (21 + 35) = 70.25.",
+        "formula": "Weighted Average = (n1×A1 + n2×A2) / (n1 + n2).",
+        "shortcut": "(1344 + 2590) / 56 = 70.25.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 5,
-        "solution": "Step 1: Total age of students = 11 * 32 = 352.\nStep 2: Total age with teacher = 352 + 54 = 406.\nStep 3: New average = 406 / 12 = 33.83 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 352 to 406. Average is divide by 12.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_45",
-        "text": "The average age of a class of 9 students is 28 years. If the age of the teacher (61 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_expert_1",
+        "text": "The average of 8 consecutive odd numbers is 36. Find the largest number in the series.",
         "options": [
-            "29.8 years",
-            "29 years",
-            "33.8 years",
-            "31.3 years"
+            "39",
+            "38",
+            "45",
+            "43"
         ],
-        "answer": "31.3",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Step 1: Total age of students = 9 * 28 = 252.\nStep 2: Total age with teacher = 252 + 61 = 313.\nStep 3: New average = 313 / 10 = 31.3 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 252 to 313. Average is divide by 10.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "answer": "43",
+        "solution": "36 + (8 - 1) = 43.",
+        "formula": "Largest = Average + (Count - 1).",
+        "shortcut": "36 + 7 = 43.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
-    },
-    {
-        "id": "apt_average_46",
-        "text": "The average age of a class of 9 students is 21 years. If the age of the teacher (30 years) is included, find the new average age of the class.",
-        "options": [
-            "21.9 years",
-            "20.4 years",
-            "24.4 years",
-            "22 years"
-        ],
-        "answer": "21.9",
-        "difficulty": "intermediate",
         "patternType": 2,
-        "solution": "Step 1: Total age of students = 9 * 21 = 189.\nStep 2: Total age with teacher = 189 + 30 = 219.\nStep 3: New average = 219 / 10 = 21.9 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 189 to 219. Average is divide by 10.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "expert",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_47",
-        "text": "The average age of a class of 9 students is 42 years. If the age of the teacher (65 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_expert_2",
+        "text": "The average of 5 consecutive odd numbers is 58. Find the largest number in the series.",
         "options": [
-            "42.8 years",
-            "43 years",
-            "44.3 years",
-            "46.8 years"
+            "58",
+            "60",
+            "62",
+            "64"
         ],
-        "answer": "44.3",
-        "difficulty": "intermediate",
+        "answer": "62",
+        "solution": "58 + (5 - 1) = 62.",
+        "formula": "Largest = Average + (Count - 1).",
+        "shortcut": "58 + 4 = 62.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 3,
-        "solution": "Step 1: Total age of students = 9 * 42 = 378.\nStep 2: Total age with teacher = 378 + 65 = 443.\nStep 3: New average = 443 / 10 = 44.3 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 378 to 443. Average is divide by 10.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "expert",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_48",
-        "text": "The average age of a class of 12 students is 20 years. If the age of the teacher (28 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_expert_3",
+        "text": "The average of 7 consecutive odd numbers is 47. Find the largest number in the series.",
         "options": [
-            "19.12 years",
-            "20.62 years",
-            "21 years",
-            "23.12 years"
+            "49",
+            "53",
+            "Option 4",
+            "55"
         ],
-        "answer": "20.62",
-        "difficulty": "intermediate",
+        "answer": "53",
+        "solution": "47 + (7 - 1) = 53.",
+        "formula": "Largest = Average + (Count - 1).",
+        "shortcut": "47 + 6 = 53.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 4,
-        "solution": "Step 1: Total age of students = 12 * 20 = 240.\nStep 2: Total age with teacher = 240 + 28 = 268.\nStep 3: New average = 268 / 13 = 20.62 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 240 to 268. Average is divide by 13.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "expert",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_49",
-        "text": "The average age of a class of 15 students is 20 years. If the age of the teacher (20 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_expert_4",
+        "text": "The average of 7 consecutive odd numbers is 44. Find the largest number in the series.",
         "options": [
-            "21 years",
-            "22.5 years",
-            "18.5 years",
-            "20.0 years"
+            "46",
+            "Option 4",
+            "50",
+            "52"
         ],
-        "answer": "20.0",
-        "difficulty": "intermediate",
+        "answer": "50",
+        "solution": "44 + (7 - 1) = 50.",
+        "formula": "Largest = Average + (Count - 1).",
+        "shortcut": "44 + 6 = 50.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "average",
+        "subject": "aptitude",
         "patternType": 5,
-        "solution": "Step 1: Total age of students = 15 * 20 = 300.\nStep 2: Total age with teacher = 300 + 20 = 320.\nStep 3: New average = 320 / 16 = 20.0 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 300 to 320. Average is divide by 16.",
-        "commonMistakes": "Dividing by N instead of N+1.",
-        "subject": "aptitude",
-        "topic": "average"
+        "tags": [
+            "average",
+            "expert",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_average_50",
-        "text": "The average age of a class of 11 students is 41 years. If the age of the teacher (41 years) is included, find the new average age of the class.",
+        "id": "aptitude_average_expert_5",
+        "text": "The average of 7 consecutive odd numbers is 50. Find the largest number in the series.",
         "options": [
-            "42 years",
-            "41.0 years",
-            "43.5 years",
-            "39.5 years"
+            "52",
+            "Option 4",
+            "56",
+            "58"
         ],
-        "answer": "41.0",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Step 1: Total age of students = 11 * 41 = 451.\nStep 2: Total age with teacher = 451 + 41 = 492.\nStep 3: New average = 492 / 12 = 41.0 years.",
-        "formula": "New Average: Avg_new = (Sum_old + Value_new) / (N_old + 1)",
-        "shortcut": "Total sum changes from 451 to 492. Average is divide by 12.",
-        "commonMistakes": "Dividing by N instead of N+1.",
+        "answer": "56",
+        "solution": "50 + (7 - 1) = 56.",
+        "formula": "Largest = Average + (Count - 1).",
+        "shortcut": "50 + 6 = 56.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "average",
         "subject": "aptitude",
-        "topic": "average"
+        "patternType": 6,
+        "tags": [
+            "average",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_average_expert_6",
+        "text": "The average of 6 consecutive odd numbers is 52. Find the largest number in the series.",
+        "options": [
+            "59",
+            "54",
+            "57",
+            "53"
+        ],
+        "answer": "57",
+        "solution": "52 + (6 - 1) = 57.",
+        "formula": "Largest = Average + (Count - 1).",
+        "shortcut": "52 + 5 = 57.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "average",
+        "subject": "aptitude",
+        "patternType": 1,
+        "tags": [
+            "average",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_average_expert_7",
+        "text": "The average of 9 consecutive odd numbers is 51. Find the largest number in the series.",
+        "options": [
+            "59",
+            "55",
+            "53",
+            "61"
+        ],
+        "answer": "59",
+        "solution": "51 + (9 - 1) = 59.",
+        "formula": "Largest = Average + (Count - 1).",
+        "shortcut": "51 + 8 = 59.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "average",
+        "subject": "aptitude",
+        "patternType": 2,
+        "tags": [
+            "average",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_average_expert_8",
+        "text": "The average of 9 consecutive odd numbers is 57. Find the largest number in the series.",
+        "options": [
+            "59",
+            "67",
+            "61",
+            "65"
+        ],
+        "answer": "65",
+        "solution": "57 + (9 - 1) = 65.",
+        "formula": "Largest = Average + (Count - 1).",
+        "shortcut": "57 + 8 = 65.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "average",
+        "subject": "aptitude",
+        "patternType": 3,
+        "tags": [
+            "average",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_average_expert_9",
+        "text": "The average of 7 consecutive odd numbers is 41. Find the largest number in the series.",
+        "options": [
+            "47",
+            "43",
+            "49",
+            "Option 4"
+        ],
+        "answer": "47",
+        "solution": "41 + (7 - 1) = 47.",
+        "formula": "Largest = Average + (Count - 1).",
+        "shortcut": "41 + 6 = 47.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "average",
+        "subject": "aptitude",
+        "patternType": 4,
+        "tags": [
+            "average",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_average_expert_10",
+        "text": "The average of 6 consecutive odd numbers is 58. Find the largest number in the series.",
+        "options": [
+            "59",
+            "65",
+            "60",
+            "63"
+        ],
+        "answer": "63",
+        "solution": "58 + (6 - 1) = 63.",
+        "formula": "Largest = Average + (Count - 1).",
+        "shortcut": "58 + 5 = 63.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "average",
+        "subject": "aptitude",
+        "patternType": 5,
+        "tags": [
+            "average",
+            "expert",
+            "dynamic"
+        ]
     }
-,
-{
-    "id": "apt_avg_solved_7",
-    "text": "The average of 8 numbers is 35. If one number, 71, is removed, what is the new average?",
-    "options": [
-        "29",
-        "30",
-        "31",
-        "32"
-    ],
-    "answer": "30",
-    "difficulty": "easy",
-    "patternType": 1,
-    "solution": "Initial Total = 8 \u00d7 35 = 280.\nRemaining Total = 280 - 71 = 209.\nNew average = 209 / 7 = 29.857 \u2248 30.",
-    "formula": "New Average = (Original Total - Removed Value) / Remaining Count",
-    "shortcut": "209 / 7 \u2248 29.86 \u2248 30.",
-    "commonMistakes": "Dividing remaining total by 8 instead of 7.",
-    "subject": "aptitude",
-    "topic": "average"
-}
 ];

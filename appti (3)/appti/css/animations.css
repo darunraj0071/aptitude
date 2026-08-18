@@ -377,6 +377,8 @@
     perspective: 1000px;
     backface-visibility: hidden;
     position: relative;
+    will-change: transform, opacity;
+    transform: translateZ(0);
 }
 
 /* Enable child elements to float inside 3D space */

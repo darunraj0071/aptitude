@@ -55,9 +55,9 @@ async function startExam(level, consented = false) {
     // Pool questions across all subjects
     const subjects = ['aptitude', 'reasoning', 'verbal'];
     const topicsMap = {
-        aptitude: ['numbers', 'percentage', 'profit_loss', 'ratio_proportion', 'average', 'time_work', 'time_distance'],
-        reasoning: ['blood_relations', 'coding_decoding', 'direction_sense', 'series'],
-        verbal: ['vocabulary', 'error_spotting']
+        aptitude: ['numbers', 'percentage', 'profit_loss', 'ratio_proportion', 'average', 'time_work', 'time_distance', 'speed_distance', 'probability', 'permutation_combination', 'data_interpretation', 'simplification', 'algebra', 'geometry'],
+        reasoning: ['puzzles', 'seating_arrangement', 'blood_relations', 'coding_decoding', 'syllogism', 'direction_sense', 'statement_conclusion', 'series', 'analogy', 'non_verbal'],
+        verbal: ['grammar', 'vocabulary', 'reading_comprehension', 'sentence_correction', 'error_spotting', 'fill_blanks', 'para_jumbles']
     };
 
     const loadPromises = [];

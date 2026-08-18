@@ -1,1087 +1,1303 @@
 if (!window.TOPIC_QUESTIONS) window.TOPIC_QUESTIONS = {};
 window.TOPIC_QUESTIONS['aptitude_speed_distance'] = [
     {
-        "id": "apt_speed_distance_1",
-        "text": "A car travels at a constant speed of 41 km/h. Find the distance traveled by the car in 2 hours.",
+        "id": "aptitude_speed_distance_beginner_1",
+        "text": "A boat has a speed of 16 km/h in still water and the river current flows at 4 km/h. What is its downstream speed?",
         "options": [
-            "2 km",
-            "41 km",
-            "82 km",
-            "102 km"
+            "20 km/h",
+            "16 km/h",
+            "12 km/h",
+            "24 km/h"
         ],
-        "answer": "82",
+        "answer": "20 km/h",
+        "solution": "16 + 4 = 20 km/h.",
+        "formula": "Downstream = Boat + Stream.",
+        "shortcut": "16 + 4 = 20 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 41 km/h * 2 hours = 82 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (41) by time (2) = 82.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 2,
+        "tags": [
+            "speed_distance",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_2",
-        "text": "A car travels at a constant speed of 50 km/h. Find the distance traveled by the car in 5 hours.",
+        "id": "aptitude_speed_distance_beginner_2",
+        "text": "A boat has a speed of 12 km/h in still water and the river current flows at 5 km/h. What is its downstream speed?",
         "options": [
-            "5 km",
-            "270 km",
-            "50 km",
-            "250 km"
+            "17 km/h",
+            "12 km/h",
+            "21 km/h",
+            "7 km/h"
         ],
-        "answer": "250",
+        "answer": "17 km/h",
+        "solution": "12 + 5 = 17 km/h.",
+        "formula": "Downstream = Boat + Stream.",
+        "shortcut": "12 + 5 = 17 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 50 km/h * 5 hours = 250 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (50) by time (5) = 250.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 3,
+        "tags": [
+            "speed_distance",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_3",
-        "text": "A car travels at a constant speed of 80 km/h. Find the distance traveled by the car in 4 hours.",
+        "id": "aptitude_speed_distance_beginner_3",
+        "text": "A boat has a speed of 19 km/h in still water and the river current flows at 3 km/h. What is its downstream speed?",
         "options": [
-            "4 km",
-            "340 km",
-            "80 km",
-            "320 km"
+            "16 km/h",
+            "22 km/h",
+            "19 km/h",
+            "26 km/h"
         ],
-        "answer": "320",
+        "answer": "22 km/h",
+        "solution": "19 + 3 = 22 km/h.",
+        "formula": "Downstream = Boat + Stream.",
+        "shortcut": "19 + 3 = 22 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 80 km/h * 4 hours = 320 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (80) by time (4) = 320.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 4,
+        "tags": [
+            "speed_distance",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_4",
-        "text": "A car travels at a constant speed of 61 km/h. Find the distance traveled by the car in 2 hours.",
+        "id": "aptitude_speed_distance_beginner_4",
+        "text": "A boat has a speed of 13 km/h in still water and the river current flows at 2 km/h. What is its downstream speed?",
         "options": [
-            "2 km",
-            "61 km",
-            "142 km",
-            "122 km"
+            "19 km/h",
+            "13 km/h",
+            "11 km/h",
+            "15 km/h"
         ],
-        "answer": "122",
+        "answer": "15 km/h",
+        "solution": "13 + 2 = 15 km/h.",
+        "formula": "Downstream = Boat + Stream.",
+        "shortcut": "13 + 2 = 15 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 61 km/h * 2 hours = 122 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (61) by time (2) = 122.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 5,
+        "tags": [
+            "speed_distance",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_5",
-        "text": "A car travels at a constant speed of 40 km/h. Find the distance traveled by the car in 3 hours.",
+        "id": "aptitude_speed_distance_beginner_5",
+        "text": "A boat has a speed of 21 km/h in still water and the river current flows at 5 km/h. What is its downstream speed?",
         "options": [
-            "40 km",
-            "140 km",
-            "3 km",
-            "120 km"
+            "30 km/h",
+            "21 km/h",
+            "26 km/h",
+            "16 km/h"
         ],
-        "answer": "120",
+        "answer": "26 km/h",
+        "solution": "21 + 5 = 26 km/h.",
+        "formula": "Downstream = Boat + Stream.",
+        "shortcut": "21 + 5 = 26 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 40 km/h * 3 hours = 120 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (40) by time (3) = 120.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 6,
+        "tags": [
+            "speed_distance",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_6",
-        "text": "A car travels at a constant speed of 58 km/h. Find the distance traveled by the car in 5 hours.",
+        "id": "aptitude_speed_distance_beginner_6",
+        "text": "A boat has a speed of 13 km/h in still water and the river current flows at 3 km/h. What is its downstream speed?",
         "options": [
-            "310 km",
-            "58 km",
-            "5 km",
-            "290 km"
+            "10 km/h",
+            "16 km/h",
+            "13 km/h",
+            "20 km/h"
         ],
-        "answer": "290",
+        "answer": "16 km/h",
+        "solution": "13 + 3 = 16 km/h.",
+        "formula": "Downstream = Boat + Stream.",
+        "shortcut": "13 + 3 = 16 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 58 km/h * 5 hours = 290 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (58) by time (5) = 290.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 1,
+        "tags": [
+            "speed_distance",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_7",
-        "text": "A car travels at a constant speed of 75 km/h. Find the distance traveled by the car in 4 hours.",
+        "id": "aptitude_speed_distance_beginner_7",
+        "text": "A boat has a speed of 18 km/h in still water and the river current flows at 3 km/h. What is its downstream speed?",
         "options": [
-            "300 km",
-            "4 km",
-            "75 km",
-            "320 km"
+            "25 km/h",
+            "18 km/h",
+            "21 km/h",
+            "15 km/h"
         ],
-        "answer": "300",
+        "answer": "21 km/h",
+        "solution": "18 + 3 = 21 km/h.",
+        "formula": "Downstream = Boat + Stream.",
+        "shortcut": "18 + 3 = 21 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 75 km/h * 4 hours = 300 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (75) by time (4) = 300.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 2,
+        "tags": [
+            "speed_distance",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_8",
-        "text": "A car travels at a constant speed of 63 km/h. Find the distance traveled by the car in 2 hours.",
+        "id": "aptitude_speed_distance_beginner_8",
+        "text": "A boat has a speed of 19 km/h in still water and the river current flows at 4 km/h. What is its downstream speed?",
         "options": [
-            "146 km",
-            "2 km",
-            "63 km",
-            "126 km"
+            "27 km/h",
+            "15 km/h",
+            "23 km/h",
+            "19 km/h"
         ],
-        "answer": "126",
+        "answer": "23 km/h",
+        "solution": "19 + 4 = 23 km/h.",
+        "formula": "Downstream = Boat + Stream.",
+        "shortcut": "19 + 4 = 23 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 63 km/h * 2 hours = 126 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (63) by time (2) = 126.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 3,
+        "tags": [
+            "speed_distance",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_9",
-        "text": "A car travels at a constant speed of 63 km/h. Find the distance traveled by the car in 4 hours.",
+        "id": "aptitude_speed_distance_beginner_9",
+        "text": "A boat has a speed of 19 km/h in still water and the river current flows at 2 km/h. What is its downstream speed?",
         "options": [
-            "4 km",
-            "272 km",
-            "63 km",
-            "252 km"
+            "17 km/h",
+            "21 km/h",
+            "19 km/h",
+            "25 km/h"
         ],
-        "answer": "252",
+        "answer": "21 km/h",
+        "solution": "19 + 2 = 21 km/h.",
+        "formula": "Downstream = Boat + Stream.",
+        "shortcut": "19 + 2 = 21 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 63 km/h * 4 hours = 252 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (63) by time (4) = 252.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 4,
+        "tags": [
+            "speed_distance",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_10",
-        "text": "A car travels at a constant speed of 77 km/h. Find the distance traveled by the car in 4 hours.",
+        "id": "aptitude_speed_distance_beginner_10",
+        "text": "A boat has a speed of 13 km/h in still water and the river current flows at 5 km/h. What is its downstream speed?",
         "options": [
-            "328 km",
-            "308 km",
-            "77 km",
-            "4 km"
+            "18 km/h",
+            "8 km/h",
+            "13 km/h",
+            "22 km/h"
         ],
-        "answer": "308",
+        "answer": "18 km/h",
+        "solution": "13 + 5 = 18 km/h.",
+        "formula": "Downstream = Boat + Stream.",
+        "shortcut": "13 + 5 = 18 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 77 km/h * 4 hours = 308 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (77) by time (4) = 308.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
-    },
-    {
-        "id": "apt_speed_distance_11",
-        "text": "A car travels at a constant speed of 75 km/h. Find the distance traveled by the car in 3 hours.",
-        "options": [
-            "225 km",
-            "245 km",
-            "3 km",
-            "75 km"
-        ],
-        "answer": "225",
-        "difficulty": "easy",
-        "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 75 km/h * 3 hours = 225 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (75) by time (3) = 225.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
-    },
-    {
-        "id": "apt_speed_distance_12",
-        "text": "A car travels at a constant speed of 76 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "304 km",
-            "4 km",
-            "324 km",
-            "76 km"
-        ],
-        "answer": "304",
-        "difficulty": "easy",
-        "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 76 km/h * 4 hours = 304 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (76) by time (4) = 304.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
-    },
-    {
-        "id": "apt_speed_distance_13",
-        "text": "A car travels at a constant speed of 72 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "308 km",
-            "72 km",
-            "4 km",
-            "288 km"
-        ],
-        "answer": "288",
-        "difficulty": "easy",
-        "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 72 km/h * 4 hours = 288 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (72) by time (4) = 288.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
-    },
-    {
-        "id": "apt_speed_distance_14",
-        "text": "A car travels at a constant speed of 48 km/h. Find the distance traveled by the car in 5 hours.",
-        "options": [
-            "5 km",
-            "48 km",
-            "240 km",
-            "260 km"
-        ],
-        "answer": "240",
-        "difficulty": "easy",
         "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 48 km/h * 5 hours = 240 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (48) by time (5) = 240.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_15",
-        "text": "A car travels at a constant speed of 54 km/h. Find the distance traveled by the car in 3 hours.",
+        "id": "aptitude_speed_distance_easy_1",
+        "text": "A speedboat goes downstream at 20 km/h and upstream at 11 km/h. Find the speed in still water.",
         "options": [
-            "54 km",
-            "182 km",
-            "162 km",
-            "3 km"
+            "17 km/h",
+            "4.5 km/h",
+            "17.5 km/h",
+            "15.5 km/h"
         ],
-        "answer": "162",
+        "answer": "15.5 km/h",
+        "solution": "(20 + 11) / 2 = 15.5 km/h.",
+        "formula": "Still Water = (Down + Up) / 2.",
+        "shortcut": "(20 + 11) / 2 = 15.5 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 54 km/h * 3 hours = 162 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (54) by time (3) = 162.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 2,
+        "tags": [
+            "speed_distance",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_16",
-        "text": "A car travels at a constant speed of 47 km/h. Find the distance traveled by the car in 4 hours.",
+        "id": "aptitude_speed_distance_easy_2",
+        "text": "A speedboat goes downstream at 22 km/h and upstream at 13 km/h. Find the speed in still water.",
         "options": [
-            "47 km",
-            "188 km",
-            "208 km",
-            "4 km"
+            "17.5 km/h",
+            "4.5 km/h",
+            "19.5 km/h",
+            "19 km/h"
         ],
-        "answer": "188",
+        "answer": "17.5 km/h",
+        "solution": "(22 + 13) / 2 = 17.5 km/h.",
+        "formula": "Still Water = (Down + Up) / 2.",
+        "shortcut": "(22 + 13) / 2 = 17.5 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 47 km/h * 4 hours = 188 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (47) by time (4) = 188.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 3,
+        "tags": [
+            "speed_distance",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_17",
-        "text": "A car travels at a constant speed of 68 km/h. Find the distance traveled by the car in 2 hours.",
+        "id": "aptitude_speed_distance_easy_3",
+        "text": "A speedboat goes downstream at 20 km/h and upstream at 14 km/h. Find the speed in still water.",
         "options": [
-            "68 km",
-            "156 km",
-            "136 km",
-            "2 km"
+            "Option 4",
+            "19 km/h",
+            "17 km/h",
+            "3 km/h"
         ],
-        "answer": "136",
+        "answer": "17 km/h",
+        "solution": "(20 + 14) / 2 = 17 km/h.",
+        "formula": "Still Water = (Down + Up) / 2.",
+        "shortcut": "(20 + 14) / 2 = 17 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 68 km/h * 2 hours = 136 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (68) by time (2) = 136.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 4,
+        "tags": [
+            "speed_distance",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_18",
-        "text": "A car travels at a constant speed of 76 km/h. Find the distance traveled by the car in 2 hours.",
+        "id": "aptitude_speed_distance_easy_4",
+        "text": "A speedboat goes downstream at 23 km/h and upstream at 12 km/h. Find the speed in still water.",
         "options": [
-            "2 km",
-            "172 km",
-            "76 km",
-            "152 km"
+            "17.5 km/h",
+            "5.5 km/h",
+            "20 km/h",
+            "19.5 km/h"
         ],
-        "answer": "152",
+        "answer": "17.5 km/h",
+        "solution": "(23 + 12) / 2 = 17.5 km/h.",
+        "formula": "Still Water = (Down + Up) / 2.",
+        "shortcut": "(23 + 12) / 2 = 17.5 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 76 km/h * 2 hours = 152 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (76) by time (2) = 152.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 5,
+        "tags": [
+            "speed_distance",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_19",
-        "text": "A car travels at a constant speed of 42 km/h. Find the distance traveled by the car in 2 hours.",
+        "id": "aptitude_speed_distance_easy_5",
+        "text": "A speedboat goes downstream at 26 km/h and upstream at 19 km/h. Find the speed in still water.",
         "options": [
-            "42 km",
-            "84 km",
-            "104 km",
-            "2 km"
+            "22.5 km/h",
+            "3.5 km/h",
+            "23 km/h",
+            "24.5 km/h"
         ],
-        "answer": "84",
+        "answer": "22.5 km/h",
+        "solution": "(26 + 19) / 2 = 22.5 km/h.",
+        "formula": "Still Water = (Down + Up) / 2.",
+        "shortcut": "(26 + 19) / 2 = 22.5 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 42 km/h * 2 hours = 84 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (42) by time (2) = 84.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 6,
+        "tags": [
+            "speed_distance",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_20",
-        "text": "A car travels at a constant speed of 44 km/h. Find the distance traveled by the car in 2 hours.",
+        "id": "aptitude_speed_distance_easy_6",
+        "text": "A speedboat goes downstream at 21 km/h and upstream at 9 km/h. Find the speed in still water.",
         "options": [
-            "108 km",
-            "88 km",
-            "44 km",
-            "2 km"
+            "6 km/h",
+            "17 km/h",
+            "15 km/h",
+            "18 km/h"
         ],
-        "answer": "88",
+        "answer": "15 km/h",
+        "solution": "(21 + 9) / 2 = 15 km/h.",
+        "formula": "Still Water = (Down + Up) / 2.",
+        "shortcut": "(21 + 9) / 2 = 15 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 44 km/h * 2 hours = 88 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (44) by time (2) = 88.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 1,
+        "tags": [
+            "speed_distance",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_21",
-        "text": "A car travels at a constant speed of 76 km/h. Find the distance traveled by the car in 3 hours.",
+        "id": "aptitude_speed_distance_easy_7",
+        "text": "A speedboat goes downstream at 27 km/h and upstream at 15 km/h. Find the speed in still water.",
         "options": [
-            "3 km",
-            "248 km",
-            "228 km",
-            "76 km"
+            "21 km/h",
+            "24 km/h",
+            "6 km/h",
+            "23 km/h"
         ],
-        "answer": "228",
-        "difficulty": "medium",
+        "answer": "21 km/h",
+        "solution": "(27 + 15) / 2 = 21 km/h.",
+        "formula": "Still Water = (Down + Up) / 2.",
+        "shortcut": "(27 + 15) / 2 = 21 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 76 km/h * 3 hours = 228 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (76) by time (3) = 228.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_22",
-        "text": "A car travels at a constant speed of 53 km/h. Find the distance traveled by the car in 4 hours.",
+        "id": "aptitude_speed_distance_easy_8",
+        "text": "A speedboat goes downstream at 22 km/h and upstream at 11 km/h. Find the speed in still water.",
         "options": [
-            "232 km",
-            "53 km",
-            "4 km",
-            "212 km"
+            "19 km/h",
+            "16.5 km/h",
+            "5.5 km/h",
+            "18.5 km/h"
         ],
-        "answer": "212",
-        "difficulty": "medium",
+        "answer": "16.5 km/h",
+        "solution": "(22 + 11) / 2 = 16.5 km/h.",
+        "formula": "Still Water = (Down + Up) / 2.",
+        "shortcut": "(22 + 11) / 2 = 16.5 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 53 km/h * 4 hours = 212 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (53) by time (4) = 212.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_23",
-        "text": "A car travels at a constant speed of 74 km/h. Find the distance traveled by the car in 2 hours.",
+        "id": "aptitude_speed_distance_easy_9",
+        "text": "A speedboat goes downstream at 23 km/h and upstream at 15 km/h. Find the speed in still water.",
         "options": [
-            "168 km",
-            "148 km",
-            "74 km",
-            "2 km"
+            "20 km/h",
+            "4 km/h",
+            "19 km/h",
+            "21 km/h"
         ],
-        "answer": "148",
-        "difficulty": "medium",
+        "answer": "19 km/h",
+        "solution": "(23 + 15) / 2 = 19 km/h.",
+        "formula": "Still Water = (Down + Up) / 2.",
+        "shortcut": "(23 + 15) / 2 = 19 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 74 km/h * 2 hours = 148 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (74) by time (2) = 148.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_24",
-        "text": "A car travels at a constant speed of 77 km/h. Find the distance traveled by the car in 2 hours.",
+        "id": "aptitude_speed_distance_easy_10",
+        "text": "A speedboat goes downstream at 24 km/h and upstream at 17 km/h. Find the speed in still water.",
         "options": [
-            "77 km",
-            "154 km",
-            "174 km",
-            "2 km"
+            "20.5 km/h",
+            "3.5 km/h",
+            "22.5 km/h",
+            "21 km/h"
         ],
-        "answer": "154",
-        "difficulty": "medium",
+        "answer": "20.5 km/h",
+        "solution": "(24 + 17) / 2 = 20.5 km/h.",
+        "formula": "Still Water = (Down + Up) / 2.",
+        "shortcut": "(24 + 17) / 2 = 20.5 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 77 km/h * 2 hours = 154 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (77) by time (2) = 154.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "easy",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_25",
-        "text": "A car travels at a constant speed of 72 km/h. Find the distance traveled by the car in 5 hours.",
+        "id": "aptitude_speed_distance_medium_1",
+        "text": "A boat travels upstream at 18 km/h and downstream at 24 km/h. Find the rate of flow of the stream.",
         "options": [
-            "360 km",
-            "72 km",
-            "380 km",
-            "5 km"
+            "Option 4",
+            "21 km/h",
+            "3 km/h",
+            "5 km/h"
         ],
-        "answer": "360",
+        "answer": "3 km/h",
+        "solution": "(24 - 18) / 2 = 3 km/h.",
+        "formula": "Stream = (Down - Up) / 2.",
+        "shortcut": "(24 - 18) / 2 = 3 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 72 km/h * 5 hours = 360 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (72) by time (5) = 360.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
-    },
-    {
-        "id": "apt_speed_distance_26",
-        "text": "A car travels at a constant speed of 44 km/h. Find the distance traveled by the car in 2 hours.",
-        "options": [
-            "88 km",
-            "108 km",
-            "2 km",
-            "44 km"
-        ],
-        "answer": "88",
-        "difficulty": "medium",
         "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 44 km/h * 2 hours = 88 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (44) by time (2) = 88.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_27",
-        "text": "A car travels at a constant speed of 46 km/h. Find the distance traveled by the car in 4 hours.",
+        "id": "aptitude_speed_distance_medium_2",
+        "text": "A boat travels upstream at 13 km/h and downstream at 21 km/h. Find the rate of flow of the stream.",
         "options": [
-            "184 km",
-            "204 km",
-            "46 km",
-            "4 km"
+            "17 km/h",
+            "4 km/h",
+            "6 km/h",
+            "5 km/h"
         ],
-        "answer": "184",
+        "answer": "4 km/h",
+        "solution": "(21 - 13) / 2 = 4 km/h.",
+        "formula": "Stream = (Down - Up) / 2.",
+        "shortcut": "(21 - 13) / 2 = 4 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 46 km/h * 4 hours = 184 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (46) by time (4) = 184.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 3,
+        "tags": [
+            "speed_distance",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_28",
-        "text": "A car travels at a constant speed of 69 km/h. Find the distance traveled by the car in 5 hours.",
+        "id": "aptitude_speed_distance_medium_3",
+        "text": "A boat travels upstream at 15 km/h and downstream at 25 km/h. Find the rate of flow of the stream.",
         "options": [
-            "5 km",
-            "345 km",
-            "365 km",
-            "69 km"
+            "5 km/h",
+            "7 km/h",
+            "Option 4",
+            "20 km/h"
         ],
-        "answer": "345",
+        "answer": "5 km/h",
+        "solution": "(25 - 15) / 2 = 5 km/h.",
+        "formula": "Stream = (Down - Up) / 2.",
+        "shortcut": "(25 - 15) / 2 = 5 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 69 km/h * 5 hours = 345 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (69) by time (5) = 345.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 4,
+        "tags": [
+            "speed_distance",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_29",
-        "text": "A car travels at a constant speed of 61 km/h. Find the distance traveled by the car in 3 hours.",
+        "id": "aptitude_speed_distance_medium_4",
+        "text": "A boat travels upstream at 20 km/h and downstream at 28 km/h. Find the rate of flow of the stream.",
         "options": [
-            "203 km",
-            "3 km",
-            "183 km",
-            "61 km"
+            "6 km/h",
+            "4 km/h",
+            "5 km/h",
+            "24 km/h"
         ],
-        "answer": "183",
+        "answer": "4 km/h",
+        "solution": "(28 - 20) / 2 = 4 km/h.",
+        "formula": "Stream = (Down - Up) / 2.",
+        "shortcut": "(28 - 20) / 2 = 4 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 61 km/h * 3 hours = 183 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (61) by time (3) = 183.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 5,
+        "tags": [
+            "speed_distance",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_30",
-        "text": "A car travels at a constant speed of 65 km/h. Find the distance traveled by the car in 3 hours.",
+        "id": "aptitude_speed_distance_medium_5",
+        "text": "A boat travels upstream at 10 km/h and downstream at 20 km/h. Find the rate of flow of the stream.",
         "options": [
-            "195 km",
-            "3 km",
-            "65 km",
-            "215 km"
+            "5 km/h",
+            "15 km/h",
+            "7 km/h",
+            "Option 4"
         ],
-        "answer": "195",
+        "answer": "5 km/h",
+        "solution": "(20 - 10) / 2 = 5 km/h.",
+        "formula": "Stream = (Down - Up) / 2.",
+        "shortcut": "(20 - 10) / 2 = 5 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 65 km/h * 3 hours = 195 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (65) by time (3) = 195.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 6,
+        "tags": [
+            "speed_distance",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_31",
-        "text": "A car travels at a constant speed of 56 km/h. Find the distance traveled by the car in 3 hours.",
+        "id": "aptitude_speed_distance_medium_6",
+        "text": "A boat travels upstream at 14 km/h and downstream at 24 km/h. Find the rate of flow of the stream.",
         "options": [
-            "168 km",
-            "3 km",
-            "188 km",
-            "56 km"
+            "Option 4",
+            "19 km/h",
+            "7 km/h",
+            "5 km/h"
         ],
-        "answer": "168",
-        "difficulty": "intermediate",
+        "answer": "5 km/h",
+        "solution": "(24 - 14) / 2 = 5 km/h.",
+        "formula": "Stream = (Down - Up) / 2.",
+        "shortcut": "(24 - 14) / 2 = 5 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "speed_distance",
+        "subject": "aptitude",
+        "patternType": 1,
+        "tags": [
+            "speed_distance",
+            "medium",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_speed_distance_medium_7",
+        "text": "A boat travels upstream at 21 km/h and downstream at 28 km/h. Find the rate of flow of the stream.",
+        "options": [
+            "3.5 km/h",
+            "24.5 km/h",
+            "5 km/h",
+            "5.5 km/h"
+        ],
+        "answer": "3.5 km/h",
+        "solution": "(28 - 21) / 2 = 3.5 km/h.",
+        "formula": "Stream = (Down - Up) / 2.",
+        "shortcut": "(28 - 21) / 2 = 3.5 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 56 km/h * 3 hours = 168 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (56) by time (3) = 168.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_32",
-        "text": "A car travels at a constant speed of 52 km/h. Find the distance traveled by the car in 2 hours.",
+        "id": "aptitude_speed_distance_medium_8",
+        "text": "A boat travels upstream at 17 km/h and downstream at 24 km/h. Find the rate of flow of the stream.",
         "options": [
-            "52 km",
-            "124 km",
-            "104 km",
-            "2 km"
+            "5 km/h",
+            "20.5 km/h",
+            "3.5 km/h",
+            "5.5 km/h"
         ],
-        "answer": "104",
-        "difficulty": "intermediate",
+        "answer": "3.5 km/h",
+        "solution": "(24 - 17) / 2 = 3.5 km/h.",
+        "formula": "Stream = (Down - Up) / 2.",
+        "shortcut": "(24 - 17) / 2 = 3.5 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 52 km/h * 2 hours = 104 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (52) by time (2) = 104.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_33",
-        "text": "A car travels at a constant speed of 75 km/h. Find the distance traveled by the car in 5 hours.",
+        "id": "aptitude_speed_distance_medium_9",
+        "text": "A boat travels upstream at 20 km/h and downstream at 29 km/h. Find the rate of flow of the stream.",
         "options": [
-            "375 km",
-            "5 km",
-            "395 km",
-            "75 km"
+            "4.5 km/h",
+            "6.5 km/h",
+            "24.5 km/h",
+            "5 km/h"
         ],
-        "answer": "375",
-        "difficulty": "intermediate",
+        "answer": "4.5 km/h",
+        "solution": "(29 - 20) / 2 = 4.5 km/h.",
+        "formula": "Stream = (Down - Up) / 2.",
+        "shortcut": "(29 - 20) / 2 = 4.5 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 75 km/h * 5 hours = 375 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (75) by time (5) = 375.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_34",
-        "text": "A car travels at a constant speed of 80 km/h. Find the distance traveled by the car in 3 hours.",
+        "id": "aptitude_speed_distance_medium_10",
+        "text": "A boat travels upstream at 16 km/h and downstream at 22 km/h. Find the rate of flow of the stream.",
         "options": [
-            "3 km",
-            "260 km",
-            "80 km",
-            "240 km"
+            "5 km/h",
+            "3 km/h",
+            "19 km/h",
+            "Option 4"
         ],
-        "answer": "240",
-        "difficulty": "intermediate",
+        "answer": "3 km/h",
+        "solution": "(22 - 16) / 2 = 3 km/h.",
+        "formula": "Stream = (Down - Up) / 2.",
+        "shortcut": "(22 - 16) / 2 = 3 km/h.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 80 km/h * 3 hours = 240 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (80) by time (3) = 240.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "medium",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_35",
-        "text": "A car travels at a constant speed of 46 km/h. Find the distance traveled by the car in 2 hours.",
+        "id": "aptitude_speed_distance_hard_1",
+        "text": "Two runners start at the same point and run in opposite directions around a 500-meter circular track at speeds of 13 m/s and 7 m/s. When will they meet for the first time?",
         "options": [
-            "112 km",
-            "2 km",
-            "46 km",
-            "92 km"
+            "45 seconds",
+            "35 seconds",
+            "25 seconds",
+            "17 seconds"
         ],
-        "answer": "92",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 46 km/h * 2 hours = 92 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (46) by time (2) = 92.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "answer": "25 seconds",
+        "solution": "500 / (13 + 7) = 25 seconds.",
+        "formula": "Time = Track / (S1 + S2).",
+        "shortcut": "500 / (13 + 7) = 25 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
-    },
-    {
-        "id": "apt_speed_distance_36",
-        "text": "A car travels at a constant speed of 59 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "256 km",
-            "59 km",
-            "4 km",
-            "236 km"
-        ],
-        "answer": "236",
-        "difficulty": "intermediate",
         "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 59 km/h * 4 hours = 236 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (59) by time (4) = 236.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_37",
-        "text": "A car travels at a constant speed of 59 km/h. Find the distance traveled by the car in 3 hours.",
+        "id": "aptitude_speed_distance_hard_2",
+        "text": "Two runners start at the same point and run in opposite directions around a 600-meter circular track at speeds of 13 m/s and 8 m/s. When will they meet for the first time?",
         "options": [
-            "59 km",
-            "177 km",
-            "3 km",
-            "197 km"
+            "45 seconds",
+            "29 seconds",
+            "21 seconds",
+            "39 seconds"
         ],
-        "answer": "177",
-        "difficulty": "intermediate",
+        "answer": "29 seconds",
+        "solution": "600 / (13 + 8) = 29 seconds.",
+        "formula": "Time = Track / (S1 + S2).",
+        "shortcut": "600 / (13 + 8) = 29 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 59 km/h * 3 hours = 177 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (59) by time (3) = 177.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_38",
-        "text": "A car travels at a constant speed of 41 km/h. Find the distance traveled by the car in 5 hours.",
+        "id": "aptitude_speed_distance_hard_3",
+        "text": "Two runners start at the same point and run in opposite directions around a 500-meter circular track at speeds of 10 m/s and 10 m/s. When will they meet for the first time?",
         "options": [
-            "5 km",
-            "225 km",
-            "41 km",
-            "205 km"
+            "35 seconds",
+            "25 seconds",
+            "17 seconds",
+            "45 seconds"
         ],
-        "answer": "205",
-        "difficulty": "intermediate",
+        "answer": "25 seconds",
+        "solution": "500 / (10 + 10) = 25 seconds.",
+        "formula": "Time = Track / (S1 + S2).",
+        "shortcut": "500 / (10 + 10) = 25 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 41 km/h * 5 hours = 205 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (41) by time (5) = 205.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_39",
-        "text": "A car travels at a constant speed of 61 km/h. Find the distance traveled by the car in 4 hours.",
+        "id": "aptitude_speed_distance_hard_4",
+        "text": "Two runners start at the same point and run in opposite directions around a 700-meter circular track at speeds of 15 m/s and 8 m/s. When will they meet for the first time?",
         "options": [
-            "4 km",
-            "61 km",
-            "264 km",
-            "244 km"
+            "22 seconds",
+            "30 seconds",
+            "40 seconds",
+            "45 seconds"
         ],
-        "answer": "244",
-        "difficulty": "intermediate",
+        "answer": "30 seconds",
+        "solution": "700 / (15 + 8) = 30 seconds.",
+        "formula": "Time = Track / (S1 + S2).",
+        "shortcut": "700 / (15 + 8) = 30 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 61 km/h * 4 hours = 244 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (61) by time (4) = 244.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_40",
-        "text": "A car travels at a constant speed of 55 km/h. Find the distance traveled by the car in 3 hours.",
+        "id": "aptitude_speed_distance_hard_5",
+        "text": "Two runners start at the same point and run in opposite directions around a 900-meter circular track at speeds of 11 m/s and 10 m/s. When will they meet for the first time?",
         "options": [
-            "185 km",
-            "3 km",
-            "165 km",
-            "55 km"
+            "45 seconds",
+            "43 seconds",
+            "53 seconds",
+            "35 seconds"
         ],
-        "answer": "165",
-        "difficulty": "intermediate",
+        "answer": "43 seconds",
+        "solution": "900 / (11 + 10) = 43 seconds.",
+        "formula": "Time = Track / (S1 + S2).",
+        "shortcut": "900 / (11 + 10) = 43 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "speed_distance",
+        "subject": "aptitude",
+        "patternType": 6,
+        "tags": [
+            "speed_distance",
+            "hard",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_speed_distance_hard_6",
+        "text": "Two runners start at the same point and run in opposite directions around a 600-meter circular track at speeds of 16 m/s and 9 m/s. When will they meet for the first time?",
+        "options": [
+            "34 seconds",
+            "16 seconds",
+            "45 seconds",
+            "24 seconds"
+        ],
+        "answer": "24 seconds",
+        "solution": "600 / (16 + 9) = 24 seconds.",
+        "formula": "Time = Track / (S1 + S2).",
+        "shortcut": "600 / (16 + 9) = 24 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 55 km/h * 3 hours = 165 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (55) by time (3) = 165.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_41",
-        "text": "A car travels at a constant speed of 71 km/h. Find the distance traveled by the car in 4 hours.",
+        "id": "aptitude_speed_distance_hard_7",
+        "text": "Two runners start at the same point and run in opposite directions around a 1000-meter circular track at speeds of 16 m/s and 8 m/s. When will they meet for the first time?",
         "options": [
-            "284 km",
-            "304 km",
-            "71 km",
-            "4 km"
+            "45 seconds",
+            "34 seconds",
+            "52 seconds",
+            "42 seconds"
         ],
-        "answer": "284",
-        "difficulty": "intermediate",
+        "answer": "42 seconds",
+        "solution": "1000 / (16 + 8) = 42 seconds.",
+        "formula": "Time = Track / (S1 + S2).",
+        "shortcut": "1000 / (16 + 8) = 42 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 71 km/h * 4 hours = 284 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (71) by time (4) = 284.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_42",
-        "text": "A car travels at a constant speed of 71 km/h. Find the distance traveled by the car in 2 hours.",
+        "id": "aptitude_speed_distance_hard_8",
+        "text": "Two runners start at the same point and run in opposite directions around a 700-meter circular track at speeds of 15 m/s and 10 m/s. When will they meet for the first time?",
         "options": [
-            "162 km",
-            "2 km",
-            "71 km",
-            "142 km"
+            "20 seconds",
+            "38 seconds",
+            "28 seconds",
+            "45 seconds"
         ],
-        "answer": "142",
-        "difficulty": "intermediate",
+        "answer": "28 seconds",
+        "solution": "700 / (15 + 10) = 28 seconds.",
+        "formula": "Time = Track / (S1 + S2).",
+        "shortcut": "700 / (15 + 10) = 28 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 71 km/h * 2 hours = 142 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (71) by time (2) = 142.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_43",
-        "text": "A car travels at a constant speed of 79 km/h. Find the distance traveled by the car in 4 hours.",
+        "id": "aptitude_speed_distance_hard_9",
+        "text": "Two runners start at the same point and run in opposite directions around a 700-meter circular track at speeds of 12 m/s and 6 m/s. When will they meet for the first time?",
         "options": [
-            "316 km",
-            "4 km",
-            "336 km",
-            "79 km"
+            "49 seconds",
+            "45 seconds",
+            "39 seconds",
+            "31 seconds"
         ],
-        "answer": "316",
-        "difficulty": "intermediate",
+        "answer": "39 seconds",
+        "solution": "700 / (12 + 6) = 39 seconds.",
+        "formula": "Time = Track / (S1 + S2).",
+        "shortcut": "700 / (12 + 6) = 39 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 79 km/h * 4 hours = 316 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (79) by time (4) = 316.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_44",
-        "text": "A car travels at a constant speed of 80 km/h. Find the distance traveled by the car in 4 hours.",
+        "id": "aptitude_speed_distance_hard_10",
+        "text": "Two runners start at the same point and run in opposite directions around a 800-meter circular track at speeds of 11 m/s and 8 m/s. When will they meet for the first time?",
         "options": [
-            "340 km",
-            "4 km",
-            "320 km",
-            "80 km"
+            "42 seconds",
+            "34 seconds",
+            "45 seconds",
+            "52 seconds"
         ],
-        "answer": "320",
-        "difficulty": "intermediate",
+        "answer": "42 seconds",
+        "solution": "800 / (11 + 8) = 42 seconds.",
+        "formula": "Time = Track / (S1 + S2).",
+        "shortcut": "800 / (11 + 8) = 42 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 80 km/h * 4 hours = 320 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (80) by time (4) = 320.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "hard",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_45",
-        "text": "A car travels at a constant speed of 65 km/h. Find the distance traveled by the car in 5 hours.",
+        "id": "aptitude_speed_distance_expert_1",
+        "text": "A police officer running at 14 km/h chases a thief running at 11 km/h who has a lead of 118 meters. After how many seconds will the officer catch the thief?",
         "options": [
-            "325 km",
-            "65 km",
-            "5 km",
-            "345 km"
+            "120 seconds",
+            "162 seconds",
+            "117 seconds",
+            "142 seconds"
         ],
-        "answer": "325",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 65 km/h * 5 hours = 325 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (65) by time (5) = 325.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "answer": "142 seconds",
+        "solution": "118 / [(3) × 5/18] = 142 seconds.",
+        "formula": "Time = Lead / Relative Speed in m/s.",
+        "shortcut": "118 / (5/6) = 142 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
-    },
-    {
-        "id": "apt_speed_distance_46",
-        "text": "A car travels at a constant speed of 58 km/h. Find the distance traveled by the car in 5 hours.",
-        "options": [
-            "5 km",
-            "310 km",
-            "290 km",
-            "58 km"
-        ],
-        "answer": "290",
-        "difficulty": "intermediate",
         "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 58 km/h * 5 hours = 290 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (58) by time (5) = 290.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "expert",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_47",
-        "text": "A car travels at a constant speed of 43 km/h. Find the distance traveled by the car in 5 hours.",
+        "id": "aptitude_speed_distance_expert_2",
+        "text": "A police officer running at 12 km/h chases a thief running at 9 km/h who has a lead of 182 meters. After how many seconds will the officer catch the thief?",
         "options": [
-            "215 km",
-            "235 km",
-            "5 km",
-            "43 km"
+            "193 seconds",
+            "120 seconds",
+            "218 seconds",
+            "238 seconds"
         ],
-        "answer": "215",
-        "difficulty": "intermediate",
+        "answer": "218 seconds",
+        "solution": "182 / [(3) × 5/18] = 218 seconds.",
+        "formula": "Time = Lead / Relative Speed in m/s.",
+        "shortcut": "182 / (5/6) = 218 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 43 km/h * 5 hours = 215 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (43) by time (5) = 215.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "expert",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_48",
-        "text": "A car travels at a constant speed of 78 km/h. Find the distance traveled by the car in 2 hours.",
+        "id": "aptitude_speed_distance_expert_3",
+        "text": "A police officer running at 14 km/h chases a thief running at 11 km/h who has a lead of 240 meters. After how many seconds will the officer catch the thief?",
         "options": [
-            "78 km",
-            "156 km",
-            "176 km",
-            "2 km"
+            "120 seconds",
+            "308 seconds",
+            "288 seconds",
+            "263 seconds"
         ],
-        "answer": "156",
-        "difficulty": "intermediate",
+        "answer": "288 seconds",
+        "solution": "240 / [(3) × 5/18] = 288 seconds.",
+        "formula": "Time = Lead / Relative Speed in m/s.",
+        "shortcut": "240 / (5/6) = 288 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 78 km/h * 2 hours = 156 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (78) by time (2) = 156.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "expert",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_49",
-        "text": "A car travels at a constant speed of 61 km/h. Find the distance traveled by the car in 5 hours.",
+        "id": "aptitude_speed_distance_expert_4",
+        "text": "A police officer running at 15 km/h chases a thief running at 12 km/h who has a lead of 182 meters. After how many seconds will the officer catch the thief?",
         "options": [
-            "5 km",
-            "305 km",
-            "325 km",
-            "61 km"
+            "218 seconds",
+            "120 seconds",
+            "238 seconds",
+            "193 seconds"
         ],
-        "answer": "305",
-        "difficulty": "intermediate",
+        "answer": "218 seconds",
+        "solution": "182 / [(3) × 5/18] = 218 seconds.",
+        "formula": "Time = Lead / Relative Speed in m/s.",
+        "shortcut": "182 / (5/6) = 218 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "speed_distance",
+        "subject": "aptitude",
         "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 61 km/h * 5 hours = 305 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (61) by time (5) = 305.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "speed_distance"
+        "tags": [
+            "speed_distance",
+            "expert",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_speed_distance_50",
-        "text": "A car travels at a constant speed of 76 km/h. Find the distance traveled by the car in 2 hours.",
+        "id": "aptitude_speed_distance_expert_5",
+        "text": "A police officer running at 12 km/h chases a thief running at 9 km/h who has a lead of 223 meters. After how many seconds will the officer catch the thief?",
         "options": [
-            "2 km",
-            "76 km",
-            "172 km",
-            "152 km"
+            "243 seconds",
+            "120 seconds",
+            "288 seconds",
+            "268 seconds"
         ],
-        "answer": "152",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 76 km/h * 2 hours = 152 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (76) by time (2) = 152.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "answer": "268 seconds",
+        "solution": "223 / [(3) × 5/18] = 268 seconds.",
+        "formula": "Time = Lead / Relative Speed in m/s.",
+        "shortcut": "223 / (5/6) = 268 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "speed_distance",
         "subject": "aptitude",
-        "topic": "speed_distance"
+        "patternType": 6,
+        "tags": [
+            "speed_distance",
+            "expert",
+            "dynamic"
+        ]
     },
-{
-    "id": "apt_sd_solved_2",
-    "text": "A train covers 480 km in 6 hours. What is its speed in km/h?",
-    "options": [
-        "70",
-        "75",
-        "80",
-        "85"
-    ],
-    "answer": "80",
-    "difficulty": "beginner",
-    "patternType": 1,
-    "solution": "Speed = Distance / Time = 480 / 6 = 80 km/h",
-    "formula": "\u2605 Basic Speed Formula: Speed = Distance / Time",
-    "shortcut": "\u26a1 Quick Trick: Speed = 480 km / 6 hrs = 80 km/h.",
-    "commonMistakes": "Dividing time by distance instead of distance by time.",
-    "subject": "aptitude",
-    "topic": "speed_distance"
-},
-{
-    "id": "apt_sd_solved_14",
-    "text": "A 200 m long train passes a 300 m bridge at 60 km/h. What is the time to cross?",
-    "options": [
-        "28 sec",
-        "29 sec",
-        "30 sec",
-        "32 sec"
-    ],
-    "answer": "30 sec",
-    "difficulty": "beginner",
-    "patternType": 2,
-    "solution": "Speed = 60 km/h = 60 \u00d7 5/18 = 50/3 m/s. Total distance = 200 + 300 = 500 m. Time = 500 \u00f7 (50/3) = 30 seconds.",
-    "formula": "Time = Total Length / Speed (in m/s)",
-    "shortcut": "Convert 60 km/h to m/s by multiplying with 5/18 first.",
-    "commonMistakes": "Forgetting to add the train length to the bridge length.",
-    "subject": "aptitude",
-    "topic": "speed_distance"
-},
-{
-    "id": "apt_sd_solved_20",
-    "text": "A boat goes 36 km upstream in 3 hours and 54 km downstream in 3 hours. Find the speed of the current.",
-    "options": [
-        "2 km/h",
-        "3 km/h",
-        "4 km/h",
-        "5 km/h"
-    ],
-    "answer": "3 km/h",
-    "difficulty": "beginner",
-    "patternType": 3,
-    "solution": "Upstream speed U = 36/3 = 12 km/h. Downstream speed D = 54/3 = 18 km/h. Current speed = (D - U)/2 = (18 - 12)/2 = 3 km/h.",
-    "formula": "\u2605 Boats & Streams Formula: Current Speed = (Downstream Speed - Upstream Speed) / 2",
-    "shortcut": "\u26a1 Quick Trick: Upstream = 36/3 = 12. Downstream = 54/3 = 18. Current = (18 - 12) / 2 = 3 km/h.",
-    "commonMistakes": "Adding speeds instead of subtracting when calculating current speed.",
-    "subject": "aptitude",
-    "topic": "speed_distance"
-},
-{
-    "id": "apt_sd_solved_88",
-    "text": "In a 100m race, A beats B by 10m and B beats C by 10m. By how many meters does A beat C?",
-    "options": [
-        "19m",
-        "20m",
-        "18m",
-        "21m"
-    ],
-    "answer": "19m",
-    "difficulty": "intermediate",
-    "patternType": 4,
-    "solution": "Ratio A:B = 100:90. Ratio B:C = 100:90. A:C = (100/90) \u00d7 (100/90) = 100/81. Distance C covers when A covers 100m is 81m. A beats C by 100 - 81 = 19m.",
-    "formula": "\u2605 Race Ratio Formula: Speed Ratio A:B = 100:90, B:C = 100:90",
-    "shortcut": "\u26a1 Quick Trick: C runs 90% of B's 90m = 81m. A beats C by 100 - 81 = 19m.",
-    "commonMistakes": "Simply adding 10m + 10m = 20m.",
-    "subject": "aptitude",
-    "topic": "speed_distance"
-}
-,
-{
-    "id": "apt_sd_solved_2",
-    "text": "A train covers 480 km in 6 hours. What is its speed in km/h?",
-    "options": [
-        "70",
-        "75",
-        "80",
-        "85"
-    ],
-    "answer": "80",
-    "difficulty": "beginner",
-    "patternType": 1,
-    "solution": "Speed = Distance / Time = 480 / 6 = 80 km/h.",
-    "formula": "Speed = Distance / Time",
-    "shortcut": "Divide 480 by 6 directly = 80 km/h.",
-    "commonMistakes": "Multiplying distance by time instead of dividing.",
-    "subject": "aptitude",
-    "topic": "speed_distance"
-},
-{
-    "id": "apt_sd_solved_20",
-    "text": "A boat goes 36 km upstream in 3 hours and 54 km downstream in 3 hours. Find the speed of current.",
-    "options": [
-        "2 km/h",
-        "3 km/h",
-        "4 km/h",
-        "5 km/h"
-    ],
-    "answer": "3 km/h",
-    "difficulty": "intermediate",
-    "patternType": 2,
-    "solution": "Upstream Speed U = 36 / 3 = 12 km/h.\nDownstream Speed D = 54 / 3 = 18 km/h.\nCurrent Speed = (D - U) / 2 = (18 - 12) / 2 = 3 km/h.",
-    "formula": "Speed of Current = (Downstream Speed - Upstream Speed) / 2",
-    "shortcut": "Current = (18 - 12) / 2 = 3 km/h.",
-    "commonMistakes": "Adding downstream and upstream speed instead of taking half their difference.",
-    "subject": "aptitude",
-    "topic": "speed_distance"
-},
-{
-    "id": "apt_sd_solved_88",
-    "text": "In a 100m race, A beats B by 10m and B beats C by 10m. By how many meters does A beat C?",
-    "options": [
-        "19m",
-        "20m",
-        "18m",
-        "21m"
-    ],
-    "answer": "19m",
-    "difficulty": "intermediate",
-    "patternType": 3,
-    "solution": "When A runs 100m, B runs 90m. Ratio A:B = 100:90.\nWhen B runs 100m, C runs 90m. Ratio B:C = 100:90.\nA:C = (100/90) \u00d7 (100/90) = 100/81. When A reaches 100m, C is at 81m. Distance A beats C = 100 - 81 = 19m.",
-    "formula": "Distance ratio product: (A/B) \u00d7 (B/C) = A/C",
-    "shortcut": "C runs 90% of 90m = 81m. A beats C by 100 - 81 = 19m.",
-    "commonMistakes": "Assuming 10 + 10 = 20m without taking ratio of B's completed distance.",
-    "subject": "aptitude",
-    "topic": "speed_distance"
-}
+    {
+        "id": "aptitude_speed_distance_expert_6",
+        "text": "A police officer running at 14 km/h chases a thief running at 11 km/h who has a lead of 230 meters. After how many seconds will the officer catch the thief?",
+        "options": [
+            "296 seconds",
+            "276 seconds",
+            "120 seconds",
+            "251 seconds"
+        ],
+        "answer": "276 seconds",
+        "solution": "230 / [(3) × 5/18] = 276 seconds.",
+        "formula": "Time = Lead / Relative Speed in m/s.",
+        "shortcut": "230 / (5/6) = 276 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "speed_distance",
+        "subject": "aptitude",
+        "patternType": 1,
+        "tags": [
+            "speed_distance",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_speed_distance_expert_7",
+        "text": "A police officer running at 16 km/h chases a thief running at 13 km/h who has a lead of 160 meters. After how many seconds will the officer catch the thief?",
+        "options": [
+            "192 seconds",
+            "212 seconds",
+            "167 seconds",
+            "120 seconds"
+        ],
+        "answer": "192 seconds",
+        "solution": "160 / [(3) × 5/18] = 192 seconds.",
+        "formula": "Time = Lead / Relative Speed in m/s.",
+        "shortcut": "160 / (5/6) = 192 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "speed_distance",
+        "subject": "aptitude",
+        "patternType": 2,
+        "tags": [
+            "speed_distance",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_speed_distance_expert_8",
+        "text": "A police officer running at 14 km/h chases a thief running at 11 km/h who has a lead of 151 meters. After how many seconds will the officer catch the thief?",
+        "options": [
+            "181 seconds",
+            "120 seconds",
+            "156 seconds",
+            "201 seconds"
+        ],
+        "answer": "181 seconds",
+        "solution": "151 / [(3) × 5/18] = 181 seconds.",
+        "formula": "Time = Lead / Relative Speed in m/s.",
+        "shortcut": "151 / (5/6) = 181 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "speed_distance",
+        "subject": "aptitude",
+        "patternType": 3,
+        "tags": [
+            "speed_distance",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_speed_distance_expert_9",
+        "text": "A police officer running at 16 km/h chases a thief running at 13 km/h who has a lead of 198 meters. After how many seconds will the officer catch the thief?",
+        "options": [
+            "258 seconds",
+            "238 seconds",
+            "120 seconds",
+            "213 seconds"
+        ],
+        "answer": "238 seconds",
+        "solution": "198 / [(3) × 5/18] = 238 seconds.",
+        "formula": "Time = Lead / Relative Speed in m/s.",
+        "shortcut": "198 / (5/6) = 238 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "speed_distance",
+        "subject": "aptitude",
+        "patternType": 4,
+        "tags": [
+            "speed_distance",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_speed_distance_expert_10",
+        "text": "A police officer running at 13 km/h chases a thief running at 10 km/h who has a lead of 105 meters. After how many seconds will the officer catch the thief?",
+        "options": [
+            "146 seconds",
+            "126 seconds",
+            "120 seconds",
+            "101 seconds"
+        ],
+        "answer": "126 seconds",
+        "solution": "105 / [(3) × 5/18] = 126 seconds.",
+        "formula": "Time = Lead / Relative Speed in m/s.",
+        "shortcut": "105 / (5/6) = 126 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "speed_distance",
+        "subject": "aptitude",
+        "patternType": 5,
+        "tags": [
+            "speed_distance",
+            "expert",
+            "dynamic"
+        ]
+    }
 ];

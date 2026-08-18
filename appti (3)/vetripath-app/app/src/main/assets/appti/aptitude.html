@@ -250,61 +250,86 @@
 
                 <div class="edu-topic-grid">
 
-                    <!-- TOPIC 1: NUMBER SYSTEM -->
+                    <!-- TOPIC 1: NUMBER SYSTEM & NUMBER SERIES -->
                     <article class="edu-topic-card" id="guide-numbers">
                         <span class="edu-topic-badge"><i class="fa-solid fa-hashtag"></i> Chapter 01</span>
-                        <h3 class="edu-topic-title">1. Number System &amp; Divisibility Rules</h3>
+                        <h3 class="edu-topic-title">1. Number System, Divisibility &amp; Number Series Patterns</h3>
                         <p class="edu-topic-desc">
-                            The Number System is the bedrock of quantitative reasoning. It deals with natural numbers, integers, prime numbers, co-primes, divisibility properties, unit digits of exponential powers, and remainder theorems (Euler's totient and Wilson's theorem).
+                            The Number System is the bedrock of quantitative reasoning, covering classifications, divisibility rules, unit digit cyclicity, remainder theorems, and <strong>Number Series patterns</strong> (Arithmetic/Geometric progressions, second-order differences, alternating operations, cubes/squares, triangular numbers, digit operations, and wrong number identification).
                         </p>
 
                         <div class="edu-formula-box">
-                            <div class="edu-formula-title"><i class="fa-solid fa-square-root-variable"></i> Key Formulas &amp; Rules</div>
+                            <div class="edu-formula-title"><i class="fa-solid fa-square-root-variable"></i> Key Number System &amp; Series Formulas</div>
                             <ul class="edu-formula-list">
-                                <li><strong>Divisibility by 3 &amp; 9:</strong> Sum of digits must be divisible by 3 or 9.</li>
-                                <li><strong>Divisibility by 4 &amp; 8:</strong> Last 2 digits (for 4) or last 3 digits (for 8) must be divisible.</li>
-                                <li><strong>Divisibility by 11:</strong> |(Sum of odd-place digits) - (Sum of even-place digits)| = 0 or a multiple of 11.</li>
-                                <li><strong>Unit Digit Cyclicity:</strong> 2, 3, 7, 8 repeat in cycles of 4; 4 and 9 repeat in cycles of 2; 0, 1, 5, 6 have cyclicity of 1.</li>
-                                <li><strong>Sum of first <em>n</em> natural numbers:</strong> <em>S<sub>n</sub></em> = [<em>n</em>(<em>n</em> + 1)] / 2.</li>
+                                <li><strong>Divisibility Rules:</strong> 3 &amp; 9 (sum of digits), 4 &amp; 8 (last 2 or 3 digits), 11 (|(Sum<sub>odd</sub>) - (Sum<sub>even</sub>)| = 0 or 11<em>k</em>).</li>
+                                <li><strong>Unit Digit Cyclicity:</strong> 2, 3, 7, 8 repeat in cycles of 4; 4, 9 repeat in cycles of 2; 0, 1, 5, 6 repeat in cycles of 1.</li>
+                                <li><strong>Pattern 1 (AP Series):</strong> <em>a<sub>n</sub></em> = <em>a</em> + (<em>n</em> - 1)<em>d</em>; <em>S<sub>n</sub></em> = [<em>n</em>/2][2<em>a</em> + (<em>n</em> - 1)<em>d</em>].</li>
+                                <li><strong>Pattern 2 (Difference Series):</strong> Differences between consecutive terms increase/decrease by a constant <em>d<sub>n</sub></em> = <em>d</em><sub>1</sub> + (<em>n</em> - 1)<em>c</em>.</li>
+                                <li><strong>Pattern 3 (GP &amp; Multiplier Series):</strong> <em>a<sub>n</sub></em> = <em>a</em> &times; <em>r</em><sup><em>n</em>-1</sup> or alternating multipliers &times;2, &times;1.5, &times;2...</li>
+                                <li><strong>Pattern 4 (Alternating Operations):</strong> Alternating operations (+<em>a</em>, &times;<em>b</em>, +<em>a</em>, &times;<em>b</em>) or (&times;<em>n</em> + <em>n</em>, &times;<em>n</em> - <em>n</em>).</li>
+                                <li><strong>Pattern 5 &amp; 6 (Powers &amp; Triangular Numbers):</strong> <em>T<sub>n</sub></em> = <em>n</em><sup>2</sup>, <em>n</em><sup>3</sup>, <em>n</em><sup>3</sup> - <em>n</em><sup>2</sup>, and Triangular Number <em>T<sub>n</sub></em> = [<em>n</em>(<em>n</em> + 1)] / 2.</li>
+                                <li><strong>Pattern 7 &amp; 8 (Digit Ops &amp; Prime Differences):</strong> <em>T<sub>n</sub></em> = (Product of digits of <em>T</em><sub><em>n</em>-1</sub>) + 1; or differences are consecutive primes (2, 3, 5, 7, 11...).</li>
+                                <li><strong>Pattern 9 &amp; 10 (Percentages &amp; Higher-Order):</strong> Alternating percentage shifts (&plusmn;10%); 3rd order difference &Delta;<sup>3</sup> is constant for cubic series.</li>
                             </ul>
                         </div>
 
                         <div class="example-card">
                             <div class="example-header">
-                                <span><i class="fa-solid fa-lightbulb" style="color: var(--warning);"></i> <strong>Solved Example</strong></span>
-                                <span class="example-badge">Unit Digit</span>
+                                <span><i class="fa-solid fa-lightbulb" style="color: var(--warning);"></i> <strong>Solved Example 1: Multiplier &amp; Product Sum</strong></span>
+                                <span class="example-badge">Missing Term</span>
                             </div>
                             <div class="example-question">
-                                <strong>Problem:</strong> What is the unit digit of the expression 7<sup>105</sup> &times; 3<sup>58</sup>?
+                                <strong>Problem:</strong> What number should come in place of question mark (?) in: 3, 4, 10, 33, 136, 685, ?
                             </div>
                             <div class="example-solution-steps">
                                 <div class="example-step-item">
                                     <span class="example-step-num">1</span>
-                                    <div>Find cyclicity of 7 (period 4): Divide exponent 105 by 4 &rarr; 105 = 4 &times; 26 + 1. Remainder = 1. Therefore, unit digit of 7<sup>105</sup> = 7<sup>1</sup> = 7.</div>
+                                    <div>Analyze the progression step-by-step: 3 &times; 1 + 1 = 4; 4 &times; 2 + 2 = 10; 10 &times; 3 + 3 = 33.</div>
                                 </div>
                                 <div class="example-step-item">
                                     <span class="example-step-num">2</span>
-                                    <div>Find cyclicity of 3 (period 4): Divide exponent 58 by 4 &rarr; 58 = 4 &times; 14 + 2. Remainder = 2. Therefore, unit digit of 3<sup>58</sup> = 3<sup>2</sup> = 9.</div>
+                                    <div>Continue verifying the pattern: 33 &times; 4 + 4 = 136; 136 &times; 5 + 5 = 685.</div>
                                 </div>
                                 <div class="example-step-item">
                                     <span class="example-step-num">3</span>
-                                    <div>Multiply unit digits: 7 &times; 9 = 63. The resulting unit digit is 3.</div>
+                                    <div>Compute next term: 685 &times; 6 + 6 = 4110 + 6 = 4116.</div>
                                 </div>
                             </div>
-                            <div class="example-final-ans"><i class="fa-solid fa-check-circle"></i> Final Answer: 3</div>
+                            <div class="example-final-ans"><i class="fa-solid fa-check-circle"></i> Final Answer: 4116</div>
+                        </div>
+
+                        <div class="example-card" style="margin-top: 1rem;">
+                            <div class="example-header">
+                                <span><i class="fa-solid fa-lightbulb" style="color: var(--warning);"></i> <strong>Solved Example 2: Wrong Term Identification</strong></span>
+                                <span class="example-badge">Bank PO Pattern</span>
+                            </div>
+                            <div class="example-question">
+                                <strong>Problem:</strong> Find the wrong number in the series: 529, 841, 961, 1296, 1681, 1849, 2209.
+                            </div>
+                            <div class="example-solution-steps">
+                                <div class="example-step-item">
+                                    <span class="example-step-num">1</span>
+                                    <div>Express terms as squares: 529 = 23<sup>2</sup>, 841 = 29<sup>2</sup>, 961 = 31<sup>2</sup>, 1296 = 36<sup>2</sup>, 1681 = 41<sup>2</sup>, 1849 = 43<sup>2</sup>, 2209 = 47<sup>2</sup>.</div>
+                                </div>
+                                <div class="example-step-item">
+                                    <span class="example-step-num">2</span>
+                                    <div>Notice the base numbers (23, 29, 31, 37, 41, 43, 47) must all be prime numbers. 36 is composite! The correct term should be 37<sup>2</sup> = 1369.</div>
+                                </div>
+                            </div>
+                            <div class="example-final-ans"><i class="fa-solid fa-check-circle"></i> Final Answer: 1296 (Should be 1369)</div>
                         </div>
 
                         <div class="edu-callout edu-callout-mistake">
                             <i class="fa-solid fa-triangle-exclamation edu-callout-icon"></i>
                             <div>
-                                <strong>Common Mistake:</strong> Confusing a remainder of 0 with power 0. When the exponent is exactly divisible by 4 (remainder 0), use power 4 (e.g., 7<sup>4</sup> &rarr; unit digit 1), not 7<sup>0</sup> = 1.
+                                <strong>Common Mistake:</strong> Jumping to complex exponent formulas before computing first-order and second-order differences. Over 80% of competitive series can be cracked by taking consecutive differences &Delta; = <em>T</em><sub><em>n</em></sub> - <em>T</em><sub><em>n</em>-1</sub>.
                             </div>
                         </div>
 
                         <div class="edu-callout edu-callout-tip">
                             <i class="fa-solid fa-bolt edu-callout-icon"></i>
                             <div>
-                                <strong>Speed Tip:</strong> To check divisibility by composite numbers like 12, 15, 18, check co-prime factors (e.g., for 12, check both 3 and 4; for 18, check 2 and 9).
+                                <strong>Speed Tip for Wrong Number Series:</strong> When one number in a series is incorrect, it will create TWO incorrect differences in the first difference row. The incorrect number lies right between those two faulty differences!
                             </div>
                         </div>
                     </article>

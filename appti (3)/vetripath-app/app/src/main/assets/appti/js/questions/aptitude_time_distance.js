@@ -1,973 +1,1303 @@
 if (!window.TOPIC_QUESTIONS) window.TOPIC_QUESTIONS = {};
 window.TOPIC_QUESTIONS['aptitude_time_distance'] = [
     {
-        "id": "apt_time_distance_1",
-        "text": "A car travels at a constant speed of 54 km/h. Find the distance traveled by the car in 5 hours.",
+        "id": "aptitude_time_distance_beginner_1",
+        "text": "A train travels at a speed of 72 km/h for 2 hours. What total distance does it cover?",
         "options": [
-            "54 km",
-            "270 km",
-            "5 km",
-            "290 km"
+            "74 km",
+            "174 km",
+            "124 km",
+            "144 km"
         ],
-        "answer": "270",
+        "answer": "144 km",
+        "solution": "72 × 2 = 144 km.",
+        "formula": "Distance = Speed × Time.",
+        "shortcut": "72 × 2 = 144 km.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
+        "topic": "time_distance",
+        "subject": "aptitude",
         "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 54 km/h * 5 hours = 270 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (54) by time (5) = 270.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
+        "tags": [
+            "time_distance",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_time_distance_2",
-        "text": "A car travels at a constant speed of 75 km/h. Find the distance traveled by the car in 4 hours.",
+        "id": "aptitude_time_distance_beginner_2",
+        "text": "A train travels at a speed of 45 km/h for 4 hours. What total distance does it cover?",
         "options": [
-            "320 km",
-            "75 km",
-            "4 km",
-            "300 km"
-        ],
-        "answer": "300",
-        "difficulty": "beginner",
-        "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 75 km/h * 4 hours = 300 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (75) by time (4) = 300.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_3",
-        "text": "A car travels at a constant speed of 76 km/h. Find the distance traveled by the car in 5 hours.",
-        "options": [
-            "400 km",
-            "76 km",
-            "380 km",
-            "5 km"
-        ],
-        "answer": "380",
-        "difficulty": "beginner",
-        "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 76 km/h * 5 hours = 380 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (76) by time (5) = 380.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_4",
-        "text": "A car travels at a constant speed of 66 km/h. Find the distance traveled by the car in 2 hours.",
-        "options": [
-            "152 km",
-            "132 km",
-            "2 km",
-            "66 km"
-        ],
-        "answer": "132",
-        "difficulty": "beginner",
-        "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 66 km/h * 2 hours = 132 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (66) by time (2) = 132.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_5",
-        "text": "A car travels at a constant speed of 64 km/h. Find the distance traveled by the car in 5 hours.",
-        "options": [
-            "320 km",
-            "64 km",
-            "5 km",
-            "340 km"
-        ],
-        "answer": "320",
-        "difficulty": "beginner",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 64 km/h * 5 hours = 320 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (64) by time (5) = 320.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_6",
-        "text": "A car travels at a constant speed of 52 km/h. Find the distance traveled by the car in 5 hours.",
-        "options": [
-            "5 km",
-            "52 km",
-            "280 km",
-            "260 km"
-        ],
-        "answer": "260",
-        "difficulty": "beginner",
-        "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 52 km/h * 5 hours = 260 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (52) by time (5) = 260.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_7",
-        "text": "A car travels at a constant speed of 58 km/h. Find the distance traveled by the car in 3 hours.",
-        "options": [
-            "3 km",
-            "194 km",
-            "58 km",
-            "174 km"
-        ],
-        "answer": "174",
-        "difficulty": "beginner",
-        "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 58 km/h * 3 hours = 174 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (58) by time (3) = 174.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_8",
-        "text": "A car travels at a constant speed of 61 km/h. Find the distance traveled by the car in 5 hours.",
-        "options": [
-            "325 km",
-            "5 km",
-            "61 km",
-            "305 km"
-        ],
-        "answer": "305",
-        "difficulty": "beginner",
-        "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 61 km/h * 5 hours = 305 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (61) by time (5) = 305.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_9",
-        "text": "A car travels at a constant speed of 49 km/h. Find the distance traveled by the car in 5 hours.",
-        "options": [
-            "5 km",
-            "265 km",
-            "245 km",
+            "210 km",
+            "180 km",
+            "160 km",
             "49 km"
         ],
-        "answer": "245",
+        "answer": "180 km",
+        "solution": "45 × 4 = 180 km.",
+        "formula": "Distance = Speed × Time.",
+        "shortcut": "45 × 4 = 180 km.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 49 km/h * 5 hours = 245 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (49) by time (5) = 245.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "topic": "time_distance",
         "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_10",
-        "text": "A car travels at a constant speed of 68 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "272 km",
-            "292 km",
-            "68 km",
-            "4 km"
-        ],
-        "answer": "272",
-        "difficulty": "beginner",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 68 km/h * 4 hours = 272 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (68) by time (4) = 272.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_11",
-        "text": "A car travels at a constant speed of 73 km/h. Find the distance traveled by the car in 2 hours.",
-        "options": [
-            "146 km",
-            "73 km",
-            "2 km",
-            "166 km"
-        ],
-        "answer": "146",
-        "difficulty": "easy",
-        "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 73 km/h * 2 hours = 146 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (73) by time (2) = 146.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_12",
-        "text": "A car travels at a constant speed of 64 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "276 km",
-            "4 km",
-            "256 km",
-            "64 km"
-        ],
-        "answer": "256",
-        "difficulty": "easy",
         "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 64 km/h * 4 hours = 256 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (64) by time (4) = 256.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
+        "tags": [
+            "time_distance",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_time_distance_13",
-        "text": "A car travels at a constant speed of 66 km/h. Find the distance traveled by the car in 4 hours.",
+        "id": "aptitude_time_distance_beginner_3",
+        "text": "A train travels at a speed of 49 km/h for 3 hours. What total distance does it cover?",
         "options": [
-            "284 km",
-            "4 km",
-            "264 km",
-            "66 km"
-        ],
-        "answer": "264",
-        "difficulty": "easy",
-        "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 66 km/h * 4 hours = 264 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (66) by time (4) = 264.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_14",
-        "text": "A car travels at a constant speed of 54 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "236 km",
-            "54 km",
-            "216 km",
-            "4 km"
-        ],
-        "answer": "216",
-        "difficulty": "easy",
-        "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 54 km/h * 4 hours = 216 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (54) by time (4) = 216.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_15",
-        "text": "A car travels at a constant speed of 70 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "4 km",
-            "280 km",
-            "300 km",
-            "70 km"
-        ],
-        "answer": "280",
-        "difficulty": "easy",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 70 km/h * 4 hours = 280 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (70) by time (4) = 280.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_16",
-        "text": "A car travels at a constant speed of 72 km/h. Find the distance traveled by the car in 5 hours.",
-        "options": [
-            "72 km",
-            "360 km",
-            "5 km",
-            "380 km"
-        ],
-        "answer": "360",
-        "difficulty": "easy",
-        "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 72 km/h * 5 hours = 360 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (72) by time (5) = 360.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_17",
-        "text": "A car travels at a constant speed of 58 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "58 km",
-            "4 km",
-            "252 km",
-            "232 km"
-        ],
-        "answer": "232",
-        "difficulty": "easy",
-        "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 58 km/h * 4 hours = 232 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (58) by time (4) = 232.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_18",
-        "text": "A car travels at a constant speed of 74 km/h. Find the distance traveled by the car in 3 hours.",
-        "options": [
-            "242 km",
-            "74 km",
-            "222 km",
-            "3 km"
-        ],
-        "answer": "222",
-        "difficulty": "easy",
-        "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 74 km/h * 3 hours = 222 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (74) by time (3) = 222.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_19",
-        "text": "A car travels at a constant speed of 47 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "47 km",
-            "188 km",
-            "208 km",
-            "4 km"
-        ],
-        "answer": "188",
-        "difficulty": "easy",
-        "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 47 km/h * 4 hours = 188 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (47) by time (4) = 188.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_20",
-        "text": "A car travels at a constant speed of 52 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "228 km",
-            "208 km",
             "52 km",
-            "4 km"
+            "177 km",
+            "127 km",
+            "147 km"
         ],
-        "answer": "208",
-        "difficulty": "easy",
+        "answer": "147 km",
+        "solution": "49 × 3 = 147 km.",
+        "formula": "Distance = Speed × Time.",
+        "shortcut": "49 × 3 = 147 km.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
+        "difficulty": "beginner",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 4,
+        "tags": [
+            "time_distance",
+            "beginner",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_beginner_4",
+        "text": "A train travels at a speed of 56 km/h for 4 hours. What total distance does it cover?",
+        "options": [
+            "224 km",
+            "60 km",
+            "254 km",
+            "204 km"
+        ],
+        "answer": "224 km",
+        "solution": "56 × 4 = 224 km.",
+        "formula": "Distance = Speed × Time.",
+        "shortcut": "56 × 4 = 224 km.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
+        "difficulty": "beginner",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 5,
+        "tags": [
+            "time_distance",
+            "beginner",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_beginner_5",
+        "text": "A train travels at a speed of 47 km/h for 3 hours. What total distance does it cover?",
+        "options": [
+            "141 km",
+            "171 km",
+            "121 km",
+            "50 km"
+        ],
+        "answer": "141 km",
+        "solution": "47 × 3 = 141 km.",
+        "formula": "Distance = Speed × Time.",
+        "shortcut": "47 × 3 = 141 km.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
+        "difficulty": "beginner",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 6,
+        "tags": [
+            "time_distance",
+            "beginner",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_beginner_6",
+        "text": "A train travels at a speed of 52 km/h for 3 hours. What total distance does it cover?",
+        "options": [
+            "186 km",
+            "55 km",
+            "156 km",
+            "136 km"
+        ],
+        "answer": "156 km",
+        "solution": "52 × 3 = 156 km.",
+        "formula": "Distance = Speed × Time.",
+        "shortcut": "52 × 3 = 156 km.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
+        "difficulty": "beginner",
+        "topic": "time_distance",
+        "subject": "aptitude",
         "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 52 km/h * 4 hours = 208 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (52) by time (4) = 208.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
+        "tags": [
+            "time_distance",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_time_distance_21",
-        "text": "A car travels at a constant speed of 80 km/h. Find the distance traveled by the car in 3 hours.",
+        "id": "aptitude_time_distance_beginner_7",
+        "text": "A train travels at a speed of 73 km/h for 4 hours. What total distance does it cover?",
         "options": [
-            "240 km",
-            "80 km",
-            "260 km",
-            "3 km"
-        ],
-        "answer": "240",
-        "difficulty": "medium",
-        "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 80 km/h * 3 hours = 240 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (80) by time (3) = 240.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_22",
-        "text": "A car travels at a constant speed of 75 km/h. Find the distance traveled by the car in 3 hours.",
-        "options": [
-            "75 km",
-            "3 km",
-            "245 km",
-            "225 km"
-        ],
-        "answer": "225",
-        "difficulty": "medium",
-        "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 75 km/h * 3 hours = 225 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (75) by time (3) = 225.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_23",
-        "text": "A car travels at a constant speed of 63 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "4 km",
-            "63 km",
-            "252 km",
+            "292 km",
+            "77 km",
+            "322 km",
             "272 km"
         ],
-        "answer": "252",
-        "difficulty": "medium",
-        "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 63 km/h * 4 hours = 252 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (63) by time (4) = 252.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "answer": "292 km",
+        "solution": "73 × 4 = 292 km.",
+        "formula": "Distance = Speed × Time.",
+        "shortcut": "73 × 4 = 292 km.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
+        "difficulty": "beginner",
+        "topic": "time_distance",
         "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_24",
-        "text": "A car travels at a constant speed of 53 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "53 km",
-            "4 km",
-            "212 km",
-            "232 km"
-        ],
-        "answer": "212",
-        "difficulty": "medium",
-        "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 53 km/h * 4 hours = 212 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (53) by time (4) = 212.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_25",
-        "text": "A car travels at a constant speed of 59 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "59 km",
-            "4 km",
-            "236 km",
-            "256 km"
-        ],
-        "answer": "236",
-        "difficulty": "medium",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 59 km/h * 4 hours = 236 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (59) by time (4) = 236.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_26",
-        "text": "A car travels at a constant speed of 53 km/h. Find the distance traveled by the car in 5 hours.",
-        "options": [
-            "285 km",
-            "265 km",
-            "5 km",
-            "53 km"
-        ],
-        "answer": "265",
-        "difficulty": "medium",
         "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 53 km/h * 5 hours = 265 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (53) by time (5) = 265.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
+        "tags": [
+            "time_distance",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "apt_time_distance_27",
-        "text": "A car travels at a constant speed of 63 km/h. Find the distance traveled by the car in 2 hours.",
+        "id": "aptitude_time_distance_beginner_8",
+        "text": "A train travels at a speed of 70 km/h for 2 hours. What total distance does it cover?",
         "options": [
-            "126 km",
-            "63 km",
-            "2 km",
-            "146 km"
-        ],
-        "answer": "126",
-        "difficulty": "medium",
-        "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 63 km/h * 2 hours = 126 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (63) by time (2) = 126.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_28",
-        "text": "A car travels at a constant speed of 65 km/h. Find the distance traveled by the car in 3 hours.",
-        "options": [
-            "195 km",
-            "215 km",
-            "65 km",
-            "3 km"
-        ],
-        "answer": "195",
-        "difficulty": "medium",
-        "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 65 km/h * 3 hours = 195 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (65) by time (3) = 195.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_29",
-        "text": "A car travels at a constant speed of 73 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "4 km",
-            "292 km",
-            "73 km",
-            "312 km"
-        ],
-        "answer": "292",
-        "difficulty": "medium",
-        "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 73 km/h * 4 hours = 292 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (73) by time (4) = 292.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_30",
-        "text": "A car travels at a constant speed of 75 km/h. Find the distance traveled by the car in 3 hours.",
-        "options": [
-            "3 km",
-            "225 km",
-            "245 km",
-            "75 km"
-        ],
-        "answer": "225",
-        "difficulty": "medium",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 75 km/h * 3 hours = 225 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (75) by time (3) = 225.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_31",
-        "text": "A car travels at a constant speed of 42 km/h. Find the distance traveled by the car in 2 hours.",
-        "options": [
-            "42 km",
-            "84 km",
-            "2 km",
-            "104 km"
-        ],
-        "answer": "84",
-        "difficulty": "intermediate",
-        "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 42 km/h * 2 hours = 84 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (42) by time (2) = 84.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_32",
-        "text": "A car travels at a constant speed of 43 km/h. Find the distance traveled by the car in 5 hours.",
-        "options": [
-            "215 km",
-            "235 km",
-            "5 km",
-            "43 km"
-        ],
-        "answer": "215",
-        "difficulty": "intermediate",
-        "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 43 km/h * 5 hours = 215 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (43) by time (5) = 215.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_33",
-        "text": "A car travels at a constant speed of 57 km/h. Find the distance traveled by the car in 5 hours.",
-        "options": [
-            "305 km",
-            "285 km",
-            "5 km",
-            "57 km"
-        ],
-        "answer": "285",
-        "difficulty": "intermediate",
-        "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 57 km/h * 5 hours = 285 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (57) by time (5) = 285.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_34",
-        "text": "A car travels at a constant speed of 56 km/h. Find the distance traveled by the car in 3 hours.",
-        "options": [
-            "168 km",
-            "188 km",
-            "3 km",
-            "56 km"
-        ],
-        "answer": "168",
-        "difficulty": "intermediate",
-        "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 56 km/h * 3 hours = 168 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (56) by time (3) = 168.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_35",
-        "text": "A car travels at a constant speed of 63 km/h. Find the distance traveled by the car in 5 hours.",
-        "options": [
-            "315 km",
-            "63 km",
-            "335 km",
-            "5 km"
-        ],
-        "answer": "315",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 63 km/h * 5 hours = 315 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (63) by time (5) = 315.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_36",
-        "text": "A car travels at a constant speed of 66 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "66 km",
-            "4 km",
-            "264 km",
-            "284 km"
-        ],
-        "answer": "264",
-        "difficulty": "intermediate",
-        "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 66 km/h * 4 hours = 264 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (66) by time (4) = 264.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_37",
-        "text": "A car travels at a constant speed of 77 km/h. Find the distance traveled by the car in 5 hours.",
-        "options": [
-            "405 km",
-            "77 km",
-            "5 km",
-            "385 km"
-        ],
-        "answer": "385",
-        "difficulty": "intermediate",
-        "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 77 km/h * 5 hours = 385 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (77) by time (5) = 385.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_38",
-        "text": "A car travels at a constant speed of 77 km/h. Find the distance traveled by the car in 3 hours.",
-        "options": [
-            "77 km",
-            "231 km",
-            "3 km",
-            "251 km"
-        ],
-        "answer": "231",
-        "difficulty": "intermediate",
-        "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 77 km/h * 3 hours = 231 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (77) by time (3) = 231.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_39",
-        "text": "A car travels at a constant speed of 46 km/h. Find the distance traveled by the car in 5 hours.",
-        "options": [
-            "230 km",
-            "5 km",
-            "250 km",
-            "46 km"
-        ],
-        "answer": "230",
-        "difficulty": "intermediate",
-        "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 46 km/h * 5 hours = 230 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (46) by time (5) = 230.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_40",
-        "text": "A car travels at a constant speed of 70 km/h. Find the distance traveled by the car in 3 hours.",
-        "options": [
-            "70 km",
-            "3 km",
-            "230 km",
-            "210 km"
-        ],
-        "answer": "210",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 70 km/h * 3 hours = 210 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (70) by time (3) = 210.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_41",
-        "text": "A car travels at a constant speed of 40 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "160 km",
-            "180 km",
-            "40 km",
-            "4 km"
-        ],
-        "answer": "160",
-        "difficulty": "intermediate",
-        "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 40 km/h * 4 hours = 160 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (40) by time (4) = 160.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_42",
-        "text": "A car travels at a constant speed of 43 km/h. Find the distance traveled by the car in 2 hours.",
-        "options": [
-            "2 km",
-            "43 km",
-            "86 km",
-            "106 km"
-        ],
-        "answer": "86",
-        "difficulty": "intermediate",
-        "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 43 km/h * 2 hours = 86 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (43) by time (2) = 86.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_43",
-        "text": "A car travels at a constant speed of 74 km/h. Find the distance traveled by the car in 2 hours.",
-        "options": [
-            "74 km",
-            "148 km",
-            "168 km",
-            "2 km"
-        ],
-        "answer": "148",
-        "difficulty": "intermediate",
-        "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 74 km/h * 2 hours = 148 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (74) by time (2) = 148.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_44",
-        "text": "A car travels at a constant speed of 53 km/h. Find the distance traveled by the car in 3 hours.",
-        "options": [
-            "159 km",
-            "3 km",
-            "179 km",
-            "53 km"
-        ],
-        "answer": "159",
-        "difficulty": "intermediate",
-        "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 53 km/h * 3 hours = 159 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (53) by time (3) = 159.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_45",
-        "text": "A car travels at a constant speed of 43 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "43 km",
-            "4 km",
-            "192 km",
-            "172 km"
-        ],
-        "answer": "172",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 43 km/h * 4 hours = 172 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (43) by time (4) = 172.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_46",
-        "text": "A car travels at a constant speed of 80 km/h. Find the distance traveled by the car in 2 hours.",
-        "options": [
-            "160 km",
-            "2 km",
-            "80 km",
-            "180 km"
-        ],
-        "answer": "160",
-        "difficulty": "intermediate",
-        "patternType": 2,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 80 km/h * 2 hours = 160 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (80) by time (2) = 160.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_47",
-        "text": "A car travels at a constant speed of 43 km/h. Find the distance traveled by the car in 5 hours.",
-        "options": [
-            "43 km",
-            "235 km",
-            "215 km",
-            "5 km"
-        ],
-        "answer": "215",
-        "difficulty": "intermediate",
-        "patternType": 3,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 43 km/h * 5 hours = 215 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (43) by time (5) = 215.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_48",
-        "text": "A car travels at a constant speed of 52 km/h. Find the distance traveled by the car in 5 hours.",
-        "options": [
-            "260 km",
-            "280 km",
-            "5 km",
-            "52 km"
-        ],
-        "answer": "260",
-        "difficulty": "intermediate",
-        "patternType": 4,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 52 km/h * 5 hours = 260 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (52) by time (5) = 260.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_49",
-        "text": "A car travels at a constant speed of 51 km/h. Find the distance traveled by the car in 4 hours.",
-        "options": [
-            "204 km",
-            "51 km",
-            "4 km",
-            "224 km"
-        ],
-        "answer": "204",
-        "difficulty": "intermediate",
-        "patternType": 5,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 51 km/h * 4 hours = 204 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (51) by time (4) = 204.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
-        "subject": "aptitude",
-        "topic": "time_distance"
-    },
-    {
-        "id": "apt_time_distance_50",
-        "text": "A car travels at a constant speed of 75 km/h. Find the distance traveled by the car in 2 hours.",
-        "options": [
-            "2 km",
+            "72 km",
+            "120 km",
             "170 km",
-            "150 km",
-            "75 km"
+            "140 km"
         ],
-        "answer": "150",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Step 1: Distance = Speed * Time.\nStep 2: Distance = 75 km/h * 2 hours = 150 km.",
-        "formula": "Distance Formula: Distance = Speed * Time",
-        "shortcut": "Multiply speed (75) by time (2) = 150.",
-        "commonMistakes": "Incorrect unit conversion if time was given in minutes.",
+        "answer": "140 km",
+        "solution": "70 × 2 = 140 km.",
+        "formula": "Distance = Speed × Time.",
+        "shortcut": "70 × 2 = 140 km.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
+        "difficulty": "beginner",
+        "topic": "time_distance",
         "subject": "aptitude",
-        "topic": "time_distance"
+        "patternType": 3,
+        "tags": [
+            "time_distance",
+            "beginner",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_beginner_9",
+        "text": "A train travels at a speed of 78 km/h for 2 hours. What total distance does it cover?",
+        "options": [
+            "156 km",
+            "186 km",
+            "80 km",
+            "136 km"
+        ],
+        "answer": "156 km",
+        "solution": "78 × 2 = 156 km.",
+        "formula": "Distance = Speed × Time.",
+        "shortcut": "78 × 2 = 156 km.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
+        "difficulty": "beginner",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 4,
+        "tags": [
+            "time_distance",
+            "beginner",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_beginner_10",
+        "text": "A train travels at a speed of 69 km/h for 2 hours. What total distance does it cover?",
+        "options": [
+            "168 km",
+            "118 km",
+            "71 km",
+            "138 km"
+        ],
+        "answer": "138 km",
+        "solution": "69 × 2 = 138 km.",
+        "formula": "Distance = Speed × Time.",
+        "shortcut": "69 × 2 = 138 km.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
+        "difficulty": "beginner",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 5,
+        "tags": [
+            "time_distance",
+            "beginner",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_easy_1",
+        "text": "A train 274 meters long runs at 72 km/h. How many seconds will it take to pass a stationary telegraph pole?",
+        "options": [
+            "16.70 seconds",
+            "3.81 seconds",
+            "13.7 seconds",
+            "11.70 seconds"
+        ],
+        "answer": "13.7 seconds",
+        "solution": "274 / (72 × 5/18) = 13.7 seconds.",
+        "formula": "Time = Length / Speed in m/s.",
+        "shortcut": "274 / 20 = 13.7 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 2,
+        "tags": [
+            "time_distance",
+            "easy",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_easy_2",
+        "text": "A train 171 meters long runs at 54 km/h. How many seconds will it take to pass a stationary telegraph pole?",
+        "options": [
+            "3.17 seconds",
+            "11.4 seconds",
+            "14.40 seconds",
+            "9.40 seconds"
+        ],
+        "answer": "11.4 seconds",
+        "solution": "171 / (54 × 5/18) = 11.4 seconds.",
+        "formula": "Time = Length / Speed in m/s.",
+        "shortcut": "171 / 15 = 11.4 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 3,
+        "tags": [
+            "time_distance",
+            "easy",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_easy_3",
+        "text": "A train 171 meters long runs at 72 km/h. How many seconds will it take to pass a stationary telegraph pole?",
+        "options": [
+            "11.55 seconds",
+            "8.55 seconds",
+            "6.55 seconds",
+            "2.38 seconds"
+        ],
+        "answer": "8.55 seconds",
+        "solution": "171 / (72 × 5/18) = 8.55 seconds.",
+        "formula": "Time = Length / Speed in m/s.",
+        "shortcut": "171 / 20 = 8.55 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 4,
+        "tags": [
+            "time_distance",
+            "easy",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_easy_4",
+        "text": "A train 215 meters long runs at 54 km/h. How many seconds will it take to pass a stationary telegraph pole?",
+        "options": [
+            "14.33 seconds",
+            "17.33 seconds",
+            "12.33 seconds",
+            "3.98 seconds"
+        ],
+        "answer": "14.33 seconds",
+        "solution": "215 / (54 × 5/18) = 14.33 seconds.",
+        "formula": "Time = Length / Speed in m/s.",
+        "shortcut": "215 / 15 = 14.33 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 5,
+        "tags": [
+            "time_distance",
+            "easy",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_easy_5",
+        "text": "A train 186 meters long runs at 72 km/h. How many seconds will it take to pass a stationary telegraph pole?",
+        "options": [
+            "12.30 seconds",
+            "2.58 seconds",
+            "9.3 seconds",
+            "7.30 seconds"
+        ],
+        "answer": "9.3 seconds",
+        "solution": "186 / (72 × 5/18) = 9.3 seconds.",
+        "formula": "Time = Length / Speed in m/s.",
+        "shortcut": "186 / 20 = 9.3 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 6,
+        "tags": [
+            "time_distance",
+            "easy",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_easy_6",
+        "text": "A train 249 meters long runs at 72 km/h. How many seconds will it take to pass a stationary telegraph pole?",
+        "options": [
+            "12.45 seconds",
+            "3.46 seconds",
+            "10.45 seconds",
+            "15.45 seconds"
+        ],
+        "answer": "12.45 seconds",
+        "solution": "249 / (72 × 5/18) = 12.45 seconds.",
+        "formula": "Time = Length / Speed in m/s.",
+        "shortcut": "249 / 20 = 12.45 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 1,
+        "tags": [
+            "time_distance",
+            "easy",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_easy_7",
+        "text": "A train 133 meters long runs at 72 km/h. How many seconds will it take to pass a stationary telegraph pole?",
+        "options": [
+            "9.65 seconds",
+            "6.65 seconds",
+            "1.85 seconds",
+            "4.65 seconds"
+        ],
+        "answer": "6.65 seconds",
+        "solution": "133 / (72 × 5/18) = 6.65 seconds.",
+        "formula": "Time = Length / Speed in m/s.",
+        "shortcut": "133 / 20 = 6.65 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 2,
+        "tags": [
+            "time_distance",
+            "easy",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_easy_8",
+        "text": "A train 170 meters long runs at 90 km/h. How many seconds will it take to pass a stationary telegraph pole?",
+        "options": [
+            "4.80 seconds",
+            "9.80 seconds",
+            "6.8 seconds",
+            "1.89 seconds"
+        ],
+        "answer": "6.8 seconds",
+        "solution": "170 / (90 × 5/18) = 6.8 seconds.",
+        "formula": "Time = Length / Speed in m/s.",
+        "shortcut": "170 / 25 = 6.8 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 3,
+        "tags": [
+            "time_distance",
+            "easy",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_easy_9",
+        "text": "A train 280 meters long runs at 72 km/h. How many seconds will it take to pass a stationary telegraph pole?",
+        "options": [
+            "3.89 seconds",
+            "14 seconds",
+            "17.00 seconds",
+            "12.00 seconds"
+        ],
+        "answer": "14 seconds",
+        "solution": "280 / (72 × 5/18) = 14 seconds.",
+        "formula": "Time = Length / Speed in m/s.",
+        "shortcut": "280 / 20 = 14 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 4,
+        "tags": [
+            "time_distance",
+            "easy",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_easy_10",
+        "text": "A train 152 meters long runs at 36 km/h. How many seconds will it take to pass a stationary telegraph pole?",
+        "options": [
+            "18.20 seconds",
+            "15.2 seconds",
+            "4.22 seconds",
+            "13.20 seconds"
+        ],
+        "answer": "15.2 seconds",
+        "solution": "152 / (36 × 5/18) = 15.2 seconds.",
+        "formula": "Time = Length / Speed in m/s.",
+        "shortcut": "152 / 10 = 15.2 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 5,
+        "tags": [
+            "time_distance",
+            "easy",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_medium_1",
+        "text": "A train of length 200 m running at 72 km/h crosses a platform of length 173 m. Find the time taken in seconds.",
+        "options": [
+            "22.65 seconds",
+            "10.00 seconds",
+            "18.65 seconds",
+            "15.65 seconds"
+        ],
+        "answer": "18.65 seconds",
+        "solution": "(200 + 173) / 20 = 18.65 seconds.",
+        "formula": "Time = (Train Length + Platform Length) / Speed in m/s.",
+        "shortcut": "373 / 20 = 18.65 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 2,
+        "tags": [
+            "time_distance",
+            "medium",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_medium_2",
+        "text": "A train of length 195 m running at 72 km/h crosses a platform of length 187 m. Find the time taken in seconds.",
+        "options": [
+            "16.10 seconds",
+            "19.1 seconds",
+            "9.75 seconds",
+            "23.10 seconds"
+        ],
+        "answer": "19.1 seconds",
+        "solution": "(195 + 187) / 20 = 19.1 seconds.",
+        "formula": "Time = (Train Length + Platform Length) / Speed in m/s.",
+        "shortcut": "382 / 20 = 19.1 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 3,
+        "tags": [
+            "time_distance",
+            "medium",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_medium_3",
+        "text": "A train of length 230 m running at 72 km/h crosses a platform of length 172 m. Find the time taken in seconds.",
+        "options": [
+            "20.1 seconds",
+            "11.50 seconds",
+            "17.10 seconds",
+            "24.10 seconds"
+        ],
+        "answer": "20.1 seconds",
+        "solution": "(230 + 172) / 20 = 20.1 seconds.",
+        "formula": "Time = (Train Length + Platform Length) / Speed in m/s.",
+        "shortcut": "402 / 20 = 20.1 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 4,
+        "tags": [
+            "time_distance",
+            "medium",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_medium_4",
+        "text": "A train of length 152 m running at 72 km/h crosses a platform of length 229 m. Find the time taken in seconds.",
+        "options": [
+            "7.60 seconds",
+            "23.05 seconds",
+            "19.05 seconds",
+            "16.05 seconds"
+        ],
+        "answer": "19.05 seconds",
+        "solution": "(152 + 229) / 20 = 19.05 seconds.",
+        "formula": "Time = (Train Length + Platform Length) / Speed in m/s.",
+        "shortcut": "381 / 20 = 19.05 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 5,
+        "tags": [
+            "time_distance",
+            "medium",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_medium_5",
+        "text": "A train of length 282 m running at 72 km/h crosses a platform of length 249 m. Find the time taken in seconds.",
+        "options": [
+            "23.55 seconds",
+            "14.10 seconds",
+            "26.55 seconds",
+            "30.55 seconds"
+        ],
+        "answer": "26.55 seconds",
+        "solution": "(282 + 249) / 20 = 26.55 seconds.",
+        "formula": "Time = (Train Length + Platform Length) / Speed in m/s.",
+        "shortcut": "531 / 20 = 26.55 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 6,
+        "tags": [
+            "time_distance",
+            "medium",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_medium_6",
+        "text": "A train of length 172 m running at 72 km/h crosses a platform of length 103 m. Find the time taken in seconds.",
+        "options": [
+            "13.75 seconds",
+            "8.60 seconds",
+            "10.75 seconds",
+            "17.75 seconds"
+        ],
+        "answer": "13.75 seconds",
+        "solution": "(172 + 103) / 20 = 13.75 seconds.",
+        "formula": "Time = (Train Length + Platform Length) / Speed in m/s.",
+        "shortcut": "275 / 20 = 13.75 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 1,
+        "tags": [
+            "time_distance",
+            "medium",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_medium_7",
+        "text": "A train of length 188 m running at 72 km/h crosses a platform of length 205 m. Find the time taken in seconds.",
+        "options": [
+            "9.40 seconds",
+            "19.65 seconds",
+            "23.65 seconds",
+            "16.65 seconds"
+        ],
+        "answer": "19.65 seconds",
+        "solution": "(188 + 205) / 20 = 19.65 seconds.",
+        "formula": "Time = (Train Length + Platform Length) / Speed in m/s.",
+        "shortcut": "393 / 20 = 19.65 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 2,
+        "tags": [
+            "time_distance",
+            "medium",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_medium_8",
+        "text": "A train of length 179 m running at 72 km/h crosses a platform of length 158 m. Find the time taken in seconds.",
+        "options": [
+            "13.85 seconds",
+            "8.95 seconds",
+            "16.85 seconds",
+            "20.85 seconds"
+        ],
+        "answer": "16.85 seconds",
+        "solution": "(179 + 158) / 20 = 16.85 seconds.",
+        "formula": "Time = (Train Length + Platform Length) / Speed in m/s.",
+        "shortcut": "337 / 20 = 16.85 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 3,
+        "tags": [
+            "time_distance",
+            "medium",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_medium_9",
+        "text": "A train of length 216 m running at 72 km/h crosses a platform of length 138 m. Find the time taken in seconds.",
+        "options": [
+            "21.70 seconds",
+            "14.70 seconds",
+            "10.80 seconds",
+            "17.7 seconds"
+        ],
+        "answer": "17.7 seconds",
+        "solution": "(216 + 138) / 20 = 17.7 seconds.",
+        "formula": "Time = (Train Length + Platform Length) / Speed in m/s.",
+        "shortcut": "354 / 20 = 17.7 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 4,
+        "tags": [
+            "time_distance",
+            "medium",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_medium_10",
+        "text": "A train of length 185 m running at 72 km/h crosses a platform of length 154 m. Find the time taken in seconds.",
+        "options": [
+            "9.25 seconds",
+            "20.95 seconds",
+            "13.95 seconds",
+            "16.95 seconds"
+        ],
+        "answer": "16.95 seconds",
+        "solution": "(185 + 154) / 20 = 16.95 seconds.",
+        "formula": "Time = (Train Length + Platform Length) / Speed in m/s.",
+        "shortcut": "339 / 20 = 16.95 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 5,
+        "tags": [
+            "time_distance",
+            "medium",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_hard_1",
+        "text": "Two cars start at the same time from two stations 448 km apart and drive towards each other at speeds of 65 km/h and 68 km/h. After how many hours will they meet?",
+        "options": [
+            "4.57 hours",
+            "3.37 hours",
+            "2.57 hours",
+            "6.89 hours"
+        ],
+        "answer": "3.37 hours",
+        "solution": "448 / (65 + 68) = 3.37 hours.",
+        "formula": "Time = Distance / (S1 + S2).",
+        "shortcut": "448 / (65 + 68) = 3.37 hours.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 2,
+        "tags": [
+            "time_distance",
+            "hard",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_hard_2",
+        "text": "Two cars start at the same time from two stations 398 km apart and drive towards each other at speeds of 48 km/h and 60 km/h. After how many hours will they meet?",
+        "options": [
+            "3.69 hours",
+            "8.29 hours",
+            "4.89 hours",
+            "2.89 hours"
+        ],
+        "answer": "3.69 hours",
+        "solution": "398 / (48 + 60) = 3.69 hours.",
+        "formula": "Time = Distance / (S1 + S2).",
+        "shortcut": "398 / (48 + 60) = 3.69 hours.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 3,
+        "tags": [
+            "time_distance",
+            "hard",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_hard_3",
+        "text": "Two cars start at the same time from two stations 445 km apart and drive towards each other at speeds of 48 km/h and 68 km/h. After how many hours will they meet?",
+        "options": [
+            "3.84 hours",
+            "9.27 hours",
+            "5.04 hours",
+            "3.04 hours"
+        ],
+        "answer": "3.84 hours",
+        "solution": "445 / (48 + 68) = 3.84 hours.",
+        "formula": "Time = Distance / (S1 + S2).",
+        "shortcut": "445 / (48 + 68) = 3.84 hours.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 4,
+        "tags": [
+            "time_distance",
+            "hard",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_hard_4",
+        "text": "Two cars start at the same time from two stations 281 km apart and drive towards each other at speeds of 55 km/h and 58 km/h. After how many hours will they meet?",
+        "options": [
+            "5.11 hours",
+            "1.69 hours",
+            "3.69 hours",
+            "2.49 hours"
+        ],
+        "answer": "2.49 hours",
+        "solution": "281 / (55 + 58) = 2.49 hours.",
+        "formula": "Time = Distance / (S1 + S2).",
+        "shortcut": "281 / (55 + 58) = 2.49 hours.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 5,
+        "tags": [
+            "time_distance",
+            "hard",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_hard_5",
+        "text": "Two cars start at the same time from two stations 298 km apart and drive towards each other at speeds of 50 km/h and 63 km/h. After how many hours will they meet?",
+        "options": [
+            "1.84 hours",
+            "5.96 hours",
+            "2.64 hours",
+            "3.84 hours"
+        ],
+        "answer": "2.64 hours",
+        "solution": "298 / (50 + 63) = 2.64 hours.",
+        "formula": "Time = Distance / (S1 + S2).",
+        "shortcut": "298 / (50 + 63) = 2.64 hours.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 6,
+        "tags": [
+            "time_distance",
+            "hard",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_hard_6",
+        "text": "Two cars start at the same time from two stations 277 km apart and drive towards each other at speeds of 60 km/h and 69 km/h. After how many hours will they meet?",
+        "options": [
+            "4.62 hours",
+            "1.35 hours",
+            "3.35 hours",
+            "2.15 hours"
+        ],
+        "answer": "2.15 hours",
+        "solution": "277 / (60 + 69) = 2.15 hours.",
+        "formula": "Time = Distance / (S1 + S2).",
+        "shortcut": "277 / (60 + 69) = 2.15 hours.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 1,
+        "tags": [
+            "time_distance",
+            "hard",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_hard_7",
+        "text": "Two cars start at the same time from two stations 202 km apart and drive towards each other at speeds of 42 km/h and 66 km/h. After how many hours will they meet?",
+        "options": [
+            "4.81 hours",
+            "1.07 hours",
+            "3.07 hours",
+            "1.87 hours"
+        ],
+        "answer": "1.87 hours",
+        "solution": "202 / (42 + 66) = 1.87 hours.",
+        "formula": "Time = Distance / (S1 + S2).",
+        "shortcut": "202 / (42 + 66) = 1.87 hours.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 2,
+        "tags": [
+            "time_distance",
+            "hard",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_hard_8",
+        "text": "Two cars start at the same time from two stations 332 km apart and drive towards each other at speeds of 48 km/h and 72 km/h. After how many hours will they meet?",
+        "options": [
+            "2.77 hours",
+            "1.97 hours",
+            "3.97 hours",
+            "6.92 hours"
+        ],
+        "answer": "2.77 hours",
+        "solution": "332 / (48 + 72) = 2.77 hours.",
+        "formula": "Time = Distance / (S1 + S2).",
+        "shortcut": "332 / (48 + 72) = 2.77 hours.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 3,
+        "tags": [
+            "time_distance",
+            "hard",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_hard_9",
+        "text": "Two cars start at the same time from two stations 311 km apart and drive towards each other at speeds of 65 km/h and 64 km/h. After how many hours will they meet?",
+        "options": [
+            "4.78 hours",
+            "2.41 hours",
+            "3.61 hours",
+            "1.61 hours"
+        ],
+        "answer": "2.41 hours",
+        "solution": "311 / (65 + 64) = 2.41 hours.",
+        "formula": "Time = Distance / (S1 + S2).",
+        "shortcut": "311 / (65 + 64) = 2.41 hours.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 4,
+        "tags": [
+            "time_distance",
+            "hard",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_hard_10",
+        "text": "Two cars start at the same time from two stations 426 km apart and drive towards each other at speeds of 45 km/h and 53 km/h. After how many hours will they meet?",
+        "options": [
+            "5.55 hours",
+            "4.35 hours",
+            "3.55 hours",
+            "9.47 hours"
+        ],
+        "answer": "4.35 hours",
+        "solution": "426 / (45 + 53) = 4.35 hours.",
+        "formula": "Time = Distance / (S1 + S2).",
+        "shortcut": "426 / (45 + 53) = 4.35 hours.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 5,
+        "tags": [
+            "time_distance",
+            "hard",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_expert_1",
+        "text": "Two trains of lengths 147 m and 139 m run in the same direction on parallel tracks at 70 km/h and 34 km/h. How many seconds will the faster train take to completely pass the slower train?",
+        "options": [
+            "22.6 seconds",
+            "28.6 seconds",
+            "36.6 seconds",
+            "35 seconds"
+        ],
+        "answer": "28.6 seconds",
+        "solution": "(147 + 139) / (36 × 5/18) = 286 / 10 = 28.6 seconds.",
+        "formula": "Time = (L1 + L2) / [(S1 - S2) × 5/18].",
+        "shortcut": "(147 + 139) / 10 = 28.6 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 2,
+        "tags": [
+            "time_distance",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_expert_2",
+        "text": "Two trains of lengths 144 m and 146 m run in the same direction on parallel tracks at 70 km/h and 34 km/h. How many seconds will the faster train take to completely pass the slower train?",
+        "options": [
+            "37 seconds",
+            "23 seconds",
+            "35 seconds",
+            "29 seconds"
+        ],
+        "answer": "29 seconds",
+        "solution": "(144 + 146) / (36 × 5/18) = 290 / 10 = 29 seconds.",
+        "formula": "Time = (L1 + L2) / [(S1 - S2) × 5/18].",
+        "shortcut": "(144 + 146) / 10 = 29 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 3,
+        "tags": [
+            "time_distance",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_expert_3",
+        "text": "Two trains of lengths 163 m and 138 m run in the same direction on parallel tracks at 70 km/h and 34 km/h. How many seconds will the faster train take to completely pass the slower train?",
+        "options": [
+            "35 seconds",
+            "38.1 seconds",
+            "30.1 seconds",
+            "24.1 seconds"
+        ],
+        "answer": "30.1 seconds",
+        "solution": "(163 + 138) / (36 × 5/18) = 301 / 10 = 30.1 seconds.",
+        "formula": "Time = (L1 + L2) / [(S1 - S2) × 5/18].",
+        "shortcut": "(163 + 138) / 10 = 30.1 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 4,
+        "tags": [
+            "time_distance",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_expert_4",
+        "text": "Two trains of lengths 121 m and 169 m run in the same direction on parallel tracks at 70 km/h and 34 km/h. How many seconds will the faster train take to completely pass the slower train?",
+        "options": [
+            "35 seconds",
+            "29 seconds",
+            "23 seconds",
+            "37 seconds"
+        ],
+        "answer": "29 seconds",
+        "solution": "(121 + 169) / (36 × 5/18) = 290 / 10 = 29 seconds.",
+        "formula": "Time = (L1 + L2) / [(S1 - S2) × 5/18].",
+        "shortcut": "(121 + 169) / 10 = 29 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 5,
+        "tags": [
+            "time_distance",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_expert_5",
+        "text": "Two trains of lengths 190 m and 180 m run in the same direction on parallel tracks at 70 km/h and 34 km/h. How many seconds will the faster train take to completely pass the slower train?",
+        "options": [
+            "31 seconds",
+            "35 seconds",
+            "45 seconds",
+            "37 seconds"
+        ],
+        "answer": "37 seconds",
+        "solution": "(190 + 180) / (36 × 5/18) = 370 / 10 = 37 seconds.",
+        "formula": "Time = (L1 + L2) / [(S1 - S2) × 5/18].",
+        "shortcut": "(190 + 180) / 10 = 37 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 6,
+        "tags": [
+            "time_distance",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_expert_6",
+        "text": "Two trains of lengths 131 m and 102 m run in the same direction on parallel tracks at 70 km/h and 34 km/h. How many seconds will the faster train take to completely pass the slower train?",
+        "options": [
+            "31.3 seconds",
+            "23.3 seconds",
+            "35 seconds",
+            "17.3 seconds"
+        ],
+        "answer": "23.3 seconds",
+        "solution": "(131 + 102) / (36 × 5/18) = 233 / 10 = 23.3 seconds.",
+        "formula": "Time = (L1 + L2) / [(S1 - S2) × 5/18].",
+        "shortcut": "(131 + 102) / 10 = 23.3 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 1,
+        "tags": [
+            "time_distance",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_expert_7",
+        "text": "Two trains of lengths 140 m and 156 m run in the same direction on parallel tracks at 70 km/h and 34 km/h. How many seconds will the faster train take to completely pass the slower train?",
+        "options": [
+            "37.6 seconds",
+            "29.6 seconds",
+            "23.6 seconds",
+            "35 seconds"
+        ],
+        "answer": "29.6 seconds",
+        "solution": "(140 + 156) / (36 × 5/18) = 296 / 10 = 29.6 seconds.",
+        "formula": "Time = (L1 + L2) / [(S1 - S2) × 5/18].",
+        "shortcut": "(140 + 156) / 10 = 29.6 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 2,
+        "tags": [
+            "time_distance",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_expert_8",
+        "text": "Two trains of lengths 136 m and 131 m run in the same direction on parallel tracks at 70 km/h and 34 km/h. How many seconds will the faster train take to completely pass the slower train?",
+        "options": [
+            "20.7 seconds",
+            "26.7 seconds",
+            "35 seconds",
+            "34.7 seconds"
+        ],
+        "answer": "26.7 seconds",
+        "solution": "(136 + 131) / (36 × 5/18) = 267 / 10 = 26.7 seconds.",
+        "formula": "Time = (L1 + L2) / [(S1 - S2) × 5/18].",
+        "shortcut": "(136 + 131) / 10 = 26.7 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 3,
+        "tags": [
+            "time_distance",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_expert_9",
+        "text": "Two trains of lengths 155 m and 120 m run in the same direction on parallel tracks at 70 km/h and 34 km/h. How many seconds will the faster train take to completely pass the slower train?",
+        "options": [
+            "27.5 seconds",
+            "35.5 seconds",
+            "21.5 seconds",
+            "35 seconds"
+        ],
+        "answer": "27.5 seconds",
+        "solution": "(155 + 120) / (36 × 5/18) = 275 / 10 = 27.5 seconds.",
+        "formula": "Time = (L1 + L2) / [(S1 - S2) × 5/18].",
+        "shortcut": "(155 + 120) / 10 = 27.5 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 4,
+        "tags": [
+            "time_distance",
+            "expert",
+            "dynamic"
+        ]
+    },
+    {
+        "id": "aptitude_time_distance_expert_10",
+        "text": "Two trains of lengths 138 m and 129 m run in the same direction on parallel tracks at 70 km/h and 34 km/h. How many seconds will the faster train take to completely pass the slower train?",
+        "options": [
+            "35 seconds",
+            "26.7 seconds",
+            "20.7 seconds",
+            "34.7 seconds"
+        ],
+        "answer": "26.7 seconds",
+        "solution": "(138 + 129) / (36 × 5/18) = 267 / 10 = 26.7 seconds.",
+        "formula": "Time = (L1 + L2) / [(S1 - S2) × 5/18].",
+        "shortcut": "(138 + 129) / 10 = 26.7 seconds.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "time_distance",
+        "subject": "aptitude",
+        "patternType": 5,
+        "tags": [
+            "time_distance",
+            "expert",
+            "dynamic"
+        ]
     }
-,
-{
-    "id": "apt_td_solved_14",
-    "text": "A 200 m long train passes a 300 m bridge at 60 km/h. How much time does it take to cross?",
-    "options": [
-        "28 sec",
-        "29 sec",
-        "30 sec",
-        "32 sec"
-    ],
-    "answer": "30 sec",
-    "difficulty": "intermediate",
-    "patternType": 1,
-    "solution": "Speed in m/s = 60 \u00d7 (5/18) = 50/3 m/s.\nTotal distance to cover = Train length + Bridge length = 200 + 300 = 500 m.\nTime = Distance / Speed = 500 / (50/3) = 500 \u00d7 3 / 50 = 30 seconds.",
-    "formula": "\u2605 Trains Formula: Time to cross platform = (Train Length + Platform Length) / Speed",
-    "shortcut": "\u26a1 Quick Trick: Convert km/h to m/s by multiplying 5/18 (60 \u00d7 5/18 = 50/3 m/s). Time = 500 / (50/3) = 30 seconds!",
-    "commonMistakes": "Forgetting to convert km/h to m/s or excluding train length.",
-    "subject": "aptitude",
-    "topic": "time_distance"
-}
 ];

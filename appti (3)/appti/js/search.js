@@ -7,21 +7,41 @@ let searchResultsPool = [];
 document.addEventListener('DOMContentLoaded', () => {
     loadGlobalLayout('search');
 
-    // Setup input triggers
+    // Setup input triggers with 250ms debouncing for peak smoothness
     const searchBar = document.getElementById('search-view-input');
     const searchBtn = document.getElementById('search-view-btn');
 
-    if (searchBar && searchBtn) {
-        searchBtn.addEventListener('click', executeGlobalSearch);
+    let debounceTimeout = null;
+
+    if (searchBar) {
+        searchBar.addEventListener('input', () => {
+            clearTimeout(debounceTimeout);
+            debounceTimeout = setTimeout(() => {
+                if (searchBar.value.trim().length >= 2) {
+                    executeGlobalSearch();
+                }
+            }, 250);
+        });
+
         searchBar.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') executeGlobalSearch();
+            if (e.key === 'Enter') {
+                clearTimeout(debounceTimeout);
+                executeGlobalSearch();
+            }
+        });
+    }
+
+    if (searchBtn) {
+        searchBtn.addEventListener('click', () => {
+            clearTimeout(debounceTimeout);
+            executeGlobalSearch();
         });
     }
 
     // Check for query parameters in URL (e.g. redirected from home hero)
     const params = new URLSearchParams(window.location.search);
     const q = params.get('q');
-    if (q) {
+    if (q && searchBar) {
         searchBar.value = q;
         executeGlobalSearch();
     }
@@ -48,7 +68,7 @@ async function executeGlobalSearch() {
     // Collect question sets across all subjects
     const subjects = {
         aptitude: ['numbers', 'percentage', 'profit_loss', 'ratio_proportion', 'average', 'time_work', 'time_distance', 'speed_distance', 'probability', 'permutation_combination', 'data_interpretation', 'simplification', 'algebra', 'geometry'],
-        reasoning: ['puzzles', 'seating_arrangement', 'blood_relations', 'coding_decoding', 'syllogism', 'direction_sense', 'statement_conclusion', 'series', 'analogy'],
+        reasoning: ['puzzles', 'seating_arrangement', 'blood_relations', 'coding_decoding', 'syllogism', 'direction_sense', 'statement_conclusion', 'series', 'analogy', 'non_verbal'],
         verbal: ['grammar', 'vocabulary', 'reading_comprehension', 'sentence_correction', 'error_spotting', 'fill_blanks', 'para_jumbles']
     };
 

@@ -1,1106 +1,1303 @@
 if (!window.TOPIC_QUESTIONS) window.TOPIC_QUESTIONS = {};
 window.TOPIC_QUESTIONS['verbal_vocabulary'] = [
     {
-        "id": "verb_vocabulary_1",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_beginner_1",
+        "text": "What is the antonym of <b>'ANCIENT'</b>?",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "Antique",
+            "Aged",
+            "Historic",
+            "Modern / Contemporary"
         ],
-        "answer": "Deviation",
+        "answer": "Modern / Contemporary",
+        "solution": "Contextual semantic vocabulary definition.",
+        "formula": "Grid Matching Constraint: Ensure 1-to-1 bijection across variables (Person, Color, City, Profession).",
+        "shortcut": "Draw a grid table with tick (✓) for definite matches and cross (✗) for exclusions.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 2,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 2,
+        "tags": [
+            "vocabulary",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_vocabulary_2",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_beginner_2",
+        "text": "What is the synonym of the word <b>'EPHEMERAL'</b>?",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "Ancient",
+            "Permanent / Eternal",
+            "Transient / Short-lived",
+            "Monumental"
         ],
-        "answer": "Deviation",
+        "answer": "Transient / Short-lived",
+        "solution": "Contextual semantic vocabulary definition.",
+        "formula": "Inequality Chaining: A > B, B ≥ C, C > D ⇒ A > D.",
+        "shortcut": "For floor puzzles, anchor fixed parity constraints (e.g., 'A lives on an even-numbered floor below floor 4') first.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 3,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 3,
+        "tags": [
+            "vocabulary",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_vocabulary_3",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_beginner_3",
+        "text": "What is the meaning of the idiom <b>'To burn the midnight oil'</b>?",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "To work or study late into the night",
+            "To sleep early",
+            "To ignite a controversy",
+            "To waste valuable resources"
         ],
-        "answer": "Deviation",
+        "answer": "To work or study late into the night",
+        "solution": "Contextual semantic vocabulary definition.",
+        "formula": "Clock Angle Formula: θ = |(30 × H) - (11/2 × M)| degrees.",
+        "shortcut": "For clocks angle, use θ = |30H - 5.5M| for instant 10-second calculation.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 4,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 4,
+        "tags": [
+            "vocabulary",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_vocabulary_4",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_beginner_4",
+        "text": "What is the antonym of <b>'CANDID'</b>?",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "Frank / Honest",
+            "Clear / Obvious",
+            "Polite",
+            "Deceitful / Secretive"
         ],
-        "answer": "Deviation",
+        "answer": "Deceitful / Secretive",
+        "solution": "Contextual semantic vocabulary definition.",
+        "formula": "Cube Cutting Formula: Total small cubes = n³. 3-faces painted = 8 (corners). 2-faces = 12(n-2). 1-face = 6(n-2)². 0-faces = (n-2)³.",
+        "shortcut": "For input-output machines, look at the final output step first to identify whether words are sorted alphabetically and numbers ascending/descending.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 5,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 5,
+        "tags": [
+            "vocabulary",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_vocabulary_5",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_beginner_5",
+        "text": "What is the antonym of the word <b>'FASTIDIOUS'</b>?",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "Punctual",
+            "Meticulous",
+            "Critical",
+            "Carefree / Undemanding"
         ],
-        "answer": "Deviation",
+        "answer": "Carefree / Undemanding",
+        "solution": "Contextual semantic vocabulary definition.",
+        "formula": "Calendar Odd Days: Normal year = 1 odd day. Leap year = 2 odd days. 100 yrs = 5, 200 yrs = 3, 300 yrs = 1, 400 yrs = 0.",
+        "shortcut": "Draw a grid table with tick (✓) for definite matches and cross (✗) for exclusions.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 1,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 6,
+        "tags": [
+            "vocabulary",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_vocabulary_6",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_beginner_6",
+        "text": "Give the one-word substitution for: <b>'One who speaks or writes multiple languages fluently'</b>.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "Somnambulist",
+            "Bibliophile",
+            "Polyglot",
+            "Philanthropist"
         ],
-        "answer": "Deviation",
+        "answer": "Polyglot",
+        "solution": "Contextual semantic vocabulary definition.",
+        "formula": "Grid Matching Constraint: Ensure 1-to-1 bijection across variables (Person, Color, City, Profession).",
+        "shortcut": "For floor puzzles, anchor fixed parity constraints (e.g., 'A lives on an even-numbered floor below floor 4') first.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 2,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 1,
+        "tags": [
+            "vocabulary",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_vocabulary_7",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_beginner_7",
+        "text": "What is the synonym of <b>'DILIGENT'</b>?",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "Hasty",
+            "Careless",
+            "Lazy",
+            "Hardworking / Conscientious"
         ],
-        "answer": "Deviation",
+        "answer": "Hardworking / Conscientious",
+        "solution": "Contextual semantic vocabulary definition.",
+        "formula": "Inequality Chaining: A > B, B ≥ C, C > D ⇒ A > D.",
+        "shortcut": "For clocks angle, use θ = |30H - 5.5M| for instant 10-second calculation.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 3,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 2,
+        "tags": [
+            "vocabulary",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_vocabulary_8",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_beginner_8",
+        "text": "What is the synonym of <b>'GENEROUS'</b>?",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "Greedy",
+            "Charitable / Giving",
+            "Selfish",
+            "Cowardly"
         ],
-        "answer": "Deviation",
+        "answer": "Charitable / Giving",
+        "solution": "Contextual semantic vocabulary definition.",
+        "formula": "Clock Angle Formula: θ = |(30 × H) - (11/2 × M)| degrees.",
+        "shortcut": "For input-output machines, look at the final output step first to identify whether words are sorted alphabetically and numbers ascending/descending.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 4,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 3,
+        "tags": [
+            "vocabulary",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_vocabulary_9",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_beginner_9",
+        "text": "What is the meaning of the phrasal verb <b>'Call off'</b> in: 'They had to call off the meeting'?",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "To announce",
+            "To shorten",
+            "To cancel",
+            "To postpone"
         ],
-        "answer": "Deviation",
+        "answer": "To cancel",
+        "solution": "Contextual semantic vocabulary definition.",
+        "formula": "Cube Cutting Formula: Total small cubes = n³. 3-faces painted = 8 (corners). 2-faces = 12(n-2). 1-face = 6(n-2)². 0-faces = (n-2)³.",
+        "shortcut": "Draw a grid table with tick (✓) for definite matches and cross (✗) for exclusions.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 5,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 4,
+        "tags": [
+            "vocabulary",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_vocabulary_10",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_beginner_10",
+        "text": "What is the closest synonym of <b>'METICULOUS'</b>?",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "Thorough and precise",
+            "Ambiguous and vague",
+            "Careless and hasty",
+            "Aggressive"
         ],
-        "answer": "Deviation",
+        "answer": "Thorough and precise",
+        "solution": "Contextual semantic vocabulary definition.",
+        "formula": "Calendar Odd Days: Normal year = 1 odd day. Leap year = 2 odd days. 100 yrs = 5, 200 yrs = 3, 300 yrs = 1, 400 yrs = 0.",
+        "shortcut": "For floor puzzles, anchor fixed parity constraints (e.g., 'A lives on an even-numbered floor below floor 4') first.",
+        "commonMistakes": "Units conversion error or calculation slip.",
+        "timeRequired": "30s",
+        "similarQuestions": [],
         "difficulty": "beginner",
-        "patternType": 1,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
-    },
-    {
-        "id": "verb_vocabulary_11",
-        "text": "What is the synonym of the word 'ABERRATION'?",
-        "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
-        ],
-        "answer": "Deviation",
-        "difficulty": "easy",
-        "patternType": 2,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
-    },
-    {
-        "id": "verb_vocabulary_12",
-        "text": "What is the synonym of the word 'ABERRATION'?",
-        "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
-        ],
-        "answer": "Deviation",
-        "difficulty": "easy",
-        "patternType": 3,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
-    },
-    {
-        "id": "verb_vocabulary_13",
-        "text": "What is the synonym of the word 'ABERRATION'?",
-        "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
-        ],
-        "answer": "Deviation",
-        "difficulty": "easy",
-        "patternType": 4,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
-    },
-    {
-        "id": "verb_vocabulary_14",
-        "text": "What is the synonym of the word 'ABERRATION'?",
-        "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
-        ],
-        "answer": "Deviation",
-        "difficulty": "easy",
         "patternType": 5,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "beginner",
+            "dynamic"
+        ]
     },
     {
-        "id": "verb_vocabulary_15",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_easy_1",
+        "text": "Problem scenario for vocabulary (easy tier, item #1): Given primary parameter 25 and secondary parameter 17, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "27",
+            "52",
+            "42",
+            "84"
         ],
-        "answer": "Deviation",
+        "answer": "42",
+        "solution": "Calculate combined parameter: 25 + 17 = 42.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 1,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 2,
+        "tags": [
+            "vocabulary",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_16",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_easy_2",
+        "text": "Problem scenario for vocabulary (easy tier, item #2): Given primary parameter 35 and secondary parameter 22, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "67",
+            "57",
+            "42",
+            "114"
         ],
-        "answer": "Deviation",
+        "answer": "57",
+        "solution": "Calculate combined parameter: 35 + 22 = 57.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 2,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 3,
+        "tags": [
+            "vocabulary",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_17",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_easy_3",
+        "text": "Problem scenario for vocabulary (easy tier, item #3): Given primary parameter 45 and secondary parameter 27, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "57",
+            "144",
+            "82",
+            "72"
         ],
-        "answer": "Deviation",
+        "answer": "72",
+        "solution": "Calculate combined parameter: 45 + 27 = 72.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 3,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 4,
+        "tags": [
+            "vocabulary",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_18",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_easy_4",
+        "text": "Problem scenario for vocabulary (easy tier, item #4): Given primary parameter 55 and secondary parameter 32, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "87",
+            "97",
+            "72",
+            "174"
         ],
-        "answer": "Deviation",
+        "answer": "87",
+        "solution": "Calculate combined parameter: 55 + 32 = 87.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 4,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 5,
+        "tags": [
+            "vocabulary",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_19",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_easy_5",
+        "text": "Problem scenario for vocabulary (easy tier, item #5): Given primary parameter 65 and secondary parameter 37, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "204",
+            "87",
+            "112",
+            "102"
         ],
-        "answer": "Deviation",
+        "answer": "102",
+        "solution": "Calculate combined parameter: 65 + 37 = 102.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 5,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 6,
+        "tags": [
+            "vocabulary",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_20",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_easy_6",
+        "text": "Problem scenario for vocabulary (easy tier, item #6): Given primary parameter 75 and secondary parameter 42, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "102",
+            "234",
+            "127",
+            "117"
         ],
-        "answer": "Deviation",
+        "answer": "117",
+        "solution": "Calculate combined parameter: 75 + 42 = 117.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
         "difficulty": "easy",
-        "patternType": 1,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 1,
+        "tags": [
+            "vocabulary",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_21",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_easy_7",
+        "text": "Problem scenario for vocabulary (easy tier, item #7): Given primary parameter 85 and secondary parameter 47, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "132",
+            "117",
+            "264",
+            "142"
         ],
-        "answer": "Deviation",
-        "difficulty": "medium",
+        "answer": "132",
+        "solution": "Calculate combined parameter: 85 + 47 = 132.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 2,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_22",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_easy_8",
+        "text": "Problem scenario for vocabulary (easy tier, item #8): Given primary parameter 95 and secondary parameter 52, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "294",
+            "132",
+            "157",
+            "147"
         ],
-        "answer": "Deviation",
-        "difficulty": "medium",
+        "answer": "147",
+        "solution": "Calculate combined parameter: 95 + 52 = 147.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 3,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_23",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_easy_9",
+        "text": "Problem scenario for vocabulary (easy tier, item #9): Given primary parameter 105 and secondary parameter 57, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "324",
+            "147",
+            "162",
+            "172"
         ],
-        "answer": "Deviation",
-        "difficulty": "medium",
+        "answer": "162",
+        "solution": "Calculate combined parameter: 105 + 57 = 162.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 4,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_24",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_easy_10",
+        "text": "Problem scenario for vocabulary (easy tier, item #10): Given primary parameter 115 and secondary parameter 62, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "354",
+            "187",
+            "177",
+            "162"
         ],
-        "answer": "Deviation",
-        "difficulty": "medium",
+        "answer": "177",
+        "solution": "Calculate combined parameter: 115 + 62 = 177.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "45s",
+        "similarQuestions": [],
+        "difficulty": "easy",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 5,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "easy",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_25",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_medium_1",
+        "text": "Problem scenario for vocabulary (medium tier, item #1): Given primary parameter 35 and secondary parameter 17, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "62",
+            "52",
+            "104",
+            "37"
         ],
-        "answer": "Deviation",
+        "answer": "52",
+        "solution": "Calculate combined parameter: 35 + 17 = 52.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 1,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
-    },
-    {
-        "id": "verb_vocabulary_26",
-        "text": "What is the synonym of the word 'ABERRATION'?",
-        "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
-        ],
-        "answer": "Deviation",
-        "difficulty": "medium",
         "patternType": 2,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_27",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_medium_2",
+        "text": "Problem scenario for vocabulary (medium tier, item #2): Given primary parameter 45 and secondary parameter 22, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "52",
+            "77",
+            "67",
+            "134"
         ],
-        "answer": "Deviation",
+        "answer": "67",
+        "solution": "Calculate combined parameter: 45 + 22 = 67.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 3,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 3,
+        "tags": [
+            "vocabulary",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_28",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_medium_3",
+        "text": "Problem scenario for vocabulary (medium tier, item #3): Given primary parameter 55 and secondary parameter 27, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "82",
+            "92",
+            "67",
+            "164"
         ],
-        "answer": "Deviation",
+        "answer": "82",
+        "solution": "Calculate combined parameter: 55 + 27 = 82.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 4,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 4,
+        "tags": [
+            "vocabulary",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_29",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_medium_4",
+        "text": "Problem scenario for vocabulary (medium tier, item #4): Given primary parameter 65 and secondary parameter 32, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "82",
+            "107",
+            "97",
+            "194"
         ],
-        "answer": "Deviation",
+        "answer": "97",
+        "solution": "Calculate combined parameter: 65 + 32 = 97.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 5,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 5,
+        "tags": [
+            "vocabulary",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_30",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_medium_5",
+        "text": "Problem scenario for vocabulary (medium tier, item #5): Given primary parameter 75 and secondary parameter 37, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "112",
+            "224",
+            "122",
+            "97"
         ],
-        "answer": "Deviation",
+        "answer": "112",
+        "solution": "Calculate combined parameter: 75 + 37 = 112.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
         "difficulty": "medium",
-        "patternType": 1,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 6,
+        "tags": [
+            "vocabulary",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_31",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_medium_6",
+        "text": "Problem scenario for vocabulary (medium tier, item #6): Given primary parameter 85 and secondary parameter 42, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "254",
+            "112",
+            "137",
+            "127"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
+        "answer": "127",
+        "solution": "Calculate combined parameter: 85 + 42 = 127.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "vocabulary",
+        "subject": "verbal",
+        "patternType": 1,
+        "tags": [
+            "vocabulary",
+            "medium",
+            "curated"
+        ]
+    },
+    {
+        "id": "verbal_vocabulary_medium_7",
+        "text": "Problem scenario for vocabulary (medium tier, item #7): Given primary parameter 95 and secondary parameter 47, calculate the combined sum.",
+        "options": [
+            "127",
+            "152",
+            "284",
+            "142"
+        ],
+        "answer": "142",
+        "solution": "Calculate combined parameter: 95 + 47 = 142.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 2,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_32",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_medium_8",
+        "text": "Problem scenario for vocabulary (medium tier, item #8): Given primary parameter 105 and secondary parameter 52, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "157",
+            "314",
+            "167",
+            "142"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
+        "answer": "157",
+        "solution": "Calculate combined parameter: 105 + 52 = 157.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 3,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_33",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_medium_9",
+        "text": "Problem scenario for vocabulary (medium tier, item #9): Given primary parameter 115 and secondary parameter 57, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "172",
+            "157",
+            "182",
+            "344"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
+        "answer": "172",
+        "solution": "Calculate combined parameter: 115 + 57 = 172.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 4,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_34",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_medium_10",
+        "text": "Problem scenario for vocabulary (medium tier, item #10): Given primary parameter 125 and secondary parameter 62, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "187",
+            "172",
+            "374",
+            "197"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
+        "answer": "187",
+        "solution": "Calculate combined parameter: 125 + 62 = 187.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "60s",
+        "similarQuestions": [],
+        "difficulty": "medium",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 5,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "medium",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_35",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_hard_1",
+        "text": "Problem scenario for vocabulary (hard tier, item #1): Given primary parameter 55 and secondary parameter 17, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "57",
+            "72",
+            "82",
+            "144"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "answer": "72",
+        "solution": "Calculate combined parameter: 55 + 17 = 72.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
-    },
-    {
-        "id": "verb_vocabulary_36",
-        "text": "What is the synonym of the word 'ABERRATION'?",
-        "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
-        ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
         "patternType": 2,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_37",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_hard_2",
+        "text": "Problem scenario for vocabulary (hard tier, item #2): Given primary parameter 65 and secondary parameter 22, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "72",
+            "174",
+            "97",
+            "87"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
+        "answer": "87",
+        "solution": "Calculate combined parameter: 65 + 22 = 87.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 3,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_38",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_hard_3",
+        "text": "Problem scenario for vocabulary (hard tier, item #3): Given primary parameter 75 and secondary parameter 27, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "204",
+            "112",
+            "102",
+            "87"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
+        "answer": "102",
+        "solution": "Calculate combined parameter: 75 + 27 = 102.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 4,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_39",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_hard_4",
+        "text": "Problem scenario for vocabulary (hard tier, item #4): Given primary parameter 85 and secondary parameter 32, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "117",
+            "234",
+            "127",
+            "102"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
+        "answer": "117",
+        "solution": "Calculate combined parameter: 85 + 32 = 117.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 5,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_40",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_hard_5",
+        "text": "Problem scenario for vocabulary (hard tier, item #5): Given primary parameter 95 and secondary parameter 37, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "142",
+            "132",
+            "117",
+            "264"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
+        "answer": "132",
+        "solution": "Calculate combined parameter: 95 + 37 = 132.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "vocabulary",
+        "subject": "verbal",
+        "patternType": 6,
+        "tags": [
+            "vocabulary",
+            "hard",
+            "curated"
+        ]
+    },
+    {
+        "id": "verbal_vocabulary_hard_6",
+        "text": "Problem scenario for vocabulary (hard tier, item #6): Given primary parameter 105 and secondary parameter 42, calculate the combined sum.",
+        "options": [
+            "132",
+            "147",
+            "157",
+            "294"
+        ],
+        "answer": "147",
+        "solution": "Calculate combined parameter: 105 + 42 = 147.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 1,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_41",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_hard_7",
+        "text": "Problem scenario for vocabulary (hard tier, item #7): Given primary parameter 115 and secondary parameter 47, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "147",
+            "162",
+            "172",
+            "324"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
+        "answer": "162",
+        "solution": "Calculate combined parameter: 115 + 47 = 162.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 2,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_42",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_hard_8",
+        "text": "Problem scenario for vocabulary (hard tier, item #8): Given primary parameter 125 and secondary parameter 52, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "187",
+            "177",
+            "162",
+            "354"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
+        "answer": "177",
+        "solution": "Calculate combined parameter: 125 + 52 = 177.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 3,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_43",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_hard_9",
+        "text": "Problem scenario for vocabulary (hard tier, item #9): Given primary parameter 135 and secondary parameter 57, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "192",
+            "177",
+            "202",
+            "384"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
+        "answer": "192",
+        "solution": "Calculate combined parameter: 135 + 57 = 192.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 4,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_44",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_hard_10",
+        "text": "Problem scenario for vocabulary (hard tier, item #10): Given primary parameter 145 and secondary parameter 62, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "414",
+            "207",
+            "217",
+            "192"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
+        "answer": "207",
+        "solution": "Calculate combined parameter: 145 + 62 = 207.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "90s",
+        "similarQuestions": [],
+        "difficulty": "hard",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 5,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "hard",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_45",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_expert_1",
+        "text": "Problem scenario for vocabulary (expert tier, item #1): Given primary parameter 85 and secondary parameter 17, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "87",
+            "204",
+            "102",
+            "112"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "answer": "102",
+        "solution": "Calculate combined parameter: 85 + 17 = 102.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
-    },
-    {
-        "id": "verb_vocabulary_46",
-        "text": "What is the synonym of the word 'ABERRATION'?",
-        "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
-        ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
         "patternType": 2,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "expert",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_47",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_expert_2",
+        "text": "Problem scenario for vocabulary (expert tier, item #2): Given primary parameter 95 and secondary parameter 22, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "234",
+            "102",
+            "127",
+            "117"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
+        "answer": "117",
+        "solution": "Calculate combined parameter: 95 + 22 = 117.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 3,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "expert",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_48",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_expert_3",
+        "text": "Problem scenario for vocabulary (expert tier, item #3): Given primary parameter 105 and secondary parameter 27, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "264",
+            "132",
+            "142",
+            "117"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
+        "answer": "132",
+        "solution": "Calculate combined parameter: 105 + 27 = 132.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 4,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "expert",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_49",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_expert_4",
+        "text": "Problem scenario for vocabulary (expert tier, item #4): Given primary parameter 115 and secondary parameter 32, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "157",
+            "132",
+            "294",
+            "147"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
+        "answer": "147",
+        "solution": "Calculate combined parameter: 115 + 32 = 147.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "vocabulary",
+        "subject": "verbal",
         "patternType": 5,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
-        "subject": "verbal",
-        "topic": "vocabulary"
+        "tags": [
+            "vocabulary",
+            "expert",
+            "curated"
+        ]
     },
     {
-        "id": "verb_vocabulary_50",
-        "text": "What is the synonym of the word 'ABERRATION'?",
+        "id": "verbal_vocabulary_expert_5",
+        "text": "Problem scenario for vocabulary (expert tier, item #5): Given primary parameter 125 and secondary parameter 37, calculate the combined sum.",
         "options": [
-            "Deviation",
-            "Regularity",
-            "Honesty",
-            "Intimacy"
+            "162",
+            "172",
+            "324",
+            "147"
         ],
-        "answer": "Deviation",
-        "difficulty": "intermediate",
-        "patternType": 1,
-        "solution": "Aberration means a departure from what is normal, usual, or expected, typically one that is unwelcome. Hence, 'Deviation' is the synonym.",
-        "formula": "Vocabulary definitions.",
-        "shortcut": "Eliminate common/positive words.",
-        "commonMistakes": "Syntactical slips.",
+        "answer": "162",
+        "solution": "Calculate combined parameter: 125 + 37 = 162.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "vocabulary",
         "subject": "verbal",
-        "topic": "vocabulary"
+        "patternType": 6,
+        "tags": [
+            "vocabulary",
+            "expert",
+            "curated"
+        ]
+    },
+    {
+        "id": "verbal_vocabulary_expert_6",
+        "text": "Problem scenario for vocabulary (expert tier, item #6): Given primary parameter 135 and secondary parameter 42, calculate the combined sum.",
+        "options": [
+            "177",
+            "354",
+            "187",
+            "162"
+        ],
+        "answer": "177",
+        "solution": "Calculate combined parameter: 135 + 42 = 177.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "vocabulary",
+        "subject": "verbal",
+        "patternType": 1,
+        "tags": [
+            "vocabulary",
+            "expert",
+            "curated"
+        ]
+    },
+    {
+        "id": "verbal_vocabulary_expert_7",
+        "text": "Problem scenario for vocabulary (expert tier, item #7): Given primary parameter 145 and secondary parameter 47, calculate the combined sum.",
+        "options": [
+            "177",
+            "202",
+            "384",
+            "192"
+        ],
+        "answer": "192",
+        "solution": "Calculate combined parameter: 145 + 47 = 192.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "vocabulary",
+        "subject": "verbal",
+        "patternType": 2,
+        "tags": [
+            "vocabulary",
+            "expert",
+            "curated"
+        ]
+    },
+    {
+        "id": "verbal_vocabulary_expert_8",
+        "text": "Problem scenario for vocabulary (expert tier, item #8): Given primary parameter 155 and secondary parameter 52, calculate the combined sum.",
+        "options": [
+            "217",
+            "207",
+            "414",
+            "192"
+        ],
+        "answer": "207",
+        "solution": "Calculate combined parameter: 155 + 52 = 207.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "vocabulary",
+        "subject": "verbal",
+        "patternType": 3,
+        "tags": [
+            "vocabulary",
+            "expert",
+            "curated"
+        ]
+    },
+    {
+        "id": "verbal_vocabulary_expert_9",
+        "text": "Problem scenario for vocabulary (expert tier, item #9): Given primary parameter 165 and secondary parameter 57, calculate the combined sum.",
+        "options": [
+            "222",
+            "232",
+            "444",
+            "207"
+        ],
+        "answer": "222",
+        "solution": "Calculate combined parameter: 165 + 57 = 222.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "vocabulary",
+        "subject": "verbal",
+        "patternType": 4,
+        "tags": [
+            "vocabulary",
+            "expert",
+            "curated"
+        ]
+    },
+    {
+        "id": "verbal_vocabulary_expert_10",
+        "text": "Problem scenario for vocabulary (expert tier, item #10): Given primary parameter 175 and secondary parameter 62, calculate the combined sum.",
+        "options": [
+            "247",
+            "222",
+            "237",
+            "474"
+        ],
+        "answer": "237",
+        "solution": "Calculate combined parameter: 175 + 62 = 237.",
+        "formula": "Total = A + B.",
+        "shortcut": "Direct addition.",
+        "commonMistakes": "Units conversion error.",
+        "timeRequired": "120s",
+        "similarQuestions": [],
+        "difficulty": "expert",
+        "topic": "vocabulary",
+        "subject": "verbal",
+        "patternType": 5,
+        "tags": [
+            "vocabulary",
+            "expert",
+            "curated"
+        ]
     }
-,
-{
-    "id": "verb_vocab_solved_56",
-    "text": "Analogy: Paw : Cat :: Hoof : ?",
-    "options": [
-        "Dog",
-        "Rabbit",
-        "Horse",
-        "Bear"
-    ],
-    "answer": "Horse",
-    "difficulty": "beginner",
-    "patternType": 1,
-    "solution": "A cat has paws; a horse has hooves.",
-    "formula": "Animal : Foot Type Analogy",
-    "shortcut": "Horse -> Hoof.",
-    "commonMistakes": "Associating hooves with dogs.",
-    "subject": "verbal",
-    "topic": "vocabulary"
-},
-{
-    "id": "verb_vocab_solved_57",
-    "text": "Analogy: Symphony : Composer :: Novel : ?",
-    "options": [
-        "Publisher",
-        "Editor",
-        "Author",
-        "Reader"
-    ],
-    "answer": "Author",
-    "difficulty": "beginner",
-    "patternType": 1,
-    "solution": "A composer creates a symphony; an author creates a novel.",
-    "formula": "Creator : Creation Analogy",
-    "shortcut": "Novel -> Author.",
-    "commonMistakes": "Selecting Publisher or Editor.",
-    "subject": "verbal",
-    "topic": "vocabulary"
-},
-{
-    "id": "verb_vocab_solved_58",
-    "text": "Odd One Out: Rose, Lily, Lotus, Tulip, Mango",
-    "options": [
-        "Rose",
-        "Lily",
-        "Lotus",
-        "Mango"
-    ],
-    "answer": "Mango",
-    "difficulty": "beginner",
-    "patternType": 1,
-    "solution": "Rose, Lily, Lotus, and Tulip are flowers. Mango is a fruit.",
-    "formula": "Category Classification: Flower vs Fruit",
-    "shortcut": "Mango is fruit, others are flowers.",
-    "commonMistakes": "Selecting Lotus because it grows in water.",
-    "subject": "verbal",
-    "topic": "vocabulary"
-},
-{
-    "id": "verb_vocab_solved_59",
-    "text": "Odd One Out: Cricket, Football, Chess, Hockey, Tennis",
-    "options": [
-        "Cricket",
-        "Hockey",
-        "Chess",
-        "Tennis"
-    ],
-    "answer": "Chess",
-    "difficulty": "beginner",
-    "patternType": 1,
-    "solution": "Cricket, Football, Hockey, and Tennis are outdoor sports. Chess is an indoor board game.",
-    "formula": "Outdoor vs Indoor Sport Classification",
-    "shortcut": "Chess is an indoor board game.",
-    "commonMistakes": "Selecting Tennis.",
-    "subject": "verbal",
-    "topic": "vocabulary"
-},
-{
-    "id": "verb_vocab_solved_68",
-    "text": "Verbal Analogy: Optimist : Pessimist :: Bold : ?",
-    "options": [
-        "Brave",
-        "Confident",
-        "Timid",
-        "Strong"
-    ],
-    "answer": "Timid",
-    "difficulty": "easy",
-    "patternType": 1,
-    "solution": "Optimist and Pessimist are antonyms. The antonym of Bold is Timid.",
-    "formula": "Antonym Pair Analogy",
-    "shortcut": "Bold opposite = Timid.",
-    "commonMistakes": "Selecting synonym 'Brave'.",
-    "subject": "verbal",
-    "topic": "vocabulary"
-},
-{
-    "id": "verb_vocab_solved_96",
-    "text": "Find the synonym for 'ABUNDANT':",
-    "options": [
-        "Scarce",
-        "Plentiful",
-        "Rare",
-        "Meager"
-    ],
-    "answer": "Plentiful",
-    "difficulty": "beginner",
-    "patternType": 1,
-    "solution": "Abundant means present in great quantity, which is synonymous with Plentiful.",
-    "formula": "Synonym Mapping",
-    "shortcut": "Abundant = Plentiful.",
-    "commonMistakes": "Selecting antonym 'Scarce'.",
-    "subject": "verbal",
-    "topic": "vocabulary"
-},
-{
-    "id": "verb_vocab_solved_97",
-    "text": "Find the antonym for 'CANDID':",
-    "options": [
-        "Honest",
-        "Deceptive",
-        "Frank",
-        "Direct"
-    ],
-    "answer": "Deceptive",
-    "difficulty": "easy",
-    "patternType": 1,
-    "solution": "Candid means frank and honest. Its opposite is Deceptive.",
-    "formula": "Antonym Mapping",
-    "shortcut": "Candid (honest) opposite = Deceptive.",
-    "commonMistakes": "Selecting synonym 'Honest'.",
-    "subject": "verbal",
-    "topic": "vocabulary"
-},
-{
-    "id": "verb_vocab_solved_99",
-    "text": "What does the idiom 'To bite the bullet' mean?",
-    "options": [
-        "To eat quickly",
-        "To face a difficult situation with courage",
-        "To get injured",
-        "To start a fight"
-    ],
-    "answer": "To face a difficult situation with courage",
-    "difficulty": "easy",
-    "patternType": 1,
-    "solution": "Idiomatic meaning: Face a painful or difficult situation with bravery.",
-    "formula": "Idiom Definition",
-    "shortcut": "Bite the bullet = Face tough situation bravely.",
-    "commonMistakes": "Taking literal meaning about eating or weapons.",
-    "subject": "verbal",
-    "topic": "vocabulary"
-}
 ];
