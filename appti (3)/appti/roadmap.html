@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Placement Preparation Roadmap &amp; 30-Day Strategy – VetriPathLearn</title>
+    <meta name="description" content="Follow our structured placement preparation roadmap. Get a step-by-step strategy for aptitude, reasoning, Python coding, and technical interview readiness from day 1 to day 30.">
+    <meta name="keywords" content="placement preparation roadmap, placement preparation strategy, campus placement roadmap, coding roadmap, aptitude roadmap, reasoning roadmap, student placement preparation, beginner to advanced placement preparation, placement preparation guide, technical interview preparation, HR interview preparation">
+    <!-- Technical SEO Meta Tags -->
+    <meta name="google-site-verification" content="h-MC2TSGIWOwB31pbVSr-ttlsnO4Keb3vl3ygZ3WT2s">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Darun Raj">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://www.vetripathlearn.site/roadmap.html">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logo.png">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.vetripathlearn.site/roadmap.html">
+    <meta property="og:title" content="Placement Preparation Roadmap &amp; 30-Day Strategy – VetriPathLearn">
+    <meta property="og:description" content="Follow our structured placement preparation roadmap. Get a step-by-step strategy for aptitude, reasoning, Python coding, and technical interview readiness from day 1 to day 30.">
+    <meta property="og:image" content="https://www.vetripathlearn.site/images/logo.png">
+    <meta property="og:site_name" content="VetriPathLearn">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.vetripathlearn.site/roadmap.html">
+    <meta name="twitter:title" content="Placement Preparation Roadmap &amp; 30-Day Strategy – VetriPathLearn">
+    <meta name="twitter:description" content="Follow our structured placement preparation roadmap. Get a step-by-step strategy for aptitude, reasoning, Python coding, and technical interview readiness from day 1 to day 30.">
+    <meta name="twitter:image" content="https://www.vetripathlearn.site/images/logo.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Career & Placement Roadmaps",
+      "description": "Structured 30-day curriculum covering quantitative aptitude, logical reasoning, verbal ability, and coding syllabus for campus recruitment.",
+      "provider": {
+        "@type": "Organization",
+        "name": "VetriPathLearn",
+        "url": "https://www.vetripathlearn.site/"
+      },
+      "url": "https://www.vetripathlearn.site/roadmap.html"
+    }
+    </script>
+    <style>
+        /* --- Timeline Visual Track Styling --- */
+        .timeline-container {
+            position: relative;
+            margin: 2rem auto;
+            padding-left: 2.5rem;
+            border-left: 3px solid var(--border-color);
+        }
+        .timeline-connector {
+            position: absolute;
+            left: -3px;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+            z-index: 1;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-badge {
+            position: absolute;
+            left: calc(-2.5rem - 11px);
+            top: 2px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--surface-solid);
+            border: 3px solid var(--border-color);
+            z-index: 2;
+            transition: var(--transition);
+        }
+        .timeline-item.completed .timeline-badge {
+            background: var(--success);
+            border-color: var(--success-glow);
+            box-shadow: 0 0 8px var(--success);
+        }
+        .timeline-item.active .timeline-badge {
+            background: var(--primary);
+            border-color: var(--primary-glow);
+            box-shadow: 0 0 8px var(--primary);
+        }
+        
+        /* Expandable Card states */
+        .roadmap-day-card {
+            cursor: default;
+            transition: var(--transition);
+            border-radius: var(--border-radius-md);
+            border: 1px solid var(--glass-border);
+        }
+        .roadmap-arrow-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 0.3rem 0.6rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            outline: none;
+        }
+        .roadmap-arrow-btn:hover {
+            color: var(--primary) !important;
+            background: var(--primary-glow) !important;
+            transform: scale(1.15);
+        }
+        .roadmap-day-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--glass-shadow-hover);
+            border-color: var(--primary-glow);
+        }
+        .roadmap-day-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+            padding: 0 1.5rem;
+        }
+        .roadmap-day-details.expanded {
+            max-height: 800px;
+            padding: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            background: hsla(var(--primary-hue), 85%, 60%, 0.02);
+        }
+
+        .check-container {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            cursor: pointer;
+            user-select: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            background: var(--border-color);
+            font-size: 0.8rem;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+        .check-container.checked {
+            background: var(--success-glow);
+            color: var(--success);
+        }
+        .check-container input {
+            display: none;
+        }
+
+        /* Search highlights */
+        .highlight-text {
+            background: var(--warning-glow);
+            color: var(--warning);
+            padding: 0 2px;
+            border-radius: 2px;
+            font-weight: 700;
+        }
+    </style>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7971777206323143" crossorigin="anonymous"></script>
+    <!-- AMP Auto Ads -->
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+</head>
+<body>
+    <!-- AMP Auto Ads Body Tag -->
+    <amp-auto-ads type="adsense" data-ad-client="ca-pub-7971777206323143"></amp-auto-ads>
+
+
+    <!-- Global Loader -->
+    <div id="global-loader" class="loading-screen">
+        <div class="loader-content">
+            <div class="loader-logo-img-wrapper"><img src="images/logo.png" alt="VetriPathLearn Logo" class="loader-logo-img"></div>
+            <div class="loader-logo">VetriPathLearn</div>
+            <div class="loader-quote">
+                <p class="quote-text">"Walk the Path. Become the Victory. Inspire the World"</p>
+            </div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation Header Placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <main class="container fade-in-up">
+        
+        <!-- Header Hero & Global search -->
+        <section style="position: relative; padding: 4rem 1rem 2rem; text-align: center;">
+            <h1 style="font-size: 2.8rem; margin-bottom: 0.8rem; font-family: var(--font-heading); font-weight: 800;">
+                Career &amp; Placement <span style="background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Preparation Roadmaps</span>
+            </h1>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 750px; margin: 0 auto 2rem; line-height: 1.6;">
+                Structured 30-day curriculum roadmaps engineered to take you from fundamentals to placement interview mastery. Each day includes concept breakdowns, hands-on tasks, and concept verification quizzes.
+            </p>
+
+            <div style="display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                <a href="aptitude.html" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 1rem; border-radius: 20px;">
+                    <i class="fa-solid fa-calculator" style="color: var(--primary);"></i> Aptitude Topics
+                </a>
+                <a href="reasoning.html" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 1rem; border-radius: 20px;">
+                    <i class="fa-solid fa-puzzle-piece" style="color: var(--secondary);"></i> Reasoning Topics
+                </a>
+                <a href="coding.html" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 1rem; border-radius: 20px;">
+                    <i class="fa-solid fa-laptop-code" style="color: var(--warning);"></i> Coding Workstation
+                </a>
+                <a href="verbal.html" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 1rem; border-radius: 20px;">
+                    <i class="fa-solid fa-spell-check" style="color: var(--info);"></i> Verbal Ability
+                </a>
+            </div>
+
+            <!-- Unified Search across roadmaps -->
+            <div class="search-bar-wrap glass-panel" style="margin: 0 auto; max-width: 650px;">
+                <i class="fa-solid fa-magnifying-glass" style="margin: 0 0.8rem 0 1rem; color: var(--primary); font-size: 1.1rem; flex-shrink: 0;"></i>
+                <input id="roadmap-search" type="text" placeholder="Search concepts, days, or challenges (e.g. React, Docker, Hashing)...">
+                <button id="roadmap-search-clear" class="btn btn-secondary" style="border-radius: 30px; padding: 0.6rem 1.2rem; display: none; margin-right: 0.5rem; flex-shrink: 0;">Clear</button>
+            </div>
+        </section>
+
+        <!-- Search Results Hub (Hidden by default) -->
+        <section id="search-results-section" style="display: none; margin-bottom: 4rem;">
+            <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; font-family: var(--font-heading); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
+                Search Results (<span id="search-results-count">0</span> matches)
+            </h2>
+            <div id="search-results-grid" class="two-col-layout">
+                <!-- Dynamically populated matches -->
+            </div>
+        </section>
+
+        <!-- ========================================================
+             1. DEPARTMENTS GRID VIEW (HUB)
+             ======================================================== -->
+        <section id="departments-hub-view" style="margin-bottom: 5rem;">
+            <div class="three-col-grid" id="departments-grid">
+                <div class="glass-card dept-card" style="display: flex; flex-direction: column; justify-content: space-between; border-radius: var(--border-radius-md);">
+                    <div>
+                        <div style="font-size: 2rem; color: var(--primary); margin-bottom: 0.8rem;"><i class="fa-brands fa-html5"></i></div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Frontend Web Development</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">HTML5, modern CSS flex/grid, JavaScript ES6+, DOM manipulation, React component state, and production UI builds.</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="openRoadmap('frontend')" style="width: 100%;"><i class="fa-solid fa-route"></i> Explore 30-Day Track</button>
+                </div>
+                <div class="glass-card dept-card" style="display: flex; flex-direction: column; justify-content: space-between; border-radius: var(--border-radius-md);">
+                    <div>
+                        <div style="font-size: 2rem; color: var(--secondary); margin-bottom: 0.8rem;"><i class="fa-brands fa-java"></i></div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Java Full Stack Development</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">Core Java, OOP principles, Collections framework, multithreading, Spring Boot REST APIs, and JPA database integration.</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="openRoadmap('java')" style="width: 100%;"><i class="fa-solid fa-route"></i> Explore 30-Day Track</button>
+                </div>
+                <div class="glass-card dept-card" style="display: flex; flex-direction: column; justify-content: space-between; border-radius: var(--border-radius-md);">
+                    <div>
+                        <div style="font-size: 2rem; color: var(--warning); margin-bottom: 0.8rem;"><i class="fa-brands fa-python"></i></div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Python Backend &amp; Automation</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">Python fundamentals, functional decorators, FastAPI web framework, asynchronous tasks, and SQL database querying.</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="openRoadmap('python')" style="width: 100%;"><i class="fa-solid fa-route"></i> Explore 30-Day Track</button>
+                </div>
+                <div class="glass-card dept-card" style="display: flex; flex-direction: column; justify-content: space-between; border-radius: var(--border-radius-md);">
+                    <div>
+                        <div style="font-size: 2rem; color: var(--success); margin-bottom: 0.8rem;"><i class="fa-solid fa-diagram-project"></i></div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Data Structures &amp; Algorithms</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">Arrays, linked lists, stacks, queues, binary search trees, graph BFS/DFS, dynamic programming, and interview patterns.</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="openRoadmap('dsa')" style="width: 100%;"><i class="fa-solid fa-route"></i> Explore 30-Day Track</button>
+                </div>
+                <div class="glass-card dept-card" style="display: flex; flex-direction: column; justify-content: space-between; border-radius: var(--border-radius-md);">
+                    <div>
+                        <div style="font-size: 2rem; color: var(--info); margin-bottom: 0.8rem;"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Data Science &amp; Machine Learning</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">NumPy matrix math, Pandas dataframes, exploratory data analysis, regression, classification, and model metrics.</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="openRoadmap('datascience')" style="width: 100%;"><i class="fa-solid fa-route"></i> Explore 30-Day Track</button>
+                </div>
+                <div class="glass-card dept-card" style="display: flex; flex-direction: column; justify-content: space-between; border-radius: var(--border-radius-md);">
+                    <div>
+                        <div style="font-size: 2rem; color: var(--primary); margin-bottom: 0.8rem;"><i class="fa-solid fa-microchip"></i></div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Core Computer Science Subjects</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">Operating Systems, DBMS normalization, Computer Networks OSI/TCP models, and Software Engineering lifecycles.</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="openRoadmap('corecs')" style="width: 100%;"><i class="fa-solid fa-route"></i> Explore 30-Day Track</button>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 COMPREHENSIVE 4-STAGE PLACEMENT ROADMAP
+                 ========================================== -->
+            <div class="edu-section" style="margin-top: 4rem;">
+                <div class="edu-section-header">
+                    <h2 class="edu-section-title">The Complete 4-Stage Campus Placement Roadmap</h2>
+                    <p class="edu-section-subtitle">
+                        A structured, step-by-step master roadmap designed to transition engineering and science graduates from absolute basics to final interview readiness over an 8-week structured timeline.
+                    </p>
+                </div>
+
+                <div class="edu-topic-grid">
+
+                    <!-- STAGE 1: BEGINNER FOUNDATIONS -->
+                    <article class="edu-topic-card" id="roadmap-stage-1">
+                        <span class="edu-topic-badge"><i class="fa-solid fa-seedling"></i> Weeks 01 – 02</span>
+                        <h3 class="edu-topic-title">Stage 1: Core Conceptual Foundations</h3>
+                        <p class="edu-topic-desc">
+                            The foundation stage focuses on core arithmetic, basic deductive reasoning, fundamental English grammar rules, and programming syntax familiarity.
+                        </p>
+
+                        <div class="edu-formula-box">
+                            <div class="edu-formula-title"><i class="fa-solid fa-list-check"></i> Stage 1 Milestone Checklist</div>
+                            <ul class="edu-formula-list">
+                                <li><strong>Quant:</strong> Number Systems, Divisibility rules, HCF/LCM, Percentages, Profit &amp; Loss, Ratio &amp; Proportion.</li>
+                                <li><strong>Reasoning:</strong> Number Series, Alphabet Sequences (EJOTY), Coding-Decoding, Direction Sense.</li>
+                                <li><strong>Verbal:</strong> Parts of Speech, Subject-Verb Agreement, 12 Verb Tenses, Articles and Prepositions.</li>
+                                <li><strong>Coding:</strong> Python variables, loops, conditional statements, list manipulations, string slicing.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- STAGE 2: INTERMEDIATE PROBLEM SOLVING -->
+                    <article class="edu-topic-card" id="roadmap-stage-2">
+                        <span class="edu-topic-badge"><i class="fa-solid fa-gears"></i> Weeks 03 – 04</span>
+                        <h3 class="edu-topic-title">Stage 2: Multi-Concept Problem Solving</h3>
+                        <p class="edu-topic-desc">
+                            Transition from single-step formulas to multi-step problem solving, analytical puzzle structuring, reading comprehension speed, and core data structures.
+                        </p>
+
+                        <div class="edu-formula-box">
+                            <div class="edu-formula-title"><i class="fa-solid fa-list-check"></i> Stage 2 Milestone Checklist</div>
+                            <ul class="edu-formula-list">
+                                <li><strong>Quant:</strong> Time &amp; Work (LCM method), Pipes &amp; Cisterns, Time-Speed-Distance, Trains/Boats, Simple &amp; Compound Interest.</li>
+                                <li><strong>Reasoning:</strong> Blood Relations family trees, Syllogisms Venn deduction, Linear &amp; Circular Seating Arrangements.</li>
+                                <li><strong>Verbal:</strong> Reading Comprehension questions-first technique, Para Jumbles mandatory pairs, Sentence Correction.</li>
+                                <li><strong>Coding:</strong> Hash Maps, Sets, Frequency counters, Two-Pointer algorithms, Big-O complexity analysis.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- STAGE 3: ADVANCED PLACEMENT PREP -->
+                    <article class="edu-topic-card" id="roadmap-stage-3">
+                        <span class="edu-topic-badge"><i class="fa-solid fa-laptop-code"></i> Weeks 05 – 06</span>
+                        <h3 class="edu-topic-title">Stage 3: Advanced Placement &amp; Timed Drills</h3>
+                        <p class="edu-topic-desc">
+                            Tackle advanced combinatorics, probability, floor puzzles, and company-specific assessment patterns (TCS NQT, Infosys, Cognizant, Wipro).
+                        </p>
+
+                        <div class="edu-formula-box">
+                            <div class="edu-formula-title"><i class="fa-solid fa-list-check"></i> Stage 3 Milestone Checklist</div>
+                            <ul class="edu-formula-list">
+                                <li><strong>Quant:</strong> Permutation &amp; Combination ($^nP_r, ^nC_r$), Probability, Data Interpretation (Pie/Bar charts).</li>
+                                <li><strong>Reasoning:</strong> Multi-attribute Floor Puzzles, Statement &amp; Assumptions, Data Sufficiency.</li>
+                                <li><strong>Verbal:</strong> High-yield etymology roots, Idioms &amp; Phrasal verbs, 4-point error spotting scans.</li>
+                                <li><strong>Coding:</strong> Classic placement algorithms: Two Sum, Kadane's Max Subarray, Valid Palindrome, Binary Search.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- STAGE 4: FINAL SPRINT & MOCK TESTS -->
+                    <article class="edu-topic-card" id="roadmap-stage-4">
+                        <span class="edu-topic-badge"><i class="fa-solid fa-flag-checkered"></i> Weeks 07 – 08</span>
+                        <h3 class="edu-topic-title">Stage 4: Final Sprint &amp; Mock Exam Simulation</h3>
+                        <p class="edu-topic-desc">
+                            Full-length timed mock examinations, bookmark review, speed triage calibration, and mock HR/Technical interview preparations.
+                        </p>
+
+                        <div class="edu-formula-box">
+                            <div class="edu-formula-title"><i class="fa-solid fa-list-check"></i> Stage 4 Milestone Checklist</div>
+                            <ul class="edu-formula-list">
+                                <li><strong>Mock Tests:</strong> Take 2 full-length 90-minute simulations weekly on the <a href="mocktest.html" style="color: var(--primary); font-weight: 600;">Mock Simulator</a>.</li>
+                                <li><strong>Error Audit:</strong> Drill bookmarked challenging problems using the "Run Bookmarks Library" on the <a href="practice.html" style="color: var(--secondary); font-weight: 600;">Practice Portal</a>.</li>
+                                <li><strong>Speed Math:</strong> Daily 10-minute mental math drills for squares, cubes, and fraction percentages.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- ROADMAP FAQ SECTION -->
+                <div class="edu-section-header" style="margin-top: 4rem;">
+                    <h2 class="edu-section-title">Roadmap &amp; Study Planning FAQs</h2>
+                    <p class="edu-section-subtitle">
+                        Frequently asked questions on tracking progress, daily time allocation, and roadmap completion verification.
+                    </p>
+                </div>
+
+                <div class="faq-container">
+                    <details class="faq-item">
+                        <summary class="faq-summary">How much time should I dedicate daily to placement preparation?</summary>
+                        <div class="faq-content">
+                            A balanced study routine requires <strong>2 to 3 hours per day</strong>:
+                            <br>&bull; <strong>45 mins:</strong> Quantitative Aptitude (10–15 practice questions).
+                            <br>&bull; <strong>45 mins:</strong> Logical Reasoning or Verbal Ability (1–2 puzzles / RC passages).
+                            <br>&bull; <strong>45 mins:</strong> Coding &amp; DSA (1–2 algorithm implementations).
+                            <br>&bull; <strong>15 mins:</strong> Error log review and saving bookmarked questions.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-summary">How do the interactive 30-Day Department Trackers work?</summary>
+                        <div class="faq-content">
+                            Click any department track above (Web Development, Python, DSA, Data Science, Core CS). Each day displays concept notes and hands-on tasks. When you finish a day's work, click "Verify &amp; Complete" to take a concept verification check. Your progress is saved automatically to local storage and updates your completion percentage in real-time.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-summary">Can I study for aptitude and coding simultaneously?</summary>
+                        <div class="faq-content">
+                            Yes, and it is strongly recommended. Most corporate recruitment drives (such as TCS Digital and Infosys SP) test both aptitude and coding on the same day. Following our 4-stage roadmap ensures continuous, simultaneous growth across mathematics, logical reasoning, and programming without burning out.
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================
+             2. ACTIVE ROADMAP DETAIL VIEW (TIMELINE)
+             ======================================================== -->
+        <section id="roadmap-timeline-view" style="display: none; max-width: 850px; margin: 0 auto 5rem;">
+            <!-- Header navigation buttons -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <button class="btn btn-secondary" onclick="exitToHub()" style="padding: 0.5rem 1.2rem; font-size: 0.85rem; border-radius: 20px;">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Departments
+                </button>
+                <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-secondary);">
+                    Progress: <span id="roadmap-completion-percent" style="color: var(--success);">0%</span> Completed (<span id="roadmap-completed-count">0</span>/30)
+                </div>
+            </div>
+
+            <!-- Active Department Card Header -->
+            <div class="glass-card" style="padding: 2.5rem; margin-bottom: 3rem; display: flex; align-items: center; gap: 2rem; border-radius: var(--border-radius-lg);">
+                <div id="active-dept-icon" style="font-size: 3rem; color: var(--primary); width: 80px; height: 80px; border-radius: 20px; background: var(--primary-glow); display: flex; align-items: center; justify-content: center;">
+                    <!-- Set via script -->
+                </div>
+                <div style="flex: 1;">
+                    <h2 id="active-dept-title" style="font-size: 2rem; font-family: var(--font-heading); margin-bottom: 0.5rem;">Department Name</h2>
+                    <p id="active-dept-desc" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">Description goes here.</p>
+                </div>
+            </div>
+
+            <!-- Vertical Timeline Tracker -->
+            <div class="timeline-container">
+                <div class="timeline-connector"></div>
+                <div id="timeline-days-list">
+                    <!-- Populated dynamically via js/roadmap.js -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Concept Verification Modal -->
+    <div id="verification-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 14, 26, 0.85); z-index: 100000; align-items: center; justify-content: center; backdrop-filter: blur(10px); padding: 1.5rem; box-sizing: border-box;">
+        <div class="glass-panel" style="width: 100%; max-width: 550px; border-radius: var(--border-radius-lg); padding: 2.5rem; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 1px solid var(--glass-border); background: radial-gradient(circle at 0% 0%, var(--primary-glow) 0%, var(--glass-bg) 70%); display: flex; flex-direction: column; gap: 1.5rem; animation: fadeInUp 0.4s ease;">
+            
+            <div style="display: flex; align-items: center; gap: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--warning-glow); color: var(--warning); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <h3 style="margin: 0; font-size: 1.3rem; font-family: var(--font-heading); color: var(--text-primary);">Concept Verification Quiz</h3>
+                    <p style="margin: 0.2rem 0 0; color: var(--text-muted); font-size: 0.85rem;" id="modal-subtitle">Verify study items to mark Day X completed</p>
+                </div>
+            </div>
+
+            <div>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-top: 0; margin-bottom: 1.2rem;">
+                    Before you can mark this day as completed, you must prove you understand the concepts by passing this quick quiz:
+                </p>
+                
+                <!-- Dynamic Checkbox list -->
+                <div id="modal-checklist-container" style="display: flex; flex-direction: column; gap: 0.8rem; max-height: 250px; overflow-y: auto; padding-right: 0.5rem;">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; justify-content: flex-end; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                <button class="btn btn-secondary" style="border-radius: 20px; padding: 0.6rem 1.5rem; font-size: 0.9rem;" onclick="cancelVerification()">Cancel</button>
+                <button id="modal-confirm-btn" class="btn btn-primary" style="border-radius: 20px; padding: 0.6rem 1.5rem; font-size: 0.9rem;" disabled onclick="confirmVerification()">Confirm & Complete</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/cheating_protection.js"></script>
+    <script src="js/roadmap_data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/roadmap.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,238 @@
+/* ==========================================================================
+   RESPONSIVE.CSS - Mobile-First Responsive Alignment & Layout Fixes
+   Zero horizontal overflow, clean grid collapses, optimized touch targets
+   ========================================================================== */
+
+/* Universal Reset & Overflow Protection */
+html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* --- Large Desktop / 1440px+ --- */
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1360px;
+    }
+}
+
+/* --- Laptops & Standard Desktop (1024px - 1280px) --- */
+@media screen and (max-width: 1280px) {
+    .four-col-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+/* --- Tablet Devices (769px - 1024px) --- */
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 15px;
+    }
+
+    .nav-links {
+        display: none !important;
+    }
+
+    .menu-toggle-btn {
+        display: flex !important;
+    }
+
+    .three-col-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
+
+    .coding-container {
+        grid-template-columns: 1fr;
+        height: auto;
+        min-height: unset;
+    }
+
+    .left-panel, .right-panel {
+        max-height: none !important;
+        overflow-y: visible !important;
+    }
+
+    .exam-grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Mobile Devices (max-width: 768px) --- */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    /* Container & Layout Spacing */
+    .container, .main-container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Header & Navigation */
+    .nav-container {
+        padding: 0.75rem 1rem !important;
+        width: 100% !important;
+    }
+
+    .nav-links {
+        display: none !important; /* Mobile uses drawer */
+    }
+
+    .menu-toggle-btn {
+        display: flex !important;
+    }
+
+    .nav-brand {
+        font-size: 1.2rem !important;
+    }
+
+    .nav-logo-img {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    /* Grid System Collapse */
+    .two-col-layout,
+    .three-col-grid,
+    .four-col-grid,
+    .dashboard-grid,
+    .hero-grid,
+    .selector-row,
+    .formula-grid,
+    .app-promo-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+    }
+
+    /* Hero Section Sizing */
+    .hero-section {
+        padding: 3.5rem 1rem 2.5rem 1rem !important;
+    }
+
+    .hero-title {
+        font-size: 2.2rem !important;
+        line-height: 1.25 !important;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem !important;
+    }
+
+    /* Question Station Controls */
+    .difficulty-selector {
+        gap: 0.5rem !important;
+    }
+
+    .diff-pill {
+        padding: 0.35rem 0.75rem !important;
+        font-size: 0.78rem !important;
+    }
+
+    .question-card {
+        padding: 1.5rem !important;
+    }
+
+    .question-text {
+        font-size: 1.05rem !important;
+    }
+
+    .option-btn {
+        padding: 0.85rem 1rem !important;
+        font-size: 0.92rem !important;
+    }
+
+    /* Scratchpad drawer */
+    .scratchpad-box {
+        padding: 1rem !important;
+    }
+
+    /* Practice Workstation Layout */
+    .workstation-nav-tabs {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .tab-btn {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.88rem;
+    }
+
+    /* Footer Column Collapsing */
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .footer-about {
+        text-align: left;
+    }
+
+    /* App Promo Container */
+    .app-promo-grid {
+        padding: 2rem 1.5rem !important;
+    }
+
+    /* Stats Grid & Counter Cards */
+    .stats-counter-card {
+        padding: 1.25rem !important;
+    }
+
+    /* Toast Container */
+    .toast-container {
+        bottom: 16px;
+        right: 16px;
+        left: 16px;
+        width: auto;
+        max-width: none;
+    }
+}
+
+/* --- Small Mobile Phones (360px - 430px) --- */
+@media screen and (max-width: 430px) {
+    html {
+        font-size: 13.5px;
+    }
+
+    .btn {
+        padding: 0.65rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .btn-lg {
+        padding: 0.85rem 1.8rem;
+        font-size: 1rem;
+    }
+
+    .hero-title {
+        font-size: 1.95rem !important;
+    }
+
+    .palette-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+
+    .diff-pill {
+        flex: 1 1 calc(50% - 0.5rem);
+        text-align: center;
+    }
+}

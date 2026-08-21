@@ -1,0 +1,248 @@
+/* ==========================================================================
+   ANIMATIONS.CSS - UI/UX Motion Design & Keyframes (Futuristic Lab)
+   ========================================================================== */
+
+/* --- Loading Screen / Spinner --- */
+.loading-screen {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: #02040a !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s;
+    pointer-events: none;
+    user-select: none;
+}
+
+.loading-screen.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    max-width: 520px;
+    width: 90%;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.loader-logo-img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    pointer-events: none;
+    user-select: none;
+    flex-shrink: 0;
+    opacity: 0;
+    transform: scale(0.7);
+    animation: logoIntro 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.loader-logo-img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    mix-blend-mode: screen;
+    filter: drop-shadow(0 0 35px rgba(0, 240, 255, 0.45));
+}
+
+.loader-logo {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 2.3rem;
+    letter-spacing: -0.02em;
+    background: var(--gradient-cyber);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: textIntro 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+.loader-quote {
+    margin: 1rem 0 1.5rem 0;
+    padding: 0.8rem 1.4rem;
+    border-left: 3px solid var(--primary);
+    background: rgba(0, 240, 255, 0.05) !important;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: quoteIntro 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+.loader-quote p.quote-text {
+    color: #e2e8f0 !important;
+    font-size: 0.98rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.loader-spinner {
+    width: 38px;
+    height: 38px;
+    border: 3px solid rgba(255, 255, 255, 0.08);
+    border-top: 3px solid var(--primary);
+    border-right: 3px solid var(--secondary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-top: 0.5rem;
+}
+
+@keyframes logoIntro {
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes textIntro {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes quoteIntro {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --- Entrance & Reveal Animations --- */
+.fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.fade-in-down {
+    animation: fadeInDown 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Glowing Pulse Rings & Holographic Accents --- */
+.pulse-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--success);
+    box-shadow: 0 0 10px var(--success);
+    animation: pulseDot 2s infinite;
+}
+
+.pulse-dot-cyan {
+    background: var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+}
+
+.pulse-dot-amber {
+    background: var(--warning);
+    box-shadow: 0 0 10px var(--warning);
+}
+
+@keyframes pulseDot {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* 3D Flip Panel for Tabs Transition */
+.flip-panel-3d {
+    animation: flipPanelIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transform-origin: top center;
+}
+
+@keyframes flipPanelIn {
+    0% { opacity: 0; transform: translateY(12px) scale(0.98); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Option Select Button Micro-Bounce */
+.option-btn.selected {
+    animation: optionSelectPop 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes optionSelectPop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1.01); }
+}
+
+/* Correct/Incorrect Neon Flash Keyframes */
+@keyframes correctFlash {
+    0% { background: rgba(16, 185, 129, 0.35); box-shadow: 0 0 25px rgba(16, 185, 129, 0.6); }
+    100% { background: rgba(16, 185, 129, 0.18); box-shadow: 0 0 15px rgba(16, 185, 129, 0.3); }
+}
+
+@keyframes incorrectFlash {
+    0% { background: rgba(244, 63, 94, 0.35); box-shadow: 0 0 25px rgba(244, 63, 94, 0.6); }
+    100% { background: rgba(244, 63, 94, 0.18); box-shadow: 0 0 15px rgba(244, 63, 94, 0.3); }
+}
+
+/* Holographic Cyber Border Sheen */
+.cyber-sheen {
+    position: relative;
+    overflow: hidden;
+}
+
+.cyber-sheen::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(60deg, transparent 40%, rgba(255, 255, 255, 0.08) 50%, transparent 60%);
+    transform: rotate(30deg);
+    animation: sheenSwipe 6s infinite;
+    pointer-events: none;
+}
+
+@keyframes sheenSwipe {
+    0% { transform: translateX(-100%) rotate(30deg); }
+    20%, 100% { transform: translateX(100%) rotate(30deg); }
+}
+
+/* Ambient Background Logo Floating Animation */
+@keyframes floatingLogoWatermark {
+    0% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        opacity: 0.04;
+    }
+    50% {
+        transform: translate(-50%, -53%) scale(1.05) rotate(1.5deg);
+        opacity: 0.06;
+    }
+    100% {
+        transform: translate(-50%, -47%) scale(0.97) rotate(-1.5deg);
+        opacity: 0.04;
+    }
+}
+

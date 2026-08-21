@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Online Placement Mock Tests – Aptitude &amp; Reasoning – VetriPathLearn</title>
+    <meta name="description" content="Take realistic placement mock tests simulating top campus hiring exams. Practice aptitude, reasoning, and verbal tests under timed conditions to maximize speed and accuracy.">
+    <meta name="keywords" content="placement mock test, online mock test, aptitude mock test, reasoning mock test, verbal ability mock test, placement test practice, campus placement test, mock tests for students, placement preparation test, aptitude and reasoning mock test">
+    <!-- Technical SEO Meta Tags -->
+    <meta name="google-site-verification" content="h-MC2TSGIWOwB31pbVSr-ttlsnO4Keb3vl3ygZ3WT2s">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Darun Raj">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://www.vetripathlearn.site/mocktest.html">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/logo.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logo.png">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.vetripathlearn.site/mocktest.html">
+    <meta property="og:title" content="Online Placement Mock Tests – Aptitude &amp; Reasoning – VetriPathLearn">
+    <meta property="og:description" content="Take realistic placement mock tests simulating top campus hiring exams. Practice aptitude, reasoning, and verbal tests under timed conditions to maximize speed and accuracy.">
+    <meta property="og:image" content="https://www.vetripathlearn.site/images/logo.png">
+    <meta property="og:site_name" content="VetriPathLearn">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.vetripathlearn.site/mocktest.html">
+    <meta name="twitter:title" content="Online Placement Mock Tests – Aptitude &amp; Reasoning – VetriPathLearn">
+    <meta name="twitter:description" content="Take realistic placement mock tests simulating top campus hiring exams. Practice aptitude, reasoning, and verbal tests under timed conditions to maximize speed and accuracy.">
+    <meta name="twitter:image" content="https://www.vetripathlearn.site/images/logo.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Placement Mock Tests – Aptitude, Reasoning & Coding",
+      "url": "https://www.vetripathlearn.site/mocktest.html",
+      "description": "Timed placement exam simulator for company hiring patterns including TCS, Infosys, Wipro, and Accenture."
+    }
+    </script>
+    <style>
+        /* --- Exam Layout Specifics --- */
+        .exam-grid-container {
+            display: grid;
+            grid-template-columns: 2.8fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        @media screen and (max-width: 900px) {
+            .exam-grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* --- Question Palette Numbers --- */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .palette-num-btn {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        .palette-active {
+            border: 2px solid var(--primary) !important;
+            box-shadow: 0 0 0 2px var(--primary-glow);
+            transform: scale(1.05);
+        }
+        /* Palette Colors */
+        .palette-not-visited {
+            background: var(--surface);
+            color: var(--text-secondary);
+        }
+        .palette-not-answered {
+            background: var(--danger);
+            color: #fff;
+            border-color: var(--danger);
+        }
+        .palette-answered {
+            background: var(--success);
+            color: #fff;
+            border-color: var(--success);
+        }
+        .palette-marked {
+            background: var(--secondary);
+            color: #fff;
+            border-color: var(--secondary);
+        }
+        /* Palette Legend Box */
+        .legend-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .legend-indicator {
+            width: 16px;
+            height: 16px;
+            border-radius: 3px;
+        }
+    </style>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7971777206323143" crossorigin="anonymous"></script>
+    <!-- AMP Auto Ads -->
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+</head>
+<body>
+    <!-- AMP Auto Ads Body Tag -->
+    <amp-auto-ads type="adsense" data-ad-client="ca-pub-7971777206323143"></amp-auto-ads>
+
+
+    <!-- Global Loader -->
+    <div id="global-loader" class="loading-screen">
+        <div class="loader-content">
+            <div class="loader-logo-img-wrapper"><img src="images/logo.png" alt="VetriPathLearn Logo" class="loader-logo-img"></div>
+            <div class="loader-logo">VetriPathLearn</div>
+            <div class="loader-quote">
+                <p class="quote-text">"Walk the Path. Become the Victory. Inspire the World"</p>
+            </div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Nav Placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <main class="container fade-in-up">
+        
+        <!-- ========================================================
+             1. MOCK TEST CONFIGURATION PAGE
+             ======================================================== -->
+        <div id="mock-config-card" class="glass-card" style="padding: 2.5rem; border-radius: var(--border-radius-lg); max-width: 850px; margin: 2rem auto;">
+            <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem; font-family: var(--font-heading); text-align: center;"><i class="fa-solid fa-gauge-high" style="color: var(--primary); margin-right: 0.5rem;"></i>Placement Mock Tests – Aptitude, Reasoning &amp; Coding</h1>
+            <p style="color: var(--text-secondary); text-align: center; margin-bottom: 2rem; font-size: 1rem; line-height: 1.6;">
+                Simulate real company placement recruitment examinations (TCS NQT, Infosys, Wipro, Accenture, Cognizant). Each test draws randomized questions across Quantitative Aptitude, Logical Reasoning, and Verbal Ability with strict time limits and detailed performance breakdowns.
+            </p>
+
+            <div style="display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                <a href="aptitude.html" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 1rem; border-radius: 20px;">
+                    <i class="fa-solid fa-calculator" style="color: var(--primary);"></i> Aptitude Topics
+                </a>
+                <a href="reasoning.html" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 1rem; border-radius: 20px;">
+                    <i class="fa-solid fa-puzzle-piece" style="color: var(--secondary);"></i> Reasoning Topics
+                </a>
+                <a href="verbal.html" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 1rem; border-radius: 20px;">
+                    <i class="fa-solid fa-spell-check" style="color: var(--info);"></i> Verbal Topics
+                </a>
+                <a href="roadmap.html" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 1rem; border-radius: 20px;">
+                    <i class="fa-solid fa-map" style="color: var(--warning);"></i> 30-Day Roadmaps
+                </a>
+            </div>
+
+            <div class="tier-grid-container">
+                <!-- Beginner Tier -->
+                <div class="glass-panel" style="padding: 1.5rem; border-radius: var(--border-radius-md); display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--info);">Beginner Tier</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem;">A lightweight simulation perfect to verify basic accuracy and calculation pacing.</p>
+                        <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 1rem;">
+                            <i class="fa-solid fa-list-check" style="margin-right: 0.3rem;"></i> 20 Questions | <i class="fa-solid fa-clock" style="margin-right: 0.3rem;"></i> 30 mins
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="startExam('beginner')" style="width: 100%; padding: 0.6rem; font-size: 0.9rem;">Start Beginner Mock</button>
+                </div>
+
+                <!-- Intermediate Tier -->
+                <div class="glass-panel" style="padding: 1.5rem; border-radius: var(--border-radius-md); display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--success);">Intermediate Tier</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem;">Standard difficulty with moderate time bounds matching basic campus interviews.</p>
+                        <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 1rem;">
+                            <i class="fa-solid fa-list-check" style="margin-right: 0.3rem;"></i> 30 Questions | <i class="fa-solid fa-clock" style="margin-right: 0.3rem;"></i> 45 mins
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="startExam('intermediate')" style="width: 100%; padding: 0.6rem; font-size: 0.9rem;">Start Intermediate Mock</button>
+                </div>
+
+                <!-- Advanced Tier -->
+                <div class="glass-panel" style="padding: 1.5rem; border-radius: var(--border-radius-md); display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--warning);">Advanced Tier</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem;">Heavy time limit and complex logical distributions representing high-paying roles.</p>
+                        <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 1rem;">
+                            <i class="fa-solid fa-list-check" style="margin-right: 0.3rem;"></i> 40 Questions | <i class="fa-solid fa-clock" style="margin-right: 0.3rem;"></i> 60 mins
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="startExam('advanced')" style="width: 100%; padding: 0.6rem; font-size: 0.9rem;">Start Advanced Mock</button>
+                </div>
+
+                <!-- Full Length Test -->
+                <div class="glass-panel" style="padding: 1.5rem; border-radius: var(--border-radius-md); display: flex; flex-direction: column; justify-content: space-between; border-color: var(--primary);">
+                    <div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--primary);">Full-Length Mock</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem;">Authentic exam environment. Comprehensive mix across all 30 syllabus chapters.</p>
+                        <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 1rem;">
+                            <i class="fa-solid fa-list-check" style="margin-right: 0.3rem;"></i> 60 Questions | <i class="fa-solid fa-clock" style="margin-right: 0.3rem;"></i> 90 mins
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="startExam('full')" style="width: 100%; padding: 0.6rem; font-size: 0.9rem;">Start Full Mock</button>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 COMPREHENSIVE MOCK TEST EDUCATIONAL GUIDE
+                 ========================================== -->
+            <div style="margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--border-color);">
+                <div class="edu-section-header">
+                    <h2 class="edu-section-title">Mastering Timed Placement Mock Examinations</h2>
+                    <p class="edu-section-subtitle">
+                        Taking timed mock tests is the bridge between theoretical knowledge and exam-day success. Below is our comprehensive guide to exam triage time management, post-test diagnostic reviews, and test anxiety management.
+                    </p>
+                </div>
+
+                <div class="edu-topic-grid">
+
+                    <!-- TOPIC 1: PURPOSE OF MOCK TESTS -->
+                    <article class="edu-topic-card" id="guide-mock-purpose">
+                        <span class="edu-topic-badge"><i class="fa-solid fa-stopwatch"></i> Strategy 01</span>
+                        <h3 class="edu-topic-title">1. Why Timed Simulation is Critical</h3>
+                        <p class="edu-topic-desc">
+                            Solving a math puzzle with unlimited time is vastly different from solving 60 questions under a strict 90-minute countdown with negative marking. Mock tests train your cognitive stamina, calibrate internal pacing, and desensitize you to countdown pressure.
+                        </p>
+
+                        <div class="edu-formula-box">
+                            <div class="edu-formula-title"><i class="fa-solid fa-bullseye"></i> Key Assessment Metrics</div>
+                            <ul class="edu-formula-list">
+                                <li><strong>Throughput Rate:</strong> Total questions attempted divided by total minutes (aim for $\ge 0.75\text{ questions/min}$).</li>
+                                <li><strong>Net Accuracy:</strong> Correct answers divided by total attempted (target $\ge 85\%$).</li>
+                                <li><strong>Time Drain Index:</strong> Average minutes spent on questions answered incorrectly (must be under 45 seconds).</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- TOPIC 2: 3-ROUND EXAM TRIAGE STRATEGY -->
+                    <article class="edu-topic-card" id="guide-3-round-triage">
+                        <span class="edu-topic-badge"><i class="fa-solid fa-layer-group"></i> Strategy 02</span>
+                        <h3 class="edu-topic-title">2. The 3-Round Triage Time Management Strategy</h3>
+                        <p class="edu-topic-desc">
+                            The biggest mistake students make is solving questions linearly in 1, 2, 3... order and getting trapped on a hard question on question 14, missing 10 easy questions at the end. Use the 3-Round Triage method instead:
+                        </p>
+
+                        <div class="edu-formula-box">
+                            <div class="edu-formula-title"><i class="fa-solid fa-stairs"></i> The 3-Round Protocol</div>
+                            <ul class="edu-formula-list">
+                                <li><strong>Round 1 (First 30% of time - The Sprints):</strong> Scan all questions. Solve ONLY immediate 15–30 second questions (direct formula, analogies, single-line verbal, number series). Mark moderate questions as "Review". Skip hard puzzles.</li>
+                                <li><strong>Round 2 (Next 50% of time - The Calculations):</strong> Solve the "Review" marked questions (Time &amp; Work LCM calculations, Profit/Loss, 4-person seating, simple RC passages).</li>
+                                <li><strong>Round 3 (Final 20% of time - The Grunts &amp; Sanity Check):</strong> Attempt complex floor puzzles or multi-variable DI sets. Verify that no calculation slips occurred in Round 1.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- TOPIC 3: POST-TEST DIAGNOSTIC ANALYSIS -->
+                    <article class="edu-topic-card" id="guide-post-test">
+                        <span class="edu-topic-badge"><i class="fa-solid fa-chart-pie"></i> Strategy 03</span>
+                        <h3 class="edu-topic-title">3. Post-Test Diagnostic &amp; Error Logging</h3>
+                        <p class="edu-topic-desc">
+                            A mock test is only 50% effective if you do not spend at least 45 minutes analyzing the scorecard. Reviewing why an answer was wrong cements the correct pathway in long-term memory.
+                        </p>
+
+                        <div class="edu-formula-box">
+                            <div class="edu-formula-title"><i class="fa-solid fa-clipboard-check"></i> Post-Test Audit Checklist</div>
+                            <ul class="edu-formula-list">
+                                <li><strong>The "Should-Have-Solved" Bucket:</strong> Questions you knew how to solve but answered wrong due to silly calculation slips.</li>
+                                <li><strong>The "Time Traps":</strong> Questions where you spent more than 2 minutes and still got wrong or left blank.</li>
+                                <li><strong>The "Hidden Gems":</strong> Easy questions left unattempted in the final 10 questions due to poor time management.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- TOPIC 4: ANXIETY MANAGEMENT & EXAM-DAY READINESS -->
+                    <article class="edu-topic-card" id="guide-anxiety">
+                        <span class="edu-topic-badge"><i class="fa-solid fa-heart-pulse"></i> Strategy 04</span>
+                        <h3 class="edu-topic-title">4. Managing Test Anxiety &amp; Cognitive Focus</h3>
+                        <p class="edu-topic-desc">
+                            Exam anxiety reduces working memory capacity by up to 30%. Maintaining physiological composure and psychological resilience ensures optimal performance during high-stakes corporate drives.
+                        </p>
+
+                        <div class="edu-formula-box">
+                            <div class="edu-formula-title"><i class="fa-solid fa-feather-pointed"></i> Practical Calming Protocol</div>
+                            <ul class="edu-formula-list">
+                                <li><strong>Box Breathing (4-4-4):</strong> Inhale for 4s, hold for 4s, exhale for 4s before the exam starts to lower heart rate.</li>
+                                <li><strong>The 60-Second Reset:</strong> If you get stuck on a problem, immediately flag it, breathe, and skip to the next without emotional attachment.</li>
+                                <li><strong>Screen Ergonomics:</strong> Position your screen 20 inches away and maintain upright posture to prevent neck fatigue during 90-minute simulations.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- MOCK TEST FAQ SECTION -->
+                <div class="edu-section-header" style="margin-top: 4rem;">
+                    <h2 class="edu-section-title">Mock Examination FAQs</h2>
+                    <p class="edu-section-subtitle">
+                        Frequently asked questions on test duration, proctoring controls, scoring thresholds, and negative marking.
+                    </p>
+                </div>
+
+                <div class="faq-container">
+                    <details class="faq-item">
+                        <summary class="faq-summary">How does the Question Palette work in the VetriPathLearn simulator?</summary>
+                        <div class="faq-content">
+                            The question palette mirrors official TCS iON and AMCAT assessment consoles:
+                            <br>&bull; <strong>Gray:</strong> Not visited yet.
+                            <br>&bull; <strong>Red:</strong> Visited but not answered.
+                            <br>&bull; <strong>Green:</strong> Successfully answered and saved.
+                            <br>&bull; <strong>Purple:</strong> Marked for review (you can return to it before final submission).
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-summary">What is considered a safe cutoff score in campus placement mock tests?</summary>
+                        <div class="faq-content">
+                            For mass IT recruiters (TCS Ninja, Infosys System Engineer, Wipro Elite), a safe overall score is <strong>65% to 70%</strong> with sectional cutoffs of at least 60% across Quant, Reasoning, and Verbal. For high-package digital roles (TCS Digital, Infosys SP, Cognizant Next), target <strong>80% or higher</strong>.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-summary">Does the VetriPathLearn mock simulator work offline without active internet?</summary>
+                        <div class="faq-content">
+                            Yes! VetriPathLearn is built with an offline-first client architecture. All mock test questions, timers, palette states, and scoring engines run locally in your browser without requiring continuous server connectivity.
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ========================================================
+             2. ACTIVE EXAMINATION SIMULATOR SCREEN
+             ======================================================== -->
+        <div id="mock-exam-workspace" class="exam-grid-container fade-in" style="display: none;">
+            
+            <!-- Left panel - Question Area -->
+            <div>
+                <!-- Question card content -->
+                <div class="glass-card" id="exam-q-box" style="min-height: 380px; padding: 2.5rem; border-radius: var(--border-radius-lg);">
+                    <!-- Loaded dynamically -->
+                </div>
+
+                <!-- Question Actions -->
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                    <button id="btn-prev-exam" class="btn btn-secondary" onclick="prevExamQuestion()">
+                        <i class="fa-solid fa-arrow-left"></i> Previous
+                    </button>
+                    <button class="btn btn-secondary" onclick="markQuestionForReview()" style="color: var(--secondary); border-color: var(--secondary-glow);">
+                        <i class="fa-regular fa-flag"></i> Mark for Review
+                    </button>
+                    <button class="btn btn-secondary" onclick="clearExamAnswer()">
+                        <i class="fa-solid fa-eraser"></i> Clear Response
+                    </button>
+                    <button id="btn-next-exam" class="btn btn-primary" onclick="nextExamQuestion()" style="margin-left: auto;">
+                        Save & Next <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right panel - Exam Sidebar palette -->
+            <div class="glass-card" style="padding: 1.5rem; border-radius: var(--border-radius-lg); position: sticky; top: 100px;">
+                <!-- Countdown -->
+                <div style="text-align: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1rem;">
+                    <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.2rem;">TIME REMAINING</div>
+                    <div id="exam-countdown" style="font-size: 2.4rem; font-weight: 800; font-family: var(--font-heading);">00:00</div>
+                    
+                    <!-- Auto next utility toggle -->
+                    <button id="btn-auto-next" class="btn btn-secondary" onclick="toggleAutoNext()" style="margin-top: 0.8rem; font-size: 0.8rem; padding: 0.3rem 0.8rem; border-radius: 15px; color: var(--primary);">
+                        <i class="fa-solid fa-toggle-on"></i> Auto Next
+                    </button>
+                </div>
+
+                <h4 style="font-size: 0.9rem; margin-bottom: 0.5rem;">Question Palette</h4>
+                
+                <!-- Palette grid numbers -->
+                <div class="palette-grid" id="palette-numbers-grid">
+                    <!-- Numbers rendered dynamically -->
+                </div>
+
+                <!-- Palette Legend -->
+                <div class="legend-grid" style="border-top: 1px solid var(--border-color); padding-top: 1rem; margin-bottom: 1.5rem;">
+                    <div class="legend-item"><div class="legend-indicator palette-answered"></div><span>Answered</span></div>
+                    <div class="legend-item"><div class="legend-indicator palette-not-answered"></div><span>Not Answered</span></div>
+                    <div class="legend-item"><div class="legend-indicator palette-marked"></div><span>For Review</span></div>
+                    <div class="legend-item"><div class="legend-indicator palette-not-visited"></div><span>Not Visited</span></div>
+                </div>
+
+                <!-- Submit Exam -->
+                <button class="btn btn-primary" onclick="submitExamPrompt()" style="width: 100%; border-radius: var(--border-radius-sm); padding: 0.8rem;">
+                    <i class="fa-solid fa-circle-check"></i> Submit Examination
+                </button>
+            </div>
+        </div>
+
+        <!-- ========================================================
+             3. POST-EXAM RESULTS & DETAILED PERFORMANCE ANALYTICS
+             ======================================================== -->
+        <div id="mock-results-card" class="fade-in" style="display: none; max-width: 900px; margin: 0 auto;">
+            
+            <section style="text-align: center; margin-bottom: 2.5rem;">
+                <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; font-family: var(--font-heading);"><i class="fa-solid fa-trophy" style="color: var(--warning);"></i> Exam Assessment</h1>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">Review correct tallies, estimated percentile ranks, and incorrect solution reviews.</p>
+            </section>
+
+            <!-- Stat grids -->
+            <section class="dashboard-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 2rem;">
+                <div class="glass-card stat-card">
+                    <div class="stat-icon" style="color: var(--primary);"><i class="fa-solid fa-award"></i></div>
+                    <div class="stat-val" id="res-score">0 / 0</div>
+                    <div class="stat-label">Final Score</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-icon" style="color: var(--success);"><i class="fa-solid fa-bullseye"></i></div>
+                    <div class="stat-val" id="res-accuracy">0%</div>
+                    <div class="stat-label">Accuracy Rating</div>
+                </div>
+            </section>
+
+            <!-- Two-Column Breakdown: Topic stats + Actions -->
+            <div class="two-col-layout" style="margin-bottom: 2.5rem;">
+                <!-- Topic analysis -->
+                <div class="glass-card">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem;"><i class="fa-solid fa-chart-pie" style="color: var(--primary); margin-right: 0.5rem;"></i>Topic-wise Analysis</h3>
+                    <div id="res-topic-analysis">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Next steps -->
+                <div class="glass-card" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem;">
+                    <div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 1rem;"><i class="fa-solid fa-lightbulb" style="color: var(--secondary); margin-right: 0.5rem;"></i>Recommended Path</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                            Review weak sections identified in results to build targeted drills in the Practice portal.
+                        </p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
+                        <button class="btn btn-primary" onclick="exitMockTest()"><i class="fa-solid fa-rotate-left"></i> Run Another Simulator</button>
+                        <a href="practice.html" class="btn btn-secondary"><i class="fa-solid fa-dumbbell"></i> Open Practice Hub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Missed question Walkthrough reviews -->
+            <section class="glass-panel" style="padding: 2.5rem; border-radius: var(--border-radius-lg); margin-bottom: 2rem;">
+                <h3 style="font-size: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.8rem; margin-bottom: 2rem; color: var(--danger);"><i class="fa-solid fa-circle-xmark"></i> Incorrect Response Review</h3>
+                <div id="res-wrong-review">
+                    <!-- List of missed questions with options and step solutions -->
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/mock_data_gen.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cheating_protection.js"></script>
+    <script src="js/mocktest.js"></script>
+</body>
+</html>
+

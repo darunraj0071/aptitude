@@ -1,0 +1,12 @@
+*.iml
+.gradle
+local.properties
+/local.properties
+.idea/
+build/
+app/build/
+*.apk
+!appti/*.apk
+!vetripath-app/app/src/main/assets/appti/*.apk
+*.aar
+.DS_Store
