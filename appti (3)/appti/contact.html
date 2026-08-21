@@ -94,7 +94,7 @@
                     Feedback &amp; Support
                 </h1>
                 <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                    <a href="https://forms.gle/FuVXed9CbN2TQhLr6" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.75rem 2rem; font-size: 1rem; font-weight: 700; border-radius: var(--radius-full); box-shadow: 0 8px 25px var(--primary-glow); display: inline-flex; align-items: center; gap: 0.6rem;">
+                    <a href="https://forms.gle/Njf4w5fimTgycc549" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.75rem 2rem; font-size: 1rem; font-weight: 700; border-radius: var(--radius-full); box-shadow: 0 8px 25px var(--primary-glow); display: inline-flex; align-items: center; gap: 0.6rem;">
                         <i class="fa-brands fa-google"></i> Open Direct Google Form <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.85rem;"></i>
                     </a>
                 </div>
@@ -401,7 +401,8 @@
             loadGlobalLayout('contact');
         });
 
-        function handleGoogleFeedbackSubmit(event) {
+        async function handleGoogleFeedbackSubmit(event) {
+            event.preventDefault();
             const form = document.getElementById('google-feedback-form');
             const submitBtn = document.getElementById('feedback-submit-btn');
             const emailInput = document.getElementById('entry_1738353594');
@@ -414,28 +415,65 @@
             // Check multi-checkbox requirements
             const daysChecked = form.querySelectorAll('input[name="entry.16271610"]:checked');
             if (daysChecked.length === 0) {
-                event.preventDefault();
-                PlacementPrepState.dispatchToast('Please select at least one active day of the week.', 'warning');
+                if (window.PlacementPrepState && PlacementPrepState.dispatchToast) {
+                    PlacementPrepState.dispatchToast('Please select at least one active day of the week.', 'warning');
+                } else {
+                    alert('Please select at least one active day of the week.');
+                }
                 return;
             }
 
             const featuresChecked = form.querySelectorAll('input[name="entry.1119363773"]:checked');
             if (featuresChecked.length === 0) {
-                event.preventDefault();
-                PlacementPrepState.dispatchToast('Please select at least one priority feature.', 'warning');
+                if (window.PlacementPrepState && PlacementPrepState.dispatchToast) {
+                    PlacementPrepState.dispatchToast('Please select at least one priority feature.', 'warning');
+                } else {
+                    alert('Please select at least one priority feature.');
+                }
                 return;
             }
 
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting to Google Form...';
 
-            // Show success display shortly after iframe submit
+            const formUrl = form.action;
+            const formData = new FormData(form);
+
+            // Use URLSearchParams for reliable application/x-www-form-urlencoded delivery to Google Forms
+            const params = new URLSearchParams();
+            for (const [key, value] of formData.entries()) {
+                params.append(key, value);
+            }
+
+            try {
+                // Primary: Direct POST with no-cors
+                await fetch(formUrl, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: params.toString()
+                });
+            } catch (err) {
+                console.warn('Fetch submission error, attempting iframe fallback:', err);
+                try {
+                    form.target = 'hidden_gform_iframe';
+                    HTMLFormElement.prototype.submit.call(form);
+                } catch (fallbackErr) {
+                    console.error('Fallback submit error:', fallbackErr);
+                }
+            }
+
+            // Show success display
             setTimeout(() => {
                 form.style.display = 'none';
                 document.getElementById('feedback-success-card').style.display = 'block';
-                PlacementPrepState.dispatchToast('🎉 Feedback successfully submitted to Google Form!', 'success');
+                if (window.PlacementPrepState && PlacementPrepState.dispatchToast) {
+                    PlacementPrepState.dispatchToast('🎉 Feedback successfully submitted to Google Form!', 'success');
+                }
                 window.scrollTo({ top: 100, behavior: 'smooth' });
-            }, 1200);
+            }, 600);
         }
 
         function resetFeedbackForm() {
