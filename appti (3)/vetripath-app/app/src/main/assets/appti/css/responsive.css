@@ -1,5 +1,6 @@
 /* ==========================================================================
-   RESPONSIVE.CSS - Mobile-First Responsive Alignment & Layout Fixes
+   RESPONSIVE.CSS - Mobile-First Responsive Alignment & High-Speed Performance Engine
+   Zero horizontal overflow, smooth 60fps scrolling, optimized touch targets
    ========================================================================== */
 
 /* Universal Reset & Overflow Protection */
@@ -10,23 +11,51 @@ html, body {
     box-sizing: border-box !important;
 }
 
-*, *:before, *:after {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
-/* --- Tablet Devices (max-width: 1024px) --- */
+/* --- Large Desktop / 1440px+ --- */
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1360px;
+    }
+}
+
+/* --- Laptops & Standard Desktop (1024px - 1280px) --- */
+@media screen and (max-width: 1280px) {
+    .four-col-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+/* --- Tablet Devices (769px - 1024px) --- */
 @media screen and (max-width: 1024px) {
     html {
         font-size: 15px;
     }
 
     .nav-links {
-        gap: 1rem;
+        display: none !important;
+    }
+
+    .menu-toggle-btn {
+        display: flex !important;
+    }
+
+    .three-col-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .footer-content {
-        grid-template-columns: 1.5fr 1fr 1fr;
-        gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
     }
 
     .coding-container {
@@ -39,30 +68,93 @@ html, body {
         max-height: none !important;
         overflow-y: visible !important;
     }
+
+    .exam-grid-container {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* --- Mobile Devices (max-width: 768px) --- */
+/* --- Mobile Devices (max-width: 768px) - High Speed Phone Optimizations --- */
 @media screen and (max-width: 768px) {
     html {
         font-size: 14px;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    /* 1. Eliminate Fixed Background Repaint Lag on Phones */
+    body {
+        background-attachment: scroll !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* 2. Disable heavy GPU background animations and blur filters on phones */
+    body::before {
+        animation: none !important;
+        filter: none !important;
+        opacity: 0.035 !important;
+        width: 320px !important;
+        height: 320px !important;
+    }
+
+    body::after {
+        display: none !important;
+        animation: none !important;
+        filter: none !important;
+    }
+
+    .cyber-sheen::after {
+        animation: none !important;
+        display: none !important;
+    }
+
+    /* 3. High-Speed Obsidian Panels (Replacing GPU-heavy backdrop blur on multiple cards) */
+    .glass-card, 
+    .glass-panel, 
+    .topic-card, 
+    .formula-card, 
+    .edu-topic-card, 
+    .example-card,
+    .stats-counter-card,
+    .feedback-container {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background: rgba(10, 16, 32, 0.94) !important;
+        transform: translateZ(0); /* Hardware accelerated rendering */
+    }
+
+    .header-nav {
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+        background: rgba(4, 8, 18, 0.94) !important;
+    }
+
+    /* 4. Content Visibility: Delay rendering off-screen sections until scrolled */
+    .four-col-grid,
+    .three-col-grid,
+    .two-col-layout,
+    .edu-section,
+    .main-footer,
+    .faq-container {
+        content-visibility: auto;
+        contain-intrinsic-size: 0 350px;
     }
 
     /* Container & Layout Spacing */
     .container, .main-container {
-        padding: 0.8rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
         width: 100% !important;
         max-width: 100% !important;
-        box-sizing: border-box !important;
     }
 
     /* Header & Navigation */
     .nav-container {
-        padding: 0.6rem 0.8rem !important;
+        padding: 0.75rem 1rem !important;
         width: 100% !important;
     }
 
     .nav-links {
-        display: none; /* Hide top bar links on mobile */
+        display: none !important; /* Mobile uses drawer */
     }
 
     .menu-toggle-btn {
@@ -70,252 +162,136 @@ html, body {
     }
 
     .nav-brand {
-        font-size: 1.15rem !important;
-        white-space: nowrap;
+        font-size: 1.2rem !important;
     }
 
-    .nav-actions {
-        gap: 0.4rem !important;
+    .nav-logo-img {
+        width: 32px !important;
+        height: 32px !important;
     }
 
-    /* Form Controls & Dropdowns */
-    select.form-control, input.form-control, .form-control {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-        font-size: 0.9rem !important;
-    }
-
-    /* Grid System Collapsing */
+    /* Grid System Collapse */
     .two-col-layout,
     .three-col-grid,
     .four-col-grid,
     .dashboard-grid,
-    .tier-grid-container,
-    .hero-grid {
+    .hero-grid,
+    .selector-row,
+    .formula-grid,
+    .app-promo-grid {
         grid-template-columns: 1fr !important;
-        gap: 1rem !important;
+        gap: 1.25rem !important;
     }
 
-    /* Selector Rows in Coding Workstation & Practice */
-    .selector-row {
-        grid-template-columns: 1fr !important;
-        gap: 0.6rem !important;
+    /* Hero Section Sizing */
+    .hero-section {
+        padding: 3.5rem 1rem 2.5rem 1rem !important;
     }
 
-    /* Glass Cards & Panels */
-    .glass-card, .glass-panel, .card, .quiz-card, .subject-card, .description-card, .editor-card {
-        padding: 1rem !important;
-        box-sizing: border-box !important;
-        max-width: 100% !important;
-        width: 100% !important;
-        border-radius: 12px !important;
+    .hero-title {
+        font-size: 2.2rem !important;
+        line-height: 1.25 !important;
     }
 
-    /* Coding Workstation Mobile Alignment */
-    .coding-container {
-        grid-template-columns: 1fr !important;
-        gap: 1rem !important;
-        height: auto !important;
-        min-height: unset !important;
-        margin-top: 0.5rem !important;
-        margin-bottom: 1rem !important;
+    .hero-subtitle {
+        font-size: 1rem !important;
     }
 
-    .left-panel, .right-panel {
-        width: 100% !important;
-        max-height: none !important;
-        overflow-y: visible !important;
-        padding-right: 0 !important;
-    }
-
-    .editor-header {
-        flex-wrap: wrap !important;
+    /* Question Station Controls */
+    .difficulty-selector {
         gap: 0.5rem !important;
-        padding: 0.5rem 0.8rem !important;
     }
 
-    .lang-tabs {
-        flex-wrap: wrap !important;
-        gap: 0.3rem !important;
+    .diff-pill {
+        padding: 0.35rem 0.75rem !important;
+        font-size: 0.78rem !important;
     }
 
-    .lang-tab {
-        padding: 0.35rem 0.6rem !important;
-        font-size: 0.8rem !important;
+    .question-card {
+        padding: 1.5rem !important;
     }
 
-    .editor-footer {
-        flex-wrap: wrap !important;
-        gap: 0.6rem !important;
-        padding: 0.6rem 0.8rem !important;
+    .question-text {
+        font-size: 1.05rem !important;
     }
 
-    .editor-footer .btn {
-        flex: 1 1 auto !important;
-        text-align: center !important;
-        justify-content: center !important;
+    .option-btn {
+        padding: 0.85rem 1rem !important;
+        font-size: 0.92rem !important;
     }
 
-    .editor-card {
-        min-height: 280px !important;
+    /* Scratchpad drawer */
+    .scratchpad-box {
+        padding: 1rem !important;
     }
 
-    .line-numbers {
-        width: 34px !important;
-        padding-right: 0.3rem !important;
-        font-size: 0.85rem !important;
+    /* Practice Workstation Layout */
+    .workstation-nav-tabs {
+        flex-direction: row;
+        gap: 0.5rem;
     }
 
-    .editor-textarea {
-        padding: 0.6rem !important;
-        font-size: 0.85rem !important;
+    .tab-btn {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.88rem;
     }
 
-    /* Buttons Full Width on Small Forms */
-    .btn-block-mobile {
-        width: 100% !important;
-    }
-
-    /* Footer Mobile Alignment */
+    /* Footer Column Collapsing */
     .footer-content {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
     }
 
-    .footer-bottom {
-        flex-direction: column !important;
-        gap: 0.8rem !important;
-        text-align: center !important;
-    }
-}
-
-/* --- Small Mobile Devices (max-width: 480px) --- */
-@media screen and (max-width: 480px) {
-    .nav-brand {
-        font-size: 1.05rem !important;
+    .footer-about {
+        text-align: left;
     }
 
-    .nav-brand img {
-        width: 24px !important;
-        height: 24px !important;
+    /* App Promo Container */
+    .app-promo-grid {
+        padding: 2rem 1.5rem !important;
     }
 
-    .nav-container {
-        padding: 0.5rem 0.6rem !important;
+    /* Stats Grid & Counter Cards */
+    .stats-counter-card {
+        padding: 1.25rem !important;
     }
 
+    /* Toast Container */
     .toast-container {
-        left: 0.5rem !important;
-        right: 0.5rem !important;
-        bottom: 0.5rem !important;
-    }
-
-    .toast {
-        min-width: unset !important;
-        width: 100% !important;
-        font-size: 0.85rem !important;
-    }
-
-    h1, .h1-title {
-        font-size: 1.6rem !important;
-    }
-
-    h2, .h2-title {
-        font-size: 1.3rem !important;
-    }
-
-    h3 {
-        font-size: 1.15rem !important;
-    }
-
-    .action-bar {
-        flex-direction: column !important;
-        gap: 0.5rem !important;
-    }
-
-    /* Search Box Mobile Bounds & Overflow Fix */
-    .glass-panel[style*="border-radius: 40px"],
-    .glass-panel[style*="border-radius:40px"],
-    .glass-panel[style*="border-radius: 30px"],
-    .hero-search-wrapper {
-        padding: 0.3rem 0.4rem !important;
-        border-radius: 25px !important;
-        max-width: 100% !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-        overflow: hidden !important;
-    }
-
-    .glass-panel[style*="border-radius: 40px"] i,
-    .glass-panel[style*="border-radius:40px"] i {
-        margin: 0 0.4rem !important;
-        font-size: 0.95rem !important;
-    }
-
-    .glass-panel[style*="border-radius: 40px"] input,
-    .glass-panel[style*="border-radius:40px"] input {
-        font-size: 0.85rem !important;
-        padding: 0.5rem 0 !important;
-        min-width: 0 !important;
-    }
-
-    .glass-panel[style*="border-radius: 40px"] button,
-    .glass-panel[style*="border-radius:40px"] button {
-        padding: 0.5rem 0.9rem !important;
-        font-size: 0.82rem !important;
-        border-radius: 20px !important;
-        white-space: nowrap !important;
-        flex-shrink: 0 !important;
+        bottom: 16px;
+        right: 16px;
+        left: 16px;
+        width: auto;
+        max-width: none;
     }
 }
 
-/* --- Dynamic Layout Utilities --- */
-.two-col-layout {
-    display: grid;
-    grid-template-columns: 2.5fr 1fr;
-    gap: 1.5rem;
-    align-items: start;
-}
+/* --- Small Mobile Phones (360px - 430px) --- */
+@media screen and (max-width: 430px) {
+    html {
+        font-size: 13.5px;
+    }
 
-.three-col-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.2rem;
-}
+    .btn {
+        padding: 0.65rem 1.2rem;
+        font-size: 0.9rem;
+    }
 
-.four-col-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.2rem;
-}
+    .btn-lg {
+        padding: 0.85rem 1.8rem;
+        font-size: 1rem;
+    }
 
-.tier-grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.2rem;
-    margin-bottom: 2rem;
-}
+    .hero-title {
+        font-size: 1.95rem !important;
+    }
 
-/* --- Native Android App (APK WebView) Ad Suppression --- */
-body.is-native-app .ad-section-wrapper,
-body.is-native-app .ad-section-box,
-body.is-native-app .adsense-container,
-body.is-native-app .adsense-infeed-container,
-body.is-native-app ins.adsbygoogle,
-body.is-native-app amp-auto-ads,
-.is-native-app .ad-section-wrapper,
-.is-native-app .ad-section-box,
-.is-native-app .adsense-container,
-.is-native-app .adsense-infeed-container,
-.is-native-app ins.adsbygoogle,
-.is-native-app amp-auto-ads {
-    display: none !important;
-    height: 0 !important;
-    max-height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-    visibility: hidden !important;
+    .palette-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+
+    .diff-pill {
+        flex: 1 1 calc(50% - 0.5rem);
+        text-align: center;
+    }
 }

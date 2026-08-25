@@ -49,24 +49,65 @@ function updateThemeIcon(theme) {}
 // --- Mobile Navigation ---
 function initMobileNav() {
     const menuToggle = document.getElementById('menu-toggle');
-    const drawer = document.getElementById('mobile-drawer');
+    const drawer = document.getElementById('mobile-drawer') || document.querySelector('.mobile-nav-drawer');
     const overlay = document.getElementById('mobile-overlay');
     const closeBtn = document.getElementById('drawer-close');
 
-    if (menuToggle && drawer && overlay && closeBtn) {
-        menuToggle.addEventListener('click', () => {
-            drawer.classList.add('open');
-            overlay.classList.add('active');
-        });
+    if (!menuToggle || !drawer || !overlay) return;
 
-        const closeDrawer = () => {
-            drawer.classList.remove('open');
-            overlay.classList.remove('active');
+    const openDrawer = (e) => {
+        if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        drawer.classList.add('open');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeDrawer = (e) => {
+        if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        drawer.classList.remove('open');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+
+    menuToggle.onclick = openDrawer;
+    menuToggle.ontouchend = (e) => {
+        e.preventDefault();
+        openDrawer(e);
+    };
+
+    if (closeBtn) {
+        closeBtn.onclick = closeDrawer;
+        closeBtn.ontouchend = (e) => {
+            e.preventDefault();
+            closeDrawer(e);
         };
-
-        closeBtn.addEventListener('click', closeDrawer);
-        overlay.addEventListener('click', closeDrawer);
     }
+    
+    overlay.onclick = closeDrawer;
+    overlay.ontouchend = (e) => {
+        e.preventDefault();
+        closeDrawer(e);
+    };
+
+    // Close when tapping any navigation link inside drawer
+    drawer.querySelectorAll('.drawer-link, a').forEach(link => {
+        link.addEventListener('click', () => {
+            closeDrawer();
+        });
+    });
+
+    // Close drawer on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && drawer.classList.contains('open')) {
+            closeDrawer();
+        }
+    });
 }
 
 // --- Loading Panel Overlay ---
@@ -75,8 +116,8 @@ function hideLoadingScreen() {
     if (loader) {
         loader.classList.add('fade-out');
         setTimeout(() => {
-            loader.remove();
-        }, 400);
+            if (loader.parentNode) loader.remove();
+        }, 200);
     }
 }
 
@@ -176,13 +217,13 @@ function loadGlobalLayout(activeLink = 'home') {
         </header>
 
         <div id="mobile-overlay" class="mobile-overlay"></div>
-        <div id="mobile-nav-drawer" class="mobile-nav-drawer" id="mobile-drawer">
+        <div id="mobile-drawer" class="mobile-nav-drawer">
             <div class="drawer-header">
                 <span class="nav-brand">
                     <img src="images/logo.png" alt="VetriPathLearn Logo" class="nav-logo-img">
                     <span>VetriPathLearn</span>
                 </span>
-                <button id="drawer-close" class="drawer-close-btn"><i class="fa-solid fa-xmark"></i></button>
+                <button id="drawer-close" class="drawer-close-btn" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <nav class="drawer-links">
                 <a href="index.html" class="drawer-link ${activeLink === 'home' ? 'active' : ''}"><i class="fa-solid fa-house" style="color:var(--primary);"></i> Home</a>

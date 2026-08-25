@@ -1,6 +1,6 @@
 /* ==========================================================================
-   RESPONSIVE.CSS - Mobile-First Responsive Alignment & Layout Fixes
-   Zero horizontal overflow, clean grid collapses, optimized touch targets
+   RESPONSIVE.CSS - Mobile-First Responsive Alignment & High-Speed Performance Engine
+   Zero horizontal overflow, smooth 60fps scrolling, optimized touch targets
    ========================================================================== */
 
 /* Universal Reset & Overflow Protection */
@@ -74,10 +74,69 @@ html, body {
     }
 }
 
-/* --- Mobile Devices (max-width: 768px) --- */
+/* --- Mobile Devices (max-width: 768px) - High Speed Phone Optimizations --- */
 @media screen and (max-width: 768px) {
     html {
         font-size: 14px;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    /* 1. Eliminate Fixed Background Repaint Lag on Phones */
+    body {
+        background-attachment: scroll !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* 2. Disable heavy GPU background animations and blur filters on phones */
+    body::before {
+        animation: none !important;
+        filter: none !important;
+        opacity: 0.035 !important;
+        width: 320px !important;
+        height: 320px !important;
+    }
+
+    body::after {
+        display: none !important;
+        animation: none !important;
+        filter: none !important;
+    }
+
+    .cyber-sheen::after {
+        animation: none !important;
+        display: none !important;
+    }
+
+    /* 3. High-Speed Obsidian Panels (Replacing GPU-heavy backdrop blur on multiple cards) */
+    .glass-card, 
+    .glass-panel, 
+    .topic-card, 
+    .formula-card, 
+    .edu-topic-card, 
+    .example-card,
+    .stats-counter-card,
+    .feedback-container {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background: rgba(10, 16, 32, 0.94) !important;
+        transform: translateZ(0); /* Hardware accelerated rendering */
+    }
+
+    .header-nav {
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+        background: rgba(4, 8, 18, 0.94) !important;
+    }
+
+    /* 4. Content Visibility: Delay rendering off-screen sections until scrolled */
+    .four-col-grid,
+    .three-col-grid,
+    .two-col-layout,
+    .edu-section,
+    .main-footer,
+    .faq-container {
+        content-visibility: auto;
+        contain-intrinsic-size: 0 350px;
     }
 
     /* Container & Layout Spacing */

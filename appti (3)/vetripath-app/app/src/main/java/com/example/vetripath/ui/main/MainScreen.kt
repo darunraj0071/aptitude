@@ -107,17 +107,19 @@ fun MainScreen(modifier: Modifier = Modifier) {
             // Inject Javascript Anti-Copy & Anti-Selection Event Blockers
             val antiCopyJs = """
               (function() {
-                var events = ['copy', 'cut', 'contextmenu', 'selectstart', 'dragstart'];
+                var events = ['copy', 'cut', 'paste', 'contextmenu', 'selectstart', 'dragstart', 'drop'];
                 events.forEach(function(evt) {
                   document.addEventListener(evt, function(e) {
-                    if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+                    var tag = e.target.tagName ? e.target.tagName.toLowerCase() : '';
+                    if (tag !== 'input' && tag !== 'textarea' && !e.target.isContentEditable && !e.target.closest('#code-editor')) {
                       e.preventDefault();
                       return false;
                     }
                   }, true);
                 });
-                document.body.style.webkitUserSelect = 'none';
-                document.body.style.userSelect = 'none';
+                document.documentElement.style.webkitUserSelect = 'none';
+                document.documentElement.style.userSelect = 'none';
+                document.documentElement.style.webkitTouchCallout = 'none';
               })();
             """.trimIndent()
             view?.evaluateJavascript(antiCopyJs, null)
